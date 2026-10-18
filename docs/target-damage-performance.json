@@ -1,0 +1,101 @@
+{
+  "cases": [
+    {
+      "health_records": 128,
+      "iterations": 1000,
+      "avg_ms": 0.0865486999,
+      "p99_ms": 0.139700001,
+      "max_ms": 0.2843,
+      "max_all_read_calls": 54,
+      "max_all_read_bytes": 63621,
+      "source_reads_peak": 48,
+      "source_bytes_peak": 4125
+    },
+    {
+      "health_records": 1024,
+      "iterations": 1000,
+      "avg_ms": 0.204647,
+      "p99_ms": 0.308399998,
+      "max_ms": 0.3899,
+      "max_all_read_calls": 54,
+      "max_all_read_bytes": 479365,
+      "source_reads_peak": 48,
+      "source_bytes_peak": 4125
+    },
+    {
+      "health_records": 4096,
+      "iterations": 1000,
+      "avg_ms": 0.6043038,
+      "p99_ms": 0.893700002,
+      "max_ms": 1.4463,
+      "max_all_read_calls": 55,
+      "max_all_read_bytes": 1904773,
+      "source_reads_peak": 48,
+      "source_bytes_peak": 4125
+    }
+  ],
+  "shared_fragment_context_cases": [
+    {
+      "health_records": 128,
+      "death_burst": 16,
+      "mapped": 16,
+      "position_calls": 16,
+      "cached_blasts": 64,
+      "poll_ms": 1.782,
+      "all_read_calls": 237,
+      "all_read_bytes": 66971,
+      "source_reads": 219,
+      "source_bytes": 7331,
+      "polls": 2,
+      "first_poll_deaths": 12,
+      "first_poll_mapped": 12,
+      "total_poll_ms": 2.3414,
+      "max_position_calls_per_poll": 12
+    },
+    {
+      "health_records": 1024,
+      "death_burst": 16,
+      "mapped": 16,
+      "position_calls": 17,
+      "cached_blasts": 64,
+      "poll_ms": 0.924799999,
+      "all_read_calls": 246,
+      "all_read_bytes": 482808,
+      "source_reads": 227,
+      "source_bytes": 7412,
+      "polls": 2,
+      "first_poll_deaths": 12,
+      "first_poll_mapped": 12,
+      "total_poll_ms": 1.2029,
+      "max_position_calls_per_poll": 13
+    },
+    {
+      "health_records": 4096,
+      "death_burst": 16,
+      "mapped": 16,
+      "position_calls": 16,
+      "cached_blasts": 64,
+      "poll_ms": 1.3752,
+      "all_read_calls": 314,
+      "all_read_bytes": 1910611,
+      "source_reads": 291,
+      "source_bytes": 9771,
+      "polls": 1,
+      "first_poll_deaths": 16,
+      "first_poll_mapped": 16,
+      "total_poll_ms": 1.3752,
+      "max_position_calls_per_poll": 16
+    }
+  ],
+  "failed_reads": 0,
+  "measured_utc": "2026-10-18T11:44:11.927940+00:00",
+  "observer_sha256": "aabfcc354f0388f22a5fb2a10bc6d069e3bb3b2c2b5d6bc347ea92df4f5c823c",
+  "trace_sha256": "4f9054e3fb6ad9d421efd8ce19acf9701b2ae7a8dfab3940618f6bc87e353897",
+  "resolver_sha256": "27ef307fab27a0f24bc2f2a80d7b545d97ebb0d449fe4a0928c90ba940fe6cc8",
+  "method": "actual game LuaJIT + ReadProcessMemory over own synthetic buffers; eight living target HP changes and native contacts per poll",
+  "shared_fragment_context_method": "16-death burst through real observer/resolver, drained within six 100ms logical polls; poll_ms/read fields are per-poll peaks; position callback reads one owned 12-byte coordinate buffer per target, not the full Runtime unit-registration lookup",
+  "position_callback_limit": 64,
+  "runtime_unit_position_max_reads_per_callback": 12,
+  "actual_fps_verified": false,
+  "game_process_read": false
+}

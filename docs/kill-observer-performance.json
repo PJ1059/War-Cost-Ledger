@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "max_ms": 0.0703000005,
+      "health_records": 128,
+      "limit_ms": 2,
+      "hash_capacity": 256,
+      "max_read_bytes": 59496,
+      "avg_ms": 0.0162052,
+      "poll_hz": 10,
+      "incomplete_polls": 0,
+      "max_read_calls": 6,
+      "iterations": 2000,
+      "p99_ms": 0.0297000006
+    },
+    {
+      "max_ms": 0.892,
+      "health_records": 1024,
+      "limit_ms": 2,
+      "hash_capacity": 2048,
+      "max_read_bytes": 475240,
+      "avg_ms": 0.1257977,
+      "poll_hz": 10,
+      "incomplete_polls": 9,
+      "max_read_calls": 6,
+      "iterations": 2000,
+      "p99_ms": 0.210499999
+    },
+    {
+      "max_ms": 3.3395,
+      "health_records": 4096,
+      "limit_ms": 2,
+      "hash_capacity": 8192,
+      "max_read_bytes": 1900648,
+      "avg_ms": 0.57091905,
+      "poll_hz": 10,
+      "incomplete_polls": 24,
+      "max_read_calls": 7,
+      "iterations": 2000,
+      "p99_ms": 1.321
+    }
+  ],
+  "failed_reads": 0,
+  "measured_utc": "2026-10-18T11:44:01.557427+00:00",
+  "lua_dll": "G:\\SteamLibrary\\steamapps\\common\\Helldivers 2\\bin\\lua51.dll",
+  "observer_sha256": "aabfcc354f0388f22a5fb2a10bc6d069e3bb3b2c2b5d6bc347ea92df4f5c823c",
+  "method": "game LuaJIT + ReadProcessMemory of owned synthetic living-actor buffers",
+  "game_running": false,
+  "actual_fps_verified": false,
+  "excludes": [
+    "game rendering",
+    "other MOD contention",
+    "real network attribution",
+    "storage",
+    "new actor burst",
+    "corpse burst",
+    "pending attribution candidates"
+  ]
+}

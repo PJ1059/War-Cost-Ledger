@@ -1,0 +1,67 @@
+{
+  "entries": {
+    "throwable/g4_gas/detonation": {
+      "source_type": "0416984F4922757B",
+      "radius": 7.0,
+      "status": "poison",
+      "status_duration": 6,
+      "explosion_id": 177,
+      "damage_info_id": 449,
+      "status_type": 42
+    },
+    "stratagem/orbital_gas_strike/shell_impact": {
+      "source_type": "05F3C83A91075766",
+      "radius": 15.0,
+      "status": "poison",
+      "status_duration": 6,
+      "explosion_id": 82,
+      "damage_info_id": 447,
+      "status_type": 42
+    },
+    "stratagem/agm17_gas_mortar_sentry/impact": {
+      "source_type": "299C0D3DFD2F0994",
+      "radius": 7.0,
+      "status": "poison",
+      "status_duration": 6,
+      "explosion_id": 185,
+      "damage_info_id": 448,
+      "status_type": 42
+    },
+    "support_weapon/s11_speargun/expiry": {
+      "source_type": "3828E2051AA9E897",
+      "radius": 5.0,
+      "status": "poison",
+      "status_duration": 6,
+      "explosion_id": 97,
+      "damage_info_id": 66,
+      "status_type": 42
+    },
+    "stratagem/md8_gas_mines/mine": {
+      "source_type": "A9982969137F3D77",
+      "radius": 6.0,
+      "status": "poison",
+      "status_duration": 6,
+      "explosion_id": 270,
+      "damage_info_id": 449,
+      "status_type": 42
+    },
+    "stratagem/eagle_gas_airstrike/payload_impact": {
+      "source_type": "DBB286AD7ED9DF96",
+      "radius": 12.0,
+      "status": "poison",
+      "status_duration": 6,
+      "explosion_id": 331,
+      "damage_info_id": 391,
+      "status_type": 42
+    }
+  },
+  "evidence": {
+    "damage_slots": "+44+8n StatusEffectType42",
+    "duration": "SDK StatusEffectCatalog gas duration6; native status name proves semantic identity",
+    "radius": "max inner/outer (not shockwave, not inferred full gas cloud lifetime)",
+    "inputs": {
+      "sdk/StatusEffectCatalog.json": "d9598e4a4d0c9223bcd943f107509e49569c10a1622df94f1aa1f7fcb57f6815",
+      "domains/explosion_catalogue.lua": "52106eb01001fa1b0e0df18cd9beed0d945127f48c7108463a90973b80c3cc9f"
+    }
+  }
+}

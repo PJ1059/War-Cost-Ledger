@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-10-18",
+  "build": "F5FEE03DCFDB",
+  "policy": "label_exact_observed_falling_hellpod_source_only",
+  "source_count": 3,
+  "sources": {
+    "73F8498BFFDCF415": {
+      "name": "Hellpod (Payload)",
+      "name_zh": "装备空投仓",
+      "kind": "hellpod",
+      "resource_path": "content/fac_helldivers/hellpod/hellpod/hellpod_payload",
+      "variant_name": "Payload",
+      "basis": "exact_resource_path_and_native_falling_hellpod_transport_components",
+      "hellpod_component_record": 4,
+      "transport_component_record": 9,
+      "hellpod_variant": 0,
+      "spawn_height": 1000.0,
+      "initial_velocity": 400.0
+    },
+    "E58163E71928D3E2": {
+      "name": "Hellpod (InitialSpawn)",
+      "name_zh": "绝地空投仓（初始投放）",
+      "kind": "hellpod",
+      "resource_path": "content/fac_helldivers/hellpod/hellpod/hellpod_initial_spawn",
+      "variant_name": "InitialSpawn",
+      "basis": "exact_resource_path_and_native_falling_hellpod_transport_components",
+      "hellpod_component_record": 3,
+      "transport_component_record": 8,
+      "hellpod_variant": 2,
+      "spawn_height": 1500.0,
+      "initial_velocity": 400.0
+    },
+    "EF9EB729A9D6D849": {
+      "name": "Hellpod (Reinforce)",
+      "name_zh": "绝地空投仓（增援）",
+      "kind": "hellpod",
+      "resource_path": "content/fac_helldivers/hellpod/hellpod/hellpod_reinforce",
+      "variant_name": "Reinforce",
+      "basis": "exact_resource_path_and_native_falling_hellpod_transport_components",
+      "hellpod_component_record": 5,
+      "transport_component_record": 10,
+      "hellpod_variant": 1,
+      "spawn_height": 1000.0,
+      "initial_velocity": 350.0
+    }
+  },
+  "source_identity_required": true,
+  "counts_as_vehicle_crush": false,
+  "weapon_traits_inferred": false,
+  "native_collision_mechanism_proven": false,
+  "note": "73F8498BFFDCF415 is the moving payload outer body, despite the community label Empty Hellpod; equipment racks remain excluded.",
+  "excluded": {
+    "3E9409D42D895300": "deactivated launcher: no falling HellpodComponent",
+    "5052EC6A928CCF1A": "supply rack: payload/rack only, not the falling outer body",
+    "583ECDE0D7718126": "generic hellpod base: no reviewed gameplay delivery role",
+    "685337C9CCF0E45C": "launcher: no falling HellpodComponent",
+    "736EDD2093900042": "extraction-beacon hellpod: not reviewed as a player attack source",
+    "788864E7623B9FDB": "ship delivery system: no falling HellpodComponent",
+    "B52BEAAE4F85C391": "sealed rack: payload/rack only, not the falling outer body"
+  },
+  "evidence": {
+    "datalibrary": {
+      "generated_entities.dl_bin": "21377252B81FDBC670EBA1E59A8AB64B170323DF208F175E708992E4C1FB515E",
+      "dl_library.dl_typelib": "4D04870D0A0D4DC1284998C72CDFA6F8FF6D21ABA0E36B6F758C6F73DD0417A4"
+    },
+    "runtime_build_profile_sha256": "25205ADDEF75E5813F90EC5A925AD8CF7CD97DA946FC8EF1724FA33392B098E3",
+    "filediver_hellpodvariant_sha256": "56FBC41B7AD60FAF772E0B20D7C0AAB4512FB79174C357714E65DDFDCC52F563",
+    "filediver_hellpod_component_sha256": "DB5A2ACB54FC16569BAF24ABC19BA9E062754A25E9B6A4A3FD0558626631D417"
+  }
+}

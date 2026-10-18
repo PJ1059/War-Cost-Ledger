@@ -1,0 +1,2052 @@
+{
+  "checked_on": "2026-10-09",
+  "scope": "三大敌方阵营公开 Wiki 名录中的活动单位与型号变种；固定设施、部件、友军不在此敌军击杀名录中。",
+  "classification_basis": "MOD 复盘口径，综合处理门槛与战场角色；中型精英属于中型子类。分类状态只表示用户是否已确认，不表示游戏接口已验证。",
+  "runtime_mapping": "本资料表尚未绑定 Runtime semantic_id；逐敌种识别、死亡覆盖、个人击杀归属均需另外验证。",
+  "roster_sources": [
+    "https://helldivers.wiki.gg/zh/wiki/阵营",
+    "https://helldivers.wiki.gg/wiki/Factions"
+  ],
+  "units": [
+    {
+      "name_zh": "食腐虫",
+      "name_en": "Scavenger",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "报警",
+        "群体"
+      ],
+      "classification_status": "建议",
+      "note": "基础小型单位。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E9%A3%9F%E8%85%90%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Scavenger",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Scavenger_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Scavenger_Enemy_Icon.png/123px-Scavenger_Enemy_Icon.png?5f12df",
+      "image_sha256": "227704f8df25e1d51d96438ac6c92de89e3f20879b8c817b5549564a8af7e3f1",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "胆汁吐沫虫",
+      "name_en": "Bile Spitter",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "酸液",
+        "远程"
+      ],
+      "classification_status": "建议",
+      "note": "小型酸液攻击单位。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%83%86%E6%B1%81%E5%90%90%E6%B2%AB%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Bile_Spitter",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Bile_Spitter_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Bile_Spitter_Enemy_Icon.png/123px-Bile_Spitter_Enemy_Icon.png?417c48",
+      "image_sha256": "27d95d13b2297b3f58d905bf36a6a3806aa8fc783e30bf979ff3606a40837851",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "猛扑虫",
+      "name_en": "Pouncer",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "跳跃",
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "以跳跃接近目标。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%8C%9B%E6%89%91%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Pouncer",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Pouncer_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Pouncer_Enemy_Icon.png/123px-Pouncer_Enemy_Icon.png?620995",
+      "image_sha256": "d244dfd16186c571a50ab860d29b5700818681920feca39cee6957f2dc4986e2",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "追猎虫",
+      "name_en": "Hunter",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "跳跃",
+        "减速"
+      ],
+      "classification_status": "建议",
+      "note": "威胁来自机动性与成群袭击。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%BF%BD%E7%8C%8E%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Hunter",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Hunter_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Hunter_Enemy_Icon.png/123px-Hunter_Enemy_Icon.png?2bf50c",
+      "image_sha256": "086014db0399b83df1dc2c8aaeee072c8cefb8335464af499562ed3aeeb1127d",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "尖啸虫",
+      "name_en": "Shrieker",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "飞行",
+        "俯冲"
+      ],
+      "classification_status": "建议",
+      "note": "飞行是标签，不单设主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%B0%96%E5%95%B8%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Shrieker",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Shrieker_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Shrieker_Enemy_Icon.png/123px-Shrieker_Enemy_Icon.png?e81ad0",
+      "image_sha256": "e80f8f1356241023f9003160940eb723355d11e3eef6afcbf72325b233379ea8",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "武斗虫",
+      "name_en": "Warrior",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "普通中型近战单位。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%AD%A6%E6%96%97%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Warrior",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Warrior_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Warrior_Enemy_Icon.png/123px-Warrior_Enemy_Icon.png?3b5392",
+      "image_sha256": "1f92e2690ffd39e060dbd4e546c89657a6e3a2eb21f786d60061ee6944a13d27",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "胆汁武斗虫",
+      "name_en": "Bile Warrior",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "近战",
+        "死亡爆炸"
+      ],
+      "classification_status": "建议",
+      "note": "武斗虫变种，单独记录型号。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%83%86%E6%B1%81%E6%AD%A6%E6%96%97%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Bile_Warrior",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Bile_Warrior_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Bile_Warrior_Enemy_Icon.png/123px-Bile_Warrior_Enemy_Icon.png?de0c91",
+      "image_sha256": "b47b771cc9523276890d30c94ae4328626751e0e3e0f2437d131deb146e109c8",
+      "image_size": [
+        123,
+        92
+      ]
+    },
+    {
+      "name_zh": "阿尔法武斗虫",
+      "name_en": "Alpha Warrior",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "高速",
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "由阿尔法指挥官召唤；召唤兵与指挥官分别记录。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E9%98%BF%E5%B0%94%E6%B3%95%E6%AD%A6%E6%96%97%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Alpha_Warrior",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Alpha_Warrior_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Alpha_Warrior_Enemy_Icon.png/123px-Alpha_Warrior_Enemy_Icon.png?2bfcdc",
+      "image_sha256": "7fbf31591cf8fb5cfd2f1456600df761aeb85ea3aee0e55f05390f6b31dfe9bc",
+      "image_size": [
+        123,
+        92
+      ]
+    },
+    {
+      "name_zh": "虫窝护卫",
+      "name_en": "Hive Guard",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "正面装甲"
+      ],
+      "classification_status": "建议",
+      "note": "有中甲部位，归普通中型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%99%AB%E7%AA%9D%E6%8A%A4%E5%8D%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Hive_Guard",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Hive_Guard_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Hive_Guard_Enemy_Icon.png/123px-Hive_Guard_Enemy_Icon.png?9dc089",
+      "image_sha256": "a110b6c441987b3f13b1418db7d6cc4cc310f32135a7db2dd6a7b4534b28d095",
+      "image_size": [
+        123,
+        118
+      ]
+    },
+    {
+      "name_zh": "抚育喷涌虫",
+      "name_en": "Nursing Spewer",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "酸液",
+        "喷吐"
+      ],
+      "classification_status": "建议",
+      "note": "暂归普通中型，与能炮击的胆汁喷涌虫区分。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%8A%9A%E8%82%B2%E5%96%B7%E6%B6%8C%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Nursing_Spewer",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Nursing_Spewer_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Nursing_Spewer_Enemy_Icon.png/123px-Nursing_Spewer_Enemy_Icon.png?7bdfd2",
+      "image_sha256": "b03ceba61ba82f28100c12c6ea81fdf125cd550e34c7604ad7841372b6233bbc",
+      "image_size": [
+        123,
+        95
+      ]
+    },
+    {
+      "name_zh": "胆汁喷涌虫",
+      "name_en": "Bile Spewer",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "酸液",
+        "炮击"
+      ],
+      "classification_status": "建议",
+      "note": "护甲与远程炮击能力构成精英特征。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%83%86%E6%B1%81%E5%96%B7%E6%B6%8C%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Bile_Spewer",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Bile_Spewer_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Bile_Spewer_Enemy_Icon.png/123px-Bile_Spewer_Enemy_Icon.png?ccba98",
+      "image_sha256": "0d5d33bc975b4ca33344f09e22dfdecb4f78183fc049597d02e4f865507c3042",
+      "image_size": [
+        123,
+        80
+      ]
+    },
+    {
+      "name_zh": "虫族指挥官",
+      "name_en": "Brood Commander",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "指挥",
+        "召唤",
+        "冲撞"
+      ],
+      "classification_status": "建议",
+      "note": "沿用前轮的中型精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%99%AB%E6%97%8F%E6%8C%87%E6%8C%A5%E5%AE%98",
+      "source_en": "https://helldivers.wiki.gg/wiki/Brood_Commander",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Brood_Commander_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Brood_Commander_Enemy_Icon.png/123px-Brood_Commander_Enemy_Icon.png?d9a429",
+      "image_sha256": "4079b308270022e48382badcdd26a1749255bbeb51ad6ecc5be42fd7fd91e497",
+      "image_size": [
+        123,
+        91
+      ]
+    },
+    {
+      "name_zh": "阿尔法指挥官",
+      "name_en": "Alpha Commander",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "指挥",
+        "召唤",
+        "冲撞"
+      ],
+      "classification_status": "已确认",
+      "note": "召唤阿尔法武斗虫；按战场角色归精英。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E9%98%BF%E5%B0%94%E6%B3%95%E6%8C%87%E6%8C%A5%E5%AE%98",
+      "source_en": "https://helldivers.wiki.gg/wiki/Alpha_Commander",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Alpha_Commander_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Alpha_Commander_Enemy_Icon.png/123px-Alpha_Commander_Enemy_Icon.png?f2038e",
+      "image_sha256": "28e8e956ef6151c0447a931359e873b183db0bbf70246fc9a6529c354c541663",
+      "image_size": [
+        123,
+        92
+      ]
+    },
+    {
+      "name_zh": "追踪虫",
+      "name_en": "Stalker",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "隐形",
+        "伏击"
+      ],
+      "classification_status": "建议",
+      "note": "隐形伏击与强近战构成精英特征。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%BF%BD%E8%B8%AA%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Stalker",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Stalker_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Stalker_Enemy_Icon.png/123px-Stalker_Enemy_Icon.png?d7f8c7",
+      "image_sha256": "f310266a26cf2abb29ca1f24662e563034ec0c877d5c98ea35a148713b269dcf",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "强袭虫",
+      "name_en": "Charger",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "重甲",
+        "冲撞"
+      ],
+      "classification_status": "建议",
+      "note": "与强袭虫其他变种分行统计。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%BC%BA%E8%A2%AD%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Charger",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Charger_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Charger_Enemy_Icon.png/123px-Charger_Enemy_Icon.png?4bde89",
+      "image_sha256": "7560568de5620bc84c857cd09bbb6b1e6726d75b076c8ab76c6dfb4471f97f3b",
+      "image_size": [
+        123,
+        93
+      ]
+    },
+    {
+      "name_zh": "孢子强袭虫",
+      "name_en": "Spore Charger",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "重甲",
+        "迷雾",
+        "死亡爆炸"
+      ],
+      "classification_status": "建议",
+      "note": "孢子迷雾变种；不与孢裂变种混名。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%AD%A2%E5%AD%90%E5%BC%BA%E8%A2%AD%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Spore_Charger",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Spore_Charger_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Spore_Charger_Enemy_Icon.png/123px-Spore_Charger_Enemy_Icon.png?580316",
+      "image_sha256": "25bb4c3cb1df58ab3d3028cacbf1e19d19402127be7fa27404e8d30833f10066",
+      "image_size": [
+        123,
+        85
+      ]
+    },
+    {
+      "name_zh": "巨兽级强袭虫",
+      "name_en": "Charger Behemoth",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "重甲",
+        "冲撞"
+      ],
+      "classification_status": "已确认",
+      "note": "沿用已讨论的重装目标口径。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%B7%A8%E5%85%BD%E7%BA%A7%E5%BC%BA%E8%A2%AD%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Charger_Behemoth",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Charger_Behemoth_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Charger_Behemoth_Enemy_Icon.png/123px-Charger_Behemoth_Enemy_Icon.png?907971",
+      "image_sha256": "bc0a8e821d214192f4df40c75605bcac62411cec2b61ca89addca97715dbe3c6",
+      "image_size": [
+        123,
+        92
+      ]
+    },
+    {
+      "name_zh": "穿刺虫",
+      "name_en": "Impaler",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "重甲",
+        "触手"
+      ],
+      "classification_status": "已确认",
+      "note": "只记本体；触手不作为额外敌种击杀。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%A9%BF%E5%88%BA%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Impaler",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Impaler_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Impaler_Enemy_Icon.png/123px-Impaler_Enemy_Icon.png?471ac9",
+      "image_sha256": "19e81dceb18a613e1a1561b979493395e9cc723672610c422bd2ccd3a1be528e",
+      "image_size": [
+        123,
+        92
+      ]
+    },
+    {
+      "name_zh": "吐酸泰坦",
+      "name_en": "Bile Titan",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "巨型",
+      "subclass": "",
+      "display_class": "巨型",
+      "tags": [
+        "重甲",
+        "酸液",
+        "踩踏"
+      ],
+      "classification_status": "已确认",
+      "note": "沿用已讨论的重装目标口径。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%90%90%E9%85%B8%E6%B3%B0%E5%9D%A6",
+      "source_en": "https://helldivers.wiki.gg/wiki/Bile_Titan",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Bile_Titan_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Bile_Titan_Enemy_Icon.png/123px-Bile_Titan_Enemy_Icon.png?67a749",
+      "image_sha256": "3bea2b7a4efec94c492aa2298c49282d0a967588391a03039a6ff239d47c22e2",
+      "image_size": [
+        123,
+        91
+      ],
+      "classification_edited_at": "2026-10-09T07:02:57.511Z"
+    },
+    {
+      "name_zh": "蟑龙",
+      "name_en": "Dragonroach",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "巨型",
+      "subclass": "",
+      "display_class": "巨型",
+      "tags": [
+        "飞行",
+        "燃烧",
+        "重甲"
+      ],
+      "classification_status": "已确认",
+      "note": "按处理门槛与吐酸泰坦同级；Wiki 体型为 Massive。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%9F%91%E9%BE%99",
+      "source_en": "https://helldivers.wiki.gg/wiki/Dragonroach",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Dragonroach_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Dragonroach_Enemy_Icon.png/123px-Dragonroach_Enemy_Icon.png?140961",
+      "image_sha256": "32f14cf18500a9b6754a894c7e2b0108a6d76ecb2f550cde003ab79dec9421f4",
+      "image_size": [
+        123,
+        53
+      ],
+      "classification_edited_at": "2026-10-09T07:03:03.297Z"
+    },
+    {
+      "name_zh": "霸王虫",
+      "name_en": "Hive Lord",
+      "faction": "终结族",
+      "branch": "常规",
+      "main_class": "BOSS",
+      "subclass": "",
+      "display_class": "BOSS",
+      "tags": [
+        "钻地",
+        "酸液",
+        "碾压"
+      ],
+      "classification_status": "已确认",
+      "note": "独立 BOSS 主类，不重复计入巨型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E9%9C%B8%E7%8E%8B%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Hive_Lord",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Hive_Lord_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Hive_Lord_Enemy_Icon.png/123px-Hive_Lord_Enemy_Icon.png?bfaf80",
+      "image_sha256": "74afd1de701c19fc58fa8a8a61b83cbcba7de945ce0e832679f73b1c11a61c1b",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "掠食追猎虫",
+      "name_en": "Predator Hunter",
+      "faction": "终结族",
+      "branch": "掠食变种",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "隐形",
+        "酸液",
+        "高速"
+      ],
+      "classification_status": "建议",
+      "note": "先保留追猎虫的轻型主类；型号单独记录。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%8E%A0%E9%A3%9F%E8%BF%BD%E7%8C%8E%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Predator_Hunter",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Predator_Hunter_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Predator_Hunter_Enemy_Icon.png/123px-Predator_Hunter_Enemy_Icon.png?6215f5",
+      "image_sha256": "fc198cf4871c1535a133ed7c59fcd5c2c793704762058f3ed49e4fddbb3f6ac0",
+      "image_size": [
+        123,
+        86
+      ]
+    },
+    {
+      "name_zh": "掠食追踪虫",
+      "name_en": "Predator Stalker",
+      "faction": "终结族",
+      "branch": "掠食变种",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "高速",
+        "伏击"
+      ],
+      "classification_status": "建议",
+      "note": "该变种不能隐形；保留中型精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%8E%A0%E9%A3%9F%E8%BF%BD%E8%B8%AA%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Predator_Stalker",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Predator_Stalker_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Predator_Stalker_Enemy_Icon.png/123px-Predator_Stalker_Enemy_Icon.png?e4cffa",
+      "image_sha256": "79f87ce0a6459c6d1958b8f14e65ba899695badd29f1c29e71a3fcd6c11197c0",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "孢裂食腐虫",
+      "name_en": "Spore Burst Scavenger",
+      "faction": "终结族",
+      "branch": "孢裂变种",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "孢子",
+        "死亡爆炸"
+      ],
+      "classification_status": "建议",
+      "note": "继承基础型号主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%AD%A2%E8%A3%82%E9%A3%9F%E8%85%90%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Spore_Burst_Scavenger",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Spore_Burst_Scavenger_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Spore_Burst_Scavenger_Enemy_Icon.png/123px-Spore_Burst_Scavenger_Enemy_Icon.png?25ea02",
+      "image_sha256": "3e54f0f3fac8efda5f1c976ee751ce861e79f11a03634cc324e282ef582c1460",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "孢裂追猎虫",
+      "name_en": "Spore Burst Hunter",
+      "faction": "终结族",
+      "branch": "孢裂变种",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "孢子",
+        "死亡爆炸"
+      ],
+      "classification_status": "建议",
+      "note": "继承基础型号主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%AD%A2%E8%A3%82%E8%BF%BD%E7%8C%8E%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Spore_Burst_Hunter",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Spore_Burst_Hunter_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Spore_Burst_Hunter_Enemy_Icon.png/123px-Spore_Burst_Hunter_Enemy_Icon.png?e2d11b",
+      "image_sha256": "7d86431a4f6dfc79676911afecfe28a6d1f3e976393109107f64937adc9d905d",
+      "image_size": [
+        123,
+        95
+      ]
+    },
+    {
+      "name_zh": "孢裂武斗虫",
+      "name_en": "Spore Burst Warrior",
+      "faction": "终结族",
+      "branch": "孢裂变种",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "孢子",
+        "死亡爆炸"
+      ],
+      "classification_status": "建议",
+      "note": "继承基础型号主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%AD%A2%E8%A3%82%E6%AD%A6%E6%96%97%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Spore_Burst_Warrior",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Spore_Burst_Warrior_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Spore_Burst_Warrior_Enemy_Icon.png/123px-Spore_Burst_Warrior_Enemy_Icon.png?8a3ef7",
+      "image_sha256": "303740313dbfe941b98932ebaf46ca955770a5462f59e7fa97fbf1577e4778de",
+      "image_size": [
+        123,
+        94
+      ]
+    },
+    {
+      "name_zh": "孢裂吐酸泰坦",
+      "name_en": "Spore Burst Bile Titan",
+      "faction": "终结族",
+      "branch": "孢裂变种",
+      "main_class": "巨型",
+      "subclass": "",
+      "display_class": "巨型",
+      "tags": [
+        "酸液",
+        "强化友军"
+      ],
+      "classification_status": "已确认",
+      "note": "强化附近敌人的泰坦变种。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%AD%A2%E8%A3%82%E5%90%90%E9%85%B8%E6%B3%B0%E5%9D%A6",
+      "source_en": "https://helldivers.wiki.gg/wiki/Spore_Burst_Bile_Titan",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Spore_Burst_Bile_Titan_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Spore_Burst_Bile_Titan_Enemy_Icon.png/123px-Spore_Burst_Bile_Titan_Enemy_Icon.png?a74695",
+      "image_sha256": "985bebcfc373967517fcf41608dff6b30b921c5ded67f1b406a209de0d7afd26",
+      "image_size": [
+        123,
+        123
+      ],
+      "classification_edited_at": "2026-10-09T07:03:30.362Z"
+    },
+    {
+      "name_zh": "爆裂武斗虫",
+      "name_en": "Rupture Warrior",
+      "faction": "终结族",
+      "branch": "爆裂变种",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "钻地",
+        "伏击"
+      ],
+      "classification_status": "建议",
+      "note": "继承武斗虫主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%88%86%E8%A3%82%E6%AD%A6%E6%96%97%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Rupture_Warrior",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Rupture_Warrior_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Rupture_Warrior_Enemy_Icon.png/123px-Rupture_Warrior_Enemy_Icon.png?20e098",
+      "image_sha256": "8dec2c91b2caf78dc9bd4ac33c1c3e9c27761026569b49902f5d10ccbe2251f4",
+      "image_size": [
+        123,
+        98
+      ]
+    },
+    {
+      "name_zh": "爆裂喷涌虫",
+      "name_en": "Rupture Spewer",
+      "faction": "终结族",
+      "branch": "爆裂变种",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "钻地",
+        "酸液",
+        "炮击"
+      ],
+      "classification_status": "建议",
+      "note": "沿用前轮的中型精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%88%86%E8%A3%82%E5%96%B7%E6%B6%8C%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Rupture_Spewer",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Rupture_Spewer_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Rupture_Spewer_Enemy_Icon.png/123px-Rupture_Spewer_Enemy_Icon.png?e5810a",
+      "image_sha256": "2c7ab018dccbd183507b5763a06dcc3180e46121d1938424f4746b73e58fb9f5",
+      "image_size": [
+        123,
+        92
+      ]
+    },
+    {
+      "name_zh": "爆裂强袭虫",
+      "name_en": "Rupture Charger",
+      "faction": "终结族",
+      "branch": "爆裂变种",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "钻地",
+        "重甲",
+        "冲撞"
+      ],
+      "classification_status": "建议",
+      "note": "继承强袭虫主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%88%86%E8%A3%82%E5%BC%BA%E8%A2%AD%E8%99%AB",
+      "source_en": "https://helldivers.wiki.gg/wiki/Rupture_Charger",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Rupture_Charger_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Rupture_Charger_Enemy_Icon.png/123px-Rupture_Charger_Enemy_Icon.png?7a5653",
+      "image_sha256": "3574ee9accc990e3833647b025324fd9703194916b09ddaaec5d8a90ae805393",
+      "image_size": [
+        123,
+        98
+      ]
+    },
+    {
+      "name_zh": "装甲兵",
+      "name_en": "Trooper",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "射击",
+        "手雷"
+      ],
+      "classification_status": "建议",
+      "note": "普通机器人轻步兵。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%A3%85%E7%94%B2%E5%85%B5",
+      "source_en": "https://helldivers.wiki.gg/wiki/Trooper",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Trooper_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Trooper_Enemy_Icon.png/123px-Trooper_Enemy_Icon.png?3d9e47",
+      "image_sha256": "8b26258205a7886f4ab77a1e605b9e208fe055538377d15584e83a1191592bf2",
+      "image_size": [
+        123,
+        155
+      ]
+    },
+    {
+      "name_zh": "乱斗者",
+      "name_en": "Brawler",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "双刃近战轻步兵。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E4%B9%B1%E6%96%97%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Brawler",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Brawler_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Brawler_Enemy_Icon.png/123px-Brawler_Enemy_Icon.png?6bb7a4",
+      "image_sha256": "7164e5d6c5ff3c8629229fbf79f3689802725e2bc90ed233de3dc6c2c302c8e1",
+      "image_size": [
+        123,
+        132
+      ]
+    },
+    {
+      "name_zh": "机械统帅",
+      "name_en": "Commissar",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "指挥",
+        "报警"
+      ],
+      "classification_status": "建议",
+      "note": "有指挥作用仍归轻型，指挥另加标签。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%9C%BA%E6%A2%B0%E7%BB%9F%E5%B8%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Commissar",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Commissar_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Commissar_Enemy_Icon.png/123px-Commissar_Enemy_Icon.png?66eefd",
+      "image_sha256": "0daaed0a408c4d621047796011db00fd3fdb55893ba8d52683fb404896593262",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "火箭奇袭者",
+      "name_en": "Rocket Raider",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "火箭",
+        "远程"
+      ],
+      "classification_status": "建议",
+      "note": "携带火箭的轻步兵。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%81%AB%E7%AE%AD%E5%A5%87%E8%A2%AD%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Rocket_Raider",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Rocket_Raider_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Rocket_Raider_Enemy_Icon.png/123px-Rocket_Raider_Enemy_Icon.png?e53056",
+      "image_sha256": "1bf15dad7eded42c5cbdd6fd7cfd0548ee65542f564e7a35eee3fea22f8868f5",
+      "image_size": [
+        123,
+        134
+      ]
+    },
+    {
+      "name_zh": "特攻奇袭者",
+      "name_en": "Assault Raider",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "喷气",
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "名录列在常规；机器人阵营页也将其列入喷气旅。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%89%B9%E6%94%BB%E5%A5%87%E8%A2%AD%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Assault_Raider",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Assault_Raider_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Assault_Raider_Enemy_Icon.png/123px-Assault_Raider_Enemy_Icon.png?c1cd94",
+      "image_sha256": "a31bba202b47dee2e6aaf2085c2c00d8c38a9fc1c7892a84c5f695a7f03a8178",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "劫掠者",
+      "name_en": "Marauder",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "射击",
+        "手雷"
+      ],
+      "classification_status": "建议",
+      "note": "轻步兵系列，强化不自动等于精英。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%8A%AB%E6%8E%A0%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Marauder",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Marauder_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Marauder_Enemy_Icon.png/123px-Marauder_Enemy_Icon.png?404fe0",
+      "image_sha256": "89ec75ddb2b84447f7c2071f07c49681f0ccd57fd578323980f9d16c755e969d",
+      "image_size": [
+        123,
+        197
+      ]
+    },
+    {
+      "name_zh": "机枪奇袭者",
+      "name_en": "MG Raider",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "机枪",
+        "易爆背包"
+      ],
+      "classification_status": "建议",
+      "note": "轻步兵系列，背包不是独立击杀目标。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%9C%BA%E6%9E%AA%E5%A5%87%E8%A2%AD%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/MG_Raider",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:MG_Raider_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/MG_Raider_Enemy_Icon.png/123px-MG_Raider_Enemy_Icon.png?255484",
+      "image_sha256": "ccde9019467015d78ae8a04127526d8685bf28246a315773214233e00a5cb4aa",
+      "image_size": [
+        123,
+        197
+      ]
+    },
+    {
+      "name_zh": "狂暴者",
+      "name_en": "Berserker",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "近战",
+        "链锯"
+      ],
+      "classification_status": "建议",
+      "note": "耐久近战步兵，暂归普通中型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%8B%82%E6%9A%B4%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Berserker",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Berserker_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Berserker_Enemy_Icon.png/123px-Berserker_Enemy_Icon.png?37905c",
+      "image_sha256": "b3a35fd42eb2ce6711ea4a3221af6a9c961b07e5dab2ab7ebffe156c15884222",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "蹂躏者",
+      "name_en": "Devastator",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "中甲",
+        "射击"
+      ],
+      "classification_status": "建议",
+      "note": "普通蹂躏者。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%B9%82%E8%BA%8F%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Devastator",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Devastator_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Devastator_Enemy_Icon.png/123px-Devastator_Enemy_Icon.png?226a1d",
+      "image_sha256": "d7f032c66efa7d02949aa7b4daa2039fd3237ce7d6ddefeb5684e583da551c44",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "火箭蹂躏者",
+      "name_en": "Rocket Devastator",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "火箭",
+        "压制"
+      ],
+      "classification_status": "建议",
+      "note": "沿用前轮的中型精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%81%AB%E7%AE%AD%E8%B9%82%E8%BA%8F%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Rocket_Devastator",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Rocket_Devastator_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Rocket_Devastator_Enemy_Icon.png/123px-Rocket_Devastator_Enemy_Icon.png?f9b57b",
+      "image_sha256": "d3e416544a9ed57a668aa45565c1659130650295c1c21401e8cb896860fcef6b",
+      "image_size": [
+        123,
+        155
+      ]
+    },
+    {
+      "name_zh": "重型蹂躏者",
+      "name_en": "Heavy Devastator",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "盾牌",
+        "机枪",
+        "压制"
+      ],
+      "classification_status": "建议",
+      "note": "名称中的“重型”不等于本表重型主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E9%87%8D%E5%9E%8B%E8%B9%82%E8%BA%8F%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Heavy_Devastator",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Heavy_Devastator_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Heavy_Devastator_Enemy_Icon.png/123px-Heavy_Devastator_Enemy_Icon.png?973090",
+      "image_sha256": "674eb1dd1c40d35f20c44e432f118d49729ef5b1d9e9045af857d7174c3568d9",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "侦察纵步者",
+      "name_en": "Scout Strider",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "步行机",
+        "正面装甲"
+      ],
+      "classification_status": "建议",
+      "note": "需要区分载具本体与驾驶员死亡事件。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E4%BE%A6%E5%AF%9F%E7%BA%B5%E6%AD%A5%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Scout_Strider",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Scout_Strider_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Scout_Strider_Enemy_Icon.png/123px-Scout_Strider_Enemy_Icon.png?ae590d",
+      "image_sha256": "1908bae38e65bce3100abed31afb066ed04c2f71a6bd2d8980c20987ddf18c26",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "强化侦察纵步者",
+      "name_en": "Reinforced Scout Strider",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "步行机",
+        "火箭"
+      ],
+      "classification_status": "已确认",
+      "note": "按用户要求归普通中型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%BC%BA%E5%8C%96%E4%BE%A6%E5%AF%9F%E7%BA%B5%E6%AD%A5%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Reinforced_Scout_Strider",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Reinforced_Scout_Strider_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Reinforced_Scout_Strider_Enemy_Icon.png/123px-Reinforced_Scout_Strider_Enemy_Icon.png?2412e4",
+      "image_sha256": "1fea2786bf587a9d8afad5bdc281feabe9d0feb4d5c9dde7a76ef33b98befa65",
+      "image_size": [
+        123,
+        170
+      ]
+    },
+    {
+      "name_zh": "巨型抹煞者",
+      "name_en": "Hulk Obliterator",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "重甲",
+        "火箭"
+      ],
+      "classification_status": "建议",
+      "note": "Hulk 系列归重型；中文“巨型”是名称的一部分。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%B7%A8%E5%9E%8B%E6%8A%B9%E7%85%9E%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Hulk_Obliterator",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Hulk_Obliterator_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Hulk_Obliterator_Enemy_Icon.png/123px-Hulk_Obliterator_Enemy_Icon.png?ca281b",
+      "image_sha256": "c7ada7276a889a18f84a1df7093667798b205ef918488b793a4b50b2f9144e15",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "巨型炙炎者",
+      "name_en": "Hulk Scorcher",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "重甲",
+        "燃烧",
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "Hulk 系列归重型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%B7%A8%E5%9E%8B%E7%82%99%E7%82%8E%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Hulk_Scorcher",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Hulk_Scorcher_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Hulk_Scorcher_Enemy_Icon.png/123px-Hulk_Scorcher_Enemy_Icon.png?2d38a9",
+      "image_sha256": "e1ffc6f976696bb850eb76e6799066d9e460628a9d322af0d0ad2887df2451f3",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "巨型碾压者",
+      "name_en": "Hulk Bruiser",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "重甲",
+        "火箭",
+        "机炮"
+      ],
+      "classification_status": "建议",
+      "note": "Hulk 系列归重型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%B7%A8%E5%9E%8B%E7%A2%BE%E5%8E%8B%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Hulk_Bruiser",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Hulk_Bruiser_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Hulk_Bruiser_Enemy_Icon.png/123px-Hulk_Bruiser_Enemy_Icon.png?519048",
+      "image_sha256": "91e6ff26bd016b69bc4282a772a9fb91ed320544dcbc91a97f5815d67603b696",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "战争纵步者",
+      "name_en": "War Strider",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "重甲",
+        "步行机",
+        "榴弹"
+      ],
+      "classification_status": "建议",
+      "note": "与两种侦察纵步者分级记录。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%88%98%E4%BA%89%E7%BA%B5%E6%AD%A5%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/War_Strider",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:War_Strider_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/War_Strider_Enemy_Icon.png/123px-War_Strider_Enemy_Icon.png?3f3211",
+      "image_sha256": "d17d1e18b10d3a3bb09bba26d7f10f39b7895bbedfc5fd35730cb969e29876f7",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "湮灭坦克",
+      "name_en": "Annihilator Tank",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "坦克",
+        "主炮"
+      ],
+      "classification_status": "建议",
+      "note": "坦克本体按一辆统计；炮塔破坏不能额外算一杀。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%B9%AE%E7%81%AD%E5%9D%A6%E5%85%8B",
+      "source_en": "https://helldivers.wiki.gg/wiki/Annihilator_Tank",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Annihilator_Tank_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Annihilator_Tank_Enemy_Icon.png/123px-Annihilator_Tank_Enemy_Icon.png?204a8a",
+      "image_sha256": "308e782abe7687069a5bb86c7e5afa463491cde9819f8f11e6eb0c00605d69a5",
+      "image_size": [
+        123,
+        54
+      ]
+    },
+    {
+      "name_zh": "碎裂坦克",
+      "name_en": "Shredder Tank",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "坦克",
+        "连发炮"
+      ],
+      "classification_status": "建议",
+      "note": "四联装炮塔型号单列。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%A2%8E%E8%A3%82%E5%9D%A6%E5%85%8B",
+      "source_en": "https://helldivers.wiki.gg/wiki/Shredder_Tank",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Shredder_Tank_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Shredder_Tank_Enemy_Icon.png/123px-Shredder_Tank_Enemy_Icon.png?ba07d5",
+      "image_sha256": "4b0a2dcaa7a6fbbcb533b6027b7ad33297e60656328d686289e511bd926039c7",
+      "image_size": [
+        123,
+        65
+      ]
+    },
+    {
+      "name_zh": "铁幕坦克",
+      "name_en": "Barrager Tank",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "坦克",
+        "导弹",
+        "炮击"
+      ],
+      "classification_status": "建议",
+      "note": "导弹阵列型号单列。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E9%93%81%E5%B9%95%E5%9D%A6%E5%85%8B",
+      "source_en": "https://helldivers.wiki.gg/wiki/Barrager_Tank",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Barrager_Tank_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Barrager_Tank_Enemy_Icon.png/123px-Barrager_Tank_Enemy_Icon.png?6ec3b6",
+      "image_sha256": "cd8883397bff9f1ceee38392c66452432b07283d5b5723a26d7edd83bb23763c",
+      "image_size": [
+        123,
+        95
+      ]
+    },
+    {
+      "name_zh": "炮舰",
+      "name_en": "Gunship",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "飞行",
+        "火箭",
+        "压制"
+      ],
+      "classification_status": "已确认",
+      "note": "按用户修订归普通中型；中甲空中目标。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%82%AE%E8%88%B0",
+      "source_en": "https://helldivers.wiki.gg/wiki/Gunship",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Gunship_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Gunship_Enemy_Icon.png/123px-Gunship_Enemy_Icon.png?fe6c41",
+      "image_sha256": "70ccddf8e8ed4a8cef2c9466931f4cfc7df2629c00a5df98510baea02dc60e8a",
+      "image_size": [
+        123,
+        123
+      ],
+      "classification_edited_at": "2026-10-09T07:04:05.627Z"
+    },
+    {
+      "name_zh": "运输舰",
+      "name_en": "Dropship",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "飞行",
+        "运输",
+        "增援"
+      ],
+      "classification_status": "建议",
+      "note": "建议主类重型，另标运输；搭载敌兵按各自单位记录。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%BF%90%E8%BE%93%E8%88%B0",
+      "source_en": "https://helldivers.wiki.gg/wiki/Dropship",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Dropship_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Dropship_Enemy_Icon.png/123px-Dropship_Enemy_Icon.png?49ef05",
+      "image_sha256": "00e58e223203530bfe54c01a06baf0950fd516b2cfbe414ce16d68b44c102161",
+      "image_size": [
+        123,
+        70
+      ]
+    },
+    {
+      "name_zh": "移动工厂",
+      "name_en": "Factory Strider",
+      "faction": "机器人",
+      "branch": "常规",
+      "main_class": "巨型",
+      "subclass": "",
+      "display_class": "巨型",
+      "tags": [
+        "生产",
+        "重甲",
+        "机炮"
+      ],
+      "classification_status": "已确认",
+      "note": "按用户指定归巨型；生产的蹂躏者另计。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%A7%BB%E5%8A%A8%E5%B7%A5%E5%8E%82",
+      "source_en": "https://helldivers.wiki.gg/wiki/Factory_Strider",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Factory_Strider_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Factory_Strider_Enemy_Icon.png/123px-Factory_Strider_Enemy_Icon.png?be6d99",
+      "image_sha256": "d3044001c55ae5a9049706a898cc1d8149017ad0f84a92a57cc29cb1f876d857",
+      "image_size": [
+        123,
+        113
+      ]
+    },
+    {
+      "name_zh": "喷气旅机械统帅",
+      "name_en": "Jet Brigade Commissar",
+      "faction": "机器人",
+      "branch": "喷气旅",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "喷气",
+        "指挥",
+        "报警"
+      ],
+      "classification_status": "建议",
+      "note": "继承机械统帅主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%96%B7%E6%B0%94%E6%97%85%E6%9C%BA%E6%A2%B0%E7%BB%9F%E5%B8%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Jet_Brigade_Commissar",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Jet_Brigade_Commissar_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Jet_Brigade_Commissar_Enemy_Icon.png/123px-Jet_Brigade_Commissar_Enemy_Icon.png?910829",
+      "image_sha256": "09ce2178104c059279c03bf1a18907e8f18dc5c6923f7a46c77420600a853997",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "喷气旅装甲兵",
+      "name_en": "Jet Brigade Trooper",
+      "faction": "机器人",
+      "branch": "喷气旅",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "喷气",
+        "射击"
+      ],
+      "classification_status": "建议",
+      "note": "继承装甲兵主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%96%B7%E6%B0%94%E6%97%85%E8%A3%85%E7%94%B2%E5%85%B5",
+      "source_en": "https://helldivers.wiki.gg/wiki/Jet_Brigade_Trooper",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Jet_Brigade_Trooper_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Jet_Brigade_Trooper_Enemy_Icon.png/123px-Jet_Brigade_Trooper_Enemy_Icon.png?9e59b5",
+      "image_sha256": "9e895abecb32cd80eafdde9eb846b7e57185328d64a377248f2e75cf5a0af1f3",
+      "image_size": [
+        123,
+        139
+      ]
+    },
+    {
+      "name_zh": "喷气旅机枪奇袭者",
+      "name_en": "Jet Brigade MG Raider",
+      "faction": "机器人",
+      "branch": "喷气旅",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "喷气",
+        "机枪"
+      ],
+      "classification_status": "建议",
+      "note": "继承机枪奇袭者主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%96%B7%E6%B0%94%E6%97%85%E6%9C%BA%E6%9E%AA%E5%A5%87%E8%A2%AD%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Jet_Brigade_MG_Raider",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Jet_Brigade_MG_Raider_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Jet_Brigade_MG_Raider_Enemy_Icon.png/123px-Jet_Brigade_MG_Raider_Enemy_Icon.png?bb3a33",
+      "image_sha256": "8d8281da53422aff96ff6a12403028130763f18a79617ec385431090f6a7c8b7",
+      "image_size": [
+        123,
+        117
+      ]
+    },
+    {
+      "name_zh": "喷气旅蹂躏者",
+      "name_en": "Jet Brigade Devastator",
+      "faction": "机器人",
+      "branch": "喷气旅",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "喷气",
+        "突袭"
+      ],
+      "classification_status": "已确认",
+      "note": "按用户修订归普通中型；喷气能力作为标签。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%96%B7%E6%B0%94%E6%97%85%E8%B9%82%E8%BA%8F%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Jet_Brigade_Devastator",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Jet_Brigade_Devastator_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Jet_Brigade_Devastator_Enemy_Icon.png/123px-Jet_Brigade_Devastator_Enemy_Icon.png?1d2575",
+      "image_sha256": "d1e6ac93c6254db43f1c949c408c5ceb9263de6098e48c18a13f30390c422a4b",
+      "image_size": [
+        123,
+        123
+      ],
+      "classification_edited_at": "2026-10-09T07:04:20.033Z"
+    },
+    {
+      "name_zh": "喷气旅巨型炙炎者",
+      "name_en": "Jet Brigade Hulk Scorcher",
+      "faction": "机器人",
+      "branch": "喷气旅",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "喷气",
+        "重甲",
+        "燃烧"
+      ],
+      "classification_status": "建议",
+      "note": "Hulk 系列归重型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%96%B7%E6%B0%94%E6%97%85%E5%B7%A8%E5%9E%8B%E7%82%99%E7%82%8E%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Jet_Brigade_Hulk_Scorcher",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Jet_Brigade_Hulk_Scorcher_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Jet_Brigade_Hulk_Scorcher_Enemy_Icon.png/123px-Jet_Brigade_Hulk_Scorcher_Enemy_Icon.png?892744",
+      "image_sha256": "747193ed1b9bee8da442d832de21120fe05eef6d8d43fec56ec15a8327894571",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "喷气旅巨型碾压者",
+      "name_en": "Jet Brigade Hulk Bruiser",
+      "faction": "机器人",
+      "branch": "喷气旅",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "喷气",
+        "重甲",
+        "火箭"
+      ],
+      "classification_status": "建议",
+      "note": "Hulk 系列归重型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%96%B7%E6%B0%94%E6%97%85%E5%B7%A8%E5%9E%8B%E7%A2%BE%E5%8E%8B%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Jet_Brigade_Hulk_Bruiser",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Jet_Brigade_Hulk_Bruiser_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Jet_Brigade_Hulk_Bruiser_Enemy_Icon.png/123px-Jet_Brigade_Hulk_Bruiser_Enemy_Icon.png?2da7be",
+      "image_sha256": "04f470f779463ca159365681bfa97332d67263a88ef38782e8bdc8408b43e6ea",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "炙焰装甲兵",
+      "name_en": "Pyro Trooper",
+      "faction": "机器人",
+      "branch": "炽灼部队",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "燃烧",
+        "燃料背包"
+      ],
+      "classification_status": "建议",
+      "note": "轻步兵型号，近距离危险另用燃烧标签表达。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%82%99%E7%84%B0%E8%A3%85%E7%94%B2%E5%85%B5",
+      "source_en": "https://helldivers.wiki.gg/wiki/Pyro_Trooper",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Pyro_Trooper_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Pyro_Trooper_Enemy_Icon.png/123px-Pyro_Trooper_Enemy_Icon.png?4d7361",
+      "image_sha256": "0a2269782b59a802fbd38a5dbb6d8e1fe12204676fb6efdda186d2019c15af37",
+      "image_size": [
+        123,
+        152
+      ]
+    },
+    {
+      "name_zh": "燃烧火箭奇袭者",
+      "name_en": "Incendiary Rocket Raider",
+      "faction": "机器人",
+      "branch": "炽灼部队",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "燃烧",
+        "火箭"
+      ],
+      "classification_status": "建议",
+      "note": "继承火箭奇袭者主类。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%87%83%E7%83%A7%E7%81%AB%E7%AE%AD%E5%A5%87%E8%A2%AD%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Incendiary_Rocket_Raider",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Incendiary_Rocket_Raider_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Incendiary_Rocket_Raider_Enemy_Icon.png/123px-Incendiary_Rocket_Raider_Enemy_Icon.png?f68829",
+      "image_sha256": "ea7b71c9916a64eeec06070ced28d6eb9292b34ddfc250f3d0b3e9dacf15a534",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "燃烧机枪蹂躏者",
+      "name_en": "Incendiary MG Devastator",
+      "faction": "机器人",
+      "branch": "炽灼部队",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "盾牌",
+        "燃烧",
+        "压制"
+      ],
+      "classification_status": "建议",
+      "note": "沿用盾牌与燃烧武器单位的精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%87%83%E7%83%A7%E6%9C%BA%E6%9E%AA%E8%B9%82%E8%BA%8F%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Incendiary_MG_Devastator",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Incendiary_MG_Devastator_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Incendiary_MG_Devastator_Enemy_Icon.png/123px-Incendiary_MG_Devastator_Enemy_Icon.png?2715ed",
+      "image_sha256": "f64664bc7d475a2f117415fca4d6a9c01875337c75f7029d4f64f08d462efc77",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "烈火蹂躏者",
+      "name_en": "Conflagration Devastator",
+      "faction": "机器人",
+      "branch": "炽灼部队",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "盾牌",
+        "燃烧",
+        "霰弹"
+      ],
+      "classification_status": "建议",
+      "note": "盾牌加燃烧聚变霰弹枪；与喷火器 Hulk 区分。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%83%88%E7%81%AB%E8%B9%82%E8%BA%8F%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Conflagration_Devastator",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Conflagration_Devastator_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Conflagration_Devastator_Enemy_Icon.png/123px-Conflagration_Devastator_Enemy_Icon.png?d40273",
+      "image_sha256": "9f77546440e1a818f5479ba57c80f198027db062a4d4971858da5ed41c22bb21",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "巨型烈焰轰炸者",
+      "name_en": "Hulk Firebomber",
+      "faction": "机器人",
+      "branch": "炽灼部队",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "重甲",
+        "燃烧",
+        "榴弹"
+      ],
+      "classification_status": "建议",
+      "note": "喷火器与燃烧榴弹的 Hulk；不是带盾蹂躏者。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%B7%A8%E5%9E%8B%E7%83%88%E7%84%B0%E8%BD%B0%E7%82%B8%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Hulk_Firebomber",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Hulk_Firebomber_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Hulk_Firebomber_Enemy_Icon.png/123px-Hulk_Firebomber_Enemy_Icon.png?1545c2",
+      "image_sha256": "d810582a163911f1da192f25bc40d5d35b28883932a72767ee4fcd44d9aeae6e",
+      "image_size": [
+        123,
+        115
+      ]
+    },
+    {
+      "name_zh": "激进先锋",
+      "name_en": "Radical",
+      "faction": "机器人",
+      "branch": "生化人军团",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "霰弹",
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "沿用前轮的中型精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%BF%80%E8%BF%9B%E5%85%88%E9%94%8B",
+      "source_en": "https://helldivers.wiki.gg/wiki/Radical",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Radical_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Radical_Enemy_Icon.png/123px-Radical_Enemy_Icon.png?a4336c",
+      "image_sha256": "5b861221c26fb91d159069dc67f832c0fa8332b1a4545dac733024e0cbb53e7e",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "惑乱者",
+      "name_en": "Agitator",
+      "faction": "机器人",
+      "branch": "生化人军团",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "指挥",
+        "强化部队"
+      ],
+      "classification_status": "建议",
+      "note": "沿用前轮的中型精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%83%91%E4%B9%B1%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Agitator",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Agitator_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Agitator_Enemy_Icon.png/123px-Agitator_Enemy_Icon.png?5e6d2c",
+      "image_sha256": "158f79b967658e30bb2a0f4db1b6a8b39b67370d72f13f46899583d91b4edbe2",
+      "image_size": [
+        123,
+        130
+      ]
+    },
+    {
+      "name_zh": "噪轰引擎",
+      "name_en": "Vox Engine",
+      "faction": "机器人",
+      "branch": "生化人军团",
+      "main_class": "巨型",
+      "subclass": "",
+      "display_class": "巨型",
+      "tags": [
+        "机甲",
+        "导弹",
+        "机炮"
+      ],
+      "classification_status": "已确认",
+      "note": "按用户指定归巨型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%99%AA%E8%BD%B0%E5%BC%95%E6%93%8E",
+      "source_en": "https://helldivers.wiki.gg/wiki/Vox_Engine",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Vox_Engine_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Vox_Engine_Enemy_Icon.png/123px-Vox_Engine_Enemy_Icon.png?bedff5",
+      "image_sha256": "3f4f9e32afcc8c6893da491ee7b164d883277ef735cdc49ef6fda0bdec0449bd",
+      "image_size": [
+        123,
+        112
+      ]
+    },
+    {
+      "name_zh": "无票者",
+      "name_en": "Voteless",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "群体",
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "基础群体步兵。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%97%A0%E7%A5%A8%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Voteless",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Voteless_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Voteless_Enemy_Icon.png/123px-Voteless_Enemy_Icon.png?6b7d3a",
+      "image_sha256": "41c79caf179784090584243e2083c166ed040aba8327c6e07beca5b6f79b0d6a",
+      "image_size": [
+        123,
+        229
+      ]
+    },
+    {
+      "name_zh": "守望者",
+      "name_en": "Watcher",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "飞行",
+        "电弧",
+        "报警"
+      ],
+      "classification_status": "建议",
+      "note": "无人机本身脆弱，报警用标签表达。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%AE%88%E6%9C%9B%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Watcher",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Watcher_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Watcher_Enemy_Icon.png/123px-Watcher_Enemy_Icon.png?96b0d8",
+      "image_sha256": "716bc7e07d55e4fc4659b744b58749b3ee91298520a09ca379dd37f606b2405c",
+      "image_size": [
+        123,
+        97
+      ]
+    },
+    {
+      "name_zh": "监视者",
+      "name_en": "Overseer",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "护盾",
+        "近战",
+        "等离子"
+      ],
+      "classification_status": "建议",
+      "note": "沿用前轮的中型精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%9B%91%E8%A7%86%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Overseer",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Overseer_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Overseer_Enemy_Icon.png/123px-Overseer_Enemy_Icon.png?f19e78",
+      "image_sha256": "8860df5d58bdff15fbd2232e576ec727b849caca9096dc1820de504cde8b136c",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "崇高监视者",
+      "name_en": "Elevated Overseer",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "飞行",
+        "等离子"
+      ],
+      "classification_status": "建议",
+      "note": "沿用前轮的中型精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%B4%87%E9%AB%98%E7%9B%91%E8%A7%86%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Elevated_Overseer",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Elevated_Overseer_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Elevated_Overseer_Enemy_Icon.png/123px-Elevated_Overseer_Enemy_Icon.png?618075",
+      "image_sha256": "11de29b0a5a1e0fa66d5c63f20515dccd4a8da523ecd3dced43b6eee3cd41525",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "新月监视者",
+      "name_en": "Crescent Overseer",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "等离子",
+        "炮击"
+      ],
+      "classification_status": "建议",
+      "note": "沿用前轮的中型精英建议。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%96%B0%E6%9C%88%E7%9B%91%E8%A7%86%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Crescent_Overseer",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Crescent_Overseer_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Crescent_Overseer_Enemy_Icon.png/123px-Crescent_Overseer_Enemy_Icon.png?7e455c",
+      "image_sha256": "ad4063504cbf24adb7826e6c22a691e548d93586617cf069fde589b7e543c304",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "肉瘤体",
+      "name_en": "Fleshmob",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "血肉聚合",
+        "冲撞"
+      ],
+      "classification_status": "已确认",
+      "note": "重型依据生命值与近战威胁；无甲不自动归轻型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%82%89%E7%98%A4%E4%BD%93",
+      "source_en": "https://helldivers.wiki.gg/wiki/Fleshmob",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Fleshmob_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Fleshmob_Enemy_Icon.png/123px-Fleshmob_Enemy_Icon.png?886d74",
+      "image_sha256": "35fbcb55e41755c2aa086b000e53e04830c7cb2ae9b904f296b73d68bfb95e9a",
+      "image_size": [
+        123,
+        91
+      ]
+    },
+    {
+      "name_zh": "猎杀器",
+      "name_en": "Harvester",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "护盾",
+        "光束",
+        "电弧"
+      ],
+      "classification_status": "建议",
+      "note": "建议归重型；按作战门槛，不因三足外形归巨型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%8C%8E%E6%9D%80%E5%99%A8",
+      "source_en": "https://helldivers.wiki.gg/wiki/Harvester",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Harvester_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Harvester_Enemy_Icon.png/123px-Harvester_Enemy_Icon.png?127c0a",
+      "image_sha256": "ad6d3d0a0ff697e1ed6668993074c14257e2c05e3957bacedd4c7810e3a8771b",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "刺魟",
+      "name_en": "Stingray",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "中型",
+      "subclass": "精英",
+      "display_class": "中型精英",
+      "tags": [
+        "飞行",
+        "空中扫射"
+      ],
+      "classification_status": "已确认",
+      "note": "按本轮确认归中型精英。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%88%BA%E9%AD%9F",
+      "source_en": "https://helldivers.wiki.gg/wiki/Stingray",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Stingray_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Stingray_Enemy_Icon.png/123px-Stingray_Enemy_Icon.png?c3256c",
+      "image_sha256": "cf385ad5dcd6b19aa262d3bc91ada3967e8f60fae2e916bd68f586d145e893ab",
+      "image_size": [
+        123,
+        69
+      ]
+    },
+    {
+      "name_zh": "穿梭舰",
+      "name_en": "Warp Ship",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "飞行",
+        "运输",
+        "增援"
+      ],
+      "classification_status": "建议",
+      "note": "空中增援舰；地面停泊穿梭舰另属设施。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%A9%BF%E6%A2%AD%E8%88%B0",
+      "source_en": "https://helldivers.wiki.gg/wiki/Warp_Ship",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Warp_Ship_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Warp_Ship_Enemy_Icon.png/123px-Warp_Ship_Enemy_Icon.png?fd5819",
+      "image_sha256": "f47601e919cd91556725465d7e9962c76ec0da170285c6a86b649830dce917a4",
+      "image_size": [
+        123,
+        69
+      ]
+    },
+    {
+      "name_zh": "利维坦",
+      "name_en": "Leviathan",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "巨型",
+      "subclass": "",
+      "display_class": "巨型",
+      "tags": [
+        "飞行",
+        "光束",
+        "轰炸"
+      ],
+      "classification_status": "已确认",
+      "note": "按用户指定归巨型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%88%A9%E7%BB%B4%E5%9D%A6",
+      "source_en": "https://helldivers.wiki.gg/wiki/Leviathan",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Leviathan_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Leviathan_Enemy_Icon.png/123px-Leviathan_Enemy_Icon.png?cc7ccf",
+      "image_sha256": "d6f0525b8144af0767a7182b00dffc0a1e508f04811014b18d4baf541f27c2a9",
+      "image_size": [
+        123,
+        123
+      ]
+    },
+    {
+      "name_zh": "光能者统御舰",
+      "name_en": "Illuminate Overship",
+      "faction": "光能者",
+      "branch": "常规",
+      "main_class": "BOSS",
+      "subclass": "",
+      "display_class": "BOSS",
+      "tags": [
+        "母舰",
+        "护盾",
+        "任务目标"
+      ],
+      "classification_status": "已确认",
+      "note": "只统计任务中的可摧毁实例；天空背景模型不计。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%85%89%E8%83%BD%E8%80%85%E7%BB%9F%E5%BE%A1%E8%88%B0",
+      "source_en": "https://helldivers.wiki.gg/wiki/Illuminate_Overship",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Illuminate_Overship_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Illuminate_Overship_Enemy_Icon.png/123px-Illuminate_Overship_Enemy_Icon.png?a0005f",
+      "image_sha256": "7072b51263a222a970f1093be59ae4220360afcc5e35620461f287a1da03290a",
+      "image_size": [
+        123,
+        148
+      ],
+      "classification_edited_at": "2026-10-09T07:04:56.429Z"
+    },
+    {
+      "name_zh": "证真者",
+      "name_en": "Veracitor",
+      "faction": "光能者",
+      "branch": "占领者",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "护盾",
+        "近战",
+        "载人机甲"
+      ],
+      "classification_status": "建议",
+      "note": "虽有中甲可击部位，按耐久与大型机甲角色暂归重型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E8%AF%81%E7%9C%9F%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Veracitor",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Veracitor_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Veracitor_Enemy_Icon.png/123px-Veracitor_Enemy_Icon.png?456e79",
+      "image_sha256": "2074bfd5f47b5cb181693cc822c609ccfb2aa0c7104bbef984b4bd69bfa6f94c",
+      "image_size": [
+        123,
+        86
+      ]
+    },
+    {
+      "name_zh": "御门者",
+      "name_en": "Gatekeeper",
+      "faction": "光能者",
+      "branch": "占领者",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "护盾",
+        "重甲",
+        "等离子"
+      ],
+      "classification_status": "建议",
+      "note": "有重甲与护盾的载人机甲，暂归重型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E5%BE%A1%E9%97%A8%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Gatekeeper",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Gatekeeper_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Gatekeeper_Enemy_Icon.png/123px-Gatekeeper_Enemy_Icon.png?ac7e7b",
+      "image_sha256": "2601a6ee7498941a17d11b04da8557fcbc8cf0bdb47cba3288a5fbfa5b3366f2",
+      "image_size": [
+        123,
+        98
+      ]
+    },
+    {
+      "name_zh": "突入者",
+      "name_en": "Obtruder",
+      "faction": "光能者",
+      "branch": "占领者",
+      "main_class": "轻型",
+      "subclass": "",
+      "display_class": "轻型",
+      "tags": [
+        "飞行",
+        "蜂群",
+        "等离子"
+      ],
+      "classification_status": "建议",
+      "note": "蜂群无人机，暂归轻型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%AA%81%E5%85%A5%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Obtruder",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Obtruder.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Obtruder.png/123px-Obtruder.png?a90eeb",
+      "image_sha256": "ff233703c645c686f637069c96a24ce918bb8dccffa763dac63dc25493aa96f8",
+      "image_size": [
+        123,
+        106
+      ]
+    },
+    {
+      "name_zh": "悲怜体",
+      "name_en": "Wretch",
+      "faction": "光能者",
+      "branch": "窃票者",
+      "main_class": "中型",
+      "subclass": "",
+      "display_class": "中型",
+      "tags": [
+        "高速",
+        "扑击",
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "普通中型近战单位；不因敏捷自动标为精英。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E6%82%B2%E6%80%9C%E4%BD%93",
+      "source_en": "https://helldivers.wiki.gg/wiki/Wretch",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Wretch_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Wretch_Enemy_Icon.png/123px-Wretch_Enemy_Icon.png?bfc8b8",
+      "image_sha256": "8553e1935914801fc684974327bbc3417160f0de8908a0cbc787d8e172953a73",
+      "image_size": [
+        123,
+        141
+      ]
+    },
+    {
+      "name_zh": "粉碎者",
+      "name_en": "Crusher",
+      "faction": "光能者",
+      "branch": "窃票者",
+      "main_class": "重型",
+      "subclass": "",
+      "display_class": "重型",
+      "tags": [
+        "再生",
+        "重甲头盔",
+        "近战"
+      ],
+      "classification_status": "建议",
+      "note": "与肉瘤体分行；按耐久与再生能力归重型。",
+      "source_zh": "https://helldivers.wiki.gg/zh/wiki/%E7%B2%89%E7%A2%8E%E8%80%85",
+      "source_en": "https://helldivers.wiki.gg/wiki/Crusher",
+      "image_source": "https://helldivers.wiki.gg/zh/wiki/File:Crusher_Enemy_Icon.png",
+      "image_url": "https://helldivers.wiki.gg/images/thumb/Crusher_Enemy_Icon.png/123px-Crusher_Enemy_Icon.png?5b5c38",
+      "image_sha256": "d76e85ad401e47dcb9d44081a4028356a90549ee745cd71522b47f7ab2ba2b66",
+      "image_size": [
+        123,
+        123
+      ]
+    }
+  ],
+  "classification_revision": {
+    "source_file": "HD2-敌军定位表-2026-10-09.json",
+    "exported_on": "2026-10-09T07:06:17.083Z",
+    "source_sha256": "10c6b428f693d21be2eadcc5fc03cbefdc45a8250d4e7ea1b4b0da93f15b3857",
+    "changed_units": 6,
+    "note_corrections": {
+      "Gunship": "按用户修订归普通中型；中甲空中目标。",
+      "Jet Brigade Devastator": "按用户修订归普通中型；喷气能力作为标签。"
+    }
+  }
+}

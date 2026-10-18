@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "runtime_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+  "policy": "exact_mounted_weapon_resource_projectile_branch_no_vehicle_ownership_inference",
+  "evidence": [
+    {
+      "file": "domains/vehicle_weapon_authoring.lua",
+      "sha256": "b37d222407c9f8261f73b85da483507c5a388d8d33755b6c6ae12eaad0efedd1"
+    },
+    {
+      "file": "sdk/VehicleWeaponCapabilities.json",
+      "sha256": "1b95a4a924b280912049f79f543c1d0edde269b7d5110d4d2ddc56a4983c6a41"
+    },
+    {
+      "file": "sdk/docs/vehicle-weapons.md",
+      "sha256": "7408f488c1f62acbbfffa9c1eea83449fb06be8eb97996443aa979b3f403cdc0"
+    }
+  ],
+  "sources": {
+    "1FA1F596769225C2": {
+      "name": "TD-220 Bastion MK XVI / attach_tank_gun",
+      "name_zh": "TD-220 堡垒 · 主炮",
+      "kind": "stratagem",
+      "branch": "Projectile",
+      "vehicle": "TD-220 Bastion MK XVI",
+      "resource_hash": "1FA1F596769225C2",
+      "attack_resource_hash": "1FA1F596769225C2",
+      "mount_path_hash": "1FA1F596769225C2",
+      "carrier_resource_hash": "16474112801385B6"
+    },
+    "439F9E65C18567DA": {
+      "name": "TD-220 Bastion MK XVI / attach_tank_gun_mg",
+      "name_zh": "TD-220 堡垒 · 同轴机枪",
+      "kind": "stratagem",
+      "branch": "Projectile",
+      "vehicle": "TD-220 Bastion MK XVI",
+      "resource_hash": "439F9E65C18567DA",
+      "attack_resource_hash": "439F9E65C18567DA",
+      "mount_path_hash": "439F9E65C18567DA",
+      "carrier_resource_hash": "16474112801385B6"
+    },
+    "16474112801385B6": {
+      "name": "TD-220 Bastion MK XVI",
+      "name_zh": "TD-220 堡垒 MK XVI",
+      "kind": "stratagem",
+      "branch": "Projectile",
+      "vehicle": "TD-220 Bastion MK XVI",
+      "resource_hash": "16474112801385B6",
+      "source_resolution": "carrier_resource_alias",
+      "mounted_projectile_resources": [
+        "1FA1F596769225C2",
+        "439F9E65C18567DA"
+      ],
+      "basis": "both_native_mountChains_vehicleResource_same_exact_carrier_and_Projectile_attacks",
+      "carrier_contact_source_observed_in_game": false
+    }
+  }
+}

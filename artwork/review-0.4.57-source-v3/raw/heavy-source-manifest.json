@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "retrieval": "browser pageAssets bundle of actual rendered game images; no AI",
+  "items": [
+    {
+      "key": "veracitor",
+      "name": "反重",
+      "unit": "证真者",
+      "source_url": "https://helldivers.wiki.gg/images/Veracitor_Enemy_Icon.png?456e79",
+      "raw": "heavy-veracitor.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        1436
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "1e6fb8aa8829a851097d29f57628e110c5409128811793fb9384d9d9fafda767"
+    },
+    {
+      "key": "gatekeeper",
+      "name": "反重",
+      "unit": "御门者",
+      "source_url": "https://helldivers.wiki.gg/images/Gatekeeper_Enemy_Icon.png?ac7e7b",
+      "raw": "heavy-gatekeeper.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        1631
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "7be2821c0ed90856e16c439bdec97bc7ef793d5eadcd682a9cf90099f8e96223"
+    },
+    {
+      "key": "fleshmob",
+      "name": "反重",
+      "unit": "肉瘤体",
+      "source_url": "https://helldivers.wiki.gg/images/Fleshmob_Enemy_Icon.png?886d74",
+      "raw": "heavy-fleshmob.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        1515
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "8810e47925d595dad5290964be524dd69796e2cacac8d61a9bfd6d5d77fe8921"
+    },
+    {
+      "key": "crusher",
+      "name": "反重",
+      "unit": "粉碎者",
+      "source_url": "https://helldivers.wiki.gg/images/Crusher_Enemy_Icon.png?5b5c38",
+      "raw": "heavy-crusher.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        2048
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "4e2c4096d522c3dbedf1462f7fbd38c0da88ed089a193205ea0a038ab0db8893"
+    },
+    {
+      "key": "harvester",
+      "name": "反重",
+      "unit": "猎杀器",
+      "source_url": "https://helldivers.wiki.gg/images/Harvester_Enemy_Icon.png?127c0a",
+      "raw": "heavy-harvester.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2200,
+        2200
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "36052b9f7d322edee3d6b326875161ec6dd734fd09ec178aad14923d66fcd1ed"
+    },
+    {
+      "key": "war-strider",
+      "name": "反重",
+      "unit": "战争纵步者",
+      "source_url": "https://helldivers.wiki.gg/images/War_Strider_Enemy_Icon.png?3f3211",
+      "raw": "heavy-war-strider.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        2048
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "b8c472361d83ddfe71f2d1614f43804c8a4b4e9b277804f65102654a46ee838f"
+    }
+  ]
+}

@@ -1,0 +1,816 @@
+{
+  "revision": "ledger_hit_install_package_v2",
+  "abi": 1,
+  "record_bytes": 96,
+  "queue_header_bytes": 64,
+  "arena_header_bytes": 64,
+  "arena_row_bytes": 640,
+  "arena_capacity": 32,
+  "max_probes": 8,
+  "max_drain": 64,
+  "arena_fields": {
+    "capacity": 0,
+    "row_stride": 4,
+    "epoch": 8,
+    "peer": 16,
+    "contact_counter": 24,
+    "rejected_u64": 32,
+    "enabled": 40,
+    "active_u32": 44,
+    "rows_pointer": 48,
+    "configure_lock": 56,
+    "configuration_generation_u32": 60
+  },
+  "consumer_entry": "drain",
+  "coverage_complete": false,
+  "arena_rejections_mean_partial": true,
+  "sites": [
+    {
+      "name": "contact_begin",
+      "rva": 20632808,
+      "pin_hex": "e8c350efff",
+      "replace_bytes": 5,
+      "patch_kind": "E8_CALL",
+      "original_rva": 19539376
+    },
+    {
+      "name": "default_delta",
+      "rva": 19516092,
+      "pin_hex": "f3410f5cc1",
+      "replace_bytes": 5,
+      "patch_kind": "E8_CALL",
+      "original_rva": null
+    },
+    {
+      "name": "custom_curve",
+      "rva": 19516127,
+      "pin_hex": "e85cfeffff",
+      "replace_bytes": 5,
+      "patch_kind": "E8_CALL",
+      "original_rva": 19515712
+    },
+    {
+      "name": "ap_result",
+      "rva": 19516257,
+      "pin_hex": "f30f117704",
+      "replace_bytes": 5,
+      "patch_kind": "E8_CALL",
+      "original_rva": null
+    },
+    {
+      "name": "normal_final",
+      "rva": 20633739,
+      "pin_hex": "e8a004efff",
+      "replace_bytes": 5,
+      "patch_kind": "E8_CALL",
+      "original_rva": 19520816
+    },
+    {
+      "name": "physical_success",
+      "rva": 20648404,
+      "pin_hex": "32c088451c",
+      "replace_bytes": 5,
+      "patch_kind": "E8_CALL",
+      "original_rva": null
+    },
+    {
+      "name": "iteration_end",
+      "rva": 20632020,
+      "pin_hex": "8b442474ffc0",
+      "replace_bytes": 6,
+      "patch_kind": "E8_CALL_NOP",
+      "original_rva": null
+    }
+  ],
+  "entries": [
+    {
+      "name": "contact_begin",
+      "code_hex": "555657488da424e0feffff4889e5488984242000000048898c242800000048899424300000004c898424380000004c898c24400000004c899424480000004c899c24500000000f298424600000000f298c24700000000f299424800000000f299c24900000000f29a424a00000000f29ac24b00000000fae9c24c00000009f88a424c80000000f908424c9000000c78424d00000000000000048b800000000000000008b503cf6c2010f8562000000899424d8000000837828010f8551000000f0ff402c3b503c0f850a000000837828010f8409000000f0ff482ce931000000c78424d00000000100000048b90000000000000000488b9424300000004c8d84244001000048b80000000000000000ffd083bc24d0000000010f850e00000048b80000000000000000f0ff482c0fae9424c00000000f288424600000000f288c24700000000f289424800000000f289c24900000000f28a424a00000000f28ac24b0000000488b8c2428000000488b9424300000004c8b8424380000004c8b8c24400000004c8b9424480000004c8b9c24500000008a8424c9000000047f8aa424c80000009e488b842420000000488da5200100005f5e5dff25000000000000000000000000",
+      "relocations": [
+        {
+          "offset": 155,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 237,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 263,
+          "width": 8,
+          "address_key": "begin",
+          "addend": 0
+        },
+        {
+          "offset": 289,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 446,
+          "width": 8,
+          "address_key": "original_contact_begin",
+          "addend": 0
+        }
+      ],
+      "unwind_hex": "010e06050e030b012400037002600150",
+      "executable_length": 446,
+      "entry_offset": 0,
+      "frame_allocation": 288,
+      "frame_register": "RBP",
+      "original_parent_unwind_unchanged": true
+    },
+    {
+      "name": "default_delta",
+      "code_hex": "555657488da424e0feffff4889e5488984242000000048898c242800000048899424300000004c898424380000004c898c24400000004c899424480000004c899c24500000000f298424600000000f298c24700000000f299424800000000f299c24900000000f29a424a00000000f29ac24b00000000fae9c24c00000009f88a424c80000000f908424c9000000c78424d00000000000000048b800000000000000008b503cf6c2010f859a000000899424d8000000837828010f8589000000f0ff402c3b503c0f850a000000837828010f8409000000f0ff482ce969000000c78424d00000000100000048b900000000000000004889da4531c048b80000000000000000ffd04885c00f84390000004889c68b467085c00f841c00000083f8010f8413000000c7466404000000c7465800000000e90f000000c7467001000000834e5810836638fb83bc24d0000000010f850e00000048b80000000000000000f0ff482c0fae9424c00000000f288424600000000f288c24700000000f289424800000000f289c24900000000f28a424a00000000f28ac24b0000000488b8c2428000000488b9424300000004c8b8424380000004c8b8c24400000004c8b9424480000004c8b9c24500000008a8424c9000000047f8aa424c80000009e488b842420000000f3410f5cc1488da5200100005f5e5dc3",
+      "relocations": [
+        {
+          "offset": 155,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 237,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 253,
+          "width": 8,
+          "address_key": "lookup",
+          "addend": 0
+        },
+        {
+          "offset": 345,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        }
+      ],
+      "unwind_hex": "010e06050e030b012400037002600150",
+      "executable_length": 502,
+      "entry_offset": 0,
+      "frame_allocation": 288,
+      "frame_register": "RBP",
+      "original_parent_unwind_unchanged": true
+    },
+    {
+      "name": "custom_curve",
+      "code_hex": "555657488da424e0feffff4889e5488984242000000048898c242800000048899424300000004c898424380000004c898c24400000004c899424480000004c899c24500000000f298424600000000f298c24700000000f299424800000000f299c24900000000f29a424a00000000f29ac24b00000000fae9c24c00000009f88a424c80000000f908424c9000000c78424d00000000000000048b800000000000000008b503cf6c2010f859e000000899424d8000000837828010f858d000000f0ff402c3b503c0f850a000000837828010f8409000000f0ff482ce96d000000c78424d00000000100000048b900000000000000004889da4531c048b80000000000000000ffd04885c00f843d0000004889c68b467085c00f841c00000083f8020f8413000000c7466404000000c7465800000000e913000000c7467002000000834e5810836638fb834e380483bc24d0000000010f850e00000048b80000000000000000f0ff482c0fae9424c00000000f288424600000000f288c24700000000f289424800000000f289c24900000000f28a424a00000000f28ac24b0000000488b8c2428000000488b9424300000004c8b8424380000004c8b8c24400000004c8b9424480000004c8b9c24500000008a8424c9000000047f8aa424c80000009e488b842420000000488da5200100005f5e5dff25000000000000000000000000",
+      "relocations": [
+        {
+          "offset": 155,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 237,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 253,
+          "width": 8,
+          "address_key": "lookup",
+          "addend": 0
+        },
+        {
+          "offset": 349,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 506,
+          "width": 8,
+          "address_key": "original_custom_curve",
+          "addend": 0
+        }
+      ],
+      "unwind_hex": "010e06050e030b012400037002600150",
+      "executable_length": 506,
+      "entry_offset": 0,
+      "frame_allocation": 288,
+      "frame_register": "RBP",
+      "original_parent_unwind_unchanged": true
+    },
+    {
+      "name": "ap_result",
+      "code_hex": "555657488da424e0feffff4889e5488984242000000048898c242800000048899424300000004c898424380000004c898c24400000004c899424480000004c899c24500000000f298424600000000f298c24700000000f299424800000000f299c24900000000f29a424a00000000f29ac24b00000000fae9c24c00000009f88a424c80000000f908424c9000000c78424d00000000000000048b800000000000000008b503cf6c2010f85df000000899424d8000000837828010f85ce000000f0ff402c3b503c0f850a000000837828010f8409000000f0ff482ce9ae000000c78424d00000000100000048b900000000000000004889da4531c048b80000000000000000ffd04885c00f847e0000004889c6837e64010f8571000000f3440f115640f3440f114e44f30f117648488b8310010000488946108b432089462c8b83800000008946308b83000100008946348b038946508b8424c00000000d801f0000898424c40000000fae9424c4000000f3410f10c2f3410f5cc1f30f11465c814e588c000000c746640200000083bc24d0000000010f850e00000048b80000000000000000f0ff482c0fae9424c00000000f288424600000000f288c24700000000f289424800000000f289c24900000000f28a424a00000000f28ac24b0000000488b8c2428000000488b9424300000004c8b8424380000004c8b8c24400000004c8b9424480000004c8b9c24500000008a8424c9000000047f8aa424c80000009e488b842420000000f30f117704488da5200100005f5e5dc3",
+      "relocations": [
+        {
+          "offset": 155,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 237,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 253,
+          "width": 8,
+          "address_key": "lookup",
+          "addend": 0
+        },
+        {
+          "offset": 414,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        }
+      ],
+      "unwind_hex": "010e06050e030b012400037002600150",
+      "executable_length": 571,
+      "entry_offset": 0,
+      "frame_allocation": 288,
+      "frame_register": "RBP",
+      "original_parent_unwind_unchanged": true
+    },
+    {
+      "name": "normal_final",
+      "code_hex": "555657488da424e0feffff4889e5488984242000000048898c242800000048899424300000004c898424380000004c898c24400000004c899424480000004c899c24500000000f298424600000000f298c24700000000f299424800000000f299c24900000000f29a424a00000000f29ac24b00000000fae9c24c00000009f88a424c80000000f908424c9000000c78424d00000000000000048b800000000000000008b503cf6c2010f85cd010000899424d8000000837828010f85bc010000f0ff402c3b503c0f850a000000837828010f8409000000f0ff482ce99c010000c78424d00000000100000048b90000000000000000488b9424380000004531c048b80000000000000000ffd04885c00f84670100004889c64c8b942438000000837e64020f8563000000498b8210010000483b46100f854b000000418b42203b462c0f853e000000418b82800000003b46300f852e000000418b82000100003b46340f851e000000418b023b46500f8512000000418b42503b46440f8505000000e907000000c74658000000004c8b9424380000004c8b9c2430000000498b821001000048894610418b422089462c418b8280000000894630418b8200010000894634418b02894650418b4250894644418b4304894648418b0389464cc7466403000000c7465400000000836658bf834e5823836638fc41807a73000f8404000000834e3801488b842420000000f680fc000000010f8404000000834e3802c7463c0100000048b80000000000000000488b4e10483b48100f852500000048b90000000000000000488b094885c90f840f0000004889f248b80000000000000000ffd048b900000000000000004889f248b80000000000000000ffd083bc24d0000000010f850e00000048b80000000000000000f0ff482c0fae9424c00000000f288424600000000f288c24700000000f289424800000000f289c24900000000f28a424a00000000f28ac24b0000000488b8c2428000000488b9424300000004c8b8424380000004c8b8c24400000004c8b9424480000004c8b9c24500000008a8424c9000000047f8aa424c80000009e488b842420000000488da5200100005f5e5dff25000000000000000000000000",
+      "relocations": [
+        {
+          "offset": 155,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 237,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 258,
+          "width": 8,
+          "address_key": "lookup",
+          "addend": 0
+        },
+        {
+          "offset": 552,
+          "width": 8,
+          "address_key": "bridge",
+          "addend": 0
+        },
+        {
+          "offset": 576,
+          "width": 8,
+          "address_key": "entity_manager_global",
+          "addend": 0
+        },
+        {
+          "offset": 601,
+          "width": 8,
+          "address_key": "qualifier",
+          "addend": 0
+        },
+        {
+          "offset": 613,
+          "width": 8,
+          "address_key": "bridge",
+          "addend": 0
+        },
+        {
+          "offset": 626,
+          "width": 8,
+          "address_key": "publish",
+          "addend": 0
+        },
+        {
+          "offset": 652,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 809,
+          "width": 8,
+          "address_key": "original_normal_final",
+          "addend": 0
+        }
+      ],
+      "unwind_hex": "010e06050e030b012400037002600150",
+      "executable_length": 809,
+      "entry_offset": 0,
+      "frame_allocation": 288,
+      "frame_register": "RBP",
+      "original_parent_unwind_unchanged": true
+    },
+    {
+      "name": "physical_success",
+      "code_hex": "555657488da424e0feffff4889e5488984242000000048898c242800000048899424300000004c898424380000004c898c24400000004c899424480000004c899c24500000000f298424600000000f298c24700000000f299424800000000f299c24900000000f29a424a00000000f29ac24b00000000fae9c24c00000009f88a424c80000000f908424c9000000c78424d00000000000000048b800000000000000008b503cf6c2010f8530010000899424d8000000837828010f851f010000f0ff402c3b503c0f850a000000837828010f8409000000f0ff482ce9ff000000c78424d00000000100000048b900000000000000004c89ea4531c048b80000000000000000ffd04885c00f84cf0000004889c64d89ea4c8b9c2430010000498b821001000048894610418b422089462c418b8280000000894630418b8200010000894634418b02894650418b4250894644418b4304894648418b0389464cc7466403000000c7465400000000836658bfc7465803000000c7463800000000c7463c0200000044897e2048b80000000000000000488b4e10483b48100f852500000048b90000000000000000488b094885c90f840f0000004889f248b80000000000000000ffd048b900000000000000004889f248b80000000000000000ffd083bc24d0000000010f850e00000048b80000000000000000f0ff482c0fae9424c00000000f288424600000000f288c24700000000f289424800000000f289c24900000000f28a424a00000000f28ac24b0000000488b8c2428000000488b9424300000004c8b8424380000004c8b8c24400000004c8b9424480000004c8b9c24500000008a8424c9000000047f8aa424c80000009e488b8424200000004c8b94243001000032c04188421c4c8b942448000000488da5200100005f5e5dc3",
+      "relocations": [
+        {
+          "offset": 155,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 237,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 253,
+          "width": 8,
+          "address_key": "lookup",
+          "addend": 0
+        },
+        {
+          "offset": 395,
+          "width": 8,
+          "address_key": "bridge",
+          "addend": 0
+        },
+        {
+          "offset": 419,
+          "width": 8,
+          "address_key": "entity_manager_global",
+          "addend": 0
+        },
+        {
+          "offset": 444,
+          "width": 8,
+          "address_key": "qualifier",
+          "addend": 0
+        },
+        {
+          "offset": 456,
+          "width": 8,
+          "address_key": "bridge",
+          "addend": 0
+        },
+        {
+          "offset": 469,
+          "width": 8,
+          "address_key": "publish",
+          "addend": 0
+        },
+        {
+          "offset": 495,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        }
+      ],
+      "unwind_hex": "010e06050e030b012400037002600150",
+      "executable_length": 669,
+      "entry_offset": 0,
+      "frame_allocation": 288,
+      "frame_register": "RBP",
+      "original_parent_unwind_unchanged": true
+    },
+    {
+      "name": "iteration_end",
+      "code_hex": "555657488da424e0feffff4889e5488984242000000048898c242800000048899424300000004c898424380000004c898c24400000004c899424480000004c899c24500000000f298424600000000f298c24700000000f299424800000000f299c24900000000f29a424a00000000f29ac24b00000000fae9c24c00000009f88a424c80000000f908424c9000000c78424d00000000000000048b800000000000000008b503cf6c2010f8569000000899424d8000000837828010f8558000000f0ff402c3b503c0f850a000000837828010f8409000000f0ff482ce938000000c78424d00000000100000048b90000000000000000488b9424300100004881c2800500004c8d84244001000048b80000000000000000ffd083bc24d0000000010f850e00000048b80000000000000000f0ff482c0fae9424c00000000f288424600000000f288c24700000000f289424800000000f289c24900000000f28a424a00000000f28ac24b0000000488b8c2428000000488b9424300000004c8b8424380000004c8b8c24400000004c8b9424480000004c8b9c24500000008a8424c9000000047f8aa424c80000009e488b8424200000008b8424b4010000ffc0488da5200100005f5e5dc3",
+      "relocations": [
+        {
+          "offset": 155,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 237,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        },
+        {
+          "offset": 270,
+          "width": 8,
+          "address_key": "end",
+          "addend": 0
+        },
+        {
+          "offset": 296,
+          "width": 8,
+          "address_key": "arena",
+          "addend": 0
+        }
+      ],
+      "unwind_hex": "010e06050e030b012400037002600150",
+      "executable_length": 457,
+      "entry_offset": 0,
+      "frame_allocation": 288,
+      "frame_register": "RBP",
+      "original_parent_unwind_unchanged": true
+    },
+    {
+      "name": "publish",
+      "code_hex": "5657488b4210483b41100f858800000031c041b801000000f0440fb141180f858a000000488b4208483b41080f855f0000008b411c3b41040f8369000000448b41244d6bc0604a8d7c01404889d64989c9b90c000000fcf348a54c89c948ff4128488b41284a894401408b4124ffc03b41040f820200000031c0894124ff411cc7411800000000b801000000e924000000c7411800000000f048ff4138b802000000e90e000000c7411800000000f048ff413031c05f5ec3",
+      "relocations": [],
+      "unwind_hex": "0102020002700160",
+      "executable_length": 184,
+      "entry_offset": 0
+    },
+    {
+      "name": "drain",
+      "code_hex": "56574585c00f84940000004183f8400f860600000041b84000000031c041ba01000000f0440fb151180f8570000000448b511c453bc20f86030000004589d04531db4585c00f84450000004989c98b4120486bc060488d7401404889d7b90c000000fcf348a54c89c94883c2608b4120ffc03b41040f820200000031c089412041ffc341ffc80f85c2ffffff4429591cc74118000000004489d8e90200000031c05f5ec3",
+      "relocations": [],
+      "unwind_hex": "0102020002700160",
+      "executable_length": 164,
+      "entry_offset": 0
+    },
+    {
+      "name": "configure",
+      "code_hex": "56574889ce4889d731c041ba01000000f0440fb157380f85ae000000837f3cfc0f879d000000f0ff473cc7472800000000837f2c000f858400000031c0f0440fb156180f8576000000837f2c000f85650000004c8946084c894e104c8947084c894f10c7461c00000000c7462000000000c74624000000004989fb488b7f30418b0b4869c95000000031c0fcf348abc74618000000008b44243883e00141894328f041ff433c41c7433800000000b801000000e914000000c7461800000000f0ff473cc747380000000031c05f5ec3",
+      "relocations": [],
+      "unwind_hex": "0102020002700160",
+      "executable_length": 207,
+      "entry_offset": 0
+    },
+    {
+      "name": "begin",
+      "code_hex": "5356574889ce4889d7837e28010f85860100004885ff0f847d0100004d85c00f847401000065488b042530000000448b48484489cb8b06ffc821c341ba080000004c69db800200004c035e30418b43604439c80f843300000085c00f8515000000f0450fb14b600f841f0000004439c80f8416000000ffc38b06ffc821c341ffca0f85baffffffe90d010000418b436485c00f842000000083f8030f8417000000493b7b680f85ee0000004d3b83700200000f85e10000004d89837002000041c743640000000041c7435800000000b801000000f0480fc1461848ffc04989c048c1e8204885c00f85ac00000049c743000000000049c743080000000049c743100000000049c743180000000049c743200000000049c743280000000049c743300000000049c743380000000049c743400000000049c743480000000049c743500000000049c7435800000000488b4608498943084d89432849897b1849897b6841c743700000000041c743400000c07f41c743440000c07f41c743480000c07f41c7435c0000c07f41c74364010000004c89d8e907000000f048ff462031c05f5e5bc3",
+      "relocations": [],
+      "unwind_hex": "010303000370026001300000",
+      "executable_length": 420,
+      "entry_offset": 0
+    },
+    {
+      "name": "lookup",
+      "code_hex": "5356574889ce4889d7837e28010f85830000004885ff0f847a00000065488b042530000000448b48484489cb8b06ffc821c341ba080000004c69db800200004c035e30418b43604439c80f841e00000085c00f843e000000ffc38b06ffc821c341ffca0f85cfffffffe928000000493b7b680f851e000000418b436483f8010f840900000083f8020f85080000004c89d8e907000000f048ff462031c05f5e5bc3",
+      "relocations": [],
+      "unwind_hex": "010303000370026001300000",
+      "executable_length": 161,
+      "entry_offset": 0
+    },
+    {
+      "name": "end",
+      "code_hex": "5356574889ce4889d7837e28010f859d0000004885ff0f84940000004d85c00f848b00000065488b042530000000448b48484489cb8b06ffc821c341ba080000004c69db800200004c035e30418b43604439c80f841e00000085c00f844f000000ffc38b06ffc821c341ffca0f85cfffffffe939000000493b7b680f852f0000004d3b83700200000f852200000041c743640000000049c743680000000041c7435800000000b801000000e907000000f048ff462031c05f5e5bc3",
+      "relocations": [],
+      "unwind_hex": "010303000370026001300000",
+      "executable_length": 187,
+      "entry_offset": 0
+    },
+    {
+      "name": "resolve",
+      "entry_offset": 0,
+      "code_hex": "4989ca4885c90f84d500000085d20f84cd000000458b8ab8aef1004585c90f84bd0000004181f9000010000f87b00000004489c841ffc94485c80f85a100000089d0410faf82c0aef1004421c84d8b82b0aef1004d85c00f8484000000b908000000458b1cc04139d30f841f000000453b9abcaef1000f8465000000ffc04421c8ffc90f85d9ffffffe953000000458b5cc0044181fb000010000f83410000004d6bdb184f8d9c1a182ff300413953080f852b000000498b03413953080f851e0000004d3b82b0aef1000f851100000041ffc1453b8ab8aef1000f8501000000c331c0c3",
+      "executable_length": 228,
+      "relocations": [],
+      "unwind_hex": "01000000"
+    },
+    {
+      "name": "allow",
+      "entry_offset": 0,
+      "code_hex": "4585c00f844b0000004181f8000400000f873e0000004531c94539c10f83320000004489c04429c8d1e84401c8483b14c10f84170000000f8209000000448d4801e9d3ffffff4189c0e9cbffffffb801000000c331c0c3",
+      "executable_length": 87,
+      "relocations": [],
+      "unwind_hex": "01000000"
+    },
+    {
+      "name": "qualifier",
+      "entry_offset": 0,
+      "code_hex": "56574883ec284889cf4889d6816658bffeffffc74654000000004889f98b562c48b80000000000000000ffd04885c00f84350000004889c248b9000000000000000041b86f00000048b80000000000000000ffd085c00f840e000000814e5840000000c74654010000004889f98b563048b80000000000000000ffd04885c00f842e0000004889c248b9000000000000000041b85b00000048b80000000000000000ffd085c00f8407000000814e58000100008b46584883c4285f5ec3",
+      "executable_length": 189,
+      "relocations": [
+        {
+          "offset": 34,
+          "width": 8,
+          "address_key": "resolve",
+          "addend": 0
+        },
+        {
+          "offset": 58,
+          "width": 8,
+          "address_key": "enemy_types",
+          "addend": 0
+        },
+        {
+          "offset": 74,
+          "width": 8,
+          "address_key": "allow",
+          "addend": 0
+        },
+        {
+          "offset": 114,
+          "width": 8,
+          "address_key": "resolve",
+          "addend": 0
+        },
+        {
+          "offset": 138,
+          "width": 8,
+          "address_key": "source_types",
+          "addend": 0
+        },
+        {
+          "offset": 154,
+          "width": 8,
+          "address_key": "allow",
+          "addend": 0
+        }
+      ],
+      "unwind_hex": "010603000642027001600000"
+    },
+    {
+      "name": "pause",
+      "code_hex": "56574889ce4889d731c041ba01000000f0440fb157380f85720000004c3946080f855f0000004c394e100f85550000004c3947080f854b0000004c394f100f8541000000f6473c010f8537000000837f28000f8419000000837f3cfc0f8723000000f0ff473cc7472800000000f0ff473c837f2c000f850a000000b801000000e90200000031c0c74738000000005f5ec3",
+      "unwind_hex": "0102020002700160",
+      "entry_offset": 0,
+      "executable_length": 145,
+      "relocations": []
+    },
+    {
+      "name": "resume",
+      "code_hex": "56574889ce4889d731c041ba01000000f0440fb157380f85720000004c3946080f855f0000004c394e100f85550000004c3947080f854b0000004c394f100f8541000000f6473c010f8537000000837f2c000f852d000000837f28010f8419000000837f3cfc0f8719000000f0ff473cc7472801000000f0ff473cb801000000e90200000031c0c74738000000005f5ec3",
+      "unwind_hex": "0102020002700160",
+      "entry_offset": 0,
+      "executable_length": 145,
+      "relocations": []
+    },
+    {
+      "name": "patch_transaction_v2",
+      "code_hex": "53565741544155415641574883ec304989cc31c041b801000000f0450fb104240f850c07000041c74424040000000041c744240c0000000041c74424100000000041c74424140000000041c74424180000000041c74424240000000041c74424680000000041c74424740000000041c74424780000000041c744247c0000000041c7442408ffffffff498b742428498b7c243049c78424980000000000000049c78424a00000000000000041837c241c010f825d03000041817c241c000100000f874e03000041837c2420010f824203000041837c2420080f873603000049837c2438ff0f852a03000041837c2470000f841e0300004531ed453b6c241c0f83270000004d6bfd284901f741c747180000000041c7471c0000000041c747240000000041ffc5e9ceffffff4531f6453b7424200f83250000004d6bfe304901ff41837f08050f840b00000041837f08060f85be02000041ffc6e9d0ffffff4531f6453b7424200f83420000004d6bfe304901ff41c747280000000041c7472c000000004d8b174d8b5f1031db418a041a413a041b0f8501040000ffc3413b5f080f82e6ffffff41ffc6e9b3ffffff4531ed453b6c241c0f83330000004d6bfd284901f7498b0f498b442440ffd04189471883f8ff0f84d403000041ff44240c85c00f85d503000041ffc5e9c2ffffff49c78424a000000000000000498b4c2438498b94249800000041b8000800004531c9c744242000000000498d8424a00000004889442428498b842480000000ffd041894424783d1a0000800f84e500000085c00f853e0100004983bc24a0000000000f842f010000498b8c24980000004885c90f8412000000498b842490000000ffd085c00f840c010000498b8c24a000000049898c249800000049c78424a000000000000000498b842488000000ffd085c00f84de00000041ff44247489c3418b44241cffc041394424740f87d8000000413b5c24700f851a00000041837c2424000f85c100000041c744242401000000e909ffffff4531ed453b6c241c0f83a50000004d6bfd284901f7413b5f200f851800000041837f24000f858900000041c7472401000000e9d2feffff41ffc5e9c4ffffff4983bc24a0000000000f8552000000498b8c24980000004885c90f841e000000498b842490000000ffd085c00f842f00000049c784249800000000000000418b44241cffc041394424740f852400000041837c2424010f8518000000e99c00000041ff44247c41c74424040a000000e90e00000041c74424040b000000e900000000498b8c24a00000004885c90f8417000000498b842490000000ffd085c00f850500000041ff44247c49c78424a000000000000000498b8c24980000004885c90f8417000000498b842490000000ffd085c00f850500000041ff44247c49c784249800000000000000e9d302000041c74424040c000000e9c50200004531ed453b6c241c0f836d0000004d6bfd284901f7498b0f498b5708498b442448ffd085c00f847d010000498b5708488b82f8000000498947104531f6453b7424200f832b0000004d6bde304901fb4d8b134c39d00f8210000000418b4b084c01d14839c80f824b01000041ffc6e9caffffff41ffc5e988ffffff4531f6453b7424200f83320000004d6bfe304901ff4d8b174d8b5f1031db418a041a413a041b0f85d2000000ffc3413b5f080f82e6ffffff41ffc6e9c3ffffff4531f6453b7424200f83fc0100004d6bfe304901ff498b0f418b570841b8400000004d8d4f20498b442458ffd085c00f84d900000041c7472801000000418b4720413b470c0f85c30000004d8b174d8b5f1831db418a041b4188041affc3413b5f080f82ecffffff41c7472c0100000041ff442410498b4c2438498b17458b4708498b442460ffd085c00f8491000000498b0f418b5708458b47204d8d4f24498b442458ffd085c00f848600000041c747280000000041ffc6e945ffffff458974240841c744240406000000e93901000041c744240402000000e92b01000041c744240403000000e91d01000041c744240404000000e90f010000458974240841c744240405000000e9fc000000458974240841c744240407000000e926000000458974240841c744240408000000e913000000458974240841c744240409000000e900000000458b7424204585f60f84b500000041ffce4d6bfe304901ff41837f28000f850b00000041837f2c000f84d7ffffff498b0f418b570841b8400000004d8d4f24498b442458ffd085c00f846b00000041837f2c000f84420000004d8b174d8b5f1031db418a041b4188041affc3413b5f080f82ecffffff41ff442468498b4c2438498b17458b4708498b442460ffd085c00f850500000041ff442414498b0f418b5708458b47204d8d4f24498b442458ffd085c00f854cffffff41ff442414e942ffffff458b6c240c4585ed0f842b00000041ffcd4d6bfd284901f7498b0f498b442450ffd04189471c83f8ff0f85d6ffffff41ff442418e9ccffffff41c7042400000000418b442404e905000000b8010000004883c430415f415e415d415c5f5e5bc3",
+      "entry_offset": 0,
+      "executable_length": 1863,
+      "unwind_hex": "010f08000f520bf009e007d005c0037002600130",
+      "relocations": []
+    }
+  ],
+  "game_connected": false,
+  "game_access": false,
+  "lifetime": "process-life once installed; host owns transaction",
+  "configure_signature": "uint32_t(void* bridge,void* arena,uint64_t epoch,uint64_t peer,uint32_t enabled)",
+  "data_tables": {
+    "enemy_types": [
+      "0002BA767DF856F3",
+      "08E6FFC2474287BD",
+      "09FE0BE51A23396C",
+      "0AB7B92B131C228C",
+      "0ADC9F9173AD8E1D",
+      "10081ACEF6163EF6",
+      "137988CEA16458F7",
+      "1897BDD32105D2DC",
+      "19E18B46EC55D94A",
+      "1A7FCDFF98C664B0",
+      "1E66EE1F6F7FD00E",
+      "1F0A91729C0004E0",
+      "20B9C7734DAEAD65",
+      "215CE160A17BE4CD",
+      "257D805CAA7E10C0",
+      "282EB766C1FFA6A1",
+      "30CF04B2EC8C9BD4",
+      "30F2DEE2333F227A",
+      "31BAE74D2F064D8D",
+      "32541FC4EC7C9CDC",
+      "36AA99CCE5E60146",
+      "3AFF5FD7D5450B99",
+      "3D0E03E2D574E1CA",
+      "3E0537D606438FEA",
+      "4019623142351CB6",
+      "44458A2C52B002FB",
+      "453FE22C634EB30F",
+      "4E97FB073BDC7A4B",
+      "51EEA86BF6997E4E",
+      "53D8919D7B8ABD67",
+      "54E107DACF6929CB",
+      "57EED0EAC346CD9D",
+      "58B2B86C11369241",
+      "5CA832447445C0BA",
+      "6021E22338333D88",
+      "604A794EC45BB820",
+      "63DF3D07B7424588",
+      "64090088502435DD",
+      "64BA5F030B114EC1",
+      "67DC32DCA4F02D33",
+      "6B202392F4AB605E",
+      "6DAB2EADF5D8B692",
+      "728421351D440EBC",
+      "72A83E49CED6DB3D",
+      "746A7F3BEDA32699",
+      "74E2285C01DA4F71",
+      "78E1497571012C47",
+      "7B48CACDBACB3881",
+      "7ECE5304F868F6B3",
+      "82A87AD8D595B2BA",
+      "856E9710E45E760F",
+      "883401AF2A98A5F6",
+      "8FF0A839830A7692",
+      "905809A4C28D8A45",
+      "960B48A421A3FAAA",
+      "9647B00CC3A9D36F",
+      "965EAE5A51ACDD4A",
+      "96BA14C9EBB49CE1",
+      "9A8A3AAE287B230C",
+      "9D8827FED763650E",
+      "9E2E17F2CCCCAFDD",
+      "9F57782F00E6ED20",
+      "A05BD1EC67B3AC4C",
+      "A1F37BF2A40FBDE4",
+      "A35207C6F2150806",
+      "A381A11C07D3EB94",
+      "A6A68D8AF177F3A1",
+      "A71AAFD82C6EBC92",
+      "AAB438596F5E8FD9",
+      "AC60E78435098C9D",
+      "AE63E525853D7044",
+      "AF0F9B3A163787A5",
+      "B2A6FA1E4284C7E6",
+      "B5DBC0C240C921AD",
+      "B92435FBF60F0748",
+      "BC242702FB46B7E7",
+      "BE39E313A1E46BB9",
+      "BE743B2FAA3A6E26",
+      "C626D2BB495A202D",
+      "C6449FFD9EA3779C",
+      "C9BCCCB0A54A82A4",
+      "CBB1BA3366009C3A",
+      "CC188F0C80505C6C",
+      "CC7022FDD172089B",
+      "CCAE5264ACD591B7",
+      "D37E8D120D2836E3",
+      "D465D9C7F77A07CB",
+      "D522FD4748D443A5",
+      "D5792F6856B06BA4",
+      "D63FCBFF0851B7AF",
+      "D8CBC4A807A6D035",
+      "D9511E9F6BD62E3F",
+      "DA40BB347C7447F2",
+      "DB90077E76FAA025",
+      "DB964631BE1CF501",
+      "DFBACBD977A948DC",
+      "E0353177F1329573",
+      "E683D2CA5618D74A",
+      "E8F19A0AA958E46D",
+      "EACEE39FA017B495",
+      "EF04CB84D097A497",
+      "EF570293245A17C2",
+      "F0B26FA9258128D3",
+      "F1610AC48CDC5240",
+      "F22D027B37BEF107",
+      "F540CA9D9D4A422E",
+      "F66D0BAD8693779A",
+      "F79CD8BB654397DF",
+      "F8131632AA867107",
+      "F8B5A81A86D5D4EB",
+      "FB9937035D652C43"
+    ],
+    "source_types": [
+      "006E44327BB953FE",
+      "02CD7321CD8445F5",
+      "02EECD0B1FA49630",
+      "03E67A19B07C6523",
+      "05D8D8C073B9D502",
+      "05E4E5C2DB6E44A2",
+      "0807AEA5217E4767",
+      "085C1EDB038EC24E",
+      "0B882808C6F498E8",
+      "0F83639AB8C86165",
+      "11C27D3BABB38956",
+      "14D5D4506056C7A4",
+      "186EA95DE7306B1A",
+      "1A437158E1B8D2A1",
+      "1ABBFF60D26BA391",
+      "2152D5147B0AC418",
+      "25AA2FD4643CF4EE",
+      "295BEB26DC4F8FF1",
+      "2B28E17FFED05F7C",
+      "2E9D0BDC48B09E60",
+      "30061F91AF477F5E",
+      "3575AABC5F1F9326",
+      "35A61296619CC47E",
+      "3828E2051AA9E897",
+      "416D053372C4E433",
+      "41EAC4A03987FAA0",
+      "43A58CB89CFA197C",
+      "43CB1033961A2276",
+      "46183B50961D1328",
+      "4BA41B6F9F405CC2",
+      "4C786785C79D44E7",
+      "4D58C77087B774C5",
+      "4DBD74F49C8FFC13",
+      "4E310B1FE4C52B52",
+      "4E4A613EB9BF5C24",
+      "4F749E2EE26F532D",
+      "52071F49263415E4",
+      "52E4334E6A128CAF",
+      "587878FB76F4B9B1",
+      "5EBAEA70C0D060B9",
+      "5FECAB819F96A3E8",
+      "708EA298C82093D0",
+      "72170A55A1F37FF1",
+      "7B75E5132FFD4CA6",
+      "80F1A156D9FA1E36",
+      "84354339522C932D",
+      "8645F167B3C813A2",
+      "88C2D09AD85A7C9F",
+      "89C5493E08CA4207",
+      "8A307BD1811A5FE9",
+      "8D3D52A3B2F19402",
+      "90DDC374F4E3D756",
+      "94BD931B5FB4EE95",
+      "9571CA51F0DAF35B",
+      "968211C0033DCE64",
+      "9EB160830321BFD6",
+      "A6A735ACCB4A327F",
+      "A7EE1EBF58FCDF1F",
+      "A8A91EB54892B6B2",
+      "A955C4EA6F6D4203",
+      "AA69A60D74A3EC54",
+      "B43235DBD493750C",
+      "B6AFF2195568767F",
+      "B9606C5AAB32C3C2",
+      "B9C209B4F99B5335",
+      "BC29613666DF696B",
+      "BE70EE0D8D44028E",
+      "C12A34F375BD5A87",
+      "C780BCD79547DA0F",
+      "C85F576D5E086147",
+      "CC786F6491FE7E65",
+      "CD00BDC1149C2928",
+      "CDF28BE026BB7D84",
+      "CE063AA33D95A812",
+      "CF5F176E0E322BE1",
+      "CF8934FF6567A42D",
+      "D323DE60855898AC",
+      "D53EE03481AE73FD",
+      "D6B1FB05B9109353",
+      "DBB6C961C59FADC1",
+      "DCD1C835407EF7BA",
+      "E5796355A8FD67E0",
+      "E6D932BE83729076",
+      "E8D5F49AD7780E54",
+      "E91F569C2AD8AF01",
+      "EEA5E3CEF1E12C14",
+      "F0338468DCDB6A6C",
+      "F49227A0630A3F7F",
+      "F992CE97577C8A7F",
+      "FB3A19078694708A",
+      "FE3B29B2CFA63F9B"
+    ]
+  },
+  "data_encoding": "sorted ascending u64 little endian; hex strings must not convert through double",
+  "entity_manager_global_rva": 54968216,
+  "entity_manager_evidence": {
+    "manager_global_rva": 54968216,
+    "module": "game.dll",
+    "sdk_wielder": {
+      "entities": 54968216,
+      "entityMap": 15838896,
+      "descriptors": 15937304,
+      "descriptorStride": 24,
+      "descriptorEntity": 8
+    },
+    "domain_path": "domains/event_natives.lua",
+    "domain_sha256": "2774766b8eca615530f7b926a3b6568104c4d7bc043c88bef106dd6be13d6233",
+    "runtime_path": "runtime/event_world.lua",
+    "runtime_sha256": "407980b97198dff9b7ea7e0bdf3c1c9bfe85171eb278207a1e08ba042707dea2",
+    "runtime_lines": "545-557 entity_descriptor and entity_type",
+    "actual_lookup_path": "dist/hit-entity-map-analysis-20261012/function.bin",
+    "actual_lookup_sha256": "27627b0418666a4ce50917587d9dd779c3736a8af2272a3a3c955f94cb3701ed",
+    "actual_global_load_rva": 16620880,
+    "actual_global_load_pin": "4c8b1541224902",
+    "actual_global_rip_target": 54968216
+  },
+  "catalog_evidence": {
+    "sdk_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+    "enemy_catalog_sha256": "c2369c01e47c96713374479bce1ff286b35e6d426125473fda17054cd904736f",
+    "source_evidence": [
+      {
+        "file": "external/HD2Runtime/sdk/PlayerWeaponAuthoringCapabilities.json",
+        "sha256": "ce4f5b46fca26d128579557a9e476ce5baf73ca9d0de4131d38bce47900b0a7d"
+      },
+      {
+        "file": "external/HD2Runtime/sdk/SupportWeaponAuthoringCapabilities.json",
+        "sha256": "4b7a62d89504aca821c5db6c2edd916edba2413ee1d3730e97ebc7b79bafee6b"
+      },
+      {
+        "file": "docs/integration-catalogs.json",
+        "sha256": "74ada1205851200f313651aa6a590a59eef5be5477399d15b35ab01069540222"
+      }
+    ],
+    "enemy_count": 111,
+    "source_count": 91
+  },
+  "qualifier_signature": "uint32_t(void* manager,void* record96)",
+  "resolve_signature": "uint64_t(void* manager,uint32_t entity)",
+  "allow_signature": "uint32_t(const uint64_t* sorted,uint64_t type,uint32_t count)",
+  "qualification_limits": {
+    "hash_probes_per_entity": 8,
+    "max_map_capacity": 1048576,
+    "max_descriptor_index": 1048576,
+    "enemy_types": 111,
+    "source_types": 91,
+    "world_scan": false
+  }
+}

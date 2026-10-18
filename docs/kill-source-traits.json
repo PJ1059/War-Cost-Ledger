@@ -1,0 +1,2621 @@
+{
+  "schema_version": 1,
+  "version": "0.4.52",
+  "policy": "exact_sdk_resource_max_ap_and_native_damaging_status_sources",
+  "source_types": {
+    "006E44327BB953FE": {
+      "name": "GL-15 Evictor",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "02EECD0B1FA49630": {
+      "name": "GL-21 Grenade Launcher",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "03E67A19B07C6523": {
+      "name": "R-63 Diligence",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "03F31CAF3A7D8F4E": {
+      "name": "G-142 Pyrotech",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "0416984F4922757B": {
+      "name": "G-4 Gas",
+      "poison": true,
+      "fire": false,
+      "native_fire": false,
+      "native_poison": true
+    },
+    "04653AB33F3FFB44": {
+      "name": "G-10 Incendiary",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "05D8D8C073B9D502": {
+      "name": "SG-8P Punisher Plasma",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "05F3C83A91075766": {
+      "name": "Orbital Gas Strike",
+      "poison": true,
+      "fire": false,
+      "native_fire": false,
+      "native_poison": true
+    },
+    "0736BEE2D6328726": {
+      "name": "B/FLAM-80 Cremator",
+      "armor_penetration_max": 4,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "076DD5D4F4360204": {
+      "name": "ARC-12 Blitzer",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "0807AEA5217E4767": {
+      "name": "SMG-72 Pummeler",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "085C1EDB038EC24E": {
+      "name": "MG-206 Heavy Machine Gun",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "0B882808C6F498E8": {
+      "name": "P-35 Re-Educator",
+      "armor_penetration_max": 4,
+      "poison": true,
+      "fire": false,
+      "native_fire": false,
+      "native_poison": true
+    },
+    "0F83639AB8C86165": {
+      "name": "R-2 Amendment",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "11C27D3BABB38956": {
+      "name": "MG-43 Machine Gun",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "14D5D4506056C7A4": {
+      "name": "P-33 Missile Pistol",
+      "armor_penetration_max": 5,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "186EA95DE7306B1A": {
+      "name": "SMG-203 Gallant",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "1980D92B619FF5FE": {
+      "name": "LAS-98 Laser Cannon",
+      "armor_penetration_max": 4,
+      "fire": true,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "1A437158E1B8D2A1": {
+      "name": "P-113 Verdict",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "1ABBFF60D26BA391": {
+      "name": "R/40-K Hot-Shot Marksman Rifle",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "2152D5147B0AC418": {
+      "name": "MG-206 Heavy Machine Gun",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "25AA2FD4643CF4EE": {
+      "name": "FAF-14 Spear",
+      "armor_penetration_max": 7,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "26E40437EA275296": {
+      "name": "RL-77 Airburst Rocket Launcher",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "27BB558C893383CC": {
+      "name": "Eagle Napalm Airstrike",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "27EE1ED8F6FB6356": {
+      "name": "LAS-5 Scythe",
+      "armor_penetration_max": 2,
+      "fire": true,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "295BEB26DC4F8FF1": {
+      "name": "LAS-17 Double-Edge Sickle",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "299C0D3DFD2F0994": {
+      "name": "A/GM-17 Gas Mortar Sentry",
+      "poison": true,
+      "fire": false,
+      "native_fire": false,
+      "native_poison": true
+    },
+    "2B28E17FFED05F7C": {
+      "name": "SG-22 Bushwhacker",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "2E9D0BDC48B09E60": {
+      "name": "RS-422 Railgun",
+      "armor_penetration_max": 5,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "30061F91AF477F5E": {
+      "name": "PLAS-39 Accelerator Rifle",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "35A61296619CC47E": {
+      "name": "LAS-99 Quasar Cannon",
+      "armor_penetration_max": 6,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "3828E2051AA9E897": {
+      "name": "S-11 Speargun",
+      "armor_penetration_max": 6,
+      "poison": true,
+      "fire": false,
+      "native_fire": false,
+      "native_poison": true
+    },
+    "39AB99895147A3BF": {
+      "name": "FLAM-40 Flamethrower",
+      "armor_penetration_max": 4,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "3C86E871923F3970": {
+      "name": "LAS-13 Trident",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "3F92BA65EF65CCA9": {
+      "name": "P-72 Crisper",
+      "armor_penetration_max": 4,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "416D053372C4E433": {
+      "name": "LAS-58 Talon",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "41EAC4A03987FAA0": {
+      "name": "SG-8 Punisher",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "43A58CB89CFA197C": {
+      "name": "M-1000 Maxigun",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "43CB1033961A2276": {
+      "name": "AR-23P Liberator Penetrator",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "46183B50961D1328": {
+      "name": "SG-225 Breaker",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "4BA41B6F9F405CC2": {
+      "name": "StA-11 SMG",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "4C786785C79D44E7": {
+      "name": "R-63CS Diligence Counter Sniper",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "4D58C77087B774C5": {
+      "name": "M6C/SOCOM Pistol",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "4DBD74F49C8FFC13": {
+      "name": "MA5C Assault Rifle",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "4E4A613EB9BF5C24": {
+      "name": "SMG-37 Defender",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "4F749E2EE26F532D": {
+      "name": "SG-8S Slugger",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "4FB0F8C02F55C82B": {
+      "name": "FLAM-66 Torcher",
+      "armor_penetration_max": 4,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "52071F49263415E4": {
+      "name": "SG-88 Break-Action Shotgun",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "52CDBFBACA3CB397": {
+      "name": "CQC-30 Stun Baton",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "52E4334E6A128CAF": {
+      "name": "GP-31 Grenade Pistol",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "56070F36CFFFA8A8": {
+      "name": "LAS-98 Laser Cannon",
+      "armor_penetration_max": 4,
+      "fire": true,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "587878FB76F4B9B1": {
+      "name": "MG-43 Machine Gun",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "5990123D142B16CB": {
+      "name": "MLS-4X Commando",
+      "armor_penetration_max": 6,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "5C14F27759DD3BE0": {
+      "name": "G-8 Immolation",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "5C54E81A4AAA31FC": {
+      "name": "EAT-17 Expendable Anti-Tank",
+      "armor_penetration_max": 6,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "5EBAEA70C0D060B9": {
+      "name": "SG-225SP Breaker Spray&Pray",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "5F3EC9BDA2BD8553": {
+      "name": "CQC-20 Breaching Hammer",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "5FECAB819F96A3E8": {
+      "name": "BR-14 Adjudicator",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "6CFCC7F8801A0266": {
+      "name": "40-K Meltagun",
+      "armor_penetration_max": 7,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "708EA298C82093D0": {
+      "name": "AR-59 Suppressor",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "72170A55A1F37FF1": {
+      "name": "DBS-2 Double Freedom",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "75816077C139C850": {
+      "name": "CQC-5 Combat Hatchet",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "7617642765AC38C7": {
+      "name": "EAT-411 Leveller",
+      "armor_penetration_max": 6,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "78A8185F63A70795": {
+      "name": "B/FLAM-80 Cremator",
+      "armor_penetration_max": 4,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "792D5D2A340FD6E6": {
+      "name": "CQC-42 Machete",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "7B06196E90154C88": {
+      "name": "LAS-7 Dagger",
+      "armor_penetration_max": 2,
+      "fire": true,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "7B75E5132FFD4CA6": {
+      "name": "R-2124 Constitution",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "7E1F76163C667E4B": {
+      "name": "CQC-73 Entrenchment Tool",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "80932FA0ED6901D3": {
+      "name": "EAT-17 Expendable Anti-Tank",
+      "armor_penetration_max": 6,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "80F1A156D9FA1E36": {
+      "name": "JAR-5 Dominator",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "820CC3BAFE962858": {
+      "name": "A/FLAM-40 Flame Sentry",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "84354339522C932D": {
+      "name": "AR-2 Coyote",
+      "armor_penetration_max": 3,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "8645F167B3C813A2": {
+      "name": "LAS-16 Sickle",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "88C2D09AD85A7C9F": {
+      "name": "GL-28 Belt-Fed Grenade Launcher",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "88F61AFFF48AC8A4": {
+      "name": "TX-41 Sterilizer",
+      "armor_penetration_max": 5,
+      "poison": true,
+      "fire": false,
+      "native_fire": false,
+      "native_poison": true
+    },
+    "89C5493E08CA4207": {
+      "name": "APW-1 Anti-Materiel Rifle",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "8A307BD1811A5FE9": {
+      "name": "SMG/FLAM-34 Stoker",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "8D3D52A3B2F19402": {
+      "name": "P-4 Senator",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "90DDC374F4E3D756": {
+      "name": "M90A Shotgun",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "94BD931B5FB4EE95": {
+      "name": "SMG-32 Reprimand",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "9571CA51F0DAF35B": {
+      "name": "MP-98 Knight",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "968211C0033DCE64": {
+      "name": "AR-23 Liberator",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "96DE9CD50F7306E6": {
+      "name": "ARC-3 Arc Thrower",
+      "armor_penetration_max": 7,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "992B6F65A5BAB53D": {
+      "name": "SMG/FLAM-34 Stoker / underbarrel",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "9B75217D8312DD67": {
+      "name": "B/MD C4 Pack",
+      "armor_penetration_max": 7,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "9EB160830321BFD6": {
+      "name": "GP-20 Ultimatum",
+      "armor_penetration_max": 6,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "9F80D67A12A7E40F": {
+      "name": "GR-8 Recoilless Rifle",
+      "armor_penetration_max": 6,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "A16AB4FF66AE6970": {
+      "name": "Orbital Napalm Barrage",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "A6A735ACCB4A327F": {
+      "name": "M-105 Stalwart",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "A7EE1EBF58FCDF1F": {
+      "name": "AR-23A Liberator Carbine",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "A8A91EB54892B6B2": {
+      "name": "AR-11 Arbitrator",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "A8CFFB316F0B5C5F": {
+      "name": "AC-8 Autocannon",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "A955C4EA6F6D4203": {
+      "name": "AR/GL-21 One-Two",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "A9982969137F3D77": {
+      "name": "MD-8 Gas Mines",
+      "poison": true,
+      "fire": false,
+      "native_fire": false,
+      "native_poison": true
+    },
+    "AA69A60D74A3EC54": {
+      "name": "PLAS-15 Loyalist",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "B0F1B354BA1D38D8": {
+      "name": "CQC-1 One True Flag",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "B16C9D490AA59B77": {
+      "name": "MGX-42 Bullet Storm",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "B2B5E0D185605F9E": {
+      "name": "EAT-700 Expendable Napalm",
+      "armor_penetration_max": 6,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "B43235DBD493750C": {
+      "name": "M-105 Stalwart",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "B6AFF2195568767F": {
+      "name": "R-36 Eruptor",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "B9606C5AAB32C3C2": {
+      "name": "M-105 Stalwart",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "BC29613666DF696B": {
+      "name": "AR-32 Pacifier",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "BE70EE0D8D44028E": {
+      "name": "M7S SMG",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "BF32E12923A9A252": {
+      "name": "MD-I4 Incendiary Mines",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "BF4CFD2AEABFB5A4": {
+      "name": "CQC-9 Defoliation Tool",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "C12A34F375BD5A87": {
+      "name": "SG-225IE Breaker Incendiary",
+      "armor_penetration_max": 2,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "C5C05FCB5747C799": {
+      "name": "G-123 Thermite",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "C780BCD79547DA0F": {
+      "name": "P-69 Veto",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "C85F576D5E086147": {
+      "name": "LAS-12 Sai",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "CC786F6491FE7E65": {
+      "name": "StA-X3 W.A.S.P. Launcher",
+      "armor_penetration_max": 6,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "CD00BDC1149C2928": {
+      "name": "MG-206 Heavy Machine Gun",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "CDF28BE026BB7D84": {
+      "name": "StA-52 Assault Rifle",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "CE063AA33D95A812": {
+      "name": "AR-61 Tenderizer",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "CF5F176E0E322BE1": {
+      "name": "AR-23C Liberator Concussive",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "CF8934FF6567A42D": {
+      "name": "P-92 Warrant",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "D323DE60855898AC": {
+      "name": "SG-451 Cookout",
+      "armor_penetration_max": 2,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "D53EE03481AE73FD": {
+      "name": "M-105 Stalwart",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "D54B9505C0F72873": {
+      "name": "LAS-98 Laser Cannon",
+      "armor_penetration_max": 4,
+      "fire": true,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "DBB286AD7ED9DF96": {
+      "name": "Eagle Gas Airstrike",
+      "poison": true,
+      "fire": false,
+      "native_fire": false,
+      "native_poison": true
+    },
+    "DBB6C961C59FADC1": {
+      "name": "P/40-K Bolt Pistol",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "DCD1C835407EF7BA": {
+      "name": "SG-97 Sweeper",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "DE18775FA447A9BF": {
+      "name": "MS-11 Solo Silo",
+      "armor_penetration_max": 9,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "E3B6AEDD07FCB464": {
+      "name": "CQC-19 Stun Lance",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "E5796355A8FD67E0": {
+      "name": "R-4 Hyena",
+      "armor_penetration_max": 3,
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "E6D932BE83729076": {
+      "name": "R-6 Deadeye",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "E85E623F93F96FB3": {
+      "name": "CQC-72 Entrenchment Tool",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "E8D5F49AD7780E54": {
+      "name": "PLAS-45 Epoch",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "E91F569C2AD8AF01": {
+      "name": "P-34 Breacher",
+      "armor_penetration_max": 4,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "EB725C39FC38B87C": {
+      "name": "G-13 Incendiary Impact",
+      "fire": true,
+      "poison": false,
+      "native_fire": true,
+      "native_poison": false
+    },
+    "EC3575E7A93793BB": {
+      "name": "Orbital Laser",
+      "fire": true,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "EEA5E3CEF1E12C14": {
+      "name": "PLAS-1 Scorcher",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "F0338468DCDB6A6C": {
+      "name": "R-72 Censor",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "F49227A0630A3F7F": {
+      "name": "CB-9 Exploding Crossbow",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "F992CE97577C8A7F": {
+      "name": "VG-70 Variable",
+      "armor_penetration_max": 2,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "FB3A19078694708A": {
+      "name": "PLAS-101 Purifier",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "FCD8A6E67EAC635A": {
+      "name": "CQC-2 Saber",
+      "armor_penetration_max": 3,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    },
+    "FE3B29B2CFA63F9B": {
+      "name": "GL-52 De-Escalator",
+      "armor_penetration_max": 6,
+      "fire": false,
+      "poison": false,
+      "native_fire": false,
+      "native_poison": false
+    }
+  },
+  "armor_evidence": {
+    "006E44327BB953FE": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "GL-15 Evictor",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "02EECD0B1FA49630": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "GL-21 Grenade Launcher",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 0
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "03E67A19B07C6523": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "R-63 Diligence",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "05D8D8C073B9D502": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SG-8P Punisher Plasma",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0,
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "0736BEE2D6328726": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "B/FLAM-80 Cremator",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Spray",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "076DD5D4F4360204": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "ARC-12 Blitzer",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "0807AEA5217E4767": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SMG-72 Pummeler",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "085C1EDB038EC24E": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "MG-206 Heavy Machine Gun",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "0B882808C6F498E8": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "P-35 Re-Educator",
+      "ap_values": [
+        4,
+        4,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "0F83639AB8C86165": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "R-2 Amendment",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "11C27D3BABB38956": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "MG-43 Machine Gun",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "14D5D4506056C7A4": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "P-33 Missile Pistol",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0,
+        5,
+        5,
+        5,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "186EA95DE7306B1A": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SMG-203 Gallant",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "1980D92B619FF5FE": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "LAS-98 Laser Cannon",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Beam",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "1A437158E1B8D2A1": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "P-113 Verdict",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "1ABBFF60D26BA391": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "R/40-K Hot-Shot Marksman Rifle",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "2152D5147B0AC418": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "MG-206 Heavy Machine Gun",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "25AA2FD4643CF4EE": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "FAF-14 Spear",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 7
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "26E40437EA275296": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "RL-77 Airburst Rocket Launcher",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 3
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "27EE1ED8F6FB6356": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "LAS-5 Scythe",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "295BEB26DC4F8FF1": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "LAS-17 Double-Edge Sickle",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "2B28E17FFED05F7C": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SG-22 Bushwhacker",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "2E9D0BDC48B09E60": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "RS-422 Railgun",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 5
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "30061F91AF477F5E": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "PLAS-39 Accelerator Rifle",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "35A61296619CC47E": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "LAS-99 Quasar Cannon",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 6
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "3828E2051AA9E897": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "S-11 Speargun",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 5
+        },
+        {
+          "role": "primary_expiry",
+          "kind": "Explosion",
+          "ap_direct": 6
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "39AB99895147A3BF": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "FLAM-40 Flamethrower",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Spray",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "3C86E871923F3970": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "LAS-13 Trident",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "3F92BA65EF65CCA9": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "P-72 Crisper",
+      "ap_values": [
+        4,
+        4,
+        4,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "416D053372C4E433": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "LAS-58 Talon",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "41EAC4A03987FAA0": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SG-8 Punisher",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "43A58CB89CFA197C": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "M-1000 Maxigun",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "43CB1033961A2276": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR-23P Liberator Penetrator",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "46183B50961D1328": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SG-225 Breaker",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "4BA41B6F9F405CC2": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "StA-11 SMG",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "4C786785C79D44E7": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "R-63CS Diligence Counter Sniper",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "4D58C77087B774C5": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "M6C/SOCOM Pistol",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "4DBD74F49C8FFC13": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "MA5C Assault Rifle",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "4E4A613EB9BF5C24": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SMG-37 Defender",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "4F749E2EE26F532D": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SG-8S Slugger",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "4FB0F8C02F55C82B": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "FLAM-66 Torcher",
+      "ap_values": [
+        4,
+        4,
+        4,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "52071F49263415E4": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "SG-88 Break-Action Shotgun",
+      "attacks": [
+        {
+          "role": "feed_primary",
+          "kind": "Projectile",
+          "ap_direct": 2
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "52CDBFBACA3CB397": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "CQC-30 Stun Baton",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "52E4334E6A128CAF": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "GP-31 Grenade Pistol",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "56070F36CFFFA8A8": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "LAS-98 Laser Cannon",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Beam",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "587878FB76F4B9B1": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "MG-43 Machine Gun",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "5990123D142B16CB": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "MLS-4X Commando",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 6
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "5C54E81A4AAA31FC": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "EAT-17 Expendable Anti-Tank",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 6
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "5EBAEA70C0D060B9": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SG-225SP Breaker Spray&Pray",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "5F3EC9BDA2BD8553": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "CQC-20 Breaching Hammer",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Melee",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "5FECAB819F96A3E8": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "BR-14 Adjudicator",
+      "ap_values": [
+        3,
+        3,
+        3,
+        1
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "6CFCC7F8801A0266": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "40-K Meltagun",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Beam",
+          "ap_direct": 7
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "708EA298C82093D0": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR-59 Suppressor",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "72170A55A1F37FF1": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "DBS-2 Double Freedom",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "75816077C139C850": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "CQC-5 Combat Hatchet",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "7617642765AC38C7": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "EAT-411 Leveller",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 6
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 6
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "78A8185F63A70795": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "B/FLAM-80 Cremator",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Spray",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "792D5D2A340FD6E6": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "CQC-20 Breaching Hammer",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Melee",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "7B06196E90154C88": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "LAS-7 Dagger",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "7B75E5132FFD4CA6": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "R-2124 Constitution",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "7E1F76163C667E4B": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "CQC-72 Entrenchment Tool",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Melee",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "80932FA0ED6901D3": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "EAT-17 Expendable Anti-Tank",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 6
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "80F1A156D9FA1E36": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "JAR-5 Dominator",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "84354339522C932D": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR-2 Coyote",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "8645F167B3C813A2": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "LAS-16 Sickle",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "88C2D09AD85A7C9F": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "GL-28 Belt-Fed Grenade Launcher",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 4
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "88F61AFFF48AC8A4": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "TX-41 Sterilizer",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Spray",
+          "ap_direct": 5
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "89C5493E08CA4207": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "APW-1 Anti-Materiel Rifle",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "8A307BD1811A5FE9": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SMG/FLAM-34 Stoker",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "8D3D52A3B2F19402": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "P-4 Senator",
+      "ap_values": [
+        4,
+        4,
+        4,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "90DDC374F4E3D756": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "M90A Shotgun",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "94BD931B5FB4EE95": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SMG-32 Reprimand",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "9571CA51F0DAF35B": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "MP-98 Knight",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "968211C0033DCE64": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR-23 Liberator",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "96DE9CD50F7306E6": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "ARC-3 Arc Thrower",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Arc",
+          "ap_direct": 7
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "9B75217D8312DD67": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "B/MD C4 Pack",
+      "attacks": [
+        {
+          "role": "detonation",
+          "kind": "Explosion",
+          "ap_direct": 7
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "9EB160830321BFD6": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "GP-20 Ultimatum",
+      "ap_values": [
+        6,
+        0,
+        0,
+        0,
+        6,
+        6,
+        6,
+        6
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "9F80D67A12A7E40F": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "GR-8 Recoilless Rifle",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 6
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "A6A735ACCB4A327F": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "M-105 Stalwart",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 2
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "A7EE1EBF58FCDF1F": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR-23A Liberator Carbine",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "A8A91EB54892B6B2": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR-11 Arbitrator",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "A8CFFB316F0B5C5F": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "AC-8 Autocannon",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 4
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "A955C4EA6F6D4203": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR/GL-21 One-Two",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "AA69A60D74A3EC54": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "PLAS-15 Loyalist",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "B0F1B354BA1D38D8": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "CQC-1 One True Flag",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Melee",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "B16C9D490AA59B77": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "MGX-42 Bullet Storm",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 2
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "B2B5E0D185605F9E": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "EAT-700 Expendable Napalm",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 3
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 6
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "B43235DBD493750C": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "M-105 Stalwart",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 2
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "B6AFF2195568767F": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "R-36 Eruptor",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0,
+        4,
+        4,
+        4,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "B9606C5AAB32C3C2": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "M-105 Stalwart",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 2
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "BC29613666DF696B": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR-32 Pacifier",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "BE70EE0D8D44028E": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "M7S SMG",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "BF4CFD2AEABFB5A4": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "CQC-9 Defoliation Tool",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Melee",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "C12A34F375BD5A87": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SG-225IE Breaker Incendiary",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "C780BCD79547DA0F": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "P-69 Veto",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "C85F576D5E086147": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "LAS-12 Sai",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "CC786F6491FE7E65": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "StA-X3 W.A.S.P. Launcher",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 6
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "CD00BDC1149C2928": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "MG-206 Heavy Machine Gun",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "CDF28BE026BB7D84": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "StA-52 Assault Rifle",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "CE063AA33D95A812": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR-61 Tenderizer",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "CF5F176E0E322BE1": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "AR-23C Liberator Concussive",
+      "ap_values": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "CF8934FF6567A42D": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "P-92 Warrant",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "D323DE60855898AC": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SG-451 Cookout",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "D53EE03481AE73FD": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "M-105 Stalwart",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 2
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "D54B9505C0F72873": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "LAS-98 Laser Cannon",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Beam",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "DBB6C961C59FADC1": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "P/40-K Bolt Pistol",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0,
+        4,
+        4,
+        4,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "DCD1C835407EF7BA": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "SG-97 Sweeper",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "DE18775FA447A9BF": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "MS-11 Solo Silo",
+      "attacks": [
+        {
+          "role": "detonation",
+          "kind": "Explosion",
+          "ap_direct": 7
+        },
+        {
+          "role": "impact",
+          "kind": "Explosion",
+          "ap_direct": 9
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "E3B6AEDD07FCB464": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "CQC-19 Stun Lance",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "E5796355A8FD67E0": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "R-4 Hyena",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "E6D932BE83729076": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "R-6 Deadeye",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "E85E623F93F96FB3": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "CQC-72 Entrenchment Tool",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Melee",
+          "ap_direct": 3
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "E8D5F49AD7780E54": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "PLAS-45 Epoch",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 4
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 4
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    },
+    "E91F569C2AD8AF01": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "P-34 Breacher",
+      "ap_values": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "EEA5E3CEF1E12C14": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "PLAS-1 Scorcher",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "F0338468DCDB6A6C": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "R-72 Censor",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "F49227A0630A3F7F": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "CB-9 Exploding Crossbow",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0,
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "F992CE97577C8A7F": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "VG-70 Variable",
+      "ap_values": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "FB3A19078694708A": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "PLAS-101 Purifier",
+      "ap_values": [
+        3,
+        3,
+        3,
+        0,
+        3,
+        3,
+        3,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "FCD8A6E67EAC635A": {
+      "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "weapon": "CQC-2 Saber",
+      "ap_values": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "basis": "max_all_native_primary_and_explosion_damage_ap_fields"
+    },
+    "FE3B29B2CFA63F9B": {
+      "artifact": "sdk/SupportWeaponCapabilities.json",
+      "weapon": "GL-52 De-Escalator",
+      "attacks": [
+        {
+          "role": "primary",
+          "kind": "Projectile",
+          "ap_direct": 0
+        },
+        {
+          "role": "primary_impact",
+          "kind": "Explosion",
+          "ap_direct": 6
+        }
+      ],
+      "basis": "max_all_resolved_native_attack_branches_for_resource"
+    }
+  },
+  "inputs": {
+    "sdk/PlayerWeaponAuthoringCapabilities.json": "ce4f5b46fca26d128579557a9e476ce5baf73ca9d0de4131d38bce47900b0a7d",
+    "sdk/SupportWeaponCapabilities.json": "c2e8bf12ef1e2cfcfa4349d9725b1becfefc5b11277db87a72f5aebdd401e042",
+    "sdk/StatusEffectCatalog.json": "d9598e4a4d0c9223bcd943f107509e49569c10a1622df94f1aa1f7fcb57f6815",
+    "schemas/stratagem_authoring_catalog.json": "ca928f8f4f12b48ab1206fe12a7ec8f416cdebf339bd4ceef78225704fd74e88"
+  },
+  "summary": {
+    "sources": 137,
+    "ap_le_2": 37,
+    "fire_sources": 26,
+    "poison_sources": 8
+  },
+  "limitations": [
+    "AP is a pinned native default; other mods can change attacks after construction.",
+    "A fire/gas-capable source alone is an approximation; observed final damage element takes precedence.",
+    "No global weapon stat batch is per-victim attribution evidence."
+  ]
+}

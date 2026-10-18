@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="0 0 180 60" fill="none">
+  <!-- Fixed hollow HUD frame; the transparent imagegen pictogram is a separate layer. -->
+  <path d="M9 1.5H171L178.5 9V51L171 58.5H9L1.5 51V9Z" stroke="#eeefdf" stroke-width="2"/>
+  <path d="M29 7.5H63M117 7.5H151M29 52.5H63M117 52.5H151" stroke="#e7d46a" stroke-width="1.2"/>
+  <path d="M25 7.5H12L7.5 12V23M155 7.5H168L172.5 12V23M25 52.5H12L7.5 48V37M155 52.5H168L172.5 48V37" stroke="#e7d46a" stroke-width="1.2"/>
+</svg>

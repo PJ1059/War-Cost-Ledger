@@ -1,0 +1,37 @@
+{
+  "format": "HD2-TASK-LAYOUT-CALLER-PINS-1",
+  "source_binary": "dist/task-module-update-58132.bin",
+  "source_sha256": "fdaf5e1961693bbeb7e910382286d333c5d6e65bce9607ed76232c1ebab9074b",
+  "source_rva": 24969216,
+  "source_length": 24576,
+  "pins": [
+    {
+      "rva": 24971363,
+      "length": 12,
+      "source_binary_offset": 2147,
+      "hex": "410f28c8488bcde831f0ffff",
+      "call_offset": 7,
+      "target": 24967328
+    },
+    {
+      "rva": 24971453,
+      "length": 16,
+      "source_binary_offset": 2237,
+      "hex": "488d8df06d0000410f28c8e833ae0700",
+      "call_offset": 11,
+      "target": 25474816
+    }
+  ],
+  "setter_payload": {
+    "rva": 21264032,
+    "length": 64,
+    "source_binary": "external/ledger_ui_20261011T022845Z_map_open_1.bin",
+    "source_binary_sha256": "ee338b1688205b060d545a99659a36005fb3c9d370f52314df3acef92eab9648",
+    "source_binary_offset": 4839072,
+    "hex": "48895c241848896c24204889542410565741574883ec20f30f104104488bda0f2e442448488bf10f8a80000000757ef30f1041080f2e44244c7a7275708b0125"
+  },
+  "scope_notes": [
+    "Caller PIN bytes and setter prefix are exact saved real bytes.",
+    "Missing callee bodies in unit tests use an explicitly synthetic payload formed by repeating the setter prefix; they are not proof of those callee bodies."
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "version": "0.4.48",
+  "revision": "combat-v2",
+  "method": "editable native-style flat vectors",
+  "overrides": [
+    "R05"
+  ],
+  "additions": [
+    "R12"
+  ],
+  "items": [
+    {
+      "id": "R05",
+      "key": "melee",
+      "name": "近战杀敌",
+      "kind": "ribbon",
+      "accent": "#c7b980",
+      "file": "R05-melee-elbow.png",
+      "source_svg": "R05-melee-elbow.svg",
+      "source_svg_sha256": "ba0e3c0f9069d8b44964cb8db4a90586f3dd5fc510dcca95521aedac803fc343",
+      "sha256": "6e49a4839887cbc8214f6667c30928b9c2a84c0057bfd2ba3a2baaa527013b11",
+      "width": 512,
+      "height": 512,
+      "alpha_bbox": [
+        80,
+        64,
+        512,
+        387
+      ],
+      "body_ratio": 1.3374613003095974,
+      "symbol_width": 0.42,
+      "display_scale": 1,
+      "artwork_form": "repo_native_vector_ribbon",
+      "review_fingerprint": "b1a0452dd3b7e8de47b931afa66818f34ce5808fc0582905d708ca8e1dacf7dd",
+      "design_basis": "bent armored elbow reference"
+    },
+    {
+      "id": "R12",
+      "key": "crush",
+      "name": "碾压",
+      "kind": "ribbon",
+      "accent": "#c7b980",
+      "file": "R12-crush.png",
+      "source_svg": "R12-crush.svg",
+      "source_svg_sha256": "7b5a46503c922cbdf728e8a44ddf7db40fdf64bc66f1fa9e41dc3137c8195726",
+      "sha256": "9a927a47feb85d5eda34acb8b256f65310cee04a39a99f6bc79fbbf7ac96b4bf",
+      "width": 512,
+      "height": 512,
+      "alpha_bbox": [
+        12,
+        103,
+        479,
+        431
+      ],
+      "body_ratio": 1.423780487804878,
+      "symbol_width": 0.68,
+      "display_scale": 1,
+      "artwork_form": "repo_native_vector_ribbon",
+      "review_fingerprint": "9e407baf097e17103f8cdbc987a9d9902c8a5a3e0bd0555e6c3e1cc72c092a25",
+      "design_basis": "vehicle track over enemy silhouette"
+    }
+  ]
+}

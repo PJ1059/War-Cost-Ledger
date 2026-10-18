@@ -1,0 +1,80 @@
+{
+  "files": [
+    {
+      "filename": "01-live-combat-hud.png",
+      "title": "Live Combat HUD",
+      "caption": "Actual gameplay at 00:18.2: hit feedback, a killstreak ribbon, Star of Democracy, kill-source text and war-cost notices. The original Chinese-language gameplay HUD is preserved.",
+      "crop": null,
+      "type": "Original gameplay capture",
+      "privacy": "No chat or other players' names are visible. Only the local P1 slot indicator appears.",
+      "source_path": "artwork\\mod-covers-0.4.65-v2\\source-frame-18.2s.png",
+      "source_sha256": "6627f41cc70558da780c403e75579aea1c1c325a64d1c24325f7650e648b9a23",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "6627f41cc70558da780c403e75579aea1c1c325a64d1c24325f7650e648b9a23",
+      "pixel_preservation": "Exact source file copy"
+    },
+    {
+      "filename": "02-earned-achievements.png",
+      "title": "Earned Achievements",
+      "caption": "English achievement panel preview using actual saved career records and the production MOD interface. Earned medals retain their real recorded totals.",
+      "crop": [
+        903,
+        443,
+        1611,
+        776
+      ],
+      "type": "Existing saved-data panel preview; not a live screenshot",
+      "privacy": "No account identifiers, nicknames or chat appear in the selected panel.",
+      "source_path": "artwork\\mod-covers-0.4.65\\war-cost-ledger-cover-en.png",
+      "source_sha256": "437a495f299aeae051ec5f07ee1aaef5a6d5fba9e7cde9a52cf329278cbb6c42",
+      "dimensions": [
+        708,
+        333
+      ],
+      "sha256": "8ff3a08cb3efda94ca1c2bacbba47af41b3e2d096a2c9a06aff56029210f23e0",
+      "pixel_preservation": "Exact crop; no scaling, redrawing, or added text"
+    },
+    {
+      "filename": "03-career-war-costs.png",
+      "title": "Career War Costs",
+      "caption": "English career bill preview from actual saved records. The total of 10,141,384.25 USD covers 11 recorded missions; 23 older missions have no bill records.",
+      "crop": [
+        90,
+        905,
+        828,
+        1313
+      ],
+      "type": "Existing saved-data panel preview; not a live screenshot",
+      "privacy": "No account identifiers, nicknames or chat appear in the selected panel.",
+      "source_path": "artwork\\mod-covers-0.4.65\\war-cost-ledger-cover-en.png",
+      "source_sha256": "437a495f299aeae051ec5f07ee1aaef5a6d5fba9e7cde9a52cf329278cbb6c42",
+      "dimensions": [
+        738,
+        408
+      ],
+      "sha256": "1db78f6dd392792c2c31ffaa251ac5370f390222087880ffc682896f1ada7c4e",
+      "pixel_preservation": "Exact crop; no scaling, redrawing, or added text"
+    }
+  ],
+  "source_video": "external/202610181936.mp4",
+  "source_video_sha256": "06a178aae6716889b2ef0a1afd06824ac770da0540b5022916fdf837990c45c2",
+  "frame_time_seconds": 18.2,
+  "saved_account_sha256": "847aec022242357945ebe55ea11659801398554546de522b137a75e006f489b6",
+  "saved_data_scopes": {
+    "achievements": "Career award totals",
+    "bill": {
+      "selection": "All saved missions",
+      "recorded_missions": 11,
+      "unrecorded_missions": 23,
+      "total_cents": 1014138425,
+      "currency": "USD"
+    }
+  },
+  "new_generated_art": false,
+  "source_files_unchanged": true,
+  "production_mod_changed": false,
+  "published": false
+}

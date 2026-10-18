@@ -1,0 +1,149 @@
+{
+  "cases": [
+    {
+      "avg_us": 18.5420000016,
+      "max_us": 197.999994271,
+      "name": "runtime_integer_2_keys",
+      "p50_us": 14.7999962792,
+      "p95_us": 39.6000032197,
+      "p99_us": 51.3999984832,
+      "read_bytes_per_poll": 21084,
+      "read_calls_per_poll": 7,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1
+    },
+    {
+      "avg_us": 24.2539000028,
+      "max_us": 219.200002903,
+      "name": "runtime_integer_3_keys",
+      "p50_us": 20.3000017791,
+      "p95_us": 38.5000021197,
+      "p99_us": 73.3999986551,
+      "read_bytes_per_poll": 21092,
+      "read_calls_per_poll": 8,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1
+    },
+    {
+      "avg_us": 34.146850041,
+      "max_us": 305.800000206,
+      "name": "runtime_integer_5_keys",
+      "p50_us": 29.3000048259,
+      "p95_us": 57.299999753,
+      "p99_us": 99.0999978967,
+      "read_bytes_per_poll": 21108,
+      "read_calls_per_poll": 10,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1
+    },
+    {
+      "avg_us": 17.8212500359,
+      "max_us": 119.199998153,
+      "name": "native_integer_2_keys",
+      "p50_us": 14.6999955177,
+      "p95_us": 38.1999998353,
+      "p99_us": 54.0999972145,
+      "read_bytes_per_poll": 21108,
+      "read_calls_per_poll": 7,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1
+    },
+    {
+      "avg_us": 23.8564500032,
+      "max_us": 153.399996634,
+      "name": "native_integer_3_keys",
+      "p50_us": 19.9999994948,
+      "p95_us": 39.8000047426,
+      "p99_us": 78.4000003478,
+      "read_bytes_per_poll": 21128,
+      "read_calls_per_poll": 8,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1
+    },
+    {
+      "avg_us": 33.7776499764,
+      "max_us": 150.49999638,
+      "name": "native_integer_5_keys",
+      "p50_us": 28.8999945042,
+      "p95_us": 57.299999753,
+      "p99_us": 108.300002466,
+      "read_bytes_per_poll": 21168,
+      "read_calls_per_poll": 10,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1
+    },
+    {
+      "avg_us": 35.0930500026,
+      "max_us": 254.999999015,
+      "name": "native_mixed_5_keys",
+      "p50_us": 29.5000063488,
+      "p95_us": 59.3000004301,
+      "p99_us": 112.800000352,
+      "read_bytes_per_poll": 21168,
+      "read_calls_per_poll": 10,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1
+    },
+    {
+      "avg_us": 115.466999934,
+      "max_us": 742.600001104,
+      "name": "native_full_raw_snapshot",
+      "p50_us": 56.9999974687,
+      "p95_us": 475.200002256,
+      "p99_us": 542.300003872,
+      "read_bytes_per_poll": 22348,
+      "read_calls_per_poll": 6,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1
+    }
+  ],
+  "fixture": {
+    "integer_keys": [
+      1448579290,
+      3566519756,
+      3345484315
+    ],
+    "main_capacity": 64,
+    "main_populated": 64,
+    "player_index_capacity": 8,
+    "source_blocks": 64,
+    "source_bytes": 20992,
+    "source_entries_each": 16
+  },
+  "iterations": 2000,
+  "jit_enabled": true,
+  "lua_version": "Lua 5.1",
+  "luajit_version": "LuaJIT 2.1.0-alpha",
+  "timing": {
+    "clock": "QueryPerformanceCounter",
+    "garbage_collection": "default enabled; collected before each measurement case",
+    "timer_pair_median_us": 0
+  },
+  "warmup_iterations": 300,
+  "created_at_utc": "2026-10-09T13:37:36.321905+00:00",
+  "benchmark_kind": "synthetic_self_process_ReadProcessMemory_microbenchmark",
+  "game_started": false,
+  "game_fps_measured": false,
+  "environment": {
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.8",
+    "logical_cpus": 16,
+    "lua_dll": "G:\\SteamLibrary\\steamapps\\common\\Helldivers 2\\bin\\lua51.dll",
+    "lua_dll_sha256": "2c8720c9f446c848436ad993b1a88099d76f0b0b09df53689719b797c3039ce7"
+  },
+  "runtime_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+  "source_sha256": {
+    "external/HD2Runtime/runtime/event_world.lua": "407980b97198dff9b7ea7e0bdf3c1c9bfe85171eb278207a1e08ba042707dea2",
+    "external/HD2Runtime/runtime/native_view.lua": "8ad87367338fe7f593b743cb6a633f9173cd1987d1abd6f890a602a66bb8cb34",
+    "external/HD2Runtime/runtime/windows_readonly.lua": "de487561871ad158b9cc09205a64acdbfdc564fb1722872aa5a2ade4fb191282",
+    "tests/bench_stat_reader.lua": "e5e50e2ee50c0b410e4133dc74b1d6564ef5b900e8772c43348481cb992fbb6f",
+    "src/native-stats.lua": "d6226509d1df04d4482626b20e26f35659b6dcd0adae16da2f9c8ee96e2eb986"
+  },
+  "limitations": [
+    "Synthetic stable, fully populated buffers in this benchmark process; no game process was opened.",
+    "Uses real Runtime ReadProcessMemory, native_view and production reader code; excludes world.open build proofs.",
+    "No rendering, other mods, gameplay contention, asynchronous changes, storage writes or FPS measurement.",
+    "Per-call QPC samples include timing and instrumentation overhead; no overhead subtraction.",
+    "LuaJIT enabled, normal garbage collection, OS scheduling and fixed case order can affect tails."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "source": "external/mission_icons.xaml",
+  "resource": "content/ui/shared/resources/generated_icons/mission_icons.xaml",
+  "template": "MissionIconRadar",
+  "source_line": 243,
+  "source_sha256": "b0fb6c9d6b214af7a5f17eb6bf54338cc678734400ee0683d3992e0dc67d5427",
+  "conversion": "Three original white XAML Paths rendered by Windows WPF Geometry.Parse, no path or paint edits, transparent 512x512 with a 12px margin; existing ribbon frame is separate.",
+  "png_sha256": "1ce37d9998ec243f206940ec6cfaec708885ca878b014789d829e9a9f762d335",
+  "svg_sha256": "ffc94e8791c4d0d8c5baabcaa5ab58e3c1748b69f32e2a60d979954f5970a3f9",
+  "semantic_use": "Game radar mission marker reused as the ledger reconnaissance ribbon symbol; this is not a claim that the game awards a reconnaissance ribbon."
+}

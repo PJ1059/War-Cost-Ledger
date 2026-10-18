@@ -1,0 +1,421 @@
+{
+  "capture_limit_bytes": 1048576,
+  "cases": [
+    {
+      "avg_us": 7932.73199997,
+      "capture_bytes": {
+        "avg": 130243,
+        "max": 130243,
+        "p50": 130243,
+        "p95": 130243,
+        "p99": 130243
+      },
+      "entries_per_capture": 1088,
+      "main_capacity": 64,
+      "main_populated": 64,
+      "max_us": 9235.19999924,
+      "name": "probe_capture_main_64",
+      "p50_us": 7922.70000238,
+      "p95_us": 8847.19999885,
+      "p99_us": 9205.20000363,
+      "production_json_limit_passed": true,
+      "production_json_roundtrip_verified": true,
+      "read_bytes_per_poll": 22348,
+      "read_calls_per_poll": 6,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1,
+      "stages": {
+        "encode": {
+          "avg_us": 7139.72299985,
+          "max_us": 8194.50000563,
+          "p50_us": 7080.7000011,
+          "p95_us": 7776.30000084,
+          "p99_us": 8083.09999411
+        },
+        "file_write": {
+          "avg_us": 595.774999892,
+          "max_us": 939.999998081,
+          "p50_us": 588.900002185,
+          "p95_us": 711.900000169,
+          "p99_us": 915.39999994
+        },
+        "snapshot": {
+          "avg_us": 197.234000225,
+          "max_us": 1148.90000259,
+          "p50_us": 99.8000032268,
+          "p95_us": 813.099999505,
+          "p99_us": 941.500002227
+        }
+      }
+    },
+    {
+      "avg_us": 36014.9299999,
+      "capture_bytes": {
+        "avg": 625293,
+        "max": 625293,
+        "p50": 625293,
+        "p95": 625293,
+        "p99": 625293
+      },
+      "entries_per_capture": 5120,
+      "main_capacity": 4096,
+      "main_populated": 4096,
+      "max_us": 52146.2999968,
+      "name": "probe_capture_main_4096",
+      "p50_us": 35824.2000002,
+      "p95_us": 40137.1000044,
+      "p99_us": 51047.9000004,
+      "production_json_limit_passed": true,
+      "production_json_roundtrip_verified": true,
+      "read_bytes_per_poll": 102988,
+      "read_calls_per_poll": 6,
+      "read_failures": 0,
+      "read_into_calls_per_poll": 1,
+      "stages": {
+        "encode": {
+          "avg_us": 33826.7980004,
+          "max_us": 50066.6999942,
+          "p50_us": 32639.2999996,
+          "p95_us": 37663.0000028,
+          "p99_us": 43403.3999991
+        },
+        "file_write": {
+          "avg_us": 900.287999757,
+          "max_us": 1637.10000197,
+          "p50_us": 825.800001621,
+          "p95_us": 1489.40000508,
+          "p99_us": 1545.09999993
+        },
+        "snapshot": {
+          "avg_us": 1287.84399974,
+          "max_us": 6007.39999936,
+          "p50_us": 466.499994218,
+          "p95_us": 3723.90000121,
+          "p99_us": 4354.29999925
+        }
+      }
+    }
+  ],
+  "filesystem": {
+    "cache": "warm after preflight and warmup",
+    "cleanup": "each result verified byte-for-byte and removed outside timing",
+    "fsync": false,
+    "write": "io.open wb / io.write / io.close / os.rename"
+  },
+  "fixture": {
+    "capture_main_capacities": [
+      64,
+      4096
+    ],
+    "integer_keys": [
+      1448579290,
+      3566519756,
+      3345484315
+    ],
+    "player_index_capacity": 8,
+    "source_blocks": 64,
+    "source_bytes": 20992,
+    "source_entries_each": 16
+  },
+  "iterations": 100,
+  "jit_enabled": true,
+  "lua_version": "Lua 5.1",
+  "luajit_version": "LuaJIT 2.1.0-alpha",
+  "timing": {
+    "clock": "QueryPerformanceCounter",
+    "garbage_collection": "default enabled; collected before each measurement case",
+    "timer_pair_median_us": 0
+  },
+  "warmup_iterations": 10,
+  "temporary_files_cleaned": true,
+  "created_at_utc": "2026-10-09T14:00:28.030804+00:00",
+  "benchmark_kind": "synthetic_self_process_probe_capture_with_real_files",
+  "game_started": false,
+  "game_fps_measured": false,
+  "environment": {
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.8",
+    "logical_cpus": 16,
+    "lua_dll": "G:\\SteamLibrary\\steamapps\\common\\Helldivers 2\\bin\\lua51.dll",
+    "lua_dll_sha256": "2c8720c9f446c848436ad993b1a88099d76f0b0b09df53689719b797c3039ce7"
+  },
+  "runtime_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+  "source_sha256": {
+    "external/HD2Runtime/runtime/event_world.lua": "407980b97198dff9b7ea7e0bdf3c1c9bfe85171eb278207a1e08ba042707dea2",
+    "external/HD2Runtime/runtime/native_view.lua": "8ad87367338fe7f593b743cb6a633f9173cd1987d1abd6f890a602a66bb8cb34",
+    "external/HD2Runtime/runtime/windows_readonly.lua": "de487561871ad158b9cc09205a64acdbfdc564fb1722872aa5a2ade4fb191282",
+    "tests/bench_stat_reader.lua": "c9b68bbf2b1706f527a3f4a5223b22e95d0660898228d2ec1593e983de845a96",
+    "src/native-stats.lua": "d6226509d1df04d4482626b20e26f35659b6dcd0adae16da2f9c8ee96e2eb986",
+    "external/HD2Runtime/runtime/mod_store.lua": "29818bdf70ee6ede35bb8e73d0645771dc358fde205284a4da55522f803d9645"
+  },
+  "limitations": [
+    "Synthetic stable, fully populated buffers in this benchmark process; no game process was opened.",
+    "Uses real Runtime ReadProcessMemory, native_view and production reader code; excludes world.open build proofs.",
+    "Includes production mod_store JSON encoding and real write/close/rename to OS temporary files; excludes request file reading/decoding/removal, code-range captures, lazy module initialization and logging.",
+    "Warm filesystem cache, repeated writes in a temporary directory, no fsync; antivirus and real gameplay contention may alter stalls.",
+    "These are single-capture timing distributions, not live FPS measurements; averaging across the sampling interval hides individual frame stalls.",
+    "Per-call QPC samples include timing and instrumentation overhead; no overhead subtraction.",
+    "LuaJIT enabled, normal garbage collection, OS scheduling and fixed case order can affect tails."
+  ],
+  "binary_comparison_measurement": {
+    "capture_limit_bytes": 1048576,
+    "cases": [
+      {
+        "avg_us": 8293.80099989,
+        "capture_bytes": {
+          "avg": 130243,
+          "max": 130243,
+          "p50": 130243,
+          "p95": 130243,
+          "p99": 130243
+        },
+        "capture_format": "json",
+        "entries_per_capture": 1088,
+        "main_capacity": 64,
+        "main_populated": 64,
+        "max_us": 12277.6999997,
+        "name": "probe_capture_main_64",
+        "p50_us": 7969.39999418,
+        "p95_us": 10623.0000019,
+        "p99_us": 11384.5000014,
+        "production_json_limit_passed": true,
+        "production_json_roundtrip_verified": true,
+        "read_bytes_per_poll": 22348,
+        "read_calls_per_poll": 6,
+        "read_failures": 0,
+        "read_into_calls_per_poll": 1,
+        "stages": {
+          "encode": {
+            "avg_us": 7363.35800008,
+            "max_us": 10823.3999999,
+            "p50_us": 7202.19999494,
+            "p95_us": 9251.60000043,
+            "p99_us": 10173.900002
+          },
+          "file_write": {
+            "avg_us": 712.841000131,
+            "max_us": 1325.80000354,
+            "p50_us": 682.400001097,
+            "p95_us": 1035.90000072,
+            "p99_us": 1136.400002
+          },
+          "snapshot": {
+            "avg_us": 217.601999684,
+            "max_us": 1006.09999936,
+            "p50_us": 153.900000441,
+            "p95_us": 506.600001245,
+            "p99_us": 776.100001531
+          }
+        }
+      },
+      {
+        "avg_us": 33319.6959997,
+        "capture_bytes": {
+          "avg": 625293,
+          "max": 625293,
+          "p50": 625293,
+          "p95": 625293,
+          "p99": 625293
+        },
+        "capture_format": "json",
+        "entries_per_capture": 5120,
+        "main_capacity": 4096,
+        "main_populated": 4096,
+        "max_us": 40398.7999962,
+        "name": "probe_capture_main_4096",
+        "p50_us": 33427.7000002,
+        "p95_us": 35978.5999972,
+        "p99_us": 38811.6999966,
+        "production_json_limit_passed": true,
+        "production_json_roundtrip_verified": true,
+        "read_bytes_per_poll": 102988,
+        "read_calls_per_poll": 6,
+        "read_failures": 0,
+        "read_into_calls_per_poll": 1,
+        "stages": {
+          "encode": {
+            "avg_us": 31213.2910002,
+            "max_us": 37592.9000002,
+            "p50_us": 30632.2000033,
+            "p95_us": 34562.4999973,
+            "p99_us": 37304.000005
+          },
+          "file_write": {
+            "avg_us": 786.043999906,
+            "max_us": 1182.10000073,
+            "p50_us": 755.100001697,
+            "p95_us": 968.09999377,
+            "p99_us": 1045.10000529
+          },
+          "snapshot": {
+            "avg_us": 1320.36099967,
+            "max_us": 3849.20000215,
+            "p50_us": 463.60000124,
+            "p95_us": 3627.70000356,
+            "p99_us": 3846.49999614
+          }
+        }
+      },
+      {
+        "avg_us": 433.655000743,
+        "capture_bytes": {
+          "avg": 22632,
+          "max": 22632,
+          "p50": 22632,
+          "p95": 22632,
+          "p99": 22632
+        },
+        "capture_format": "binary",
+        "entries_per_capture": 1088,
+        "main_capacity": 64,
+        "main_populated": 64,
+        "max_us": 1180.39999506,
+        "name": "probe_binary_capture_main_64",
+        "p50_us": 405.700004194,
+        "p95_us": 564.200003282,
+        "p99_us": 785.100004578,
+        "production_binary_roundtrip_verified": true,
+        "production_json_limit_passed": true,
+        "production_json_roundtrip_verified": true,
+        "read_bytes_per_poll": 22348,
+        "read_calls_per_poll": 6,
+        "read_failures": 0,
+        "read_into_calls_per_poll": 0,
+        "stages": {
+          "encode": {
+            "avg_us": 28.3590002073,
+            "max_us": 119.199998153,
+            "p50_us": 24.2000023718,
+            "p95_us": 45.3000029665,
+            "p99_us": 71.2999972166
+          },
+          "file_write": {
+            "avg_us": 382.475000588,
+            "max_us": 1140.00000031,
+            "p50_us": 359.000005119,
+            "p95_us": 519.499997608,
+            "p99_us": 747.099998989
+          },
+          "snapshot": {
+            "avg_us": 22.8209999477,
+            "max_us": 123.900004837,
+            "p50_us": 16.4000011864,
+            "p95_us": 46.499997552,
+            "p99_us": 93.7000004342
+          }
+        }
+      },
+      {
+        "avg_us": 468.51300016,
+        "capture_bytes": {
+          "avg": 103274,
+          "max": 103274,
+          "p50": 103274,
+          "p95": 103274,
+          "p99": 103274
+        },
+        "capture_format": "binary",
+        "entries_per_capture": 5120,
+        "main_capacity": 4096,
+        "main_populated": 4096,
+        "max_us": 851.400000101,
+        "name": "probe_binary_capture_main_4096",
+        "p50_us": 434.900000982,
+        "p95_us": 623.700005235,
+        "p99_us": 779.299996793,
+        "production_binary_roundtrip_verified": true,
+        "production_json_limit_passed": true,
+        "production_json_roundtrip_verified": true,
+        "read_bytes_per_poll": 102988,
+        "read_calls_per_poll": 6,
+        "read_failures": 0,
+        "read_into_calls_per_poll": 0,
+        "stages": {
+          "encode": {
+            "avg_us": 39.5620002382,
+            "max_us": 123.199999507,
+            "p50_us": 24.5999981416,
+            "p95_us": 108.699998236,
+            "p99_us": 121.999997646
+          },
+          "file_write": {
+            "avg_us": 390.635000367,
+            "max_us": 724.799996533,
+            "p50_us": 374.700000975,
+            "p95_us": 504.299998283,
+            "p99_us": 680.199998897
+          },
+          "snapshot": {
+            "avg_us": 38.3159995545,
+            "max_us": 146.300000779,
+            "p50_us": 31.9000027957,
+            "p95_us": 65.2999951853,
+            "p99_us": 143.700002809
+          }
+        }
+      }
+    ],
+    "filesystem": {
+      "cache": "warm after preflight and warmup",
+      "cleanup": "each result verified byte-for-byte and removed outside timing",
+      "fsync": false,
+      "write": "io.open wb / io.write / io.close / os.rename"
+    },
+    "fixture": {
+      "capture_main_capacities": [
+        64,
+        4096
+      ],
+      "integer_keys": [
+        1448579290,
+        3566519756,
+        3345484315
+      ],
+      "player_index_capacity": 8,
+      "source_blocks": 64,
+      "source_bytes": 20992,
+      "source_entries_each": 16
+    },
+    "iterations": 100,
+    "jit_enabled": true,
+    "lua_version": "Lua 5.1",
+    "luajit_version": "LuaJIT 2.1.0-alpha",
+    "timing": {
+      "clock": "QueryPerformanceCounter",
+      "garbage_collection": "default enabled; collected before each measurement case",
+      "timer_pair_median_us": 0
+    },
+    "warmup_iterations": 10,
+    "temporary_files_cleaned": true,
+    "created_at_utc": "2026-10-09T14:09:56.319465+00:00",
+    "benchmark_kind": "synthetic_self_process_probe_capture_with_real_files",
+    "game_started": false,
+    "game_fps_measured": false,
+    "environment": {
+      "os": "Windows-10-10.0.19045-SP0",
+      "python": "3.12.8",
+      "logical_cpus": 16,
+      "lua_dll": "G:\\SteamLibrary\\steamapps\\common\\Helldivers 2\\bin\\lua51.dll",
+      "lua_dll_sha256": "2c8720c9f446c848436ad993b1a88099d76f0b0b09df53689719b797c3039ce7"
+    },
+    "runtime_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+    "source_sha256": {
+      "external/HD2Runtime/runtime/event_world.lua": "407980b97198dff9b7ea7e0bdf3c1c9bfe85171eb278207a1e08ba042707dea2",
+      "external/HD2Runtime/runtime/native_view.lua": "8ad87367338fe7f593b743cb6a633f9173cd1987d1abd6f890a602a66bb8cb34",
+      "external/HD2Runtime/runtime/windows_readonly.lua": "de487561871ad158b9cc09205a64acdbfdc564fb1722872aa5a2ade4fb191282",
+      "tests/bench_stat_reader.lua": "ba6f315e7d88786b6d4f46e06165111eb45b66cda2ecfdfd3c52d82f6e0dbdb4",
+      "src/native-stats.lua": "984f624440f6f39bd159e357f17ca57c986ff12433bdf809b725662f3cc8cdac",
+      "external/HD2Runtime/runtime/mod_store.lua": "29818bdf70ee6ede35bb8e73d0645771dc358fde205284a4da55522f803d9645"
+    },
+    "limitations": [
+      "Synthetic stable, fully populated buffers in this benchmark process; no game process was opened.",
+      "Uses real Runtime ReadProcessMemory, native_view and production reader code; excludes world.open build proofs.",
+      "Includes production mod_store JSON encoding and real write/close/rename to OS temporary files; excludes request file reading/decoding/removal, code-range captures, lazy module initialization and logging.",
+      "Binary cases use the production raw reader and wire layout; small position/state metadata is synthetic, excluding the optional avatar/position native lookup.",
+      "Warm filesystem cache, repeated writes in a temporary directory, no fsync; antivirus and real gameplay contention may alter stalls.",
+      "These are single-capture timing distributions, not live FPS measurements; averaging across the sampling interval hides individual frame stalls.",
+      "Per-call QPC samples include timing and instrumentation overhead; no overhead subtraction.",
+      "LuaJIT enabled, normal garbage collection, OS scheduling and fixed case order can affect tails."
+    ]
+  }
+}

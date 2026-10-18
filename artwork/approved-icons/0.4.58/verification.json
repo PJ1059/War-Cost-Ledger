@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "source_ids": "Only final approved c616 and fd33 originals",
+  "original_source_files_unchanged": true,
+  "runtime_deploy_or_shared_tools_written": false,
+  "checks": [
+    {
+      "id": "M08",
+      "output_size": [
+        1536,
+        1536
+      ],
+      "output_rgba": true,
+      "sha_match": true,
+      "original_backup_sha_match": true,
+      "alpha_support_exact_to_original_maxRGB_over20": true,
+      "opaque_rgb_pixels_changed": 0,
+      "opaque_rgb_pixels_verified": 73091,
+      "semantic_holes_transparent": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "no_thumbnail_or_numeral": true
+    },
+    {
+      "id": "M09",
+      "output_size": [
+        1536,
+        1536
+      ],
+      "output_rgba": true,
+      "sha_match": true,
+      "original_backup_sha_match": true,
+      "alpha_support_exact_to_original_maxRGB_over20": true,
+      "opaque_rgb_pixels_changed": 0,
+      "opaque_rgb_pixels_verified": 77711,
+      "semantic_holes_transparent": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "no_thumbnail_or_numeral": true
+    },
+    {
+      "id": "M10",
+      "output_size": [
+        1536,
+        1536
+      ],
+      "output_rgba": true,
+      "sha_match": true,
+      "original_backup_sha_match": true,
+      "alpha_support_exact_to_original_maxRGB_over20": true,
+      "opaque_rgb_pixels_changed": 0,
+      "opaque_rgb_pixels_verified": 105960,
+      "semantic_holes_transparent": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "no_thumbnail_or_numeral": true
+    },
+    {
+      "id": "M12",
+      "output_size": [
+        1536,
+        1536
+      ],
+      "output_rgba": true,
+      "sha_match": true,
+      "original_backup_sha_match": true,
+      "alpha_support_exact_to_original_maxRGB_over20": true,
+      "opaque_rgb_pixels_changed": 0,
+      "opaque_rgb_pixels_verified": 457530,
+      "semantic_holes_transparent": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "no_thumbnail_or_numeral": true
+    }
+  ]
+}

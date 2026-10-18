@@ -1,0 +1,950 @@
+{
+  "schema": 1,
+  "version": "draft-v18",
+  "method": "mixed_sources",
+  "transparent_background": true,
+  "review_status": "pending_user_confirmation",
+  "source_review": {
+    "file": "../v15/user-review.json",
+    "sha256": "05acab2df80188e775074ae2ddaae454133a5d5c82ae4577f67bab06c76f793d",
+    "counts": {
+      "approved": 7,
+      "pending": 15,
+      "changes": 4
+    }
+  },
+  "style": {
+    "ribbon_ratio": 3,
+    "ribbon_frame": "ribbon-frame.svg",
+    "frame_method": "native_ui_geometry",
+    "frame_fill": "none",
+    "preserve": "四枚勋章M01、M03、M04、M05仅去内部黑／灰底与宽光晕；其余22张PNG和绶带框逐字节复制v17。保留R07 PS定稿与全部图案计数含义。",
+    "neutrality": "R01与R03按最新反馈分别使用尖啸虫、吐酸泰坦的形象；统计范围仍为各阵营空中／巨型单位。",
+    "display": "图像源文件逐字节复制，不裁剪、不缩放、不修改透明通道；由现有alpha_bbox展示。",
+    "frame_sha256": "6b4a4f7445b4a6f16e45e1ee59b53fee80d689f37dec0c865b96872a8ab4e21e",
+    "meaning": "本版只修改四枚勋章的负空间，不改统计含义或事件规则；四项新资产需重新审核。"
+  },
+  "items": [
+    {
+      "id": "M01",
+      "key": "democracy_harvester",
+      "name": "民主收割机",
+      "kind": "勋章",
+      "accent": "#b1c8a0",
+      "subject": "Democracy Harvester achievement: an original sharp sickle blade crossing a small alien insect skull, with sparse lower victory leaves. Convey harvesting many light enemies. White blade and skull, small muted green accents.",
+      "status": "pending_user_confirmation",
+      "generated_path": "generated-source/exec-8102aabd-9a0e-43c3-a5c1-7b862a9a3131.png",
+      "file": "M01-democracy_harvester.png",
+      "asset_revision": "v18",
+      "asset_role": "whole_medal",
+      "references": [
+        "artwork/icon-drafts/v17/M01-democracy_harvester.png"
+      ],
+      "change": "removed_internal_dark_plate",
+      "previous_review": {
+        "review": "approved",
+        "note": "",
+        "sha256": "1f1217b6ec2f449f5d8e3f83f81e73371df5dc57f5512f1421a8d3caa7c2a7ed",
+        "review_fingerprint": "82b51ebb68850d6bb971221a6e30427929e3223e18ba0fabced0623262443e67"
+      },
+      "origin_generated_path": "generated-source/exec-8102aabd-9a0e-43c3-a5c1-7b862a9a3131.png",
+      "method": "built_in_image_gen",
+      "source_path": "generated-source/exec-8102aabd-9a0e-43c3-a5c1-7b862a9a3131.png",
+      "previous_revision_metadata": {
+        "prompt": "Use case: precise-object-edit. Image 1 is our original Helldivers 2 achievement medal, the EDIT TARGET. Preserve its thin angular white/democracy-gold medal outline and simple upper attachment, so it fits the other medals. Redraw the central emblem as instructed below. Keep broad flat stencil shapes, muted category colors and large transparent negative space; no opaque disk or plate. Remove heavy bloom/glow, embossed relief and fine metallic detail. A clean semi-transparent game HUD medal, readable at about 26x32 screen pixels, one standalone icon. All unmarked background and open areas must be truly transparent. No words, numbers, counts, labels, realistic scenery, frame copied from another game's exact badge or extra objects. The user wants Helldivers identity preserved. Replace the sickle-and-alien-skull central emblem with an unmistakable LAWN MOWER as the user's democracy-harvester joke: compact white mower deck, two broad wheels, one simple angled pushing handle, a small cut grass tuft and restrained olive-green accent. No skull, insect or particular enemy faction. Keep it icon-like and readable small.",
+        "asset_revision": "v2",
+        "origin_generated_path": "generated-source/exec-f8be33ec-f3f3-4ccf-8f31-fbb4c5eee140.png"
+      },
+      "prompt_intent": "Remove ONLY dark/black/gray interior plate and broad glow; preserve foreground white/gold outlines, emblem, laurel and category colors; true alpha-transparent negative space.",
+      "mode": "edit",
+      "transparent_background": true,
+      "review_reset": "Changed image bytes: internal black/gray backing removed; fresh user review required.",
+      "previous_asset": {
+        "revision": "v17",
+        "file": "artwork/icon-drafts/v17/M01-democracy_harvester.png",
+        "sha256": "1f1217b6ec2f449f5d8e3f83f81e73371df5dc57f5512f1421a8d3caa7c2a7ed",
+        "review_fingerprint": "82b51ebb68850d6bb971221a6e30427929e3223e18ba0fabced0623262443e67"
+      },
+      "description": "保留原勋章主体和轮廓，内部黑／灰底改为透明镂空。"
+    },
+    {
+      "id": "M02",
+      "key": "air_expert",
+      "name": "防空专家",
+      "kind": "勋章",
+      "accent": "#8bbad6",
+      "subject": "防空专家中央改成晴空万里的太阳与晴朗天际符号，保留原勋章框、月桂与蓝色分类色。",
+      "prompt": "Use case: precise-object-edit.\nInput image 1: EDIT TARGET, our existing Helldivers 2 AIR DEFENSE EXPERT medal.\nPrimary request: change the central emblem to mean CLEAR SKIES, the Chinese expression 晴空万里: having cleared the sky of aerial enemies. Keep the medal name unchanged; no words in the picture.\nPreserve the target's angular gold/ivory hollow medal frame, top suspension bar, gold bottom laurel and restrained blue category accents. Change ONLY the central gun / burst emblem. Remove the entire anti-aircraft gun, pedestal, firing trails and explosive flak burst.\nReplace them with a single clear, calm sky symbol: a small pale-gold SUN near the upper center with six chunky separated rays, above two low sweeping clean sky-blue / ivory HORIZON strokes. The center must look airy, bright, open and cloudless, expressing clear open sky. No clouds or smoke, no aircraft, wing badges, targets, radar, cannon, planet, globe, terrain picture, buildings or stars. The symbol should read as clear sky inside a Helldivers military commendation, not a painted landscape.\nFlat clean stencil, very sparse broad shapes; generous real transparent negative space especially between sun and sky strokes. Original outer frame and blue accent placements intact, simple crisp edges. Readable at 26x32px. No glow, blur, texture, realistic metal, embossed relief, heavy backing disk, letters, counts, labels, watermark or background. Keep actual alpha transparency in every open area.",
+      "status": "pending_unchanged",
+      "generated_path": "artwork/icon-drafts/v17/M02-air_expert.png",
+      "file": "M02-air_expert.png",
+      "asset_revision": "v4",
+      "asset_role": "whole_medal",
+      "references": [
+        "artwork/icon-drafts/v3/M02-air_expert.png"
+      ],
+      "change": "unchanged",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "e4364595af60e1bcdfb684648573080c6d0b12f38088a9f98cfd81bcd13aba68",
+        "review_fingerprint": "bd0fc6f9d5fbe73431aa2a6bf867d0257a70dfda9bef012b0ab5ca510e802794"
+      },
+      "origin_generated_path": "generated-source/exec-5178dfdc-cc09-420d-a335-ccf8c7029b88.png",
+      "method": "built_in_image_gen",
+      "source_path": "artwork/icon-drafts/v17/M02-air_expert.png"
+    },
+    {
+      "id": "M03",
+      "key": "democracy_undying",
+      "name": "民主永不死",
+      "kind": "勋章",
+      "accent": "#9bcfb1",
+      "subject": "Democracy Never Dies achievement, healing 1000 health in one life: a central white medical cross enclosed by one almost complete circular revival arrow and a short heartbeat pulse. Very simple recognisable medical-revival emblem. Green accents, never a red cross.",
+      "status": "pending_user_confirmation",
+      "generated_path": "generated-source/exec-df35c566-5951-4f86-88fc-28f6b4d7f23a.png",
+      "file": "M03-democracy_undying.png",
+      "asset_revision": "v18",
+      "asset_role": "whole_medal",
+      "references": [
+        "artwork/icon-drafts/v17/M03-democracy_undying.png"
+      ],
+      "change": "removed_internal_dark_plate",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "642a493ab2caeba650db04cc7d175fd2ae981b277f3f0e0b093a9d745806632e",
+        "review_fingerprint": "85255c7c84bcb72343bfd334aaa9d94964584c2cf40e95f39c2107777123d73a"
+      },
+      "origin_generated_path": "generated-source/exec-df35c566-5951-4f86-88fc-28f6b4d7f23a.png",
+      "method": "built_in_image_gen",
+      "source_path": "generated-source/exec-df35c566-5951-4f86-88fc-28f6b4d7f23a.png",
+      "previous_revision_metadata": {
+        "prompt": "Use case: stylized-concept. Asset type: ONE reusable transparent game HUD achievement icon for an original Helldivers 2 battle-results MOD. Generate only the specified icon, not a sheet or screenshot. Native Helldivers 2 military holographic HUD language: precise thin ivory-white and pale democracy-yellow outlines, sparse geometry, limited category accent color, airy transparent charcoal fill, crisp white central emblem. Flat clean graphic, balanced strong silhouette readable at tiny HUD size. No realistic metal, thick chrome, glitter, radial rays, decorative scenery, letters, numbers, text, labels or watermark. Isolate the complete icon with a small even margin on a genuinely transparent canvas. Use real transparency outside the icon. The fill should be much fainter than the outline and emblem. A compact angular hexagonal military achievement medal in a square composition, with a small suspension bar at the top and restrained victory leaves only at the lower edges. Fine pale-gold and ivory perimeter lines, original white central emblem, small specified category-color accent. Keep it mostly hollow, light, flat and holographic, not a solid opaque medallion or ornate realistic medal. It must remain identifiable at 32 by 38 GUI pixels. Subject: Democracy Never Dies achievement, healing 1000 health in one life: a central white medical cross enclosed by one almost complete circular revival arrow and a short heartbeat pulse. Very simple recognisable medical-revival emblem. Green accents, never a red cross.",
+        "asset_revision": "v1",
+        "origin_generated_path": "generated-source/exec-f8203185-4a7a-479a-b991-88551b6f9440.png"
+      },
+      "prompt_intent": "Remove ONLY dark/black/gray interior plate and broad glow; preserve foreground white/gold outlines, emblem, laurel and category colors; true alpha-transparent negative space.",
+      "mode": "edit",
+      "transparent_background": true,
+      "review_reset": "Changed image bytes: internal black/gray backing removed; fresh user review required.",
+      "previous_asset": {
+        "revision": "v17",
+        "file": "artwork/icon-drafts/v17/M03-democracy_undying.png",
+        "sha256": "642a493ab2caeba650db04cc7d175fd2ae981b277f3f0e0b093a9d745806632e",
+        "review_fingerprint": "85255c7c84bcb72343bfd334aaa9d94964584c2cf40e95f39c2107777123d73a"
+      },
+      "description": "保留原勋章主体和轮廓，内部黑／灰底改为透明镂空。"
+    },
+    {
+      "id": "M04",
+      "key": "freedom_in_veins",
+      "name": "血管中全是自由的香气",
+      "kind": "勋章",
+      "accent": "#7fc7b9",
+      "subject": "Freedom in the Veins achievement, healing 5000 health in one mission: a white heart / vascular emblem with a crisp heartbeat line and two small rising wing-shaped pulse waves, crowned by a small democracy star. Distinguish from the medical-cross revival medal. Small teal-green accents.",
+      "status": "pending_user_confirmation",
+      "generated_path": "generated-source/exec-3b329b64-a9b8-403d-8200-0778894f9d2c.png",
+      "file": "M04-freedom_in_veins.png",
+      "asset_revision": "v18",
+      "asset_role": "whole_medal",
+      "references": [
+        "artwork/icon-drafts/v17/M04-freedom_in_veins.png"
+      ],
+      "change": "removed_internal_dark_plate",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "e960ce8bea104dcc2f151e7a8fe4c9412a5d26c7b3a1f82619e2fea8680fb2ea",
+        "review_fingerprint": "77606fad7d5f8f56ebdf2072fc4ff78704c98258b18755e9e133bacb06aabe3a"
+      },
+      "origin_generated_path": "generated-source/exec-3b329b64-a9b8-403d-8200-0778894f9d2c.png",
+      "method": "built_in_image_gen",
+      "source_path": "generated-source/exec-3b329b64-a9b8-403d-8200-0778894f9d2c.png",
+      "previous_revision_metadata": {
+        "prompt": "Use case: stylized-concept. Asset type: ONE reusable transparent game HUD achievement icon for an original Helldivers 2 battle-results MOD. Generate only the specified icon, not a sheet or screenshot. Native Helldivers 2 military holographic HUD language: precise thin ivory-white and pale democracy-yellow outlines, sparse geometry, limited category accent color, airy transparent charcoal fill, crisp white central emblem. Flat clean graphic, balanced strong silhouette readable at tiny HUD size. No realistic metal, thick chrome, glitter, radial rays, decorative scenery, letters, numbers, text, labels or watermark. Isolate the complete icon with a small even margin on a genuinely transparent canvas. Use real transparency outside the icon. The fill should be much fainter than the outline and emblem. A compact angular hexagonal military achievement medal in a square composition, with a small suspension bar at the top and restrained victory leaves only at the lower edges. Fine pale-gold and ivory perimeter lines, original white central emblem, small specified category-color accent. Keep it mostly hollow, light, flat and holographic, not a solid opaque medallion or ornate realistic medal. It must remain identifiable at 32 by 38 GUI pixels. Subject: Freedom in the Veins achievement, healing 5000 health in one mission: a white heart / vascular emblem with a crisp heartbeat line and two small rising wing-shaped pulse waves, crowned by a small democracy star. Distinguish from the medical-cross revival medal. Small teal-green accents.",
+        "asset_revision": "v1",
+        "origin_generated_path": "generated-source/exec-bb400628-d829-4491-a301-f6c15950e2f9.png"
+      },
+      "prompt_intent": "Remove ONLY dark/black/gray interior plate and broad glow; preserve foreground white/gold outlines, emblem, laurel and category colors; true alpha-transparent negative space.",
+      "mode": "edit",
+      "transparent_background": true,
+      "review_reset": "Changed image bytes: internal black/gray backing removed; fresh user review required.",
+      "previous_asset": {
+        "revision": "v17",
+        "file": "artwork/icon-drafts/v17/M04-freedom_in_veins.png",
+        "sha256": "e960ce8bea104dcc2f151e7a8fe4c9412a5d26c7b3a1f82619e2fea8680fb2ea",
+        "review_fingerprint": "77606fad7d5f8f56ebdf2072fc4ff78704c98258b18755e9e133bacb06aabe3a"
+      },
+      "description": "保留原勋章主体和轮廓，内部黑／灰底改为透明镂空。"
+    },
+    {
+      "id": "M05",
+      "key": "foreign_parking",
+      "name": "这里不让停外地车",
+      "kind": "勋章",
+      "accent": "#b7a4d4",
+      "subject": "No Offworld Parking achievement: a clearly alien flying-saucer / warp-ship silhouette under a diagonal interdiction slash, with a minimal gate or landing-pad line below. Clean original sci-fi alien craft, no text and no letter P. Small muted violet accents.",
+      "status": "pending_user_confirmation",
+      "generated_path": "generated-source/exec-e7ded907-17f9-4dcf-b2c3-c36ee869c3c1.png",
+      "file": "M05-foreign_parking.png",
+      "asset_revision": "v18",
+      "asset_role": "whole_medal",
+      "references": [
+        "artwork/icon-drafts/v17/M05-foreign_parking.png"
+      ],
+      "change": "removed_internal_dark_plate",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "cc10bbcf2e0be65af2a637fb65b7426e56ebb1f72052b117aa56e04c7b8e07e0",
+        "review_fingerprint": "605122aca8b1e0da5244643888efd224d22e87978ae7992e29ffb605770a38ed"
+      },
+      "origin_generated_path": "generated-source/exec-e7ded907-17f9-4dcf-b2c3-c36ee869c3c1.png",
+      "method": "built_in_image_gen",
+      "source_path": "generated-source/exec-e7ded907-17f9-4dcf-b2c3-c36ee869c3c1.png",
+      "previous_revision_metadata": {
+        "prompt": "Use case: stylized-concept. Asset type: ONE reusable transparent game HUD achievement icon for an original Helldivers 2 battle-results MOD. Generate only the specified icon, not a sheet or screenshot. Native Helldivers 2 military holographic HUD language: precise thin ivory-white and pale democracy-yellow outlines, sparse geometry, limited category accent color, airy transparent charcoal fill, crisp white central emblem. Flat clean graphic, balanced strong silhouette readable at tiny HUD size. No realistic metal, thick chrome, glitter, radial rays, decorative scenery, letters, numbers, text, labels or watermark. Isolate the complete icon with a small even margin on a genuinely transparent canvas. Use real transparency outside the icon. The fill should be much fainter than the outline and emblem. A compact angular hexagonal military achievement medal in a square composition, with a small suspension bar at the top and restrained victory leaves only at the lower edges. Fine pale-gold and ivory perimeter lines, original white central emblem, small specified category-color accent. Keep it mostly hollow, light, flat and holographic, not a solid opaque medallion or ornate realistic medal. It must remain identifiable at 32 by 38 GUI pixels. Subject: No Offworld Parking achievement: a clearly alien flying-saucer / warp-ship silhouette under a diagonal interdiction slash, with a minimal gate or landing-pad line below. Clean original sci-fi alien craft, no text and no letter P. Small muted violet accents.",
+        "asset_revision": "v1",
+        "origin_generated_path": "generated-source/exec-00fb6ef2-9322-4364-be5e-8abf9f66e724.png"
+      },
+      "prompt_intent": "Remove ONLY dark/black/gray interior plate and broad glow; preserve foreground white/gold outlines, emblem, laurel and category colors; true alpha-transparent negative space.",
+      "mode": "edit",
+      "transparent_background": true,
+      "review_reset": "Changed image bytes: internal black/gray backing removed; fresh user review required.",
+      "previous_asset": {
+        "revision": "v17",
+        "file": "artwork/icon-drafts/v17/M05-foreign_parking.png",
+        "sha256": "cc10bbcf2e0be65af2a637fb65b7426e56ebb1f72052b117aa56e04c7b8e07e0",
+        "review_fingerprint": "605122aca8b1e0da5244643888efd224d22e87978ae7992e29ffb605770a38ed"
+      },
+      "description": "保留原勋章主体和轮廓，内部黑／灰底改为透明镂空。"
+    },
+    {
+      "id": "M06",
+      "key": "fragrant",
+      "name": "香喷喷",
+      "kind": "勋章",
+      "accent": "#dea36c",
+      "subject": "Cumulative fire-source kills achievement: an original white alien skull surrounded by a small three-point flame, thin victory leaves at the lower sides. The skull and flame must be separate readable shapes, not photoreal anatomy. Small restrained orange-gold accents.",
+      "prompt": "Use case: precise-object-edit.\nInput image 1: EDIT TARGET, our Helldivers 2 achievement medal.\nPreserve the existing white/gold angular outer medal outline, top attachment, small category accents and open negative space. Change ONLY the central emblem as described. Keep a simple flat 2D military HUD stencil, readable at 26x32 pixels. No solid background disk. Blank spaces and openings must be truly alpha-zero transparent. No bloom, glow, shadow, embossed relief, extra decoration, text, counts or scenery.\nReplace the ENTIRE globe / continents / circular planet with a bold generic enemy-death skull: a simple white skull with two broad angular dark cutout eye sockets and one broad jaw cutout. A strong orange-gold rising flame surrounds and rises BEHIND the skull. Keep the existing lower gold laurel and a short lightning slash as the catastrophe/Witherer composition. Clearly means enemy incendiary kills. No Earth, globe, continent, planet, democratic star, Super Earth insignia, Helldiver helmet or winged Helldivers skull logo. No burning friendly world. This is a universal enemy casualty symbol, no particular bug/robot/Illuminate species. Keep it clean, spare and clearly distinct from a geographic symbol.",
+      "status": "pending_unchanged",
+      "generated_path": "artwork/icon-drafts/v17/M06-fragrant.png",
+      "file": "M06-fragrant.png",
+      "asset_revision": "v3",
+      "asset_role": "whole_medal",
+      "references": [
+        "artwork/icon-drafts/v2/M06-fragrant.png"
+      ],
+      "change": "unchanged",
+      "reference_url": "https://wiki.worldofwarships.com/Ship:Achievements",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "4392d6db92bf02b7d6795cbebcb4dbd7f06de2e7df6444298065e830bb7ccae1",
+        "review_fingerprint": "feaa82519c1f5af2367622fa0a26586adf5cb3fd8e188c8cf5807fb03b97781d"
+      },
+      "origin_generated_path": "generated-source/exec-00a3caef-ea9a-4323-b38a-1b289fa701ed.png",
+      "method": "built_in_image_gen",
+      "source_path": "artwork/icon-drafts/v17/M06-fragrant.png"
+    },
+    {
+      "id": "R01",
+      "key": "air",
+      "name": "防空",
+      "kind": "绶带",
+      "accent": "#8bbad6",
+      "subject": "按最新补充简化为尖啸虫纯剪影与准心；移除翅膜和甲壳内细节。",
+      "prompt": "Use case: precise-object-edit.\nInput image 1: EDIT TARGET, our current Helldivers 2 Shrieker targeting pictogram.\nThe user says: a SILHOUETTE is enough; it does not need to be this large or detailed.\nMake a tiny HUD icon, not an illustration. Preserve the actual Shrieker's external contour: two upright hooked membrane wings, scalloped outer wing edges, insect body and narrow lower body. Fill the entire creature silhouette with ONE flat ivory-white ink. Remove ALL internal wing membrane ribs, armor panels, inner strokes, stippling, scratches, holes, wear and shading. Keep only the natural large empty spaces outside the creature, including the space between the wings. The only foreground detail is the same clean democracy-yellow targeting circle with four short crosshair ticks centered on the creature's body. No extra outlines, shadow, texture, glow, 3D shading, border, frame, backdrop, words or counts.\nThe result must read immediately when the complete symbol is only about 18 pixels high. Compact square transparent icon, preferably 256x256 output. Solid smooth silhouette edges, large transparent background. Preserve real transparency. One icon only.",
+      "prompt_record": "reconstructed_from_generation_record",
+      "status": "pending_unchanged",
+      "generated_path": "artwork/icon-drafts/v17/R01-air.png",
+      "file": "R01-air.png",
+      "asset_revision": "v4",
+      "asset_role": "central_pictogram",
+      "references": [
+        "generated-source/exec-131d9a67-2576-4b78-aa56-39f3fc32c6c0.png"
+      ],
+      "change": "unchanged",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "3477d22ddfda61936a1be9982405c6fbf4f14cf578e1113e64755a1f1d073d35",
+        "review_fingerprint": "77260b9fb88e8052743c3deaad0259ae7e74128bffa7558180ea4c0dc40a6294"
+      },
+      "transparent_background": true,
+      "origin_generated_path": "generated-source/exec-483398b8-ee4d-4c2d-8e86-ebd7343db275.png",
+      "method": "built_in_image_gen",
+      "source_path": "artwork/icon-drafts/v17/R01-air.png"
+    },
+    {
+      "id": "R02",
+      "key": "heavy",
+      "name": "反重",
+      "kind": "绶带",
+      "accent": "#d9a159",
+      "subject": "Heavy enemy kill: a clearly heavy armored enemy head / helmet with broad shoulder armor and a sharp central fracture from an impact. Heavy armor should be the defining symbol, not a bullet icon. Small muted bronze accents.",
+      "prompt": "Use case: logo-brand. One original flat 2D HELLDIVERS 2 military HUD pictogram on true transparent background. Ivory-white with a small democracy-yellow accent, crisp angular stencil, very few broad shapes, large transparent negative spaces, no fine detail. Clear at 18 to 24 pixels. ONE central icon only; its ribbon frame is separate. No frame, ribbon, plate, text or numbers. No bevel, texture, wear, glow, shadow, scenery or black/gray fill. All unmarked space is alpha-zero. HEAVY KILL, neutral across all three factions: a thick generic armored shield split by one broad crack, with a small yellow armor-piercing point. Generic protection/armor emblem; no helmet, face, bug shell anatomy, robot or alien species.",
+      "status": "approved_unchanged",
+      "generated_path": "artwork/icon-drafts/v17/R02-heavy.png",
+      "file": "R02-heavy.png",
+      "asset_revision": "v2",
+      "asset_role": "central_pictogram",
+      "references": [],
+      "change": "unchanged",
+      "previous_review": {
+        "review": "approved",
+        "note": "",
+        "sha256": "4ceb149534896179dbba05a7a9ae6b2b08e1fdc97441120ad97baa9ed033b601",
+        "review_fingerprint": "51c08584e05e1ab3be441ab72fadcb0aa2ddf9244f35358d1a820a3800468ca4"
+      },
+      "origin_generated_path": "generated-source/exec-64af05e9-f91f-44b9-9e9c-edfca9f8d79a.png",
+      "method": "built_in_image_gen",
+      "source_path": "artwork/icon-drafts/v17/R02-heavy.png"
+    },
+    {
+      "id": "R03",
+      "key": "giant",
+      "name": "巨人杀手",
+      "kind": "绶带",
+      "accent": "#b5a2dc",
+      "subject": "巨人杀手使用游戏内吐酸泰坦被致死打击的图案；不修改巨型击杀统计范围。",
+      "prompt": "Use case: logo-brand.\nAsset type: ONE central pictogram for a HELLDIVERS 2 battle-results HUD ribbon. The existing 3:1 hollow ribbon frame is separate; do NOT draw or change a ribbon frame.\nStyle: flat ivory-white and democracy-yellow sci-fi military stencil. Strong broad silhouettes, a few meaningful negative cuts, clean angular precision. Readable in an actual small HUD at 24px. Generous transparent negative space around and inside the mark. No photorealistic shading, bevel, distress, fine etched detail, gradients, texture, glow, opaque backing, ribbon, border, words or counts. All unmarked areas are genuinely alpha-zero transparent. One centered symbol on a transparent canvas.\nInput image 1: SPECIES / ANATOMY REFERENCE, the actual Helldivers 2 BILE TITAN enemy icon from the existing verified enemy catalog.\nPrimary request: KILLING A BILE TITAN. Use the actual four extremely long, thin angular stilt legs, small armored triangular insect thorax / head and central hanging abdomen visible in the reference. Preserve the alien's specific silhouette so it is recognizable as the game Bile Titan even small; not a humanoid monster, generic spider or Charger. Symmetrical near-front view matching the reference. Make the four leg shafts strong enough to survive tiny HUD size, with generous negative spaces between them. Add one bold democracy-yellow diagonal lethal strike THROUGH THE HEAD / upper body; a small separated white head-armor fragment establishes it has been defeated. Restrict the strike to the body so all four long legs remain readable. White stencil anatomy, one yellow fatal slash, no opaque disk, small soldier, target circle, generic skull, flames or scenery.",
+      "status": "pending_unchanged",
+      "generated_path": "artwork/icon-drafts/v17/R03-giant.png",
+      "file": "R03-giant.png",
+      "asset_revision": "v4",
+      "asset_role": "central_pictogram",
+      "references": [
+        "artwork/icon-drafts/v4/references/Bile-Titan.webp"
+      ],
+      "change": "unchanged",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "660608d5d5fa67b0a2fd6547abc1052b6464b99a3417658098d3b1b6b05c62f5",
+        "review_fingerprint": "4db5023d392501f16bde070223ea475cfb240fa9844051f4c23cbaa57b40de9b"
+      },
+      "origin_generated_path": "generated-source/exec-dd6c7321-25e6-4b05-9bd5-4be07ab86630.png",
+      "method": "built_in_image_gen",
+      "source_path": "artwork/icon-drafts/v17/R03-giant.png"
+    },
+    {
+      "id": "R04",
+      "key": "demolition",
+      "name": "拆除",
+      "kind": "绶带",
+      "accent": "#c5ae69",
+      "subject": "Enemy asset demolition: a compact angular alien industrial factory / bunker with a cracked roof and two outward demolition fragments. A building, not a creature. Small muted ochre-gold accents.",
+      "prompt": "Use case: logo-brand. One original flat 2D HELLDIVERS 2 military HUD pictogram on true transparent background. Ivory-white with a small democracy-yellow accent, crisp angular stencil, very few broad shapes, large transparent negative spaces, no fine detail. Clear at 18 to 24 pixels. ONE central icon only; its ribbon frame is separate. No frame, ribbon, plate, text or numbers. No bevel, texture, wear, glow, shadow, scenery or black/gray fill. All unmarked space is alpha-zero. ASSET DESTRUCTION, neutral across all three factions: a single large hollow geometric cube/building block breaking into three angular white pieces, one short yellow demolition slash. Abstract destructible asset with a broken structural edge. No factory chimney, robot building, bug nest, alien saucer or recognizable faction structure.",
+      "status": "approved_unchanged",
+      "generated_path": "artwork/icon-drafts/v17/R04-demolition.png",
+      "file": "R04-demolition.png",
+      "asset_revision": "v2",
+      "asset_role": "central_pictogram",
+      "references": [],
+      "change": "unchanged",
+      "previous_review": {
+        "review": "approved",
+        "note": "",
+        "sha256": "dfdd9d497995e2a3dbcc680257175d8b3efdbe758cf1bbbe18e5afd1a8ca68e8",
+        "review_fingerprint": "c986f0f28107833066a1401c3dedd7e170ae7a16acdbf4e8b8379072985de3da"
+      },
+      "origin_generated_path": "generated-source/exec-79ae4f5b-597b-4dc9-880b-57469b913bd7.png",
+      "method": "built_in_image_gen",
+      "source_path": "artwork/icon-drafts/v17/R04-demolition.png"
+    },
+    {
+      "id": "R05",
+      "key": "melee",
+      "name": "近战杀敌",
+      "kind": "绶带",
+      "accent": "#8fc7c0",
+      "subject": "R05 melee KILL ribbon central emblem. Reference is the actual Terminid Warrior from Helldivers 2: angular wedge-shaped chitin head, two hooked mandibles, insect body and jointed legs, not a human skull. Make a sharp broad combat dagger clearly embedded point-down into the back of one SMALL collapsed dead Terminid, with its rigid folded legs splayed horizontally. Dagger hilt and guard above corpse, blade penetrates its shell. A plain compact side silhouette of corpse below dagger with at most two chitin seam cutouts; unmistakably a knife planted in a dead bug. No upright living warrior, not only a loose knife, no human bodies, no blood droplets. Ivory bug and ivory dagger, one subtle teal hilt accent matching #8fc7c0. No external frame, no decorative motion or sparks. Wide but compact 1.2:1 silhouette; this will be centered in the established 3:1 hollow ribbon frame.",
+      "prompt": "Use case: stylized-concept. Asset: ONE original transparent Helldivers 2 combat HUD pictogram, NOT a sheet, screenshot, ribbon frame, badge or label. A flat precise ivory-white military stencil, restrained pale democracy-yellow / specified category-color accent, generous actual transparent negative space. One compact coherent composition readable at 24px maximum edge. Use broad purposeful shapes and very few internal cutouts; keep crisp hard clean contours, no mottled wear, accidental holes, cloudy fringes, glow, gradients, lighting, realistic metal, embossed relief, soft blur, text, numbers, arrows unless specifically required, watermark, solid background, checkerboard or drop shadow. Complete central silhouette in the middle of a square transparent canvas with large even margins; foreground occupies about 16–20% of the full canvas area. Preserve actual alpha transparency in empty regions. Reference artwork is design/identity inspiration only: translate to a distinct HD2 stencil.\nR05 melee KILL ribbon central emblem. Reference is the actual Terminid Warrior from Helldivers 2: angular wedge-shaped chitin head, two hooked mandibles, insect body and jointed legs, not a human skull. Make a sharp broad combat dagger clearly embedded point-down into the back of one SMALL collapsed dead Terminid, with its rigid folded legs splayed horizontally. Dagger hilt and guard above corpse, blade penetrates its shell. A plain compact side silhouette of corpse below dagger with at most two chitin seam cutouts; unmistakably a knife planted in a dead bug. No upright living warrior, not only a loose knife, no human bodies, no blood droplets. Ivory bug and ivory dagger, one subtle teal hilt accent matching #8fc7c0. No external frame, no decorative motion or sparks. Wide but compact 1.2:1 silhouette; this will be centered in the established 3:1 hollow ribbon frame.",
+      "status": "pending_unchanged",
+      "generated_path": "artwork/icon-drafts/v17/R05-melee.png",
+      "file": "R05-melee.png",
+      "asset_revision": "v11",
+      "asset_role": "central_pictogram",
+      "references": [
+        "artwork/icon-drafts/v11/references/Warrior.webp"
+      ],
+      "change": "unchanged",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "cf1695e590731e1de01c747a6a9d7a12072bbdd2321a9a74dcaceec0b59a3057",
+        "review_fingerprint": "895e55677f40ce5240dbc74c07807a7bece096f304fd20cceb3fb1a1b025d3d9"
+      },
+      "method": "built_in_image_gen",
+      "source_path": "artwork/icon-drafts/v17/R05-melee.png",
+      "description": "尖刀插在倒下的终结族尸体上；统一记录近战杀敌。"
+    },
+    {
+      "id": "R06",
+      "key": "ignite",
+      "name": "火焰击杀",
+      "kind": "绶带",
+      "accent": "#e09a60",
+      "subject": "火焰中央放置原生骷髅参考，单个叠合图案，不再并排。",
+      "prompt": "Use case: compositing. Asset: ONE transparent central pictogram for our hollow Helldivers 2 HUD fire-kill ribbon. Image 1 is the EDIT TARGET: our flame and native-style skull presently side-by-side. Image 2 is the accepted flame-shape reference. Image 3 is the extracted native Helldivers 2 skull identity reference. User correction: put the skull INSIDE THE CENTER OF THE FLAME, not beside it. Make ONE compact vertical emblem: preserve the recognizable pointed ivory-white outer flame silhouette, remove the separate skull at right, and replace the small inner yellow flame with the native flat ivory skull centered inside the flame's hollow belly. Native skull broad flat forehead, simple eye apertures, angular cheek points, very short squared jaw, no added teeth or nose. The skull should occupy about half the outer flame height, and be readable at a final central pictogram height of 15 pixels. Leave a broad genuinely transparent gap between skull and surrounding flame so they do not merge; sparse restrained democracy-yellow flame accents may outline the outer tongue, not cover the skull. Flat clean military stencil, purposeful broad solid shapes, simple clean internal cuts, no random holes. Center the whole compact emblem on transparent square canvas with clear margin. Keep the existing military white/yellow visual identity. Generate only the central pictogram, no ribbon frame, text, letters, numbers, labels, plate, scene, smoke, gradient, glow, shading, shadows, distressed texture or checkerboard. Background and open cuts genuinely alpha-transparent. One skull fully contained in one flame, never two motifs side-by-side.",
+      "status": "pending_unchanged",
+      "generated_path": "artwork/icon-drafts/v17/R06-fire_kills.png",
+      "file": "R06-fire_kills.png",
+      "asset_revision": "v16",
+      "asset_role": "central_pictogram",
+      "references": [
+        "artwork/icon-drafts/v15/R06-fire_kills.png",
+        "artwork/icon-drafts/v15/R08-status_fire.png",
+        "artwork/icon-drafts/v15/references/HD2-native-skull_icon.png"
+      ],
+      "change": "unchanged",
+      "previous_review": {
+        "review": "changes",
+        "note": "火焰中央有个骷髅头，不是分开放",
+        "sha256": "4a9421fcd0e339d8728d225f578dda35cbbda20e21c0f09d486dca33f0a50920",
+        "review_fingerprint": "1225fb04881df1facca116d403e3332105a138e5d6bd81f1ba6d19b071741300"
+      },
+      "method": "built_in_image_gen",
+      "source_path": "artwork/icon-drafts/v17/R06-fire_kills.png",
+      "description": "火焰中央放置原生骷髅参考，单个叠合图案，不再并排。",
+      "symbol_width": 0.34,
+      "reference_sha256": {
+        "artwork/icon-drafts/v15/R06-fire_kills.png": "4a9421fcd0e339d8728d225f578dda35cbbda20e21c0f09d486dca33f0a50920",
+        "artwork/icon-drafts/v15/R08-status_fire.png": "2fc4d426bc6ed5d6c559a2a58be533af783af1f1e51469d3272aac6051ec8e76",
+        "artwork/icon-drafts/v15/references/HD2-native-skull_icon.png": "07735af40c8c23740a0c792b71b2bad61bd05e24506eacd521c4832f85f898ff"
+      }
+    },
+    {
+      "id": "R07",
+      "key": "firepower",
+      "name": "火力倾泻",
+      "kind": "绶带",
+      "accent": "#d6cb84",
+      "subject": "用户在Photoshop直接擦除火焰后的子弹风暴定稿。",
+      "status": "pending_unchanged",
+      "file": "R07-firepower.png",
+      "asset_revision": "v9",
+      "asset_role": "central_pictogram",
+      "references": [
+        "external/ChatGPT 图像 2026年10月11日 05_57_12.png"
+      ],
+      "change": "unchanged",
+      "symbol_width": 0.56,
+      "reference_archive": "references/R07-user-photoshop.png",
+      "method": "user_photoshop",
+      "source_path": "artwork/icon-drafts/v17/R07-firepower.png",
+      "source_sha256": "a099f9990cc45e35c9774d2872ae043cef3c15d4a82c4c96d9e3a62b5ab76ebe",
+      "origin_generation": {
+        "method": "built_in_image_gen",
+        "prompt": "Use case: style-transfer.\nAsset type: R07 Firepower ribbon central pictogram for a Helldivers 2 HUD, displayed inside a separate existing hollow 3:1 ribbon frame.\nInput image 1: the EXACT SUBJECT REFERENCE, an actual game/trailer screenshot of the MGX-42 BULLET STORM. Use its weapon shape; ignore all other content.\nPrimary request: turn ONLY this specific MGX-42 weapon into a compact clean white-and-democracy-yellow military HUD silhouette. Preserve the recognizable large SHORT RECTANGULAR BOX gun body, its flat slab surfaces, the tall rectangular front muzzle face with a regular GRID of round openings, and the simple lower frame/grip visible in the reference. Match the reference's slightly three-quarter orientation with the front muzzle pointing right. Its box shape and rectangular muzzle array must dominate. Preserve the real weapon's compact proportions; do not elongate it. The barrel openings are shallow holes flush in the rectangular box, not projecting tubes. Represent the holes with a few bold clean transparent grid cuts, keeping them readable at about 32 by 16 pixels. Simplify all surface details to a flat off-white stencil silhouette and a few large transparent cutouts. Include only a very SMALL democracy-yellow muzzle flare immediately to the right, no more than 12 percent of the complete symbol's width.\nRemove the person, hands, background, other weapon at the far left, and all caption text. No added rifle stock or magazine drum, no round front plate, no cylindrical barrel bundle, no Gatling/minigun rotation hardware, no optical scope, no extra weapons. No shading, thin etched lines, scratches, speckle, weathering, outlined cartoon drawing, realistic materials, glow, text, ribbon border, or ribbon backing. Subject alone centered with generous genuine alpha-zero transparent margins. The outer canvas may be wide but the weapon itself must remain compact like the reference. Genuine RGBA transparent background. The application's existing hollow ribbon border will be retained separately.",
+        "generated_path": "generated-source/exec-952fbe63-6f87-42ba-b429-31383c9f222f.png",
+        "references": [
+          "artwork/icon-drafts/v6/references/MGX-42-Bullet-Storm-game-reference.webp"
+        ]
+      },
+      "generated_path": "artwork/icon-drafts/v17/R07-firepower.png",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "a099f9990cc45e35c9774d2872ae043cef3c15d4a82c4c96d9e3a62b5ab76ebe",
+        "review_fingerprint": "1b470b3d2c91098bb15981242b1870f29826811f4e53d8e77b7bdaaa349627eb"
+      },
+      "display_scale": 0.6666666666666666,
+      "description": "保留用户 PS 原图与枪身细节，中央图案缩小至上一版的三分之二；镂空绶带框保持大小。"
+    },
+    {
+      "id": "H01",
+      "key": "hit_total",
+      "name": "总命中",
+      "kind": "绶带",
+      "accent": "#e7d46a",
+      "subject": "子弹直接命中靶心；只在地图累计绶带区显示，右侧不设总命中小图标。",
+      "prompt": "Edit this exact icon as a FLAT HARD-EDGED MILITARY HUD STENCIL. Keep the bullet on the left touching the target center on the right, but REMOVE EVERY PIXEL OF GLOW, BLUR, BLOOM, SHADOW, HAZE, LIGHTING AND GRADIENT. The image must contain ONLY TWO SOLID FOREGROUND COLORS: uniform off-white ivory and a small uniform yellow contact mark, plus fully transparent negative space and minimal antialiasing at hard boundaries. Rebuild the target as exactly TWO SIMPLE OUTLINE RINGS, each thin but bold. The spaces between the two rings and inside their center MUST BE FULLY TRANSPARENT rather than filled white or cream. The target is an outline, not a solid disc. Keep a short solid ivory bullet whose triangular tip touches a tiny solid democracy-yellow contact dot at the center of the outlined target. Simple clean uninterrupted geometry, bold readable at 22x15 pixels. Wide even transparent padding. No black background, opaque backdrop, smoke, glowing light, realistic material, cloudy alpha fringe, dither or distress, additional symbols, text, label, frame or shadow. Output the same bullet-plus-bullseye composition as one compact isolated flat pictogram on a genuinely transparent RGBA background.",
+      "file": "H01-hit_total.png",
+      "status": "pending_unchanged",
+      "asset_role": "central_pictogram",
+      "asset_revision": "v12",
+      "method": "built_in_image_gen",
+      "availability": "已有计数接口；筛选与接入待验证",
+      "description": "子弹直接命中靶心；只在地图累计绶带区显示，右侧不设总命中小图标。",
+      "source_path": "artwork/icon-drafts/v17/H01-hit_total.png",
+      "generated_path": "artwork/icon-drafts/v17/H01-hit_total.png",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "79f225606e7c416a1452490f47010417812fc305eec4259e3c65fa6657d27d7e",
+        "review_fingerprint": "a3a8b0cd7d55bd1c0235ba32dade57e6b952b55b59488efe9c537296ec913a06"
+      },
+      "change": "unchanged",
+      "references": [
+        "generated-source/exec-de017247-c18d-4374-a5c4-ee3f8cfd7c02.png"
+      ],
+      "reference_sha256": {
+        "generated-source/exec-de017247-c18d-4374-a5c4-ee3f8cfd7c02.png": "2602d16d674477ffdcf1854a0f4a877fbcf000ba46d8e7e317aaef0b294c3686"
+      },
+      "generation_attempts": [
+        {
+          "prompt_file": "icon-prompts.json",
+          "generated_path": "generated-source/exec-de017247-c18d-4374-a5c4-ee3f8cfd7c02.png",
+          "selected": false
+        },
+        {
+          "prompt_file": "H01-cleanup-prompt.json",
+          "generated_path": "generated-source/exec-eb7d3948-d158-4e5a-8e25-a37a92c07010.png",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "id": "H02",
+      "key": "hit_ricochet",
+      "name": "跳弹",
+      "kind": "命中",
+      "accent": "#8bbad6",
+      "subject": "H02 RICOCHET. The reference is WoWS's tiny ricochet symbol: a diagonally tilted armor plane and a real projectile visibly deflected at the point of contact. Adapt its readable shell/plate relationship to HD2. One small white hollow angular armor plate, drawn as a foreshortened tilted quadrilateral with only two sturdy edge strokes and a tiny contact notch. One short pointed ivory BULLET bouncing upward and right, clearly outside / above the armor surface. A single bent thin blue trajectory (#8bbad6) connects the incoming path to the outgoing bullet, no arrowheads. The shell must be recognizable as an actual projectile, not an abstract arrow. Flat white stencil, subtle pale-yellow contact mark. Avoid the source's opaque gray texture and large backing tile: the armor plane's interior stays transparent. No penetration hole.",
+      "prompt": "Use case: stylized-concept. Asset: ONE original transparent Helldivers 2 combat HUD pictogram, NOT a sheet, screenshot, ribbon frame, badge or label. A flat precise ivory-white military stencil, restrained pale democracy-yellow / specified category-color accent, generous actual transparent negative space. One compact coherent composition readable at 24px maximum edge. Use broad purposeful shapes and very few internal cutouts; keep crisp hard clean contours, no mottled wear, accidental holes, cloudy fringes, glow, gradients, lighting, realistic metal, embossed relief, soft blur, text, numbers, arrows unless specifically required, watermark, solid background, checkerboard or drop shadow. Complete central silhouette in the middle of a square transparent canvas with large even margins; foreground occupies about 16–20% of the full canvas area. Preserve actual alpha transparency in empty regions. Reference artwork is design/identity inspiration only: translate to a distinct HD2 stencil.\nH02 RICOCHET. The reference is WoWS's tiny ricochet symbol: a diagonally tilted armor plane and a real projectile visibly deflected at the point of contact. Adapt its readable shell/plate relationship to HD2. One small white hollow angular armor plate, drawn as a foreshortened tilted quadrilateral with only two sturdy edge strokes and a tiny contact notch. One short pointed ivory BULLET bouncing upward and right, clearly outside / above the armor surface. A single bent thin blue trajectory (#8bbad6) connects the incoming path to the outgoing bullet, no arrowheads. The shell must be recognizable as an actual projectile, not an abstract arrow. Flat white stencil, subtle pale-yellow contact mark. Avoid the source's opaque gray texture and large backing tile: the armor plane's interior stays transparent. No penetration hole.",
+      "file": "H02-hit_ricochet.png",
+      "status": "approved_unchanged",
+      "asset_role": "hit_pictogram",
+      "asset_revision": "v11",
+      "method": "built_in_image_gen",
+      "availability": "需要新增或验证接口",
+      "description": "弹头在装甲表面弹开，折线路径表示跳弹。",
+      "source_path": "artwork/icon-drafts/v17/H02-hit_ricochet.png",
+      "generated_path": "artwork/icon-drafts/v17/H02-hit_ricochet.png",
+      "previous_review": {
+        "review": "approved",
+        "note": "",
+        "sha256": "225168d0740de7a42486cf841051f74964649847ca4265b4b76b5a5b612cfab3",
+        "review_fingerprint": "cc70a8234b41c099e10e45ddd1c49ee768b0774ee1f7fff571262093801fb9e9"
+      },
+      "change": "unchanged",
+      "references": [
+        "artwork/icon-drafts/v11/references/wows-ricochet.png"
+      ]
+    },
+    {
+      "id": "H03",
+      "key": "hit_blocked",
+      "name": "未击穿（碎弹）",
+      "kind": "命中",
+      "accent": "#d7a16f",
+      "subject": "弹头分为两块大碎片，宽断裂间隙表示撞上完整装甲后未击穿。",
+      "prompt": "Edit this single small Helldivers 2 HUD pictogram. Output exactly one isolated icon on a genuinely transparent RGBA background with generous transparent padding. Preserve the flat ivory-white silhouette and restrained warm democracy-yellow / category accent. Strong crisp contours, purposeful negative space, clean undamaged surfaces. It must read at only 24 pixels high (the total-hit symbol at roughly 22 by 15 pixels). Fine deliberate inner detail is allowed but do not rely on tiny detail for the meaning. No text, digits, labels, ribbon frame, decorative badge, screenshot, black/white backing rectangle, checkerboard, soft glow or distressed/grunge holes. The existing ribbon frame is supplied separately in code; never draw it into the image. Retain the recognizable tilted hollow armor plate outline in the reference and its ivory / subdued amber palette, but redesign the foreground projectile to be UNMISTAKABLY SHATTERED against this solid armor. The projectile is made of two LARGE detached pieces: rear cylindrical stub on the left ends in a deep jagged zigzag fracture; the pointed nose fragment beside the plate is rotated upwards about 40 degrees and displaced well away. There must be a broad truly transparent open gap between the two fracture edges, at least one quarter of the projectile's original length. Add just two large ivory shards plus a small amber angular chip within the open fracture, no speckle cloud. The broken piece's outline must never bridge the gap and must not still look like one intact bullet. The plate is unpierced, no bullet or trail on its back side, no entry/exit hole, no ricochet turning arrow. Use large thick shapes so the large broken projectile is unmistakable at 24px, while retaining hollow spaces around the plate.",
+      "file": "H03-hit_blocked.png",
+      "status": "approved_unchanged",
+      "asset_role": "hit_pictogram",
+      "asset_revision": "v12",
+      "method": "built_in_image_gen",
+      "availability": "需要新增或验证接口",
+      "description": "弹头分为两块大碎片，宽断裂间隙表示撞上完整装甲后未击穿。",
+      "source_path": "artwork/icon-drafts/v17/H03-hit_blocked.png",
+      "generated_path": "artwork/icon-drafts/v17/H03-hit_blocked.png",
+      "previous_review": {
+        "review": "approved",
+        "note": "",
+        "sha256": "f67340a5637706880da212a172ac5c33008d5cf75783fb2dea37f7bbd082dc83",
+        "review_fingerprint": "f0d76c23a9ccef16b7313f7156f0c042a83efd576bcac95bfe0af490589b7325"
+      },
+      "change": "unchanged",
+      "references": [
+        "artwork/icon-drafts/v11/H03-hit_blocked.png"
+      ],
+      "reference_sha256": {
+        "artwork/icon-drafts/v11/H03-hit_blocked.png": "0fbf185708bdeff350d77fe705758ba9ca89328bebf1b190a6e521e0d4018480"
+      }
+    },
+    {
+      "id": "H04",
+      "key": "hit_penetration",
+      "name": "击穿",
+      "kind": "命中",
+      "accent": "#d6d8bd",
+      "subject": "用户指定复用v13完全击穿图片作为击穿图：弹头部分进入倾斜方框。",
+      "file": "H04-hit_penetration.png",
+      "status": "pending_unchanged",
+      "asset_role": "hit_pictogram",
+      "asset_revision": "v14",
+      "method": "reused_existing_asset",
+      "availability": "需要新增或验证接口",
+      "description": "采用上一版完全击穿图，弹头部分穿入方框；穿入深度为图形示意，仍表示同级击穿。",
+      "source_path": "artwork/icon-drafts/v17/H04-hit_penetration.png",
+      "generated_path": "artwork/icon-drafts/v17/H04-hit_penetration.png",
+      "references": [
+        "artwork/icon-drafts/v13/H05-hit_full_penetration.png"
+      ],
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "35b522655c24f2f84d0a56e55dc6a46cdb3eb40b9e84891ce1988bb9998eb6b4",
+        "review_fingerprint": "e688d4abfffd6717b9804a30e8c494f04fe34ea13cecee94a62b0a40942186b2"
+      },
+      "change": "unchanged",
+      "reference_sha256": {
+        "artwork/icon-drafts/v13/H05-hit_full_penetration.png": "35b522655c24f2f84d0a56e55dc6a46cdb3eb40b9e84891ce1988bb9998eb6b4"
+      },
+      "origin_generated_path": "generated-source/exec-022a80d9-921a-4814-b237-a8dbdd826c46.png",
+      "origin_prompt": "Use case: stylized-concept. Asset: ONE original transparent Helldivers 2 combat HUD pictogram, NOT a sheet, screenshot, ribbon frame, badge or label. A flat precise ivory-white military stencil, restrained pale democracy-yellow / specified category-color accent, generous actual transparent negative space. One compact coherent composition readable at 24px maximum edge. Use broad purposeful shapes and very few internal cutouts; keep crisp hard clean contours, no mottled wear, accidental holes, cloudy fringes, glow, gradients, lighting, realistic metal, embossed relief, soft blur, text, numbers, arrows unless specifically required, watermark, solid background, checkerboard or drop shadow. Complete central silhouette in the middle of a square transparent canvas with large even margins; foreground occupies about 16–20% of the full canvas area. Preserve actual alpha transparency in empty regions. Reference artwork is design/identity inspiration only: translate to a distinct HD2 stencil.\nH05 FULL PENETRATION / armor overmatch in HD2. WoWS images are ONLY geometry references; this category means higher AP than armor, NOT WoWS overpenetration. Use ONE hollow diagonally tilted armor plate and an actual chunky ivory pointed BULLET forcefully penetrating it. One VERY CLEAR open pale democracy-YELLOW angular breach rim around its passage, wider than the subdued rim in ordinary penetration, with exactly two separated small yellow chips. Shell nose exposed beyond the plate, one subtle rear band. The dominant difference is the bright, wider yellow breach in a SINGLE plate. No path arrow, no second wall, no double shell, no additional target, no source gray backing, no glow. Flat military stencil and open alpha negative space. Preserve clarity at 24px."
+    },
+    {
+      "id": "H05",
+      "key": "hit_full_penetration",
+      "name": "完全击穿",
+      "kind": "命中",
+      "accent": "#e7d46a",
+      "subject": "整颗弹头已经穿过倾斜装甲方框，底部、主体与尖端都在出口侧。",
+      "prompt": "Use case: precise-object-edit. Asset: ONE transparent 24-pixel Helldivers 2 HUD hit pictogram. Image 1 is the EDIT TARGET, our current full-penetration icon. User request: make the ENTIRE BULLET pass through the hollow rectangular armor frame. Preserve the existing tilted ivory-white hollow rectangle, its lean, the bullet direction (left/upper-left toward right/lower-right), flat military stencil identity, and small democracy-gold impact star at the opening. Move the complete intact bullet forward along that same axis, so its rear base, body and pointed nose are ALL beyond the far/right edge of the armor frame. The bullet's rear should be just outside the far edge with a small transparent separation: no bullet body or base remaining on the entry side. This must read as fully emerged, compared with the original target in which most of the bullet is still entering. Keep one plate and one intact bullet only, compact overall silhouette readable at 24x24 pixels, purposeful thick edges, broad simple shapes, ample true transparent negative space and modest clear canvas margin. Keep the plate almost as large as the original relative to the bullet; do not shrink it into an insignificant tiny fragment. Retain a restrained gold impact shape at the plate opening. No second plate, arrow, duplicate bullet, smoke, new ribbon frame, text, numbers, labels, borders, opaque background, checkerboard, metal rendering, shadows, glow, blur, distress or random holes. Preserve actual alpha transparency throughout background and hollow frame. This is a visual symbol only; do not add physical simulation annotations.",
+      "file": "H05-hit_full_penetration.png",
+      "status": "pending_unchanged",
+      "asset_role": "hit_pictogram",
+      "asset_revision": "v14",
+      "method": "built_in_image_gen",
+      "availability": "需要新增或验证接口",
+      "description": "整个弹头穿过方框，已从出口侧完全露出；仍表示高于装甲等级的完全击穿，不表示弹体继续飞行的贯穿记录。",
+      "source_path": "artwork/icon-drafts/v17/H05-hit_full_penetration.png",
+      "generated_path": "artwork/icon-drafts/v17/H05-hit_full_penetration.png",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "2640b2531794b93735aba3cdd75fd99dbb87b4731e5d601d9c7254963286d137",
+        "review_fingerprint": "263fce2ce23319165c97f9551c5cc28527fe540c01ced37dff769447cca20283"
+      },
+      "change": "unchanged",
+      "references": [
+        "artwork/icon-drafts/v13/H05-hit_full_penetration.png"
+      ],
+      "reference_sha256": {
+        "artwork/icon-drafts/v13/H05-hit_full_penetration.png": "35b522655c24f2f84d0a56e55dc6a46cdb3eb40b9e84891ce1988bb9998eb6b4"
+      }
+    },
+    {
+      "id": "H06",
+      "key": "hit_through",
+      "name": "贯穿",
+      "kind": "命中",
+      "accent": "#82c3bc",
+      "subject": "H06 THROUGH TARGET. EDIT TARGET is the input H06 icon. Preserve its two white vertical armor slices, their spacing and overall simple horizontal layout. Replace ONLY the existing long teal ARROW with an unmistakable short pointed BULLET flying to the right outside the second plate: ivory projectile with small teal #82c3bc band and rounded / tapered conical nose. Show one thin straight teal trail continuing through both existing openings, not a thick arrow shaft, and NO arrowhead or rear arrow fletching. The actual bullet should be short (one plate width) at right, not stretched like a spear. Keep two distinct plate slices and all real transparent regions. Clean edges and no random distressed flecks.",
+      "prompt": "Use case: stylized-concept. Asset: ONE original transparent Helldivers 2 combat HUD pictogram, NOT a sheet, screenshot, ribbon frame, badge or label. A flat precise ivory-white military stencil, restrained pale democracy-yellow / specified category-color accent, generous actual transparent negative space. One compact coherent composition readable at 24px maximum edge. Use broad purposeful shapes and very few internal cutouts; keep crisp hard clean contours, no mottled wear, accidental holes, cloudy fringes, glow, gradients, lighting, realistic metal, embossed relief, soft blur, text, numbers, arrows unless specifically required, watermark, solid background, checkerboard or drop shadow. Complete central silhouette in the middle of a square transparent canvas with large even margins; foreground occupies about 16–20% of the full canvas area. Preserve actual alpha transparency in empty regions. Reference artwork is design/identity inspiration only: translate to a distinct HD2 stencil.\nH06 THROUGH TARGET. EDIT TARGET is the input H06 icon. Preserve its two white vertical armor slices, their spacing and overall simple horizontal layout. Replace ONLY the existing long teal ARROW with an unmistakable short pointed BULLET flying to the right outside the second plate: ivory projectile with small teal #82c3bc band and rounded / tapered conical nose. Show one thin straight teal trail continuing through both existing openings, not a thick arrow shaft, and NO arrowhead or rear arrow fletching. The actual bullet should be short (one plate width) at right, not stretched like a spear. Keep two distinct plate slices and all real transparent regions. Clean edges and no random distressed flecks.",
+      "file": "H06-hit_through.png",
+      "status": "pending_unchanged",
+      "asset_role": "hit_pictogram",
+      "asset_revision": "v11",
+      "method": "built_in_image_gen",
+      "availability": "需要新增或验证接口",
+      "description": "实际子弹穿过两片装甲继续飞行，表示贯穿目标；事件需独立证据。",
+      "source_path": "artwork/icon-drafts/v17/H06-hit_through.png",
+      "generated_path": "artwork/icon-drafts/v17/H06-hit_through.png",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "4375f230127204341db86d31b73b76ddbac170d6f7380afeafbf9f10dc4612b9",
+        "review_fingerprint": "f274f42955218d914df461b241f34b265f450633a72e7a5fa52d51cd51f47507"
+      },
+      "change": "unchanged",
+      "references": [
+        "artwork/icon-drafts/v10/H06-hit_through.png"
+      ]
+    },
+    {
+      "id": "H07",
+      "key": "hit_part_destroyed",
+      "name": "部位摧毁",
+      "kind": "命中",
+      "accent": "#d7a16f",
+      "subject": "黄色准星再放大，中心直接对准断肢上段破损关节。",
+      "prompt": "Use case: precise-object-edit. Asset: ONE transparent Helldivers 2 24-pixel HUD part-destroyed hit pictogram. Image 1 is EDIT TARGET. User correction: enlarge the yellow crosshair further, and place its center ON the severed insect limb joint, not in empty air. Change the yellow reticle's position, scale and line thickness only; preserve the white two-piece broken Terminid limb, jagged broken ends, scattered little white fragments, diagonal pose, ivory stencil silhouette and purposeful sparse detail. Place the exact center of the reticle on the upper large limb's actual jagged broken joint end where white shell still exists: at the lower tip of the upper fragment. It must enclose and aim directly at visible white broken joint material, not the middle of the transparent gap between the pieces. Make the bold yellow ring outer diameter about 75 percent of total visible limb height; four cardinal reticle ticks extend to about 90 percent, thick even ring/ticks readable at 24x24. Keep an open transparent center that clearly reveals the broken white joint at the aim point; do not add an opaque disk. Full reticle and both limb tips inside canvas with clear margin. Do not turn it into a head/weapon/whole insect. Preserve sharp graphic edges, flat white and democracy-yellow only. No label, text, number, medal/ribbon frame, background plate, halo, gradient, glow, shading, black paint, speckles, weathering or scene. All background and open cuts truly alpha-transparent.",
+      "file": "H07-hit_part_destroyed.png",
+      "status": "pending_unchanged",
+      "asset_role": "hit_pictogram",
+      "asset_revision": "v16",
+      "method": "built_in_image_gen",
+      "availability": "需要新增或验证接口",
+      "description": "黄色准星再放大，中心直接对准断肢上段破损关节。",
+      "source_path": "artwork/icon-drafts/v17/H07-hit_part_destroyed.png",
+      "generated_path": "artwork/icon-drafts/v17/H07-hit_part_destroyed.png",
+      "previous_review": {
+        "review": "changes",
+        "note": "再大些。准心要在关节中央，而不是瞄准空气",
+        "sha256": "c814b51c5483ff07f8e471d2aebc04c01f057d48dce31612d17f5b5225c895eb",
+        "review_fingerprint": "57e77c1c42e25df7c3a8fd53b9882f6f1b7abc7e0b79b73ac79b303a51b1cdec"
+      },
+      "change": "unchanged",
+      "references": [
+        "artwork/icon-drafts/v15/H07-hit_part_destroyed.png"
+      ],
+      "reference_sha256": {
+        "artwork/icon-drafts/v15/H07-hit_part_destroyed.png": "c814b51c5483ff07f8e471d2aebc04c01f057d48dce31612d17f5b5225c895eb"
+      }
+    },
+    {
+      "id": "H08",
+      "key": "hit_weakpoint",
+      "name": "头部／弱点命中",
+      "kind": "命中",
+      "accent": "#dcb871",
+      "subject": "黄色准星环包围中央的完整骷髅头；头部位于准星中间，不在额头上画准星。",
+      "prompt": "Use case: precise-object-edit. Asset: one original small transparent Helldivers 2 combat HUD pictogram for a 24px maximum display edge. Output only the isolated icon on genuinely transparent RGBA, with generous transparent padding. Retain the established crisp flat ivory-white military stencil and restrained democracy-yellow accent. A few deliberate fine inner seams are allowed, but no grunge, damaged random holes, speckles, glow, lighting, gradient, smoke, background rectangle, checkerboard, label, numbers, frame or decorative medal. Purposeful large negative spaces and strong readable shapes. Do not add unrelated elements. Primary change: user's exact composition is a SKULL INSIDE THE CENTER OF THE CROSSHAIR, NOT a crosshair painted inside a large skull's forehead. Preserve the reference skull's recognizable clean ivory frontal silhouette, two angular hollow eye sockets, triangular nasal hole and two broad teeth notches, but shrink that skull so the ENTIRE skull sits in the open center of a much larger democracy-yellow targeting ring. The outer reticle is the dominant silhouette: one hollow circle and four short outward cardinal ticks. Skull height about 45% of the ring's INNER diameter. Leave a clear fully transparent margin all around the whole skull between its crown, cheeks, lower teeth and the enclosing ring. All forehead and facial features are ivory / transparent only: NO yellow crosshair or plus drawn on the skull itself, no aiming marks overlapping eyes or forehead. The reticle encloses the entire head, not just its forehead. Center the skull in the geometric bullseye. Keep total geometry compact and bold enough for 24px: larger thin yellow ring / four ticks with a small but readable ivory skull within, no crossbones, helmet, insect anatomy, extra target ring, label or large opaque backing.",
+      "file": "H08-hit_weakpoint.png",
+      "status": "approved_unchanged",
+      "asset_role": "hit_pictogram",
+      "asset_revision": "v13",
+      "method": "built_in_image_gen",
+      "availability": "需要新增或验证接口",
+      "description": "黄色准星环包围中央的完整骷髅头；头部位于准星中间，不在额头上画准星。",
+      "source_path": "artwork/icon-drafts/v17/H08-hit_weakpoint.png",
+      "generated_path": "artwork/icon-drafts/v17/H08-hit_weakpoint.png",
+      "previous_review": {
+        "review": "approved",
+        "note": "",
+        "sha256": "258e08b52a338f9a04a39b6f305ad1b060e1e708d88b89def5d5fc6aac096f2a",
+        "review_fingerprint": "fa2a5dfbc85baef081540ae0f591610dff63c1ac19d6c2e2d1b3f3132895bd5c"
+      },
+      "change": "unchanged",
+      "references": [
+        "artwork/icon-drafts/v12/H08-hit_weakpoint.png"
+      ],
+      "reference_sha256": {
+        "artwork/icon-drafts/v12/H08-hit_weakpoint.png": "28561d32a3cc3794a4d82ae27e63de119c1a4d16f0d4260d3f74039306ac8538"
+      }
+    },
+    {
+      "id": "H09",
+      "key": "hit_melee",
+      "name": "近战命中",
+      "kind": "命中",
+      "accent": "#aebed0",
+      "subject": "H09 MELEE CONTACT / HIT, distinct from melee kill R05. Sword-wound reference shows an action of blade contacting target, not a loose weapon. Generate one thick ivory combat dagger thrust diagonally down-right INTO a cropped angular TERMINID chitin shell edge in lower right. Exposed hilt and guard at upper-left, blade in firm direct contact with shell. Clearly show the shell surface receiving the thrust and one compact pale yellow contact nick / three SHORT sharp rays right at the blade tip; one short cool gray-blue #aebed0 motion slash behind knife. Action readable at24px. The target is a cropped bug armor section, not an entire dead body; no hanging corpse, no blood, no human anatomy. No floating lone knife, no crossed-weapon badge. Same crisp ivory military stencil with real transparent negative space.",
+      "prompt": "Use case: stylized-concept. Asset: ONE original transparent Helldivers 2 combat HUD pictogram, NOT a sheet, screenshot, ribbon frame, badge or label. A flat precise ivory-white military stencil, restrained pale democracy-yellow / specified category-color accent, generous actual transparent negative space. One compact coherent composition readable at 24px maximum edge. Use broad purposeful shapes and very few internal cutouts; keep crisp hard clean contours, no mottled wear, accidental holes, cloudy fringes, glow, gradients, lighting, realistic metal, embossed relief, soft blur, text, numbers, arrows unless specifically required, watermark, solid background, checkerboard or drop shadow. Complete central silhouette in the middle of a square transparent canvas with large even margins; foreground occupies about 16–20% of the full canvas area. Preserve actual alpha transparency in empty regions. Reference artwork is design/identity inspiration only: translate to a distinct HD2 stencil.\nH09 MELEE CONTACT / HIT, distinct from melee kill R05. Sword-wound reference shows an action of blade contacting target, not a loose weapon. Generate one thick ivory combat dagger thrust diagonally down-right INTO a cropped angular TERMINID chitin shell edge in lower right. Exposed hilt and guard at upper-left, blade in firm direct contact with shell. Clearly show the shell surface receiving the thrust and one compact pale yellow contact nick / three SHORT sharp rays right at the blade tip; one short cool gray-blue #aebed0 motion slash behind knife. Action readable at24px. The target is a cropped bug armor section, not an entire dead body; no hanging corpse, no blood, no human anatomy. No floating lone knife, no crossed-weapon badge. Same crisp ivory military stencil with real transparent negative space.",
+      "file": "H09-hit_melee.png",
+      "status": "pending_unchanged",
+      "asset_role": "hit_pictogram",
+      "asset_revision": "v11",
+      "method": "built_in_image_gen",
+      "availability": "需要新增或验证接口",
+      "description": "尖刀刺入虫族甲壳的接触动作；记录近战命中，具体覆盖范围待验证。",
+      "source_path": "artwork/icon-drafts/v17/H09-hit_melee.png",
+      "generated_path": "artwork/icon-drafts/v17/H09-hit_melee.png",
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "5112f9c54cadf187f1b2e52f860e7d59b191e678123b1fb822f84b8febc415ea",
+        "review_fingerprint": "733487ad78ce6b7dbd600f9efc1584f5dcd4e2a16b2504d45e06725280e86b4e"
+      },
+      "change": "unchanged",
+      "references": [
+        "artwork/icon-drafts/v11/references/sword-wound-lorc.png",
+        "artwork/icon-drafts/v11/references/Warrior.webp"
+      ]
+    },
+    {
+      "accent": "#E09A60",
+      "status": "pending_unchanged",
+      "asset_revision": "v15",
+      "availability": "状态生效接口待验证",
+      "display_scale": 1,
+      "id": "S01",
+      "key": "status_fire",
+      "name": "点燃",
+      "kind": "状态",
+      "file": "S01-status_fire.png",
+      "asset_role": "status_pictogram",
+      "method": "reused_existing_asset",
+      "change": "unchanged",
+      "source_path": "artwork/icon-drafts/v17/S01-status_fire.png",
+      "generated_path": "artwork/icon-drafts/v17/S01-status_fire.png",
+      "description": "成功点燃敌人时出现；持续伤害与刷新不增加，最后一次生效2秒后收纳。",
+      "subject": "原火焰图用于成功点燃即时反馈。",
+      "references": [
+        "artwork/icon-drafts/v14/R06-ignite.png"
+      ],
+      "reference_sha256": {
+        "artwork/icon-drafts/v14/R06-ignite.png": "2fc4d426bc6ed5d6c559a2a58be533af783af1f1e51469d3272aac6051ec8e76"
+      },
+      "previous_review": {
+        "review": "pending",
+        "note": "",
+        "sha256": "2fc4d426bc6ed5d6c559a2a58be533af783af1f1e51469d3272aac6051ec8e76",
+        "review_fingerprint": "c458e7f30c886e8755441e67b0ec24d62768b1d15bcd43aa3ca29710920a983c"
+      }
+    },
+    {
+      "accent": "#9EBB85",
+      "status": "pending_user_confirmation",
+      "asset_revision": "v17",
+      "availability": "状态生效接口待验证",
+      "display_scale": 1,
+      "id": "S02",
+      "key": "status_poison",
+      "name": "中毒",
+      "kind": "状态",
+      "file": "S02-status_poison.png",
+      "asset_role": "status_pictogram",
+      "method": "built_in_image_gen",
+      "change": "unchanged",
+      "source_path": "artwork/icon-drafts/v17/S02-status_poison.png",
+      "description": "圆润防毒面罩：大眼孔与中央七孔圆形滤罐。",
+      "subject": "按用户图2的轮廓：圆顶面罩、斜椭圆眼孔、七孔圆形滤罐；白色与毒绿色。",
+      "generated_path": "artwork/icon-drafts/v17/S02-status_poison.png",
+      "prompt": "Use case: precise-object-edit.\nAsset type: S02 poison-status small game HUD pictogram, transparent PNG.\nInput image 1: EDIT TARGET, our current white/green gas-mask icon. Input image 2: USER-CHOSEN SHAPE REFERENCE, a black gas-mask silhouette on white.\nPrimary request: replace the angular skull-like shape of image 1 with the rounded gas-mask silhouette of image 2. Follow image 2 closely: domed rounded top, two broad outboard goggles with large slanted oval lens openings, round central respirator surrounded by a thick ring, exactly SEVEN clear circular vents (one in center, six around it), two short lower side strap protrusions. Keep its simple broad silhouette. It must clearly be a gas mask, not a skull.\nColor: ivory-white body and goggle rims; restrained muted toxic olive-green respirator ring/plate. Lens openings and the seven vent holes are genuine transparent cutouts. Use solid flat shapes with crisp smooth edges and no distressed texture. Do not retain the single empty donut respirator from image 1.\nComposition: one front-facing centered mask in a square canvas, small even margin, readable at 24x24 screen pixels. No ribbon frame, no extra skull, no text, no background plate, no white rectangle from the reference, no shadow, bloom, gradients, metal or 3D. All space outside the mask and all lens/vent openings must have real alpha transparency. Preserve the reference's rounded friendly silhouette and hole layout.",
+      "references": [
+        "artwork/icon-drafts/v16/S02-status_poison.png",
+        "external/codex-clipboard-3bdb6b6e-09f3-449f-b6bb-4dab99630f9d.png"
+      ],
+      "reference_sha256": {
+        "artwork/icon-drafts/v16/S02-status_poison.png": "b6db3b98cd4fdb63d9622fbbd75c39a47ce3605dffae4f7365eec2b3cd6fd243",
+        "external/codex-clipboard-3bdb6b6e-09f3-449f-b6bb-4dab99630f9d.png": "087da622706b630eeb846838ee5eb15f32d4d7ef38fb0acc6263ef0af0f529b1"
+      },
+      "previous_review": {
+        "review": "changes",
+        "note": "再简洁点",
+        "sha256": "1bdd33ce44417045675597ddb757d17cda16fd2d3aad792a67b769b1aff4c2a5",
+        "review_fingerprint": "2c88b7e0c66bf8296116b36cdc6acafa4de86c33ed3d6bf349c29f7abff2dbde"
+      }
+    },
+    {
+      "accent": "#E09A60",
+      "status": "approved_unchanged",
+      "asset_revision": "v15",
+      "availability": "状态生效接口待验证",
+      "display_scale": 1,
+      "id": "R08",
+      "key": "status_fire",
+      "name": "点燃",
+      "kind": "绶带",
+      "file": "R08-status_fire.png",
+      "asset_role": "central_pictogram",
+      "method": "reused_existing_asset",
+      "change": "unchanged",
+      "source_path": "artwork/icon-drafts/v17/R08-status_fire.png",
+      "generated_path": "artwork/icon-drafts/v17/R08-status_fire.png",
+      "symbol_width": 0.34,
+      "description": "沿用原点燃火焰图：累计实际点燃次数，打开地图查看；刷新不增加。",
+      "subject": "原点燃绶带图精确复用为异常状态点燃。",
+      "references": [
+        "artwork/icon-drafts/v14/R06-ignite.png"
+      ],
+      "reference_sha256": {
+        "artwork/icon-drafts/v14/R06-ignite.png": "2fc4d426bc6ed5d6c559a2a58be533af783af1f1e51469d3272aac6051ec8e76"
+      },
+      "previous_review": {
+        "review": "approved",
+        "note": "按用户直接指示沿用原点燃绶带的火焰图。",
+        "sha256": "2fc4d426bc6ed5d6c559a2a58be533af783af1f1e51469d3272aac6051ec8e76",
+        "review_fingerprint": "536c813ec35a4b9799e85b144d398b3a0fc1c741fec2f36799214de75d3c8ec2"
+      }
+    },
+    {
+      "accent": "#9EBB85",
+      "status": "pending_unchanged",
+      "asset_revision": "v16",
+      "availability": "状态生效接口待验证",
+      "display_scale": 1,
+      "id": "R09",
+      "key": "status_poison",
+      "name": "中毒",
+      "kind": "绶带",
+      "file": "R09-status_poison.png",
+      "asset_role": "central_pictogram",
+      "method": "built_in_image_gen",
+      "change": "unchanged",
+      "symbol_width": 0.34,
+      "source_path": "artwork/icon-drafts/v17/R09-status_poison.png",
+      "description": "毒气云中央放置原生骷髅参考；累计成功中毒次数，数字不是击杀。",
+      "subject": "毒气云中央放置原生骷髅参考；累计成功中毒次数，数字不是击杀。",
+      "generated_path": "artwork/icon-drafts/v17/R09-status_poison.png",
+      "prompt": "Use case: compositing. Asset: ONE transparent central pictogram for our hollow Helldivers 2 HUD poison-status tally ribbon. Image 1 is EDIT TARGET currently a gas mask beside a skull. Image 2 is the extracted native Helldivers 2 skull identity reference. Latest user correction overrides the gas-mask ribbon design: redo it as TOXIC GAS WITH A SKULL IN ITS CENTER. Remove the gas mask and side-by-side composition entirely. Make ONE compact emblem: a simple hollow muted toxic-green vapor CLOUD outline with three or four broad softly scalloped lobes, and the ivory-white native Helldivers skull centered inside it. Skull broad flat forehead, two sparse transparent eye holes, angular cheek points, very short square jaw, no teeth bars or added nose. The skull is completely enclosed by the gas-cloud outline with a generous transparent gap separating skull and cloud; skull about half the cloud's height, readable at a final 15-pixel central pictogram height. Green cloud outline is bold, uncomplicated, airy and open, no dense fill; it should read as vapor, not a flame or mask. Preserve existing HUD flat white + restrained desaturated toxic-green category identity. Square compact centered composition with clear margins; render only central pictogram, existing ribbon border is supplied separately. No separate skull at right, gas mask, biohazard triangle, text, numbers, labels, count, ribbon frame, scene, gradients, shadows, glow, blur, distressed texture, random holes or checkerboard. All backgrounds and open spaces genuinely alpha-transparent. This counts successful poison applications, not kills; skull is the user-requested emblem design.",
+      "references": [
+        "artwork/icon-drafts/v15/R09-status_poison.png",
+        "artwork/icon-drafts/v15/references/HD2-native-skull_icon.png"
+      ],
+      "reference_sha256": {
+        "artwork/icon-drafts/v15/R09-status_poison.png": "83cae73cbed8de07e65b213dd03635594aba40834078e1ef5b24062c9e96b9ce",
+        "artwork/icon-drafts/v15/references/HD2-native-skull_icon.png": "07735af40c8c23740a0c792b71b2bad61bd05e24506eacd521c4832f85f898ff"
+      },
+      "previous_review": {
+        "review": "changes",
+        "note": "重做，毒气中央有个骷髅头",
+        "sha256": "83cae73cbed8de07e65b213dd03635594aba40834078e1ef5b24062c9e96b9ce",
+        "review_fingerprint": "34177cd6c85df0df876a452f25fef7df850153f52a4334bd926e233a86c5a175"
+      }
+    }
+  ],
+  "manual_feedback": [
+    {
+      "id": "R07",
+      "draft": "draft-v5",
+      "sha256": "7f2040e9464a40a151942db3488e49868ebc969af78e7695b26b48be70aaea58",
+      "review": "changes",
+      "note": "这个完全错了。要不你用游戏中“子弹风暴”战备的武器图做吧？"
+    },
+    {
+      "id": "R07",
+      "draft": "draft-v6-initial",
+      "sha256": "67618614588a60f307326ccb60f2e69e145d9fc7e24792318955493c0a57ee0d",
+      "review": "changes",
+      "note": "去掉枪口火焰，子弹风暴上方加一缕射击结束后的余烟；允许保留内部细线和纹理。"
+    },
+    {
+      "id": "R07",
+      "draft": "draft-v6",
+      "sha256": "f5c11734f828687c6ac895d7554d524ea51bc3ddbdb11d4c550adefd4b2d9e33",
+      "review": "changes",
+      "note": "用这一版去改。去掉开火即可。"
+    },
+    {
+      "id": "R07",
+      "draft": "draft-v7",
+      "sha256": "d0e29f846f8183140bee1d3166d3cd0511d621a4d436abc9500d4f00ba1cf302",
+      "review": "changes",
+      "note": "怎么有破损？直接拿原图编辑一下就行。"
+    },
+    {
+      "id": "S02",
+      "draft": "draft-v16",
+      "sha256": "b6db3b98cd4fdb63d9622fbbd75c39a47ce3605dffae4f7365eec2b3cd6fd243",
+      "review_fingerprint": "4ecbb13ce22ad0d2e20512d8c0b133d4755b2f1ad029a14216b0900924a7024f",
+      "review": "changes",
+      "note": "用图2这种。"
+    }
+  ],
+  "manual_feedback_source": {
+    "file": "../v9/user-feedback.json",
+    "source": "direct user instructions"
+  },
+  "revision": "v18",
+  "confirmed_assets": [
+    {
+      "id": "R08",
+      "sha256": "2fc4d426bc6ed5d6c559a2a58be533af783af1f1e51469d3272aac6051ec8e76",
+      "review": "approved",
+      "note": "按用户直接指示沿用原点燃绶带的火焰图。"
+    }
+  ],
+  "confirmed_assets_source": {
+    "file": "../v15/user-feedback.json",
+    "source": "direct user instructions; exact old flame PNG only"
+  },
+  "native_skull_reference": {
+    "file": "../v17/references/HD2-native-skull-source.json",
+    "png_sha256": "07735af40c8c23740a0c792b71b2bad61bd05e24506eacd521c4832f85f898ff",
+    "scope": "游戏原生UI纹理已验证；击杀计数widget引用未独立验证；新组合图为imagegen参考合成，非原生PNG逐像素拷贝。"
+  },
+  "direct_feedback_source": {
+    "file": "../v17/user-feedback.json",
+    "sha256": "36fba645f93ef4c7ca17bdaa74ad8cf21bb6d287e58dc72f883ce25d4f6360ae"
+  },
+  "previous_revision": "v17",
+  "revision_feedback": {
+    "source": "user browser comments on ui-layout-review.html, 2026-10-13",
+    "request": "去掉黑底。检查所有问题。",
+    "scope": [
+      "M01",
+      "M03",
+      "M04",
+      "M05"
+    ],
+    "review": "pending"
+  }
+}

@@ -1,0 +1,76 @@
+HD2 War Cost Ledger — third-party notices / 第三方声明
+
+The root MIT license covers original project code and documentation only.
+Third-party portions and game-derived assets retain their separate terms.
+本项目 MIT 许可仅覆盖原创代码和文档，第三方部分及游戏衍生素材保留独立条款。
+
+HD2Runtime
+----------
+Uses code / research from HD2Runtime by SkyeShade
+https://github.com/SkyeShade/HD2Runtime
+Copyright (c) 2026 SkyeShade
+License:
+https://github.com/SkyeShade/HD2Runtime/blob/dcd996daca2573443956c07252c55c2d86dd0320/LICENSE
+
+The cited upstream license governs its adapted code and research, including
+SDK-derived findings. Preserve visible attribution. The complete runtime is
+installed separately and is not included in this mod.
+其改编代码、SDK 与研究仍受上游许可约束，须保留可见署名；完整运行库单独安装。
+
+Bingus Shared Loader — Zero-Clause BSD
+-------------------------------------
+Source: https://github.com/CowboyBingus/BingusSharedLoader
+Revision: 68b9d05fd8e49ba3fb07e7e669ea46d350e9df8f
+Scope: archive format and hashing adaptations in tools/build.py.
+
+Copyright (C) 2026 by CowboyBingus
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Filediver — BSD 3-Clause
+------------------------
+Source: https://github.com/xypwn/filediver
+Recorded research revision: e5c4b91fcc02c04aed05dfac3136d7de23004526
+Scope: offline extraction/type-name/enum references; full tool not bundled.
+
+Copyright 2026 Filediver contributors
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Game material, community data and images / 游戏与社区素材
+---------------------------------------------------------
+HELLDIVERS 2, its names, designs and game-derived artwork belong to their
+respective rightsholders, including Arrowhead Game Studios and Sony
+Interactive Entertainment. This project is not affiliated with or endorsed
+by them. Other game names and marks likewise belong to their owners.
+
+Enemy-ribbon images originate from Helldivers Wiki contributors, retrieved
+through wiki.gg, DiversHub and Helldivers Training Manual. Source URLs and
+changes are recorded in docs/DATA-SOURCES.md. DiversHub attributes its wiki
+images under CC BY-NC-SA; per-file and underlying game-art rights are not
+fully verified. These assets are not MIT or public domain. Credit alone does
+not establish permission for unrestricted redistribution or commercial use.
+
+敌方绶带的游戏渲染图、下载参考图、原生 UI 图符和社区资料不适用本项目 MIT
+许可。裁切、转单色或生成纹理并不消除原素材的权利。逐图来源与尚未核实的
+许可记录见 docs/DATA-SOURCES.md；不得把署名视为无限制使用或商业使用许可。
+
+Technical references are credited in THIRD-PARTY.md. Their inclusion in that
+list does not mean their complete mods, artwork or audio are bundled here.

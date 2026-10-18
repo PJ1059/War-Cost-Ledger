@@ -1,0 +1,506 @@
+{
+  "schema": 1,
+  "status": "review_only_not_integrated",
+  "method": "Pillow deterministic source-alpha selection and coarse negative-space simplification; no image generation",
+  "runtime_files_written": false,
+  "items": [
+    {
+      "file": "heavy-veracitor.png",
+      "unit": "证真者",
+      "source": "artwork/review-0.4.57-source-v3/heavy-veracitor.png",
+      "source_sha256": "2ac665df611788a45ab43c5b1976202907973195a306dc74671fbcb290b1d4c8",
+      "source_size": [
+        2013,
+        1325
+      ],
+      "source_selection": {
+        "unit": "证真者",
+        "remove_polygons": [
+          [
+            [
+              0,
+              970
+            ],
+            [
+              650,
+              970
+            ],
+            [
+              750,
+              1230
+            ],
+            [
+              745,
+              1325
+            ],
+            [
+              0,
+              1325
+            ]
+          ],
+          [
+            [
+              350,
+              920
+            ],
+            [
+              610,
+              920
+            ],
+            [
+              705,
+              1200
+            ],
+            [
+              650,
+              1250
+            ],
+            [
+              340,
+              1170
+            ]
+          ],
+          [
+            [
+              0,
+              875
+            ],
+            [
+              180,
+              875
+            ],
+            [
+              180,
+              970
+            ],
+            [
+              0,
+              970
+            ]
+          ],
+          [
+            [
+              500,
+              1200
+            ],
+            [
+              770,
+              1200
+            ],
+            [
+              780,
+              1245
+            ],
+            [
+              760,
+              1325
+            ],
+            [
+              500,
+              1325
+            ]
+          ]
+        ],
+        "cockpit_region": [
+          790,
+          500,
+          1125,
+          940
+        ],
+        "negative_regions": [
+          [
+            825,
+            80,
+            1110,
+            445
+          ],
+          [
+            120,
+            180,
+            455,
+            640
+          ]
+        ],
+        "notes": "Remove burning wreck below the left extremity; retain original four-limb chassis and central pilot capsule."
+      },
+      "output_sha256": "82fc1160ccd87bebf634eb6768ea1412af1907dedb8e9d533eb240acf37bddf9",
+      "output_size": [
+        756,
+        506
+      ],
+      "body_ratio": 1.4940711462450593,
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "alpha_threshold": 192,
+      "working_size": [
+        768,
+        506
+      ],
+      "working_crop": [
+        12,
+        0,
+        768,
+        506
+      ],
+      "body_pixels": 130615,
+      "negative_pixels": 18467,
+      "outline_origin": "Original alpha only; polygon selection removes extra subjects, never draws new anatomy."
+    },
+    {
+      "file": "heavy-gatekeeper.png",
+      "unit": "御门者",
+      "source": "artwork/review-0.4.57-source-v3/heavy-gatekeeper.png",
+      "source_sha256": "7651f8aff8c98efde33534cce01e3f32c40d7678b703e3b30582be95990cb2c5",
+      "source_size": [
+        1987,
+        1590
+      ],
+      "source_selection": {
+        "unit": "御门者",
+        "remove_polygons": [
+          [
+            [
+              0,
+              1320
+            ],
+            [
+              520,
+              1320
+            ],
+            [
+              580,
+              1280
+            ],
+            [
+              850,
+              1320
+            ],
+            [
+              920,
+              1510
+            ],
+            [
+              920,
+              1590
+            ],
+            [
+              0,
+              1590
+            ]
+          ],
+          [
+            [
+              0,
+              1170
+            ],
+            [
+              300,
+              1170
+            ],
+            [
+              650,
+              1250
+            ],
+            [
+              900,
+              1310
+            ],
+            [
+              900,
+              1590
+            ],
+            [
+              0,
+              1590
+            ]
+          ]
+        ],
+        "cockpit_region": [
+          880,
+          895,
+          1260,
+          1390
+        ],
+        "negative_regions": [
+          [
+            825,
+            485,
+            1280,
+            830
+          ],
+          [
+            1570,
+            480,
+            1880,
+            910
+          ]
+        ],
+        "notes": "Remove the foreground wreck at lower left; retain original raised weapon, antenna, cockpit and support limbs."
+      },
+      "output_sha256": "8dbdd7b891f28e00a4569ad0ba68b24d0545e36c01c6e116b636d8e45af3c797",
+      "output_size": [
+        747,
+        485
+      ],
+      "body_ratio": 1.5402061855670104,
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "alpha_threshold": 192,
+      "working_size": [
+        768,
+        615
+      ],
+      "working_crop": [
+        21,
+        125,
+        768,
+        610
+      ],
+      "body_pixels": 175895,
+      "negative_pixels": 24450,
+      "outline_origin": "Original alpha only; polygon selection removes extra subjects, never draws new anatomy."
+    },
+    {
+      "file": "heavy-fleshmob.png",
+      "unit": "肉瘤体",
+      "source": "artwork/review-0.4.57-source-v3/heavy-fleshmob.png",
+      "source_sha256": "432c2fdff5baa33517ad3558c3e05c54d1d4e7ced7ee04336ff791e71849e48a",
+      "source_size": [
+        2048,
+        1425
+      ],
+      "source_selection": {
+        "unit": "肉瘤体",
+        "keep_polygon": [
+          [
+            150,
+            0
+          ],
+          [
+            2048,
+            0
+          ],
+          [
+            2048,
+            500
+          ],
+          [
+            1850,
+            560
+          ],
+          [
+            1600,
+            525
+          ],
+          [
+            1460,
+            550
+          ],
+          [
+            1640,
+            610
+          ],
+          [
+            1740,
+            950
+          ],
+          [
+            1800,
+            1250
+          ],
+          [
+            1830,
+            1385
+          ],
+          [
+            1450,
+            1385
+          ],
+          [
+            1300,
+            1385
+          ],
+          [
+            1220,
+            1395
+          ],
+          [
+            1160,
+            1100
+          ],
+          [
+            1020,
+            1050
+          ],
+          [
+            880,
+            1080
+          ],
+          [
+            780,
+            1120
+          ],
+          [
+            720,
+            1340
+          ],
+          [
+            680,
+            1400
+          ],
+          [
+            480,
+            1400
+          ],
+          [
+            490,
+            1280
+          ],
+          [
+            575,
+            1050
+          ],
+          [
+            680,
+            920
+          ],
+          [
+            750,
+            880
+          ],
+          [
+            680,
+            820
+          ],
+          [
+            550,
+            790
+          ],
+          [
+            380,
+            745
+          ],
+          [
+            280,
+            745
+          ],
+          [
+            280,
+            600
+          ],
+          [
+            470,
+            560
+          ],
+          [
+            650,
+            595
+          ],
+          [
+            795,
+            560
+          ],
+          [
+            820,
+            340
+          ],
+          [
+            680,
+            300
+          ],
+          [
+            610,
+            210
+          ],
+          [
+            350,
+            180
+          ],
+          [
+            180,
+            170
+          ]
+        ],
+        "remove_corpse_regions": [
+          [
+            0,
+            400,
+            800,
+            1120
+          ],
+          [
+            1250,
+            1250,
+            2048,
+            1425
+          ]
+        ],
+        "negative_regions": [],
+        "blue_negative_regions": [
+          [
+            1260,
+            100,
+            1510,
+            300
+          ],
+          [
+            1190,
+            310,
+            1390,
+            530
+          ],
+          [
+            900,
+            490,
+            1150,
+            730
+          ],
+          [
+            810,
+            760,
+            1050,
+            1000
+          ],
+          [
+            1040,
+            760,
+            1250,
+            1020
+          ]
+        ],
+        "notes": "Select only original mutant mass; remove the background/foreground Helldivers and their rifle. Keep the multiple heads and large hooked upper hand."
+      },
+      "output_sha256": "9a5579b635dc6179efa7c08fdc77cff9d76ed11c3cb410f9a043fedca60c00bf",
+      "output_size": [
+        628,
+        523
+      ],
+      "body_ratio": 1.2007648183556405,
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "alpha_threshold": 192,
+      "working_size": [
+        768,
+        534
+      ],
+      "working_crop": [
+        70,
+        0,
+        698,
+        523
+      ],
+      "body_pixels": 141688,
+      "negative_pixels": 6103,
+      "outline_origin": "Original alpha only; polygon selection removes extra subjects, never draws new anatomy."
+    }
+  ]
+}

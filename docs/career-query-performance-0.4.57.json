@@ -1,0 +1,104 @@
+{
+  "matches": 500,
+  "death_records": 40000,
+  "source_rows": 64000,
+  "saved_bill_lines": 10000,
+  "cases": [
+    {
+      "name": "weapons_all_cold",
+      "iterations": 1,
+      "mean_ms": 55.9522,
+      "p95_ms": 55.9522,
+      "max_ms": 55.9522
+    },
+    {
+      "name": "weapons_all_hot",
+      "iterations": 30,
+      "mean_ms": 0.00662666662,
+      "p95_ms": 0.0387,
+      "max_ms": 0.0461
+    },
+    {
+      "name": "weapons_all_cross_second",
+      "iterations": 15,
+      "mean_ms": 0.00130666655,
+      "p95_ms": 0.0086,
+      "max_ms": 0.0086
+    },
+    {
+      "name": "deaths_all_cold",
+      "iterations": 1,
+      "mean_ms": 102.7786,
+      "p95_ms": 102.7786,
+      "max_ms": 102.7786
+    },
+    {
+      "name": "deaths_all_hot",
+      "iterations": 30,
+      "mean_ms": 0.00831999999,
+      "p95_ms": 0.0357999998,
+      "max_ms": 0.0605999994
+    },
+    {
+      "name": "deaths_all_cross_second",
+      "iterations": 15,
+      "mean_ms": 0.0013399999,
+      "p95_ms": 0.00890000047,
+      "max_ms": 0.00890000047
+    },
+    {
+      "name": "weapons_day_cold",
+      "iterations": 1,
+      "mean_ms": 0.748,
+      "p95_ms": 0.748,
+      "max_ms": 0.748
+    },
+    {
+      "name": "weapons_day_cross_second",
+      "iterations": 15,
+      "mean_ms": 0.00481999972,
+      "p95_ms": 0.0364999996,
+      "max_ms": 0.0364999996
+    },
+    {
+      "name": "match_page_hot",
+      "iterations": 30,
+      "mean_ms": 0.00504333323,
+      "p95_ms": 0.0277999989,
+      "max_ms": 0.0478999991
+    },
+    {
+      "name": "summary_cold",
+      "iterations": 1,
+      "mean_ms": 1.7404,
+      "p95_ms": 1.7404,
+      "max_ms": 1.7404
+    },
+    {
+      "name": "summary_cross_second",
+      "iterations": 30,
+      "mean_ms": 0.0290933334,
+      "p95_ms": 0.0522999999,
+      "max_ms": 0.0935999997
+    },
+    {
+      "name": "legacy_crush_cold",
+      "iterations": 1,
+      "mean_ms": 6.0001,
+      "p95_ms": 6.0001,
+      "max_ms": 6.0001
+    },
+    {
+      "name": "legacy_crush_hot",
+      "iterations": 30,
+      "mean_ms": 0.000936666705,
+      "p95_ms": 0.00229999932,
+      "max_ms": 0.024500001
+    }
+  ],
+  "measured_utc": "2026-10-17T11:10:54.657469+00:00",
+  "combat_sha256": "f2af1a79986c8fa24dcafb7fed3ca8e842dd925a11e7400aec4e8d69042589b6",
+  "summary_sha256": "b50e1532b507e41b2214de041eca2e3306a81741b24f2b31f7068dd30f6ec88e",
+  "method": "Actual game LuaJIT, QueryPerformanceCounter, synthetic 500-match retained archive; no game process or account writes",
+  "actual_game_frame_time_verified": false
+}

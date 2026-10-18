@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "purpose": "Real in-game render review; not installed in MOD",
+  "attribution": "DiversHub pages credit Helldivers Wiki contributors (wiki.gg/Fandom), CC BY-NC-SA. Original underlying game art belongs to its rightsholders.",
+  "items": [
+    {
+      "file": "heavy-hulk-scorcher.png",
+      "raw": "raw/heavy-hulk-scorcher.webp",
+      "source_page": "https://divershub.app/database/enemies/hulk-scorcher",
+      "source_image": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/1080px-Hulk_Scorcher_Enemy_Icon.webp",
+      "original_wiki_page": "https://helldivers.wiki.gg/wiki/Hulk_Scorcher",
+      "raw_sha256": "227f833fd32aebf3d4c4ad41d56d6fa4aa237ce70193b4006256fc8d3685725f",
+      "png_sha256": "899f5315ff897a22371be2a1f621eb5435a87fe685c4c589c524817494a14276",
+      "raw_size": [
+        1080,
+        1080
+      ],
+      "alpha_bbox": [
+        124,
+        11,
+        905,
+        1061
+      ],
+      "output_size": [
+        781,
+        1050
+      ],
+      "method": "Existing native RGBA alpha -> alpha bounding-box crop -> lossless PNG. No recoloring, no resizing, no image generation.",
+      "decoded_pixels_preserved": true
+    },
+    {
+      "file": "heavy-hulk-obliterator.png",
+      "raw": "raw/heavy-hulk-obliterator.webp",
+      "source_page": "https://divershub.app/database/enemies/hulk-obliterator",
+      "source_image": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/1080px-Hulk_Obliterator_Enemy_Icon.webp",
+      "original_wiki_page": "https://helldivers.wiki.gg/wiki/Hulk_Obliterator",
+      "raw_sha256": "d7911cd0d239e535d1288c9e778d17a1754e3d3dae673f35855c5b8cb99e750c",
+      "png_sha256": "a1a56fbe65e3734c7bac13074e2262fddf431fb2d659287558e7a59b224f1b43",
+      "raw_size": [
+        1080,
+        1080
+      ],
+      "alpha_bbox": [
+        150,
+        20,
+        1080,
+        1057
+      ],
+      "output_size": [
+        930,
+        1037
+      ],
+      "method": "Existing native RGBA alpha -> alpha bounding-box crop -> lossless PNG. No recoloring, no resizing, no image generation.",
+      "decoded_pixels_preserved": true
+    },
+    {
+      "file": "heavy-hulk-firebomber.png",
+      "raw": "raw/heavy-hulk-firebomber.webp",
+      "source_page": "https://divershub.app/database/enemies/hulk-firebomber",
+      "source_image": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/773px-Hulk_Firebomber_Enemy_Icon.webp",
+      "original_wiki_page": "https://helldivers.wiki.gg/wiki/Hulk_Firebomber",
+      "raw_sha256": "dd3169a6266c734b23a15eba1a99305b93c7549467016a63d703da7cb9572fee",
+      "png_sha256": "71a77fedae57cc3526b6a6a63c3adf1ad98a5c0384cc29abaf995b96ac270ffc",
+      "raw_size": [
+        773,
+        720
+      ],
+      "alpha_bbox": [
+        10,
+        0,
+        772,
+        701
+      ],
+      "output_size": [
+        762,
+        701
+      ],
+      "method": "Existing native RGBA alpha -> alpha bounding-box crop -> lossless PNG. No recoloring, no resizing, no image generation.",
+      "decoded_pixels_preserved": true
+    },
+    {
+      "file": "heavy-annihilator-tank.png",
+      "raw": "raw/heavy-annihilator-tank.webp",
+      "source_page": "https://divershub.app/database/enemies/annihilator-tank",
+      "source_image": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/1280px-Annihilator_Tank_Enemy_Icon.webp",
+      "original_wiki_page": "https://helldivers.wiki.gg/wiki/Annihilator_Tank",
+      "raw_sha256": "4c8669da13fb1bb21439bd02dce93989313216cdce175f17f5eee7d592352ccf",
+      "png_sha256": "78c364a035df63e036e9ec9d048723dde6909ad43d7cf041e11984577d06c14e",
+      "raw_size": [
+        1280,
+        563
+      ],
+      "alpha_bbox": [
+        48,
+        19,
+        1226,
+        523
+      ],
+      "output_size": [
+        1178,
+        504
+      ],
+      "method": "Existing native RGBA alpha -> alpha bounding-box crop -> lossless PNG. No recoloring, no resizing, no image generation.",
+      "decoded_pixels_preserved": true
+    },
+    {
+      "file": "heavy-barrager-tank.png",
+      "raw": "raw/heavy-barrager-tank.webp",
+      "source_page": "https://divershub.app/database/enemies/barrager-tank",
+      "source_image": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/934px-Barrager_Tank_Enemy_Icon.webp",
+      "original_wiki_page": "https://helldivers.wiki.gg/wiki/Barrager_Tank",
+      "raw_sha256": "c4aef2cfb0735d3efd3455b2a567b3d34ffef1afa15156a23984fe44e4444dec",
+      "png_sha256": "9ee5862c76b540b2805393c06849c857ff5ebaab50d368cff3e2d2825886b869",
+      "raw_size": [
+        934,
+        720
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        934,
+        720
+      ],
+      "output_size": [
+        934,
+        720
+      ],
+      "method": "Existing native RGBA alpha -> alpha bounding-box crop -> lossless PNG. No recoloring, no resizing, no image generation.",
+      "decoded_pixels_preserved": true
+    },
+    {
+      "file": "heavy-shredder-tank.png",
+      "raw": "raw/heavy-shredder-tank.webp",
+      "source_page": "https://divershub.app/database/enemies/shredder-tank",
+      "source_image": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/1280px-Shredder_Tank_Enemy_Icon.webp",
+      "original_wiki_page": "https://helldivers.wiki.gg/wiki/Shredder_Tank",
+      "raw_sha256": "ddbe9bfad47adbe54746f1425478e79efee951d05f9dfa07a6f372cef1a2b073",
+      "png_sha256": "1e040522837339a2a46fd45bbc772d94b35f0341f650a709769f8fee59759457",
+      "raw_size": [
+        1280,
+        674
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1229,
+        644
+      ],
+      "output_size": [
+        1229,
+        644
+      ],
+      "method": "Existing native RGBA alpha -> alpha bounding-box crop -> lossless PNG. No recoloring, no resizing, no image generation.",
+      "decoded_pixels_preserved": true
+    }
+  ]
+}

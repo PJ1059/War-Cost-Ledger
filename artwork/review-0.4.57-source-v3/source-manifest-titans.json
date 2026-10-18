@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "file": "giant-bile-titan.png",
+      "page": "https://divershub.app/database/enemies/bile-titan",
+      "url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/Bile_Titan_Enemy_Icon.webp",
+      "rawFile": "artwork\\review-0.4.57-source-v3\\raw\\giant-bile-titan.webp",
+      "sha256": "57fe4344886854f3d4ce1d0389ed0c8b97ffe68b7aa3320f9a50f9b8d52ef728",
+      "rawSha256": "1ff85e5074c38e204d192f3c12bdae064738fa6d02a0beaec4fc18925c4a1fab",
+      "crop": [
+        12,
+        9,
+        985,
+        770
+      ],
+      "method": "original transparent rendered image; alpha bbox crop only; original RGBA pixels retained; no generative edit"
+    },
+    {
+      "file": "giant-spore-burst-bile-titan.png",
+      "page": "https://divershub.app/database/enemies/spore-burst-bile-titan",
+      "url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/Spore_Burst_Bile_Titan.webp",
+      "rawFile": "artwork\\review-0.4.57-source-v3\\raw\\giant-spore-burst-bile-titan.webp",
+      "sha256": "a7c69cdcef67f8f2bdda59fcd79f3d0720a8fd7fb0b0f19a6bb1c11a03c3e5d4",
+      "rawSha256": "7fa522ed5fccec8e561cb08137478c31b00322f280b3ea78ba08dc0a9b2f8e82",
+      "crop": [
+        0,
+        0,
+        937,
+        679
+      ],
+      "method": "original transparent rendered image; alpha bbox crop only; original RGBA pixels retained; no generative edit"
+    }
+  ],
+  "reviewOnly": true
+}

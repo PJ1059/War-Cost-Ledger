@@ -1,0 +1,37 @@
+local create=dofile(assert(arg[1]))
+local K=0x897A5551
+local hits=create({bullet=true,incendiary=true},K)
+local function snapshot(total,values)
+    local out={totals={[K]=total},sources={}}
+    for source,value in pairs(values) do out.sources[source]={[K]=value} end
+    return out
+end
+local total,delta,first=hits:sample(snapshot(12,{bullet=5,incendiary=2,flamethrower=4,unknown=1}),7)
+assert(total==7 and delta==0 and first and hits.ready)
+total,delta=hits:sample(snapshot(19,{bullet=8,incendiary=4,flamethrower=6,unknown=1}),7)
+assert(total==12 and delta==5 and hits.sources.incendiary==4)
+total,delta=hits:sample(snapshot(19,{bullet=8,incendiary=4,flamethrower=6,unknown=1}),7)
+assert(total==12 and delta==0,'same native cumulative must not replay')
+assert(hits:sample(nil,7)==nil and hits.total==12 and not hits.ready)
+total,delta=hits:sample(snapshot(20,{bullet=9,incendiary=4,flamethrower=6,unknown=1}),7)
+assert(total==13 and delta==1,'read gap keeps the native baseline')
+total,delta=hits:sample(snapshot(20,{bullet=9,flamethrower=6,unknown=1}),7)
+assert(total==13 and delta==0,'missing source does not clear its high-water mark')
+total,delta=hits:sample(snapshot(20,{bullet=9,incendiary=4,flamethrower=6,unknown=1}),7)
+assert(total==13 and delta==0,'returning source does not replay')
+total,delta=hits:sample(snapshot(0,{}),7)
+assert(total==13 and delta==0,'native table reset rebases without erasing mission hits')
+total,delta=hits:sample(snapshot(3,{bullet=2,incendiary=1}),7)
+assert(total==16 and delta==3)
+total,delta=hits:sample(snapshot(3,{bullet=2,incendiary=1}),8)
+assert(total==16 and delta==0,'new player entity must establish a fresh baseline')
+total,delta=hits:sample(snapshot(4,{bullet=3,incendiary=1}),8)
+assert(total==17 and delta==1)
+assert(hits:sample(snapshot(1,{bullet=8}),8)==nil and hits.total==17)
+assert(hits:sample(snapshot(4,{bullet=0/0}),8)==nil and hits.total==17)
+local over={};for n=1,65 do over['unknown'..n]=0 end
+assert(hits:sample(snapshot(4,over),8)==nil and hits.total==17)
+hits:reset();assert(hits.total==0 and not hits.ready)
+assert(hits:sample({totals={},sources={}},8)==nil and hits.total==0)
+assert(hits:sample(snapshot(1,{bullet=1}),8)==1)
+print('Projectile hit stats: baseline, source exclusion, exact growth, gaps, resets and 64-source limit passed.')

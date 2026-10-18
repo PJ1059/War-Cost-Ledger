@@ -1,0 +1,180 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-10-15",
+  "runtime_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+  "policy": "confirmed_player_vehicle_parent_source_kills_as_crush",
+  "rule": "Count local-player source-stat KILLS growth under an exact reviewed parent body resource as crush.",
+  "source_count": 9,
+  "sources": {
+    "16474112801385B6": {
+      "name": "TD-220 Bastion MK XVI",
+      "name_zh": "TD-220 堡垒 MK XVI",
+      "vehicle_class": "Tank",
+      "kind": "vehicle_body",
+      "basis": "sdk_authoring_vehicle_and_exact_native_mountChain_parent",
+      "native_entity_id": "entity/v1/helldivers/tank",
+      "native_faction": "helldivers",
+      "known_player_call_in": true,
+      "mounted_weapon_hashes": [
+        "1FA1F596769225C2",
+        "439F9E65C18567DA"
+      ],
+      "native_collision_mechanism_proven": false
+    },
+    "2D85BFE3D8717FE5": {
+      "name": "M-104 Incinerator FRV",
+      "name_zh": "M-104 炽热型快速侦察载具",
+      "vehicle_class": "FRV",
+      "kind": "vehicle_body",
+      "basis": "sdk_authoring_vehicle_and_exact_native_mountChain_parent",
+      "native_entity_id": "entity/v1/helldivers/frv_flamer",
+      "native_faction": "helldivers",
+      "known_player_call_in": true,
+      "mounted_weapon_hashes": [
+        "444880F62CA7EAE8"
+      ],
+      "native_collision_mechanism_proven": false
+    },
+    "35DBF54F016F3624": {
+      "name": "EXO-55 Breakthrough Exosuit",
+      "name_zh": "EXO-55 突破外骨骼",
+      "vehicle_class": "Exosuit",
+      "kind": "vehicle_body",
+      "basis": "sdk_authoring_vehicle_and_exact_native_mountChain_parent",
+      "native_entity_id": "entity/v1/helldivers/combat_walker_breacher",
+      "native_faction": "helldivers",
+      "known_player_call_in": true,
+      "mounted_weapon_hashes": [
+        "DF51FE8D62F294BE"
+      ],
+      "native_collision_mechanism_proven": false
+    },
+    "79E4B3D2DA5E45E3": {
+      "name": "EXO-45 Patriot Exosuit",
+      "name_zh": "EXO-45 爱国者外骨骼",
+      "vehicle_class": "Exosuit",
+      "kind": "vehicle_body",
+      "basis": "sdk_authoring_vehicle_and_exact_native_mountChain_parent",
+      "native_entity_id": "entity/v1/helldivers/combat_walker",
+      "native_faction": "helldivers",
+      "known_player_call_in": true,
+      "mounted_weapon_hashes": [
+        "08F6089289C83D22",
+        "824B7E0C4C879EB5"
+      ],
+      "native_collision_mechanism_proven": false
+    },
+    "7B2326F6FD9C8069": {
+      "name": "EXO-51 Lumberer Exosuit",
+      "name_zh": "EXO-51 伐木者外骨骼",
+      "vehicle_class": "Exosuit",
+      "kind": "vehicle_body",
+      "basis": "sdk_authoring_vehicle_and_exact_native_mountChain_parent",
+      "native_entity_id": "entity/v1/helldivers/combat_walker_lumberer",
+      "native_faction": "helldivers",
+      "known_player_call_in": true,
+      "mounted_weapon_hashes": [
+        "0736BEE2D6328726",
+        "17C5D12D8D5DEE2C"
+      ],
+      "native_collision_mechanism_proven": false
+    },
+    "9B2140378640432E": {
+      "name": "M-103 Supply FRV",
+      "name_zh": "M-103 补给型快速侦察载具",
+      "vehicle_class": "FRV",
+      "kind": "vehicle_body",
+      "basis": "sdk_authoring_vehicle_and_exact_native_mountChain_parent",
+      "native_entity_id": "entity/v1/helldivers/frv_supply",
+      "native_faction": "helldivers",
+      "known_player_call_in": true,
+      "mounted_weapon_hashes": [
+        "4DF41F84668D07FB"
+      ],
+      "native_collision_mechanism_proven": false
+    },
+    "B0C9FAF4AF8903F9": {
+      "name": "TD-110 Maelstrom",
+      "name_zh": "TD-110 风暴漩涡",
+      "vehicle_class": "Tank",
+      "kind": "vehicle_body",
+      "basis": "sdk_authoring_vehicle_and_exact_native_mountChain_parent",
+      "native_entity_id": "entity/v1/helldivers/tank_storm",
+      "native_faction": "helldivers",
+      "known_player_call_in": true,
+      "mounted_weapon_hashes": [
+        "3A061009AA31E9CB",
+        "8AFF7F0793A5BCED",
+        "D58AE6A04EDB10DE"
+      ],
+      "native_collision_mechanism_proven": false
+    },
+    "C2D449ECF7FACAB1": {
+      "name": "EXO-49 Emancipator Exosuit",
+      "name_zh": "EXO-49 解放者外骨骼",
+      "vehicle_class": "Exosuit",
+      "kind": "vehicle_body",
+      "basis": "sdk_authoring_vehicle_and_exact_native_mountChain_parent",
+      "native_entity_id": "entity/v1/helldivers/combat_walker_obsidian",
+      "native_faction": "helldivers",
+      "known_player_call_in": true,
+      "mounted_weapon_hashes": [
+        "E5F64DCC3BFE9DD1",
+        "FF9878576A4C543B"
+      ],
+      "native_collision_mechanism_proven": false
+    },
+    "CC21C7FFD3EBEFB9": {
+      "name": "M-102 Gunner FRV",
+      "name_zh": "M-102 快速侦查载具",
+      "vehicle_class": "FRV",
+      "kind": "vehicle_body",
+      "basis": "sdk_authoring_vehicle_and_exact_native_mountChain_parent",
+      "native_entity_id": "entity/v1/helldivers/frv",
+      "native_faction": "helldivers",
+      "known_player_call_in": true,
+      "mounted_weapon_hashes": [
+        "085C1EDB038EC24E"
+      ],
+      "native_collision_mechanism_proven": false
+    }
+  },
+  "excludes": [
+    "mounted_weapon_resource",
+    "projectile_resource",
+    "enemy_vehicle",
+    "backpack_drone",
+    "label_only_or_unknown_type",
+    "unattributed_source_gap"
+  ],
+  "rule_does_not_claim_native_collision_mechanism": true,
+  "backfill_missing_source_identity": false,
+  "excluded_world_vehicles": {
+    "E9CD1D0D118886AF": {
+      "name": "FRV (Super Earth variant)",
+      "reason": "No SDK player call-in definition; applicability deferred."
+    },
+    "423FF97D57AB04F5": {
+      "name": "GATER Oil Rig",
+      "reason": "No SDK player call-in definition; applicability deferred."
+    }
+  },
+  "evidence": [
+    {
+      "path": "sdk/VehicleAuthoringCapabilities.json",
+      "sha256": "fadb5cca3a6c4bddef5c2c3c67be4ffb4f97ee2b4a0e301ded325191d42150e7"
+    },
+    {
+      "path": "sdk/VehicleWeaponCapabilities.json",
+      "sha256": "1b95a4a924b280912049f79f543c1d0edde269b7d5110d4d2ddc56a4983c6a41"
+    },
+    {
+      "path": "domains/vehicle_weapon_authoring.lua",
+      "sha256": "b37d222407c9f8261f73b85da483507c5a388d8d33755b6c6ae12eaad0efedd1"
+    },
+    {
+      "path": "domains/event_entities.lua",
+      "sha256": "c2369c01e47c96713374479bce1ff286b35e6d426125473fda17054cd904736f"
+    }
+  ]
+}

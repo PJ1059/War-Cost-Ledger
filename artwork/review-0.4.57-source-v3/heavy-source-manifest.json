@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "retrieval": "browser pageAssets bundle of actual rendered game images; no AI",
+  "items": [
+    {
+      "key": "veracitor",
+      "name": "反重",
+      "unit": "证真者",
+      "source_url": "https://helldivers.wiki.gg/images/Veracitor_Enemy_Icon.png?456e79",
+      "raw": "heavy-veracitor.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        1436
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "1e6fb8aa8829a851097d29f57628e110c5409128811793fb9384d9d9fafda767",
+      "output": "heavy-veracitor.png",
+      "operation": "existing-alpha bounding-box crop only; no recoloring, rescaling, AI, replacement or added parts",
+      "crop_box": [
+        0,
+        111,
+        2013,
+        1436
+      ],
+      "output_size": [
+        2013,
+        1325
+      ],
+      "output_sha256": "2ac665df611788a45ab43c5b1976202907973195a306dc74671fbcb290b1d4c8",
+      "pixel_exact_to_raw_crop": true
+    },
+    {
+      "key": "gatekeeper",
+      "name": "反重",
+      "unit": "御门者",
+      "source_url": "https://helldivers.wiki.gg/images/Gatekeeper_Enemy_Icon.png?ac7e7b",
+      "raw": "heavy-gatekeeper.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        1631
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "7be2821c0ed90856e16c439bdec97bc7ef793d5eadcd682a9cf90099f8e96223",
+      "output": "heavy-gatekeeper.png",
+      "operation": "existing-alpha bounding-box crop only; no recoloring, rescaling, AI, replacement or added parts",
+      "crop_box": [
+        0,
+        41,
+        1987,
+        1631
+      ],
+      "output_size": [
+        1987,
+        1590
+      ],
+      "output_sha256": "7651f8aff8c98efde33534cce01e3f32c40d7678b703e3b30582be95990cb2c5",
+      "pixel_exact_to_raw_crop": true
+    },
+    {
+      "key": "fleshmob",
+      "name": "反重",
+      "unit": "肉瘤体",
+      "source_url": "https://helldivers.wiki.gg/images/Fleshmob_Enemy_Icon.png?886d74",
+      "raw": "heavy-fleshmob.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        1515
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "8810e47925d595dad5290964be524dd69796e2cacac8d61a9bfd6d5d77fe8921",
+      "output": "heavy-fleshmob.png",
+      "operation": "existing-alpha bounding-box crop only; no recoloring, rescaling, AI, replacement or added parts",
+      "crop_box": [
+        0,
+        90,
+        2048,
+        1515
+      ],
+      "output_size": [
+        2048,
+        1425
+      ],
+      "output_sha256": "432c2fdff5baa33517ad3558c3e05c54d1d4e7ced7ee04336ff791e71849e48a",
+      "pixel_exact_to_raw_crop": true
+    },
+    {
+      "key": "crusher",
+      "name": "反重",
+      "unit": "粉碎者",
+      "source_url": "https://helldivers.wiki.gg/images/Crusher_Enemy_Icon.png?5b5c38",
+      "raw": "heavy-crusher.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        2048
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "4e2c4096d522c3dbedf1462f7fbd38c0da88ed089a193205ea0a038ab0db8893",
+      "output": "heavy-crusher.png",
+      "operation": "existing-alpha bounding-box crop only; no recoloring, rescaling, AI, replacement or added parts",
+      "crop_box": [
+        311,
+        312,
+        1742,
+        2024
+      ],
+      "output_size": [
+        1431,
+        1712
+      ],
+      "output_sha256": "9878684f993254304458fe5b3f1668dae6b9f6dd8951b7a9fffe42b2e95e1cb8",
+      "pixel_exact_to_raw_crop": true
+    },
+    {
+      "key": "harvester",
+      "name": "反重",
+      "unit": "猎杀器",
+      "source_url": "https://helldivers.wiki.gg/images/Harvester_Enemy_Icon.png?127c0a",
+      "raw": "heavy-harvester.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2200,
+        2200
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "36052b9f7d322edee3d6b326875161ec6dd734fd09ec178aad14923d66fcd1ed",
+      "output": "heavy-harvester.png",
+      "operation": "existing-alpha bounding-box crop only; no recoloring, rescaling, AI, replacement or added parts",
+      "crop_box": [
+        499,
+        26,
+        1676,
+        2169
+      ],
+      "output_size": [
+        1177,
+        2143
+      ],
+      "output_sha256": "b11191ca95f1d38bd7da17f6e9772845ea3fc4c301cfd9b2d09406d891d3ed90",
+      "pixel_exact_to_raw_crop": true
+    },
+    {
+      "key": "war-strider",
+      "name": "反重",
+      "unit": "战争纵步者",
+      "source_url": "https://helldivers.wiki.gg/images/War_Strider_Enemy_Icon.png?3f3211",
+      "raw": "heavy-war-strider.webp",
+      "raw_format": "webp",
+      "raw_size": [
+        2048,
+        2048
+      ],
+      "raw_mode": "RGBA",
+      "raw_sha256": "b8c472361d83ddfe71f2d1614f43804c8a4b4e9b277804f65102654a46ee838f",
+      "output": "heavy-war-strider.png",
+      "operation": "existing-alpha bounding-box crop only; no recoloring, rescaling, AI, replacement or added parts",
+      "crop_box": [
+        160,
+        0,
+        1818,
+        1966
+      ],
+      "output_size": [
+        1658,
+        1966
+      ],
+      "output_sha256": "b2aceba165e18ab52ec8c4d15c26ed7b8136e9423630e7eeae3854eb1d2fcf88",
+      "pixel_exact_to_raw_crop": true
+    }
+  ],
+  "review_only": true,
+  "runtime_modified": false,
+  "all_sources_original_alpha": true
+}

@@ -1,0 +1,4411 @@
+{
+  "schema": 1,
+  "runtime_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+  "workbook_sha256": "bb09a99d05de0819b7e4e5df50c069ebd42dd5abc0146b5b2d8c8a6225e5d47f",
+  "inputs_sha256": {
+    "sdk/PlayerWeaponAuthoringCapabilities.json": "ce4f5b46fca26d128579557a9e476ce5baf73ca9d0de4131d38bce47900b0a7d",
+    "sdk/SupportWeaponCapabilities.json": "c2e8bf12ef1e2cfcfa4349d9725b1becfefc5b11277db87a72f5aebdd401e042"
+  },
+  "by_type": {
+    "02EECD0B1FA49630": {
+      "id": "EQ-095",
+      "unit_cents": 8000,
+      "name_zh": "GL-21 榴弹发射器",
+      "name_en": "GL-21 Grenade Launcher",
+      "source_type": "02EECD0B1FA49630",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "GL-21 Grenade Launcher",
+        "resource": "02EECD0B1FA49630",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0x02EECD0B1FA49630",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 250,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0x02EECD0B1FA49630",
+          "ownership": {
+            "capacity": {
+              "baseValue": 10,
+              "chambered": true,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 10
+            },
+            "capacity_value": 10,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 1,
+            "magazines_from_supply": 3,
+            "spare_magazines": 3,
+            "starting_magazines": 2
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-095",
+        "row": 100
+      }
+    },
+    "03E67A19B07C6523": {
+      "id": "EQ-014",
+      "unit_cents": 250,
+      "name_zh": "R-63 勤勉",
+      "name_en": "R-63 Diligence",
+      "source_type": "03E67A19B07C6523",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "R-63 Diligence",
+        "resource": "03E67A19B07C6523",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 226,
+            "indexRow": 412,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 226,
+            "indexRow": 412,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 226,
+            "indexRow": 412,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 226,
+            "indexRow": 412,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 226,
+            "indexRow": 412,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 226,
+            "indexRow": 412,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-014",
+        "row": 19
+      }
+    },
+    "05D8D8C073B9D502": {
+      "id": "EQ-045",
+      "unit_cents": 1200,
+      "name_zh": "SG-8P 等离子制裁者",
+      "name_en": "SG-8P Punisher Plasma",
+      "source_type": "05D8D8C073B9D502",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "SG-8P Punisher Plasma",
+        "resource": "05D8D8C073B9D502",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 134,
+            "indexRow": 334,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 134,
+            "indexRow": 334,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 134,
+            "indexRow": 334,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 134,
+            "indexRow": 334,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 134,
+            "indexRow": 334,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 134,
+            "indexRow": 334,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-045",
+        "row": 50
+      }
+    },
+    "0807AEA5217E4767": {
+      "id": "EQ-023",
+      "unit_cents": 240,
+      "name_zh": "SMG-72 暴击斗士",
+      "name_en": "SMG-72 Pummeler",
+      "source_type": "0807AEA5217E4767",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "SMG-72 Pummeler",
+        "resource": "0807AEA5217E4767",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 229,
+            "indexRow": 447,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-023",
+        "row": 28
+      }
+    },
+    "085C1EDB038EC24E": {
+      "id": "EQ-088",
+      "unit_cents": 600,
+      "name_zh": "MG-206 重机枪",
+      "name_en": "MG-206 Heavy Machine Gun",
+      "source_type": "085C1EDB038EC24E",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "MG-206 Heavy Machine Gun",
+        "resource": "085C1EDB038EC24E",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0x085C1EDB038EC24E",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 263,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0x085C1EDB038EC24E",
+          "ownership": {
+            "capacity": {
+              "baseValue": 100,
+              "chambered": true,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 100
+            },
+            "capacity_value": 100,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 1,
+            "magazines_from_supply": 2,
+            "spare_magazines": 4,
+            "starting_magazines": 4
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-088",
+        "row": 93
+      }
+    },
+    "0B882808C6F498E8": {
+      "id": "EQ-077",
+      "unit_cents": 1500,
+      "name_zh": "P-35 思想改造",
+      "name_en": "P-35 Re-Educator",
+      "source_type": "0B882808C6F498E8",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "P-35 Re-Educator",
+        "resource": "0B882808C6F498E8",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 233,
+            "indexRow": 377,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 233,
+            "indexRow": 377,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 233,
+            "indexRow": 377,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 233,
+            "indexRow": 377,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 233,
+            "indexRow": 377,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 233,
+            "indexRow": 377,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-077",
+        "row": 82
+      }
+    },
+    "0F83639AB8C86165": {
+      "id": "EQ-018",
+      "unit_cents": 250,
+      "name_zh": "R-2 修正",
+      "name_en": "R-2 Amendment",
+      "source_type": "0F83639AB8C86165",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "R-2 Amendment",
+        "resource": "0F83639AB8C86165",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 217,
+            "indexRow": 81,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 217,
+            "indexRow": 81,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 217,
+            "indexRow": 81,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 217,
+            "indexRow": 81,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 217,
+            "indexRow": 81,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 217,
+            "indexRow": 81,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-018",
+        "row": 23
+      }
+    },
+    "11C27D3BABB38956": {
+      "id": "EQ-081",
+      "unit_cents": 240,
+      "name_zh": "MG-43 机枪",
+      "name_en": "MG-43 Machine Gun",
+      "source_type": "11C27D3BABB38956",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "MG-43 Machine Gun",
+        "resource": "11C27D3BABB38956",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0x11C27D3BABB38956",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 255,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0x11C27D3BABB38956",
+          "ownership": {
+            "capacity": {
+              "baseValue": 175,
+              "chambered": true,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 175
+            },
+            "capacity_value": 175,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 1,
+            "magazines_from_supply": 2,
+            "spare_magazines": 3,
+            "starting_magazines": 2
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-081",
+        "row": 86
+      }
+    },
+    "186EA95DE7306B1A": {
+      "id": "EQ-028",
+      "unit_cents": 16,
+      "name_zh": "SMG-203 英勇无畏",
+      "name_en": "SMG-203 Gallant",
+      "source_type": "186EA95DE7306B1A",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "SMG-203 Gallant",
+        "resource": "186EA95DE7306B1A",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 140,
+            "indexRow": 118,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-028",
+        "row": 33
+      }
+    },
+    "1A437158E1B8D2A1": {
+      "id": "EQ-059",
+      "unit_cents": 80,
+      "name_zh": "P-113 裁决",
+      "name_en": "P-113 Verdict",
+      "source_type": "1A437158E1B8D2A1",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "P-113 Verdict",
+        "resource": "1A437158E1B8D2A1",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 236,
+            "indexRow": 130,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 236,
+            "indexRow": 130,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 236,
+            "indexRow": 130,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 236,
+            "indexRow": 130,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 236,
+            "indexRow": 130,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 236,
+            "indexRow": 130,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-059",
+        "row": 64
+      }
+    },
+    "1ABBFF60D26BA391": {
+      "id": "EQ-051",
+      "unit_cents": 500,
+      "name_zh": "R/40-K 高能精确射手步枪",
+      "name_en": "R/40-K Hot-Shot Marksman Rifle",
+      "source_type": "1ABBFF60D26BA391",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "R/40-K Hot-Shot Marksman Rifle",
+        "resource": "1ABBFF60D26BA391",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 225,
+            "indexRow": 411,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 225,
+            "indexRow": 411,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 225,
+            "indexRow": 411,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 225,
+            "indexRow": 411,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 225,
+            "indexRow": 411,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 225,
+            "indexRow": 411,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-051",
+        "row": 56
+      }
+    },
+    "2152D5147B0AC418": {
+      "id": "EQ-088",
+      "unit_cents": 600,
+      "name_zh": "MG-206 重机枪",
+      "name_en": "MG-206 Heavy Machine Gun",
+      "source_type": "2152D5147B0AC418",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "MG-206 Heavy Machine Gun",
+        "resource": "2152D5147B0AC418",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0x2152D5147B0AC418",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 252,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0x2152D5147B0AC418",
+          "ownership": {
+            "capacity": {
+              "baseValue": 100,
+              "chambered": true,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 100
+            },
+            "capacity_value": 100,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 1,
+            "magazines_from_supply": 2,
+            "spare_magazines": 2,
+            "starting_magazines": 1
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-088",
+        "row": 93
+      }
+    },
+    "2E9D0BDC48B09E60": {
+      "id": "EQ-092",
+      "unit_cents": 10000,
+      "name_zh": "RS-422 磁轨炮",
+      "name_en": "RS-422 Railgun",
+      "source_type": "2E9D0BDC48B09E60",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "RS-422 Railgun",
+        "resource": "2E9D0BDC48B09E60",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0x2E9D0BDC48B09E60",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 257,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0x2E9D0BDC48B09E60",
+          "ownership": {
+            "capacity": {
+              "baseValue": 1,
+              "chambered": false,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 1
+            },
+            "capacity_value": 1,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 5,
+            "magazines_from_supply": 10,
+            "spare_magazines": 20,
+            "starting_magazines": 10
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-092",
+        "row": 97
+      }
+    },
+    "30061F91AF477F5E": {
+      "id": "EQ-048",
+      "unit_cents": 750,
+      "name_zh": "PLAS-39 加速步枪",
+      "name_en": "PLAS-39 Accelerator Rifle",
+      "source_type": "30061F91AF477F5E",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "PLAS-39 Accelerator Rifle",
+        "resource": "30061F91AF477F5E",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 141,
+            "indexRow": 262,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 141,
+            "indexRow": 262,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 141,
+            "indexRow": 262,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 141,
+            "indexRow": 262,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 141,
+            "indexRow": 262,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 141,
+            "indexRow": 262,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-048",
+        "row": 53
+      }
+    },
+    "3828E2051AA9E897": {
+      "id": "EQ-104",
+      "unit_cents": 12000,
+      "name_zh": "S-11 矛枪",
+      "name_en": "S-11 Speargun",
+      "source_type": "3828E2051AA9E897",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "S-11 Speargun",
+        "resource": "3828E2051AA9E897",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0x3828E2051AA9E897",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 251,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0x3828E2051AA9E897",
+          "ownership": {
+            "capacity": {
+              "baseValue": 1,
+              "chambered": false,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 1
+            },
+            "capacity_value": 1,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 3,
+            "magazines_from_supply": 6,
+            "spare_magazines": 12,
+            "starting_magazines": 12
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-104",
+        "row": 109
+      }
+    },
+    "43CB1033961A2276": {
+      "id": "EQ-002",
+      "unit_cents": 70,
+      "name_zh": "AR-23P 穿甲解放者",
+      "name_en": "AR-23P Liberator Penetrator",
+      "source_type": "43CB1033961A2276",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR-23P Liberator Penetrator",
+        "resource": "43CB1033961A2276",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 202,
+            "indexRow": 51,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-002",
+        "row": 7
+      }
+    },
+    "46183B50961D1328": {
+      "id": "EQ-030",
+      "unit_cents": 52,
+      "name_zh": "SG-225 破裂者",
+      "name_en": "SG-225 Breaker",
+      "source_type": "46183B50961D1328",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 11,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "SG-225 Breaker",
+        "resource": "46183B50961D1328",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 213,
+            "indexRow": 517,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-030",
+        "row": 35
+      }
+    },
+    "4BA41B6F9F405CC2": {
+      "id": "EQ-025",
+      "unit_cents": 16,
+      "name_zh": "StA-11 冲锋枪",
+      "name_en": "StA-11 SMG",
+      "source_type": "4BA41B6F9F405CC2",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "StA-11 SMG",
+        "resource": "4BA41B6F9F405CC2",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 137,
+            "indexRow": 106,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 137,
+            "indexRow": 106,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 137,
+            "indexRow": 106,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 137,
+            "indexRow": 106,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 137,
+            "indexRow": 106,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 137,
+            "indexRow": 106,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-025",
+        "row": 30
+      }
+    },
+    "4C786785C79D44E7": {
+      "id": "EQ-015",
+      "unit_cents": 500,
+      "name_zh": "R-63CS 反狙击勤勉",
+      "name_en": "R-63CS Diligence Counter Sniper",
+      "source_type": "4C786785C79D44E7",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "R-63CS Diligence Counter Sniper",
+        "resource": "4C786785C79D44E7",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 227,
+            "indexRow": 427,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 227,
+            "indexRow": 427,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 227,
+            "indexRow": 427,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 227,
+            "indexRow": 427,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 227,
+            "indexRow": 427,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 227,
+            "indexRow": 427,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-015",
+        "row": 20
+      }
+    },
+    "4D58C77087B774C5": {
+      "id": "EQ-061",
+      "unit_cents": 80,
+      "name_zh": "M6C/SOCOM 特种作战手枪",
+      "name_en": "M6C/SOCOM Pistol",
+      "source_type": "4D58C77087B774C5",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "M6C/SOCOM Pistol",
+        "resource": "4D58C77087B774C5",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 238,
+            "indexRow": 58,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 238,
+            "indexRow": 58,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 238,
+            "indexRow": 58,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 238,
+            "indexRow": 58,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 238,
+            "indexRow": 58,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 238,
+            "indexRow": 58,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-061",
+        "row": 66
+      }
+    },
+    "4DBD74F49C8FFC13": {
+      "id": "EQ-009",
+      "unit_cents": 120,
+      "name_zh": "MA5C 突击步枪",
+      "name_en": "MA5C Assault Rifle",
+      "source_type": "4DBD74F49C8FFC13",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "MA5C Assault Rifle",
+        "resource": "4DBD74F49C8FFC13",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 208,
+            "indexRow": 132,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 208,
+            "indexRow": 132,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 208,
+            "indexRow": 132,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 208,
+            "indexRow": 132,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 208,
+            "indexRow": 132,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 208,
+            "indexRow": 132,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-009",
+        "row": 14
+      }
+    },
+    "4E4A613EB9BF5C24": {
+      "id": "EQ-022",
+      "unit_cents": 80,
+      "name_zh": "SMG-37 防卫者",
+      "name_en": "SMG-37 Defender",
+      "source_type": "4E4A613EB9BF5C24",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "SMG-37 Defender",
+        "resource": "4E4A613EB9BF5C24",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 228,
+            "indexRow": 441,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-022",
+        "row": 27
+      }
+    },
+    "4FB0F8C02F55C82B": {
+      "id": "EQ-054",
+      "unit_cents": 30,
+      "name_zh": "FLAM-66 火炬手",
+      "name_en": "FLAM-66 Torcher",
+      "source_type": "4FB0F8C02F55C82B",
+      "stock_kind": "magazine",
+      "chamber_policy": "none",
+      "projectiles_per_unit": null,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "FLAM-66 Torcher",
+        "resource": "4FB0F8C02F55C82B",
+        "families": [
+          "spray_flame"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 219,
+            "indexRow": 35,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 219,
+            "indexRow": 35,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 219,
+            "indexRow": 35,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 219,
+            "indexRow": 35,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 219,
+            "indexRow": 35,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 219,
+            "indexRow": 35,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "sheet": 2,
+        "row": 59,
+        "unit": "显示单位",
+        "value_mc": "0.3"
+      }
+    },
+    "587878FB76F4B9B1": {
+      "id": "EQ-081",
+      "unit_cents": 240,
+      "name_zh": "MG-43 机枪",
+      "name_en": "MG-43 Machine Gun",
+      "source_type": "587878FB76F4B9B1",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "MG-43 Machine Gun",
+        "resource": "587878FB76F4B9B1",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0x587878FB76F4B9B1",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 96,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0x587878FB76F4B9B1",
+          "ownership": {
+            "capacity": {
+              "baseValue": 175,
+              "chambered": false,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 175
+            },
+            "capacity_value": 175,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 3,
+            "magazines_from_supply": 6,
+            "spare_magazines": 12,
+            "starting_magazines": 30
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-081",
+        "row": 86
+      }
+    },
+    "5EBAEA70C0D060B9": {
+      "id": "EQ-032",
+      "unit_cents": 47,
+      "name_zh": "SG-225SP 千发百中破裂者",
+      "name_en": "SG-225SP Breaker Spray&Pray",
+      "source_type": "5EBAEA70C0D060B9",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 16,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "SG-225SP Breaker Spray&Pray",
+        "resource": "5EBAEA70C0D060B9",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 214,
+            "indexRow": 77,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-032",
+        "row": 37
+      }
+    },
+    "5FECAB819F96A3E8": {
+      "id": "EQ-004",
+      "unit_cents": 240,
+      "name_zh": "BR-14 审判者",
+      "name_en": "BR-14 Adjudicator",
+      "source_type": "5FECAB819F96A3E8",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "BR-14 Adjudicator",
+        "resource": "5FECAB819F96A3E8",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 216,
+            "indexRow": 121,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 216,
+            "indexRow": 121,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 216,
+            "indexRow": 121,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 216,
+            "indexRow": 121,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 216,
+            "indexRow": 121,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 216,
+            "indexRow": 121,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-004",
+        "row": 9
+      }
+    },
+    "708EA298C82093D0": {
+      "id": "EQ-012",
+      "unit_cents": 52,
+      "name_zh": "AR-59 消音器",
+      "name_en": "AR-59 Suppressor",
+      "source_type": "708EA298C82093D0",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR-59 Suppressor",
+        "resource": "708EA298C82093D0",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 212,
+            "indexRow": 62,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-012",
+        "row": 17
+      }
+    },
+    "80F1A156D9FA1E36": {
+      "id": "EQ-053",
+      "unit_cents": 1200,
+      "name_zh": "JAR-5 主宰",
+      "name_en": "JAR-5 Dominator",
+      "source_type": "80F1A156D9FA1E36",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "JAR-5 Dominator",
+        "resource": "80F1A156D9FA1E36",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 220,
+            "indexRow": 342,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 220,
+            "indexRow": 342,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 220,
+            "indexRow": 342,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 220,
+            "indexRow": 342,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 220,
+            "indexRow": 342,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 220,
+            "indexRow": 342,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-053",
+        "row": 58
+      }
+    },
+    "84354339522C932D": {
+      "id": "EQ-010",
+      "unit_cents": 360,
+      "name_zh": "AR-2 野狼",
+      "name_en": "AR-2 Coyote",
+      "source_type": "84354339522C932D",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR-2 Coyote",
+        "resource": "84354339522C932D",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 207,
+            "indexRow": 358,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 207,
+            "indexRow": 358,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 207,
+            "indexRow": 358,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 207,
+            "indexRow": 358,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 207,
+            "indexRow": 358,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 207,
+            "indexRow": 358,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-010",
+        "row": 15
+      }
+    },
+    "89C5493E08CA4207": {
+      "id": "EQ-083",
+      "unit_cents": 1500,
+      "name_zh": "APW-1 反器材步枪",
+      "name_en": "APW-1 Anti-Materiel Rifle",
+      "source_type": "89C5493E08CA4207",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "APW-1 Anti-Materiel Rifle",
+        "resource": "89C5493E08CA4207",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0x89C5493E08CA4207",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 259,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0x89C5493E08CA4207",
+          "ownership": {
+            "capacity": {
+              "baseValue": 7,
+              "chambered": true,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 7
+            },
+            "capacity_value": 7,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 2,
+            "magazines_from_supply": 4,
+            "spare_magazines": 8,
+            "starting_magazines": 5
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-083",
+        "row": 88
+      }
+    },
+    "8A307BD1811A5FE9": {
+      "id": "EQ-027",
+      "unit_cents": 80,
+      "name_zh": "SMG/FLAM-34 司炉者",
+      "name_en": "SMG/FLAM-34 Stoker",
+      "source_type": "8A307BD1811A5FE9",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "SMG/FLAM-34 Stoker",
+        "resource": "8A307BD1811A5FE9",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 136,
+            "indexRow": 521,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-027",
+        "row": 32
+      }
+    },
+    "94BD931B5FB4EE95": {
+      "id": "EQ-024",
+      "unit_cents": 160,
+      "name_zh": "SMG-32 训斥",
+      "name_en": "SMG-32 Reprimand",
+      "source_type": "94BD931B5FB4EE95",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "SMG-32 Reprimand",
+        "resource": "94BD931B5FB4EE95",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 139,
+            "indexRow": 514,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 139,
+            "indexRow": 514,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 139,
+            "indexRow": 514,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 139,
+            "indexRow": 514,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 139,
+            "indexRow": 514,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 139,
+            "indexRow": 514,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-024",
+        "row": 29
+      }
+    },
+    "9571CA51F0DAF35B": {
+      "id": "EQ-021",
+      "unit_cents": 16,
+      "name_zh": "MP-98 骑士",
+      "name_en": "MP-98 Knight",
+      "source_type": "9571CA51F0DAF35B",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "MP-98 Knight",
+        "resource": "9571CA51F0DAF35B",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 135,
+            "indexRow": 409,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-021",
+        "row": 26
+      }
+    },
+    "968211C0033DCE64": {
+      "id": "EQ-001",
+      "unit_cents": 35,
+      "name_zh": "AR-23 解放者",
+      "name_en": "AR-23 Liberator",
+      "source_type": "968211C0033DCE64",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR-23 Liberator",
+        "resource": "968211C0033DCE64",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 201,
+            "indexRow": 246,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-001",
+        "row": 6
+      }
+    },
+    "9EB160830321BFD6": {
+      "id": "EQ-075",
+      "unit_cents": 2500000,
+      "name_zh": "GP-20 最后通牒",
+      "name_en": "GP-20 Ultimatum",
+      "source_type": "9EB160830321BFD6",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "GP-20 Ultimatum",
+        "resource": "9EB160830321BFD6",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 237,
+            "indexRow": 60,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 237,
+            "indexRow": 60,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 237,
+            "indexRow": 60,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 237,
+            "indexRow": 60,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 237,
+            "indexRow": 60,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 237,
+            "indexRow": 60,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-075",
+        "row": 80
+      }
+    },
+    "A6A735ACCB4A327F": {
+      "id": "EQ-082",
+      "unit_cents": 35,
+      "name_zh": "M-105 盟友",
+      "name_en": "M-105 Stalwart",
+      "source_type": "A6A735ACCB4A327F",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "M-105 Stalwart",
+        "resource": "A6A735ACCB4A327F",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0xA6A735ACCB4A327F",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 222,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0xA6A735ACCB4A327F",
+          "ownership": {
+            "capacity": {
+              "baseValue": 250,
+              "chambered": true,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 250
+            },
+            "capacity_value": 250,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 1,
+            "magazines_from_supply": 2,
+            "spare_magazines": 3,
+            "starting_magazines": 2
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-082",
+        "row": 87
+      }
+    },
+    "A7EE1EBF58FCDF1F": {
+      "id": "EQ-006",
+      "unit_cents": 35,
+      "name_zh": "AR-23A 解放者卡宾枪",
+      "name_en": "AR-23A Liberator Carbine",
+      "source_type": "A7EE1EBF58FCDF1F",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR-23A Liberator Carbine",
+        "resource": "A7EE1EBF58FCDF1F",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 209,
+            "indexRow": 516,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-006",
+        "row": 11
+      }
+    },
+    "A8A91EB54892B6B2": {
+      "id": "EQ-013",
+      "unit_cents": 105,
+      "name_zh": "AR-11 仲裁者",
+      "name_en": "AR-11 Arbitrator",
+      "source_type": "A8A91EB54892B6B2",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR-11 Arbitrator",
+        "resource": "A8A91EB54892B6B2",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 211,
+            "indexRow": 346,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 211,
+            "indexRow": 346,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 211,
+            "indexRow": 346,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 211,
+            "indexRow": 346,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 211,
+            "indexRow": 346,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 211,
+            "indexRow": 346,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-013",
+        "row": 18
+      }
+    },
+    "A955C4EA6F6D4203": {
+      "id": "EQ-011",
+      "unit_cents": 120,
+      "name_zh": "AR/GL-21 幺二",
+      "name_en": "AR/GL-21 One-Two",
+      "source_type": "A955C4EA6F6D4203",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR/GL-21 One-Two",
+        "resource": "A955C4EA6F6D4203",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 204,
+            "indexRow": 404,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 204,
+            "indexRow": 404,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 204,
+            "indexRow": 404,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 204,
+            "indexRow": 404,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 204,
+            "indexRow": 404,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 204,
+            "indexRow": 404,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-011",
+        "row": 16
+      }
+    },
+    "AA69A60D74A3EC54": {
+      "id": "EQ-074",
+      "unit_cents": 450,
+      "name_zh": "PLAS-15 忠诚者",
+      "name_en": "PLAS-15 Loyalist",
+      "source_type": "AA69A60D74A3EC54",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "PLAS-15 Loyalist",
+        "resource": "AA69A60D74A3EC54",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 240,
+            "indexRow": 110,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-074",
+        "row": 79
+      }
+    },
+    "B6AFF2195568767F": {
+      "id": "EQ-039",
+      "unit_cents": 6000,
+      "name_zh": "R-36 爆裂铳",
+      "name_en": "R-36 Eruptor",
+      "source_type": "B6AFF2195568767F",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "R-36 Eruptor",
+        "resource": "B6AFF2195568767F",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 221,
+            "indexRow": 24,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 221,
+            "indexRow": 24,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 221,
+            "indexRow": 24,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 221,
+            "indexRow": 24,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 221,
+            "indexRow": 24,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 221,
+            "indexRow": 24,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-039",
+        "row": 44
+      }
+    },
+    "BC29613666DF696B": {
+      "id": "EQ-008",
+      "unit_cents": 280,
+      "name_zh": "AR-32 安抚者",
+      "name_en": "AR-32 Pacifier",
+      "source_type": "BC29613666DF696B",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR-32 Pacifier",
+        "resource": "BC29613666DF696B",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 206,
+            "indexRow": 467,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-008",
+        "row": 13
+      }
+    },
+    "BE70EE0D8D44028E": {
+      "id": "EQ-026",
+      "unit_cents": 48,
+      "name_zh": "M7S 冲锋枪",
+      "name_en": "M7S SMG",
+      "source_type": "BE70EE0D8D44028E",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "M7S SMG",
+        "resource": "BE70EE0D8D44028E",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 138,
+            "indexRow": 126,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 138,
+            "indexRow": 126,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 138,
+            "indexRow": 126,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 138,
+            "indexRow": 126,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 138,
+            "indexRow": 126,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 138,
+            "indexRow": 126,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-026",
+        "row": 31
+      }
+    },
+    "C12A34F375BD5A87": {
+      "id": "EQ-033",
+      "unit_cents": 156,
+      "name_zh": "SG-225IE 高燃破裂者",
+      "name_en": "SG-225IE Breaker Incendiary",
+      "source_type": "C12A34F375BD5A87",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 12,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "SG-225IE Breaker Incendiary",
+        "resource": "C12A34F375BD5A87",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 215,
+            "indexRow": 71,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-033",
+        "row": 38
+      }
+    },
+    "CD00BDC1149C2928": {
+      "id": "EQ-088",
+      "unit_cents": 600,
+      "name_zh": "MG-206 重机枪",
+      "name_en": "MG-206 Heavy Machine Gun",
+      "source_type": "CD00BDC1149C2928",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "MG-206 Heavy Machine Gun",
+        "resource": "CD00BDC1149C2928",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0xCD00BDC1149C2928",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 264,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0xCD00BDC1149C2928",
+          "ownership": {
+            "capacity": {
+              "baseValue": 100,
+              "chambered": true,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 100
+            },
+            "capacity_value": 100,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 1,
+            "magazines_from_supply": 2,
+            "spare_magazines": 6,
+            "starting_magazines": 6
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-088",
+        "row": 93
+      }
+    },
+    "CDF28BE026BB7D84": {
+      "id": "EQ-007",
+      "unit_cents": 35,
+      "name_zh": "StA-52 突击步枪",
+      "name_en": "StA-52 Assault Rifle",
+      "source_type": "CDF28BE026BB7D84",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "StA-52 Assault Rifle",
+        "resource": "CDF28BE026BB7D84",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 205,
+            "indexRow": 32,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 205,
+            "indexRow": 32,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 205,
+            "indexRow": 32,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 205,
+            "indexRow": 32,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 205,
+            "indexRow": 32,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 205,
+            "indexRow": 32,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-007",
+        "row": 12
+      }
+    },
+    "CE063AA33D95A812": {
+      "id": "EQ-005",
+      "unit_cents": 120,
+      "name_zh": "AR-61 肉锤",
+      "name_en": "AR-61 Tenderizer",
+      "source_type": "CE063AA33D95A812",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR-61 Tenderizer",
+        "resource": "CE063AA33D95A812",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 210,
+            "indexRow": 154,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 210,
+            "indexRow": 154,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 210,
+            "indexRow": 154,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 210,
+            "indexRow": 154,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 210,
+            "indexRow": 154,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 210,
+            "indexRow": 154,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-005",
+        "row": 10
+      }
+    },
+    "CF5F176E0E322BE1": {
+      "id": "EQ-003",
+      "unit_cents": 88,
+      "name_zh": "AR-23C 震荡解放者",
+      "name_en": "AR-23C Liberator Concussive",
+      "source_type": "CF5F176E0E322BE1",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "AR-23C Liberator Concussive",
+        "resource": "CF5F176E0E322BE1",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 203,
+            "indexRow": 378,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-003",
+        "row": 8
+      }
+    },
+    "DBB6C961C59FADC1": {
+      "id": "EQ-079",
+      "unit_cents": 1800,
+      "name_zh": "P/40-K 爆弹手枪",
+      "name_en": "P/40-K Bolt Pistol",
+      "source_type": "DBB6C961C59FADC1",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "P/40-K Bolt Pistol",
+        "resource": "DBB6C961C59FADC1",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 239,
+            "indexRow": 522,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 239,
+            "indexRow": 522,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 239,
+            "indexRow": 522,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 239,
+            "indexRow": 522,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 239,
+            "indexRow": 522,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 239,
+            "indexRow": 522,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-079",
+        "row": 84
+      }
+    },
+    "E5796355A8FD67E0": {
+      "id": "EQ-020",
+      "unit_cents": 2000,
+      "name_zh": "R-4 鬣狗",
+      "name_en": "R-4 Hyena",
+      "source_type": "E5796355A8FD67E0",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "R-4 Hyena",
+        "resource": "E5796355A8FD67E0",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 223,
+            "indexRow": 533,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-020",
+        "row": 25
+      }
+    },
+    "E8D5F49AD7780E54": {
+      "id": "EQ-103",
+      "unit_cents": 12000,
+      "name_zh": "PLAS-45 纪元",
+      "name_en": "PLAS-45 Epoch",
+      "source_type": "E8D5F49AD7780E54",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/SupportWeaponCapabilities.json",
+        "catalog_identity": "PLAS-45 Epoch",
+        "resource": "E8D5F49AD7780E54",
+        "native_component": "WeaponMagazineComponentData",
+        "components": [
+          {
+            "resourceHash": "0xE8D5F49AD7780E54",
+            "component": "WeaponMagazineComponentData",
+            "componentType": "0xFB8D88A3",
+            "recordIndex": 256,
+            "uniqueOwner": true,
+            "ownerCount": 1
+          }
+        ],
+        "ammoFeedMagazine": {
+          "resourceHash": "0xE8D5F49AD7780E54",
+          "ownership": {
+            "capacity": {
+              "baseValue": 3,
+              "chambered": false,
+              "source": "WeaponMagazineComponentData.Capacity",
+              "status": "RESOLVED",
+              "transformation": "identity",
+              "value": 3
+            },
+            "capacity_value": 3,
+            "kind": "magazine",
+            "magazines_from_ammo_box": 1,
+            "magazines_from_supply": 2,
+            "spare_magazines": 4,
+            "starting_magazines": 2
+          },
+          "backpackDependencyCatalogued": false,
+          "weaponLinkedAmmoComponentOwned": false,
+          "weaponLinkedAmmo": null,
+          "backpackRuntimeOwnershipProven": false
+        },
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-103",
+        "row": 108
+      }
+    },
+    "E91F569C2AD8AF01": {
+      "id": "EQ-080",
+      "unit_cents": 120000,
+      "name_zh": "P-34 破障者",
+      "name_en": "P-34 Breacher",
+      "source_type": "E91F569C2AD8AF01",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "P-34 Breacher",
+        "resource": "E91F569C2AD8AF01",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 235,
+            "indexRow": 385,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 235,
+            "indexRow": 385,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 235,
+            "indexRow": 385,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 235,
+            "indexRow": 385,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 235,
+            "indexRow": 385,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 235,
+            "indexRow": 385,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-080",
+        "row": 85
+      }
+    },
+    "EEA5E3CEF1E12C14": {
+      "id": "EQ-043",
+      "unit_cents": 300,
+      "name_zh": "PLAS-1 焦土",
+      "name_en": "PLAS-1 Scorcher",
+      "source_type": "EEA5E3CEF1E12C14",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "PLAS-1 Scorcher",
+        "resource": "EEA5E3CEF1E12C14",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 230,
+            "indexRow": 196,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 230,
+            "indexRow": 196,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 230,
+            "indexRow": 196,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 230,
+            "indexRow": 196,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 230,
+            "indexRow": 196,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 230,
+            "indexRow": 196,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-043",
+        "row": 48
+      }
+    },
+    "F0338468DCDB6A6C": {
+      "id": "EQ-019",
+      "unit_cents": 500,
+      "name_zh": "R-72 审查官",
+      "name_en": "R-72 Censor",
+      "source_type": "F0338468DCDB6A6C",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "R-72 Censor",
+        "resource": "F0338468DCDB6A6C",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 224,
+            "indexRow": 100,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-019",
+        "row": 24
+      }
+    },
+    "F49227A0630A3F7F": {
+      "id": "EQ-040",
+      "unit_cents": 3000,
+      "name_zh": "CB-9 爆燃弩",
+      "name_en": "CB-9 Exploding Crossbow",
+      "source_type": "F49227A0630A3F7F",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "CB-9 Exploding Crossbow",
+        "resource": "F49227A0630A3F7F",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 218,
+            "indexRow": 423,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 218,
+            "indexRow": 423,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 218,
+            "indexRow": 423,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 218,
+            "indexRow": 423,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 218,
+            "indexRow": 423,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 218,
+            "indexRow": 423,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-040",
+        "row": 45
+      }
+    },
+    "F992CE97577C8A7F": {
+      "id": "EQ-055",
+      "unit_cents": 16,
+      "name_zh": "VG-70 变数",
+      "name_en": "VG-70 Variable",
+      "source_type": "F992CE97577C8A7F",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "VG-70 Variable",
+        "resource": "F992CE97577C8A7F",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 142,
+            "indexRow": 223,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 142,
+            "indexRow": 223,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 142,
+            "indexRow": 223,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 142,
+            "indexRow": 223,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 142,
+            "indexRow": 223,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 142,
+            "indexRow": 223,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-055",
+        "row": 60
+      }
+    },
+    "FB3A19078694708A": {
+      "id": "EQ-047",
+      "unit_cents": 600,
+      "name_zh": "PLAS-101 净化者",
+      "name_en": "PLAS-101 Purifier",
+      "source_type": "FB3A19078694708A",
+      "stock_kind": "magazine",
+      "chamber_policy": "separate_round",
+      "projectiles_per_unit": 1,
+      "inventory_units_are_price_units": true,
+      "evidence": {
+        "sdk": "sdk/PlayerWeaponAuthoringCapabilities.json",
+        "catalog_identity": "PLAS-101 Purifier",
+        "resource": "FB3A19078694708A",
+        "families": [
+          "conventional_projectile"
+        ],
+        "native_component": "WeaponMagazineComponentData",
+        "backing": [
+          {
+            "field": "weapon.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 231,
+            "indexRow": 258,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "weapon.base_capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 231,
+            "indexRow": 258,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.capacity",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 136,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 231,
+            "indexRow": 258,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.starting_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 140,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 231,
+            "indexRow": 258,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.magazines_from_supply",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 144,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 231,
+            "indexRow": 258,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          },
+          {
+            "field": "magazine.spare_magazines",
+            "kind": "component",
+            "component": "WeaponMagazineComponentData",
+            "offset": 148,
+            "storage": "u32",
+            "width": 4,
+            "recordIndex": 231,
+            "indexRow": 258,
+            "ownerCount": 1,
+            "uniqueOwner": true
+          }
+        ],
+        "capacity_is_read_live": true
+      },
+      "price_evidence": {
+        "price_id": "EQ-047",
+        "row": 52
+      }
+    }
+  },
+  "deferred": [
+    {
+      "id": "EQ-016",
+      "name_en": "R-2124 Constitution",
+      "source_types": [
+        "7B75E5132FFD4CA6"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-017",
+      "name_en": "R-6 Deadeye",
+      "source_types": [
+        "E6D932BE83729076"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-029",
+      "name_en": "SG-8 Punisher",
+      "source_types": [
+        "41EAC4A03987FAA0"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-031",
+      "name_en": "SG-8S Slugger",
+      "source_types": [
+        "4F749E2EE26F532D"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-034",
+      "name_en": "SG-451 Cookout",
+      "source_types": [
+        "D323DE60855898AC"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-036",
+      "name_en": "DBS-2 Double Freedom",
+      "source_types": [
+        "72170A55A1F37FF1"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-037",
+      "name_en": "M90A Shotgun",
+      "source_types": [
+        "90DDC374F4E3D756"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-038",
+      "name_en": "SG-97 Sweeper",
+      "source_types": [
+        "DCD1C835407EF7BA"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-041",
+      "name_en": "GL-15 Evictor",
+      "source_types": [
+        "006E44327BB953FE"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-044",
+      "name_en": "LAS-16 Sickle",
+      "source_types": [
+        "8645F167B3C813A2"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-049",
+      "name_en": "LAS-17 Double-Edge Sickle",
+      "source_types": [
+        "295BEB26DC4F8FF1"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-052",
+      "name_en": "LAS-12 Sai",
+      "source_types": [
+        "C85F576D5E086147"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-058",
+      "name_en": "P-4 Senator",
+      "source_types": [
+        "8D3D52A3B2F19402"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-062",
+      "name_en": "P-69 Veto",
+      "source_types": [
+        "C780BCD79547DA0F"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-070",
+      "name_en": "GP-31 Grenade Pistol",
+      "source_types": [
+        "52E4334E6A128CAF"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-071",
+      "name_en": "SG-22 Bushwhacker",
+      "source_types": [
+        "2B28E17FFED05F7C"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-073",
+      "name_en": "P-11 Stim Pistol",
+      "source_types": [
+        "D6B1FB05B9109353"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-076",
+      "name_en": "LAS-58 Talon",
+      "source_types": [
+        "416D053372C4E433"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-082",
+      "name_en": "M-105 Stalwart",
+      "source_types": [
+        "B43235DBD493750C",
+        "B9606C5AAB32C3C2",
+        "D53EE03481AE73FD"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-085",
+      "name_en": "GR-8 Recoilless Rifle",
+      "source_types": [
+        "9F80D67A12A7E40F"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-087",
+      "name_en": "AC-8 Autocannon",
+      "source_types": [
+        "A8CFFB316F0B5C5F"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-090",
+      "name_en": "RL-77 Airburst Rocket Launcher",
+      "source_types": [
+        "26E40437EA275296"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-091",
+      "name_en": "FAF-14 Spear",
+      "source_types": [
+        "25AA2FD4643CF4EE"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-093",
+      "name_en": "StA-X3 W.A.S.P. Launcher",
+      "source_types": [
+        "CC786F6491FE7E65"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-097",
+      "name_en": "LAS-99 Quasar Cannon",
+      "source_types": [
+        "35A61296619CC47E"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-098",
+      "name_en": "SG-88 Break-Action Shotgun",
+      "source_types": [
+        "52071F49263415E4"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-102",
+      "name_en": "GL-52 De-Escalator",
+      "source_types": [
+        "FE3B29B2CFA63F9B"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-108",
+      "name_en": "M-1000 Maxigun",
+      "source_types": [
+        "43A58CB89CFA197C"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    },
+    {
+      "id": "EQ-112",
+      "name_en": "GL-28 Belt-Fed Grenade Launcher",
+      "source_types": [
+        "88C2D09AD85A7C9F"
+      ],
+      "reason": "No matching native owned magazine feed evidence; keep SHOTS billing."
+    }
+  ],
+  "native_guard": {
+    "weapon_flags": {
+      "required": 128,
+      "excluded": [
+        256,
+        512
+      ]
+    },
+    "evidence": "domains/pelican.lua turretWeapon.weapon; runtime/pelicans.lua weapon_config"
+  },
+  "stock_formula": "spares * actual_capacity + rounds + loaded_projectile_chamber_0_or_1",
+  "fuel_formula": "spares * actual_capacity + rounds",
+  "chamber_evidence": [
+    "runtime/pelican_weapon.lua:225-238,815-830,1686",
+    "scripts/research_weapon_slot_capacity.py:90: magazine capacity; chambered reported separately"
+  ],
+  "limits": [
+    "Static type/feed evidence only; no real player ammo snapshot validation.",
+    "Capacity/chamber and Weapon flags are read live, not taken from static catalogue.",
+    "Do not divide observed magazine cartridges by projectile pellet count.",
+    "Inventory-managed prices must not also bill their SHOTS increments.",
+    "No authoritative reload phase; consistent rounds/working can still cross a reload boundary."
+  ]
+}

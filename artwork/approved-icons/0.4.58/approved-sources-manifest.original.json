@@ -1,0 +1,29 @@
+{
+  "status": "approved_sources_preserved_export_and_integration_pending_in_original_thread",
+  "items": [
+    {
+      "path": "artwork/approved-icons/0.4.58/originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "role": "approved original three-skull overview, left to right tiers I/II/III",
+      "bytes": 1262646,
+      "sha256": "54fdae1296542575a580329e5dde3d5f0b748ca0f4e47ca76ec292084d339842",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null
+    },
+    {
+      "path": "artwork/approved-icons/0.4.58/originals/exec-fd33a1ed-2b9a-41d3-b659-d96cf0383a32.png",
+      "role": "approved B tank gold/white swap",
+      "bytes": 1043417,
+      "sha256": "ee653579dd0d82e525231d5dd362e840ecb560d5f26799e48a4a7d36db0bd5da",
+      "dimensions": [
+        1330,
+        1182
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null
+    }
+  ]
+}

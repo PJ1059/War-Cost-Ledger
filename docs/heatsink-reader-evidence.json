@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "source": "supplied Overwatch HUD Source/weapon_heat.lua and inventory-profile.json",
+  "game_dll_sha256": "2E2C3B7C2500646DADD5F2B4C6E0504DBB7E7896139F64CDDC0D1813C718F51E",
+  "profile": {
+    "manager": 53636424,
+    "count": 20,
+    "map": 40,
+    "entities": 64,
+    "states": 88,
+    "stride": 12,
+    "heat": 4,
+    "reserve": 0,
+    "override_map": 104,
+    "configs": 168,
+    "config_stride": 592,
+    "capacity": 96,
+    "resources": 54968216,
+    "resource_offset": 15805640,
+    "resource_slots": 58,
+    "pins": [
+      {
+        "rva": 7614634,
+        "hex": "418b04ef418bf60fbae00973734c8b158a3cbe02418bce458b4230458b4a38440fafcb418d70ff4585c074264d8b5a28418b7a3466908bc6428d14094823d0418b04d33bc7742e3bc3742effc1413bc872e4b8ffffffff8bc8498b4258488d1449f30f10449004e8125e9c01f30f2cf0e9060200003bc375d9418b44d304ebd7"
+      },
+      {
+        "rva": 7616912,
+        "hex": "0fbae2090f837e0000004c8b15a733be02418b5230458b4238440fafc38d6aff85d274334d8b4a28458b5a340f1f40008bc5428d0c064823c8418b04c9413bc3740c3bc3740cffc63bf272e4eb093bc37505418b7cc904498b4a408bc7488b0cc1e8faa7dcfff30f104060e828559c014c8b742440f30f2cf08bc6488b5c24504883c4205f5e5dc3"
+      },
+      {
+        "rva": 7619111,
+        "hex": "468b0cc1410fbae1090f83870000004c8b1d0b2bbe02458b4b30418b7b380faffa458d71ff4585c97452498b7328418b6b340f1f8000000000418bce448d043b4c23c1428b0cc64e8d14c63bcd74253bca7425ffc3413bd972df8bc8498b43584c8d0449428b1c80e83c1f030003c3e958ffffff3bca7504418b42048bc8498b43584c8d0449428b1c80e81a1f030003c3e936ffffff"
+      },
+      {
+        "rva": 5300720,
+        "hex": "4883ec284c8bd14885c9750733c04883c428c38b41083b05185af7020f84930000004c8b1d2f8be1024533c048895c243048896c24384889742440458b4b70418b5b780fafd848897c2420418d69ff4585c9742c498b7b68418b73740f1f40008bcd418d14184823d1488d0cd78b14d73bd6740e3bd0740a41ffc0453bc172e033c9488b7c2420488b742440488b6c2438488b5c24303901751b8b410483f8ff74134869c050020000490383a80000004883c428c3498b0a4883c428e97ffaffff"
+      },
+      {
+        "rva": 5299504,
+        "hex": "4885c9746c488b055ce2f502448bc14c8b90c82cf10048b81b61b9a711967b1a48f7e1488bc1482bc248d1e84803c248c1e8056bc03a442bc04533c90f1f4000418bc048c1e0044903c2488b10483bd174224885d2741a418bc0418d50014533c041ffc183f839440f45c24183f93a72cf33c0c34885c074f88b48084869c1500200004805a00300004903c2c3"
+      },
+      {
+        "rva": 7754365,
+        "hex": "488b5758488d0c76f30f104c8a040f2f8dac000000771038448a08749af30f1045640f2fc17290b001eb8e"
+      },
+      {
+        "rva": 7757689,
+        "hex": "e8c2c0ffff8bcb41b9010000004c8d0449488b4f5842890481488b4f58428b14818916488b5424608b024803c0c744c5008b9164ec44894cc504488974c5084883c604ff02488b475842c744800400000000488b4758428b4c8004890e"
+      }
+    ]
+  },
+  "billing": "native same-instance spare-heatsink decline; heat gauge is never ammunition",
+  "native_calls": 0,
+  "game_writes": 0,
+  "live_new_reader_verified": false,
+  "source_sha256": {
+    "dist/mod-research/task-layout/overwatch-hud/Source/weapon_heat.lua": "409c048df8909adb04ed9be36392ef314b69fe32d27515db917a05a2aba405b2",
+    "dist/mod-research/task-layout/overwatch-hud/Source/inventory-profile.json": "5cb83ad5735a204e673db686f577f200d91408695f98db2c7d8042837a28cd67"
+  },
+  "game_dll_sha256_observed": "2e2c3b7c2500646dadd5f2b4c6e0504dbb7e7896139f64cddc0d1813c718f51e",
+  "on_disk_code_comparable": false,
+  "on_disk_code_reason": "The exact pinned game.dll on disk is WinLicense-packed; RVA file bytes are not the live unpacked instruction image. Production validates the supplied same-build runtime pins before reading.",
+  "production_required_profile_pins": [
+    2,
+    3,
+    7
+  ]
+}

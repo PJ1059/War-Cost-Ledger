@@ -1,0 +1,516 @@
+{
+  "schema": 1,
+  "version": "0.4.58",
+  "status": "approved_originals_exported_not_integrated",
+  "process": "Pillow deterministic crop/black-matte transparency/unscaled square placement",
+  "script_sha256": "b708c2b2cf7daa7157234aea92a7b16879c9bd800c7233d794214dd5f8974eb2",
+  "original_manifest_sha256": "e9446dc810de19e995bed4e71fdf55c71aa5459b5ce0ac5a87652f454abaf4f4",
+  "source_identity": "Only the two finally approved exact-SHA originals; no 27ab variant or other drafts.",
+  "canvas_policy": "1536 square, original foreground pixels unscaled, fit subsequent HUD rendering by visible alpha bbox.",
+  "mask_policy": "max RGB <=20 transparent everywhere, including semantic eye/nose/muzzle/structure holes; keep source RGB at opaque interiors; black-unmatte only <=2px support boundary.",
+  "background_filled": false,
+  "generated": false,
+  "runtime_files_written": false,
+  "items": [
+    {
+      "id": "M08",
+      "name": "民主之星",
+      "source_index": 0,
+      "crop": [
+        40,
+        25,
+        570,
+        642
+      ],
+      "file": "M08-democracy_star.png",
+      "semantic_holes": [
+        [
+          267,
+          438
+        ],
+        [
+          346,
+          438
+        ],
+        [
+          307,
+          466
+        ]
+      ],
+      "role": "Approved original upper-left skull, tier I. No lower thumbnail or Roman numeral.",
+      "source_original_path": "artwork/approved-icons/0.4.58/originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "preserved_original": "originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "source_sha256": "54fdae1296542575a580329e5dde3d5f0b748ca0f4e47ca76ec292084d339842",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "source_selected_region": [
+        40,
+        25,
+        570,
+        642
+      ],
+      "source_visible_bbox": [
+        75,
+        52,
+        540,
+        634
+      ],
+      "crop_local_visible_bbox": [
+        35,
+        27,
+        500,
+        609
+      ],
+      "canvas": [
+        1536,
+        1536
+      ],
+      "unscaled_paste_origin": [
+        535,
+        477
+      ],
+      "output_alpha_bbox": [
+        535,
+        477,
+        1000,
+        1059
+      ],
+      "output_alpha_bbox_threshold24": [
+        535,
+        477,
+        1000,
+        1059
+      ],
+      "visible_size": [
+        465,
+        582
+      ],
+      "visible_width_height_ratio": 0.7989690721649485,
+      "output_sha256": "02e61178ae80389d154720b4547c1d91107b06418e88b64f600eac196dcbe096",
+      "mask_file": "masks\\M08-alpha.png",
+      "mask_sha256": "a7fb67e39b1d3a92722d3016aa65b3c37d7ae6693d6ec51e0b46d61da5208c32",
+      "black_cutoff": 20,
+      "edge_unmatte_radius": 2,
+      "resampled": false,
+      "redrawn": false,
+      "palette_replaced": false,
+      "counts": {
+        "transparent_pixels": 226874,
+        "opaque_original_rgb_pixels": 73091,
+        "edge_black_matte_corrected_pixels": 27045
+      },
+      "semantic_negative_space_checks": [
+        {
+          "source_xy": [
+            267,
+            438
+          ],
+          "output_xy": [
+            727,
+            863
+          ],
+          "alpha": 0
+        },
+        {
+          "source_xy": [
+            346,
+            438
+          ],
+          "output_xy": [
+            806,
+            863
+          ],
+          "alpha": 0
+        },
+        {
+          "source_xy": [
+            307,
+            466
+          ],
+          "output_xy": [
+            767,
+            891
+          ],
+          "alpha": 0
+        }
+      ]
+    },
+    {
+      "id": "M09",
+      "name": "超级民主之星",
+      "source_index": 0,
+      "crop": [
+        590,
+        25,
+        1120,
+        642
+      ],
+      "file": "M09-super_democracy_star.png",
+      "semantic_holes": [
+        [
+          821,
+          431
+        ],
+        [
+          901,
+          432
+        ],
+        [
+          863,
+          460
+        ]
+      ],
+      "role": "Approved original upper-middle skull, tier II. No lower thumbnail or Roman numeral.",
+      "source_original_path": "artwork/approved-icons/0.4.58/originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "preserved_original": "originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "source_sha256": "54fdae1296542575a580329e5dde3d5f0b748ca0f4e47ca76ec292084d339842",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "source_selected_region": [
+        590,
+        25,
+        1120,
+        642
+      ],
+      "source_visible_bbox": [
+        621,
+        52,
+        1104,
+        636
+      ],
+      "crop_local_visible_bbox": [
+        31,
+        27,
+        514,
+        611
+      ],
+      "canvas": [
+        1536,
+        1536
+      ],
+      "unscaled_paste_origin": [
+        526,
+        476
+      ],
+      "output_alpha_bbox": [
+        526,
+        476,
+        1009,
+        1060
+      ],
+      "output_alpha_bbox_threshold24": [
+        526,
+        476,
+        1009,
+        1060
+      ],
+      "visible_size": [
+        483,
+        584
+      ],
+      "visible_width_height_ratio": 0.827054794520548,
+      "output_sha256": "18a2e4b3b72ea4f66e0141a57b8d05a3b583e669de26fd0cb0bf0cddaf6cabf6",
+      "mask_file": "masks\\M09-alpha.png",
+      "mask_sha256": "299f79d816a8915976466ac2ed780ecb1987ca87b89de41cbceb5e8c0d28ed63",
+      "black_cutoff": 20,
+      "edge_unmatte_radius": 2,
+      "resampled": false,
+      "redrawn": false,
+      "palette_replaced": false,
+      "counts": {
+        "transparent_pixels": 219064,
+        "opaque_original_rgb_pixels": 77711,
+        "edge_black_matte_corrected_pixels": 30235
+      },
+      "semantic_negative_space_checks": [
+        {
+          "source_xy": [
+            821,
+            431
+          ],
+          "output_xy": [
+            726,
+            855
+          ],
+          "alpha": 0
+        },
+        {
+          "source_xy": [
+            901,
+            432
+          ],
+          "output_xy": [
+            806,
+            856
+          ],
+          "alpha": 0
+        },
+        {
+          "source_xy": [
+            863,
+            460
+          ],
+          "output_xy": [
+            768,
+            884
+          ],
+          "alpha": 0
+        }
+      ]
+    },
+    {
+      "id": "M10",
+      "name": "超级无上民主之星",
+      "source_index": 0,
+      "crop": [
+        1120,
+        25,
+        1765,
+        642
+      ],
+      "file": "M10-supreme_democracy_star.png",
+      "semantic_holes": [
+        [
+          1396,
+          435
+        ],
+        [
+          1473,
+          435
+        ],
+        [
+          1433,
+          464
+        ]
+      ],
+      "role": "Approved original upper-right winged skull, tier III. No lower thumbnail or Roman numeral.",
+      "source_original_path": "artwork/approved-icons/0.4.58/originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "preserved_original": "originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "source_sha256": "54fdae1296542575a580329e5dde3d5f0b748ca0f4e47ca76ec292084d339842",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "source_selected_region": [
+        1120,
+        25,
+        1765,
+        642
+      ],
+      "source_visible_bbox": [
+        1134,
+        50,
+        1738,
+        639
+      ],
+      "crop_local_visible_bbox": [
+        14,
+        25,
+        618,
+        614
+      ],
+      "canvas": [
+        1536,
+        1536
+      ],
+      "unscaled_paste_origin": [
+        466,
+        473
+      ],
+      "output_alpha_bbox": [
+        466,
+        473,
+        1070,
+        1062
+      ],
+      "output_alpha_bbox_threshold24": [
+        466,
+        473,
+        1070,
+        1062
+      ],
+      "visible_size": [
+        604,
+        589
+      ],
+      "visible_width_height_ratio": 1.0254668930390491,
+      "output_sha256": "2adc046cb3cb79d6de3d14746df0ce1d4988c3cf4fa9e8a4d8e387a1e944c8f8",
+      "mask_file": "masks\\M10-alpha.png",
+      "mask_sha256": "88a2827c93f7eaed31b331253a6c29de2b886282e472b0a0093ce5e793d2c2d0",
+      "black_cutoff": 20,
+      "edge_unmatte_radius": 2,
+      "resampled": false,
+      "redrawn": false,
+      "palette_replaced": false,
+      "counts": {
+        "transparent_pixels": 256962,
+        "opaque_original_rgb_pixels": 105960,
+        "edge_black_matte_corrected_pixels": 35043
+      },
+      "semantic_negative_space_checks": [
+        {
+          "source_xy": [
+            1396,
+            435
+          ],
+          "output_xy": [
+            728,
+            858
+          ],
+          "alpha": 0
+        },
+        {
+          "source_xy": [
+            1473,
+            435
+          ],
+          "output_xy": [
+            805,
+            858
+          ],
+          "alpha": 0
+        },
+        {
+          "source_xy": [
+            1433,
+            464
+          ],
+          "output_xy": [
+            765,
+            887
+          ],
+          "alpha": 0
+        }
+      ]
+    },
+    {
+      "id": "M12",
+      "name": "摧毁暴政减速带",
+      "source_index": 1,
+      "crop": [
+        0,
+        0,
+        1330,
+        1182
+      ],
+      "file": "M12-tyranny_speed_bump.png",
+      "semantic_holes": [
+        [
+          665,
+          337
+        ],
+        [
+          665,
+          558
+        ],
+        [
+          665,
+          260
+        ]
+      ],
+      "role": "Approved B tank gold/white swap: original white hull/top plates/shoulders, gold tracks/barrel, original frame/laurels.",
+      "source_original_path": "artwork/approved-icons/0.4.58/originals/exec-fd33a1ed-2b9a-41d3-b659-d96cf0383a32.png",
+      "preserved_original": "originals/exec-fd33a1ed-2b9a-41d3-b659-d96cf0383a32.png",
+      "source_sha256": "ee653579dd0d82e525231d5dd362e840ecb560d5f26799e48a4a7d36db0bd5da",
+      "source_dimensions": [
+        1330,
+        1182
+      ],
+      "source_selected_region": [
+        0,
+        0,
+        1330,
+        1182
+      ],
+      "source_visible_bbox": [
+        56,
+        25,
+        1274,
+        1114
+      ],
+      "crop_local_visible_bbox": [
+        56,
+        25,
+        1274,
+        1114
+      ],
+      "canvas": [
+        1536,
+        1536
+      ],
+      "unscaled_paste_origin": [
+        159,
+        223
+      ],
+      "output_alpha_bbox": [
+        159,
+        223,
+        1377,
+        1312
+      ],
+      "output_alpha_bbox_threshold24": [
+        159,
+        223,
+        1377,
+        1312
+      ],
+      "visible_size": [
+        1218,
+        1089
+      ],
+      "visible_width_height_ratio": 1.118457300275482,
+      "output_sha256": "9c0ecc9409d0a6c8a00e3c56d6d5f42692bd4eda1a4af231689d19eb3cd85d6d",
+      "mask_file": "masks\\M12-alpha.png",
+      "mask_sha256": "a2a93f5553e7c46a670ebafba51021703079869fd65e116da9cb028cd6781f62",
+      "black_cutoff": 20,
+      "edge_unmatte_radius": 2,
+      "resampled": false,
+      "redrawn": false,
+      "palette_replaced": false,
+      "counts": {
+        "transparent_pixels": 1040980,
+        "opaque_original_rgb_pixels": 457530,
+        "edge_black_matte_corrected_pixels": 73550
+      },
+      "semantic_negative_space_checks": [
+        {
+          "source_xy": [
+            665,
+            337
+          ],
+          "output_xy": [
+            768,
+            535
+          ],
+          "alpha": 0
+        },
+        {
+          "source_xy": [
+            665,
+            558
+          ],
+          "output_xy": [
+            768,
+            756
+          ],
+          "alpha": 0
+        },
+        {
+          "source_xy": [
+            665,
+            260
+          ],
+          "output_xy": [
+            768,
+            458
+          ],
+          "alpha": 0
+        }
+      ]
+    }
+  ]
+}

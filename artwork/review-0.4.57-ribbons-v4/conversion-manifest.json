@@ -1,0 +1,772 @@
+{
+  "method": "Pillow deterministic alpha/luminance stencil",
+  "frame_source": "artwork/icon-drafts/v18/ribbon-frame.svg",
+  "frame_sha256": "6b4a4f7445b4a6f16e45e1ee59b53fee80d689f37dec0c865b96872a8ab4e21e",
+  "reference_size": [
+    96,
+    24
+  ],
+  "symbol_box": [
+    32.64,
+    16.8
+  ],
+  "items": [
+    {
+      "file": "giant-dragonroach.png",
+      "unit": "蟑龙",
+      "source": "artwork\\review-0.4.57-source-v3\\giant-dragonroach.png",
+      "source_sha256": "1cb4d82c1891bcc73bbe97fcdbe3a4b651b4338f9a69e32ad3f68010ba850b5f",
+      "output_sha256": "0fb3a404f96a548dfa33e70cd339889b58c96ef3b10cd38e9550fed22182e910",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 123,
+        "body_pixels": 12976,
+        "negative_pixels": 1465,
+        "original_size": [
+          1213,
+          362
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "giant-bile-titan.png",
+      "unit": "吐酸泰坦",
+      "source": "artwork\\review-0.4.57-source-v3\\giant-bile-titan.png",
+      "source_sha256": "57fe4344886854f3d4ce1d0389ed0c8b97ffe68b7aa3320f9a50f9b8d52ef728",
+      "output_sha256": "f50cf026f3f64fe4bd2125b014813457bda5ba86e9a3150dee46454b1af62572",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 46,
+        "body_pixels": 49777,
+        "negative_pixels": 9729,
+        "original_size": [
+          973,
+          761
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "giant-spore-burst-bile-titan.png",
+      "unit": "孢裂吐酸泰坦",
+      "source": "artwork\\review-0.4.57-source-v3\\giant-spore-burst-bile-titan.png",
+      "source_sha256": "a7c69cdcef67f8f2bdda59fcd79f3d0720a8fd7fb0b0f19a6bb1c11a03c3e5d4",
+      "output_sha256": "3dc910d3571b95b1ec5010a75463d7aec97b91ff7fdc8d74586339c86ef39646",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 49,
+        "body_pixels": 61688,
+        "negative_pixels": 12417,
+        "original_size": [
+          937,
+          679
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "giant-vox-engine.png",
+      "unit": "噪轰引擎",
+      "source": "artwork\\review-0.4.57-source-v3\\giant-vox-engine.png",
+      "source_sha256": "2910aa8ec8b0241a4b2242d6f0024fef60ee42a6a52615733530ad76dfc6b073",
+      "output_sha256": "801f1bd2c0482eb6ef6f5be1e6080ea286f6e6670ca0fdbfc887c4b5e0c55a81",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 32,
+        "body_pixels": 116635,
+        "negative_pixels": 25004,
+        "original_size": [
+          1395,
+          1092
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "giant-factory-strider.png",
+      "unit": "移动工厂",
+      "source": "artwork\\review-0.4.57-source-v3\\giant-factory-strider.png",
+      "source_sha256": "86ab15bd54108a329d06aa73f6141e44a4f408718c7b06503e0958a0d1a9d235",
+      "output_sha256": "7db96b31f3328eea2ea95c5792afa28deda95fe700bf57e255647e8c581addc5",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 24,
+        "body_pixels": 130764,
+        "negative_pixels": 31254,
+        "original_size": [
+          513,
+          472
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "giant-leviathan.png",
+      "unit": "利维坦",
+      "source": "artwork\\review-0.4.57-source-v3\\giant-leviathan.png",
+      "source_sha256": "7af10d1d067812eb6769874e8b84d804c9da119eea2174a4597cde8dc4edc050",
+      "output_sha256": "11659ff3e213341cfa8be4e7b8d5183e584a83cdb8ed4a07ba3c6ed2e4419969",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 57,
+        "body_pixels": 78711,
+        "negative_pixels": 17894,
+        "original_size": [
+          690,
+          457
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-charger.png",
+      "unit": "强袭虫",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-charger.png",
+      "source_sha256": "33acb89f05b800a3a92ec1c7689ee926fdf50d322da170ec727090c6faa3f24b",
+      "output_sha256": "d61e6d4aa09ccc728ef15b2f630d49236b4815430e1de721a65dffe5422e9fd3",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 52,
+        "body_pixels": 88722,
+        "negative_pixels": 21561,
+        "original_size": [
+          556,
+          432
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-charger-behemoth.png",
+      "unit": "巨兽级强袭虫",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-charger-behemoth.png",
+      "source_sha256": "921550b0f972a61428f76eaa0f4c409dfbeb272b7f8ad2fcd336a28a2eacbb01",
+      "output_sha256": "25085976f55e3d5869c98364232afdd93494a020e1f47592898a03d783400cd5",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 22,
+        "body_pixels": 119765,
+        "negative_pixels": 28131,
+        "original_size": [
+          796,
+          668
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-spore-charger.png",
+      "unit": "孢子强袭虫",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-spore-charger.png",
+      "source_sha256": "4900f4cd4b0aaf0f632456f1511ac305cfa8d168eb9a0ae3c0a835e321c36bfa",
+      "output_sha256": "b03148589432f1bb624a753dae81506babf848535f97026085154faaff647d84",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 29,
+        "body_pixels": 100453,
+        "negative_pixels": 23486,
+        "original_size": [
+          854,
+          685
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-rupture-charger.png",
+      "unit": "爆裂强袭虫",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-rupture-charger.png",
+      "source_sha256": "42e3b49d7f66a541345b92328bb20bedd0ede742aad71cf041fba6d41b9c8e17",
+      "output_sha256": "7e48b4c0e3230966fea9d6c7a36a55ba9f1786c83adc9ce54b694f9b092125c3",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 22,
+        "body_pixels": 127304,
+        "negative_pixels": 30488,
+        "original_size": [
+          946,
+          817
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-impaler.png",
+      "unit": "穿刺虫",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-impaler.png",
+      "source_sha256": "8cfd4eeef7efe238544f8b9771c361ec0cfdc5d321d38a721198865b03dc3f07",
+      "output_sha256": "0264c93d5f98991eaf287e9c09f793b5a553625defce9a03e396f70c420b93a1",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 37,
+        "body_pixels": 113378,
+        "negative_pixels": 26426,
+        "original_size": [
+          929,
+          757
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-hulk-bruiser.png",
+      "unit": "巨型碾压者",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-hulk-bruiser.png",
+      "source_sha256": "7913f6601aa42055b38ca6e7424fe6d1ebfe313bcf0360f57e6a9cfac961f06b",
+      "output_sha256": "67bc181f50d37eeb2f8d96cae0cb417d39bb438c9d1d51b9d8ea53482d69ced7",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 16,
+        "body_pixels": 135936,
+        "negative_pixels": 32277,
+        "original_size": [
+          994,
+          1020
+        ],
+        "effects_excluded": {
+          "regions": [
+            [
+              0,
+              78,
+              386,
+              341,
+              "red"
+            ]
+          ],
+          "removed_alpha_pixels": 45595
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-hulk-scorcher.png",
+      "unit": "巨型炙炎者",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-hulk-scorcher.png",
+      "source_sha256": "899f5315ff897a22371be2a1f621eb5435a87fe685c4c589c524817494a14276",
+      "output_sha256": "3609249df687e072ce17405463a1d1f4013f9aebf35e25c7a8ff105a2e15dbbd",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 33,
+        "body_pixels": 81717,
+        "negative_pixels": 17322,
+        "original_size": [
+          781,
+          1050
+        ],
+        "effects_excluded": {
+          "regions": [
+            [
+              230,
+              245,
+              449,
+              380,
+              "red"
+            ]
+          ],
+          "removed_alpha_pixels": 14933
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-hulk-obliterator.png",
+      "unit": "巨型抹煞者",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-hulk-obliterator.png",
+      "source_sha256": "a1a56fbe65e3734c7bac13074e2262fddf431fb2d659287558e7a59b224f1b43",
+      "output_sha256": "16f7a2cf4b71add64c638e96c53fad4258c7d41aba6a6f245cf748fa8b7d0459",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 18,
+        "body_pixels": 114829,
+        "negative_pixels": 27559,
+        "original_size": [
+          930,
+          1037
+        ],
+        "effects_excluded": {
+          "regions": [
+            [
+              505,
+              132,
+              930,
+              445,
+              "red"
+            ]
+          ],
+          "removed_alpha_pixels": 65950
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-hulk-firebomber.png",
+      "unit": "巨型烈焰轰炸者",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-hulk-firebomber.png",
+      "source_sha256": "71a77fedae57cc3526b6a6a63c3adf1ad98a5c0384cc29abaf995b96ac270ffc",
+      "output_sha256": "158f722593ca8932d8917171beceb75eb58cf18a30b3df424a7ef496cbd7053e",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 42,
+        "body_pixels": 66156,
+        "negative_pixels": 15608,
+        "original_size": [
+          762,
+          701
+        ],
+        "effects_excluded": {
+          "regions": [
+            [
+              525,
+              340,
+              762,
+              575,
+              "all"
+            ],
+            [
+              270,
+              0,
+              762,
+              232,
+              "all"
+            ]
+          ],
+          "removed_alpha_pixels": 61802
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-annihilator-tank.png",
+      "unit": "湮灭坦克",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-annihilator-tank.png",
+      "source_sha256": "78c364a035df63e036e9ec9d048723dde6909ad43d7cf041e11984577d06c14e",
+      "output_sha256": "2dd96080be5c9d2ed3bd30ca2d0de4bcbeef6aa0debb0ec4b13fc4a5bbf95478",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 28,
+        "body_pixels": 88247,
+        "negative_pixels": 21214,
+        "original_size": [
+          1178,
+          504
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-barrager-tank.png",
+      "unit": "铁幕坦克",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-barrager-tank.png",
+      "source_sha256": "9ee5862c76b540b2805393c06849c857ff5ebaab50d368cff3e2d2825886b869",
+      "output_sha256": "c77b1cd99510f950ea810d096cf145254275abc445f3c4b35192c2c1c3a8c6c4",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 22,
+        "body_pixels": 82293,
+        "negative_pixels": 21276,
+        "original_size": [
+          934,
+          720
+        ],
+        "effects_excluded": {
+          "regions": [
+            [
+              0,
+              0,
+              934,
+              110,
+              "all"
+            ],
+            [
+              0,
+              0,
+              615,
+              337,
+              "smoke"
+            ],
+            [
+              770,
+              283,
+              934,
+              679,
+              "smoke"
+            ]
+          ],
+          "removed_alpha_pixels": 113042
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-shredder-tank.png",
+      "unit": "碎裂坦克",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-shredder-tank.png",
+      "source_sha256": "1e040522837339a2a46fd45bbc772d94b35f0341f650a709769f8fee59759457",
+      "output_sha256": "6644a0bdef745f3216be672f53e37bb7de47d2595fe35f792a6b83c0eeef9a9e",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 28,
+        "body_pixels": 79996,
+        "negative_pixels": 18883,
+        "original_size": [
+          1229,
+          644
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-war-strider.png",
+      "unit": "战争纵步者",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-war-strider.png",
+      "source_sha256": "b2aceba165e18ab52ec8c4d15c26ed7b8136e9423630e7eeae3854eb1d2fcf88",
+      "output_sha256": "2a806827c57a24244b1d09ef5641354cc30f81e042b9140a73110d822a6916e8",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 17,
+        "body_pixels": 95319,
+        "negative_pixels": 23402,
+        "original_size": [
+          1658,
+          1966
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-veracitor.png",
+      "unit": "证真者",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-veracitor.png",
+      "source_sha256": "2ac665df611788a45ab43c5b1976202907973195a306dc74671fbcb290b1d4c8",
+      "output_sha256": "a43437b58c91bd297b7844f5f1851b304164a70e05b6ab622ed0d31168bec2b5",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 19,
+        "body_pixels": 71725,
+        "negative_pixels": 15032,
+        "original_size": [
+          2013,
+          1325
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-gatekeeper.png",
+      "unit": "御门者",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-gatekeeper.png",
+      "source_sha256": "7651f8aff8c98efde33534cce01e3f32c40d7678b703e3b30582be95990cb2c5",
+      "output_sha256": "c65c70470b88fc725d79ac17edb389a0337c8a6cecd669de058994a5df313df1",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 19,
+        "body_pixels": 98176,
+        "negative_pixels": 21594,
+        "original_size": [
+          1987,
+          1590
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-fleshmob.png",
+      "unit": "肉瘤体",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-fleshmob.png",
+      "source_sha256": "432c2fdff5baa33517ad3558c3e05c54d1d4e7ced7ee04336ff791e71849e48a",
+      "output_sha256": "74ef586bf334c5baec96d895a06925e1551eab8dfc5bdbbd0fce05fedd6b4275",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 10,
+        "body_pixels": 81423,
+        "negative_pixels": 20309,
+        "original_size": [
+          2048,
+          1425
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-crusher.png",
+      "unit": "粉碎者",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-crusher.png",
+      "source_sha256": "9878684f993254304458fe5b3f1668dae6b9f6dd8951b7a9fffe42b2e95e1cb8",
+      "output_sha256": "0e9ba56ff987332b91f3710aea420a905a930c409a89b38aebbf989e5fb276c6",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 21,
+        "body_pixels": 94120,
+        "negative_pixels": 20214,
+        "original_size": [
+          1431,
+          1712
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "file": "heavy-harvester.png",
+      "unit": "猎杀器",
+      "source": "artwork\\review-0.4.57-source-v3\\heavy-harvester.png",
+      "source_sha256": "b11191ca95f1d38bd7da17f6e9772845ea3fc4c301cfd9b2d09406d891d3ed90",
+      "output_sha256": "43363f3f2f4cc2711c48a719cd53a13703482d1fae425c5f33e3f49011ecb307",
+      "ink_rgb": [
+        255,
+        249,
+        237
+      ],
+      "settings": {
+        "threshold": 45,
+        "body_pixels": 38658,
+        "negative_pixels": 7367,
+        "original_size": [
+          1177,
+          2143
+        ],
+        "effects_excluded": {
+          "regions": [],
+          "removed_alpha_pixels": 0
+        },
+        "detail_sampling_box": [
+          64,
+          64
+        ]
+      }
+    }
+  ]
+}

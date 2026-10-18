@@ -1,0 +1,33 @@
+CREDITS AND SOURCES — HD2 War Cost Ledger 0.4.65
+
+Uses code / research from HD2Runtime by SkyeShade
+https://github.com/SkyeShade/HD2Runtime
+
+Thanks to CowboyBingus for Bingus Shared Loader and Mod Options Menu, and to DDRK1ing / DDRK1NG for HD2 HUD+.
+https://github.com/CowboyBingus/BingusSharedLoader
+https://github.com/CowboyBingus/ModOptionsMenu
+https://www.nexusmods.com/helldivers2/mods/15298
+
+Technical references: DrOrangi's Battlefield 5 Hit and Kill Feedback (which also credits jadeeeeeeeeee); AxoloFox's DeathSourceNotice; OVERWATCH HUD CN EN / OWHUD (JoeJackman in the creator field, SmashClaws and ChatGPT in its description); plataodomo's Objective Tracker; and the locally supplied HD2 Enemy Reinforcement HUD 0.5.2, whose author/public link has not yet been verified. These reference mods are not bundled.
+https://www.nexusmods.com/helldivers2/mods/16927
+https://www.nexusmods.com/helldivers2/mods/17151
+https://www.nexusmods.com/helldivers2/mods/17122
+https://www.nexusmods.com/helldivers2/mods/16913
+
+Thanks to xypwn and Filediver contributors for offline asset and type research; SOPII-Jr, Darctor, S. and contributors for the resource-ID sheet; and the contributors to the supplied damage sheet.
+https://github.com/xypwn/filediver
+https://docs.qq.com/sheet/DQ3Rya0VudGd3WWtv?tab=000001
+https://docs.qq.com/sheet/DT0ttc2VhVkRDcWVS
+
+Enemy names and existing renders: Helldivers Wiki contributors, DiversHub / Wild Pluto, and Helldivers Training Manual. Enemy ribbons use monochrome conversions of real game renders, not AI-generated enemy designs. Some medals and melee artwork use OpenAI image generation with user direction and review. Visual concepts reference Battlefield ribbons, War Thunder's scissors/armor achievement and World of Warships' Witherer.
+https://helldivers.wiki.gg/
+https://divershub.app/database/enemies
+https://helldiverstrainingmanual.com/
+
+Prices are project-defined requisition estimates, informed by game descriptions and official budget/technology references. Currency display uses a fixed ECB/central-bank snapshot. These are not official game prices or live exchange rates.
+
+Full credits, per-image sources and licensing boundaries:
+https://github.com/PJ1059/War-Cost-Ledger/blob/main/THIRD-PARTY.md
+https://github.com/PJ1059/War-Cost-Ledger/blob/main/docs/DATA-SOURCES.md
+
+MIT covers original project code/documentation only. HD2Runtime-derived portions and third-party/game assets retain separate terms. Unofficial fan project; not affiliated with or endorsed by Arrowhead Game Studios or Sony Interactive Entertainment.

@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "version": "metrics-v1",
+  "asset_base": "../artwork/metric-icon-drafts/v1/",
+  "sheet_sha256": "a5b974784e683f888ba215e02ef6168215c866b4523346a587cb8c6c8e892e5a",
+  "source_sheet_unmodified": true,
+  "transparent_background": true,
+  "items": [
+    {
+      "id": "U01",
+      "key": "kills",
+      "name": "击杀数",
+      "description": "大号击杀数字旁的骷髅",
+      "file": "metrics-review-sheet.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bbox": [
+        150,
+        160,
+        517,
+        522
+      ],
+      "review": "pending",
+      "method": "built_in_image_gen",
+      "accent": "#E7D46A"
+    },
+    {
+      "id": "U02",
+      "key": "bill",
+      "name": "战争账单",
+      "description": "军需票据与货币",
+      "file": "metrics-review-sheet.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bbox": [
+        783,
+        154,
+        1138,
+        533
+      ],
+      "review": "pending",
+      "method": "built_in_image_gen",
+      "accent": "#E7D46A"
+    },
+    {
+      "id": "U03",
+      "key": "shots",
+      "name": "发射弹药",
+      "description": "三发步枪弹",
+      "file": "metrics-review-sheet.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bbox": [
+        176,
+        713,
+        490,
+        1107
+      ],
+      "review": "pending",
+      "method": "built_in_image_gen",
+      "accent": "#E7D46A"
+    },
+    {
+      "id": "U04",
+      "key": "kd",
+      "name": "本局／历史 KD",
+      "description": "骷髅、斜线与阵亡身份牌",
+      "file": "metrics-review-sheet.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bbox": [
+        745,
+        748,
+        1122,
+        1092
+      ],
+      "review": "pending",
+      "method": "built_in_image_gen",
+      "accent": "#E7D46A"
+    }
+  ]
+}

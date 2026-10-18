@@ -1,0 +1,18 @@
+# Generated packages and build reports
+/dist/
+/build/
+/tmp/
+/PROJECT-STATE.md
+
+# Keep reviewed artwork; omit superseded draft iterations.
+/artwork/icon-drafts/*
+!/artwork/icon-drafts/v17/
+!/artwork/icon-drafts/v18/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Native texture extraction working cache; the selected skull/source record is kept.
+/artwork/icon-drafts/v15/references/native-skull-extract/

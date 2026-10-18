@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "price_id": "EQ-113",
+  "unit_cents": 30,
+  "unit": "displayed ammo unit",
+  "legacy_weapon": "0736BEE2D6328726",
+  "modern_weapon": "78A8185F63A70795",
+  "backpack": "43EB1C3C1A1860E0",
+  "native_components": {
+    "inventory": "domains/player_equipment.lua inventory.slots.backpack",
+    "deposit": "domains/player_equipment.lua deposit.live/amount",
+    "old_magazine": "SupportWeaponCapabilities: own WeaponMagazineComponentData"
+  },
+  "source_sha256": {
+    "sdk\\BackpackAuthoringCapabilities.json": "a4e4d8b0bf27c4b3a4e9b1314663e66eac3c36f2b5f8f62a06d9a0c8707a4584",
+    "sdk\\SupportWeaponCapabilities.json": "c2e8bf12ef1e2cfcfa4349d9725b1becfefc5b11277db87a72f5aebdd401e042",
+    "domains\\player_equipment.lua": "413f61776e94aea78917a20ebe76d7558090346b3af60a9b6329be109c2079ad"
+  },
+  "source_profile_sha256": "dc7279aa5599a46ae9caeee33745fc6e192f8e1a7177e4def429e81095fc6e8a",
+  "native_calls": 0,
+  "game_writes": 0,
+  "live_new_reader_verified": false
+}

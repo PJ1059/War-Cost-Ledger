@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "requested_date": "2026-10-11",
+  "check_date": "2026-10-11",
+  "timezone": "Asia/Tokyo",
+  "as_of": "2026-10-09",
+  "weekend": true,
+  "base": "USD",
+  "mc_usd_rate": 1,
+  "mc_usd_rule_origin": "user_confirmed_mod_rule",
+  "rate_direction": "units of selected currency per 1 USD; because 1 MC = 1 USD, also units per 1 MC",
+  "rates": {
+    "MC": 1.0,
+    "USD": 1.0,
+    "CNY": 6.692129216491166,
+    "EUR": 0.8923790826343031,
+    "GBP": 0.7564072818133143,
+    "SEK": 9.965643405318579
+  },
+  "rates_decimal": {
+    "MC": "1",
+    "USD": "1",
+    "CNY": "6.692129216491165447081920399785829020168",
+    "EUR": "0.8923790826343030519364626093164376227021",
+    "GBP": "0.7564072818133142959129038015348920221310",
+    "SEK": "9.965643405318579332500446189541317151526"
+  },
+  "original_reference_base": "EUR",
+  "original_eur_rates": {
+    "EUR": "1",
+    "USD": "1.1206",
+    "CNY": "7.4992",
+    "GBP": "0.84763",
+    "SEK": "11.1675"
+  },
+  "calculation": {
+    "formula": "USD_BASE_RATE(currency) = EUR_BASE_RATE(currency) / EUR_BASE_RATE(USD)",
+    "denominator": "1.1206",
+    "decimal_precision": 40,
+    "exact_ratios": {
+      "CNY": {
+        "numerator": "7.4992",
+        "denominator": "1.1206"
+      },
+      "EUR": {
+        "numerator": "1",
+        "denominator": "1.1206"
+      },
+      "GBP": {
+        "numerator": "0.84763",
+        "denominator": "1.1206"
+      },
+      "SEK": {
+        "numerator": "11.1675",
+        "denominator": "1.1206"
+      }
+    }
+  },
+  "sources": [
+    {
+      "id": "ecb",
+      "title": "European Central Bank — Euro foreign exchange reference rates",
+      "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.fr.html",
+      "organization": "European Central Bank",
+      "official": true,
+      "observed_reference_date": "2026-10-09",
+      "verified_currencies": [
+        "USD",
+        "CNY",
+        "GBP",
+        "SEK"
+      ],
+      "original_eur_rates": {
+        "EUR": "1",
+        "USD": "1.1206",
+        "CNY": "7.4992",
+        "GBP": "0.84763",
+        "SEK": "11.1675"
+      },
+      "precision_note": "GBP published as 0.84763; other quoted decimals retained exactly."
+    },
+    {
+      "id": "bank_of_lithuania",
+      "title": "Bank of Lithuania — Daily euro foreign exchange reference rates published by the ECB",
+      "url": "https://www.lb.lt/en/daily-euro-foreign-exchange-reference-rates-published-by-the-european-central-bank",
+      "organization": "Bank of Lithuania",
+      "official": true,
+      "observed_reference_date": "2026-10-09",
+      "verified_currencies": [
+        "USD",
+        "CNY",
+        "GBP",
+        "SEK"
+      ],
+      "original_eur_rates": {
+        "EUR": "1",
+        "USD": "1.1206",
+        "CNY": "7.4992",
+        "GBP": "0.84763",
+        "SEK": "11.1675"
+      },
+      "cross_check": "All four published currency values agree exactly with ECB."
+    },
+    {
+      "id": "banque_de_france",
+      "title": "Banque de France — Exchange rates (daily parities) — 2026-10-09",
+      "url": "https://www.banque-france.fr/en/statistics/rates-and-prices/exchange-rates-daily-parities-2026-10-09",
+      "organization": "Banque de France",
+      "official": true,
+      "observed_reference_date": "2026-10-09",
+      "original_eur_rates": {
+        "EUR": "1",
+        "USD": "1.1206",
+        "CNY": "7.4992",
+        "GBP": "0.8476",
+        "SEK": "11.1675"
+      },
+      "cross_check": "USD, CNY and SEK agree exactly; GBP display is rounded to 4 decimal places.",
+      "precision_note": "Use ECB/Lithuania GBP 0.84763, not the rounded Banque de France display 0.8476."
+    }
+  ],
+  "notes_zh": [
+    "1 MC = 1 USD 是用户确认的 MOD 记账规则；MC 与美元的关系不来自央行汇率。",
+    "2026-10-11 日本时区为星期日。欧洲央行周末不公布参考汇率，本次使用查验时最近公布日 2026-10-09 的官方参考汇率。",
+    "官方原表以欧元为基准。美元换算率由同一公布日的各币欧元报价除以 1.1206 得出；保留原始十进制报价与除法关系，金额展示时才舍入。",
+    "ECB 与立陶宛央行四币数值完全一致。法国央行固定日期页面交叉证实 USD/CNY/SEK，其 GBP 显示为四位小数 0.8476；本快照使用官方原始精度 0.84763。",
+    "这是随 MOD 打包的固定离线快照；游戏运行期间不联网获取汇率。切换币种只改变显示，战争账单仍以 MC 为原始记账单位。"
+  ],
+  "runtime_network_required": false,
+  "update_mode": "static_offline_snapshot"
+}

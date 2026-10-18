@@ -1,0 +1,27 @@
+{
+  "source_file": "external/0x14e94e13fe7fb2c7.xaml",
+  "source_sha256": "3534d73f18d36d36ebf3f6647af7402cf137ec9dbac0152eeac6f58bafdf8b76",
+  "source_lines": [
+    1019,
+    1020
+  ],
+  "template": "Template.ScrollBar.Vertical",
+  "geometry": {
+    "I01": {
+      "key": "Geometry.UpArrow",
+      "path": "M0,4L4,0 8,4"
+    },
+    "I02": {
+      "key": "Geometry.DownArrow",
+      "path": "M0,0 L4,4 8,0"
+    }
+  },
+  "viewbox": [
+    0,
+    0,
+    8,
+    4
+  ],
+  "fragment_sha256": "bf8ad285b0412407d2243fe1e5be8520a4bad1754b5bbf52f2941d7b2c24913d",
+  "conversion": "Exact native filled geometry to shader mask; no source PNG edits."
+}

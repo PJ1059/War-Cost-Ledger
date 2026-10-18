@@ -1,0 +1,301 @@
+{
+  "revision": "native_throwable_inventory_v1",
+  "domain_sha256": "413f61776e94aea78917a20ebe76d7558090346b3af60a9b6329be109c2079ad",
+  "runtime_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+  "read_contract": "inventory.throwable +0x28; inventory.counts +0x58; count stride8 +0",
+  "prices": [
+    {
+      "id": "EQ-116",
+      "row": 121,
+      "name_zh": "G-12 高爆弹",
+      "name_en": "G-12 High Explosive",
+      "unit_cents": 4500,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "6B11FC757618C57E"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-117",
+      "row": 122,
+      "name_zh": "G-6 破片弹",
+      "name_en": "G-6 Frag",
+      "unit_cents": 3500,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "4CE9EAB785A79B7B"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-118",
+      "row": 123,
+      "name_zh": "G-10 燃烧弹",
+      "name_en": "G-10 Incendiary",
+      "unit_cents": 5500,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "04653AB33F3FFB44"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-119",
+      "row": 124,
+      "name_zh": "TED-63 炸药",
+      "name_en": "TED-63 Dynamite",
+      "unit_cents": 12000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "14368DC8784220B0"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-120",
+      "row": 125,
+      "name_zh": "G-7 菠萝",
+      "name_en": "G-7 Pineapple",
+      "unit_cents": 80000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "075B19B068FB1045"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-121",
+      "row": 126,
+      "name_zh": "G-16 冲击弹",
+      "name_en": "G-16 Impact",
+      "unit_cents": 6000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "7686544F539BB9B7"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-122",
+      "row": 127,
+      "name_zh": "G-3 烟雾弹",
+      "name_en": "G-3 Smoke",
+      "unit_cents": 4000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "5DE8FD02A05B4B0A"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-123",
+      "row": 128,
+      "name_zh": "G-23 眩晕弹",
+      "name_en": "G-23 Stun",
+      "unit_cents": 35000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "0080869506299773"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-124",
+      "row": 129,
+      "name_zh": "G-123 铝热弹",
+      "name_en": "G-123 Thermite",
+      "unit_cents": 45000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "C5C05FCB5747C799"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-125",
+      "row": 130,
+      "name_zh": "G-13 燃烧冲击弹",
+      "name_en": "G-13 Incendiary Impact",
+      "unit_cents": 12000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "EB725C39FC38B87C"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-127",
+      "row": 132,
+      "name_zh": "G-4 毒气榴弹",
+      "name_en": "G-4 Gas",
+      "unit_cents": 18000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "0416984F4922757B"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-128",
+      "row": 133,
+      "name_zh": "G-50 寻踪者",
+      "name_en": "G-50 Seeker",
+      "unit_cents": 400000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "2D398D1EC35E0838"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-129",
+      "row": 134,
+      "name_zh": "G-142 烟花术",
+      "name_en": "G-142 Pyrotech",
+      "unit_cents": 6000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "03F31CAF3A7D8F4E"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-130",
+      "row": 135,
+      "name_zh": "G-109 海胆",
+      "name_en": "G-109 Urchin",
+      "unit_cents": 65000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "3FA94F58F596BC0B"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-131",
+      "row": 136,
+      "name_zh": "G-31 电弧",
+      "name_en": "G-31 Arc",
+      "unit_cents": 180000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "DB922A7AFC42894B"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-132",
+      "row": 137,
+      "name_zh": "TM-1 诱饵地雷",
+      "name_en": "TM-1 Lure Mine",
+      "unit_cents": 250000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "A20683199DFC19E8"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-133",
+      "row": 138,
+      "name_zh": "G-89 烟幕",
+      "name_en": "G-89 Smokescreen",
+      "unit_cents": 6000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "DAB81B0D80B511C7"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-134",
+      "row": 139,
+      "name_zh": "G/SH-39 盾雷",
+      "name_en": "G/SH-39 Shield",
+      "unit_cents": 1500000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "1B9AC59697006337"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-135",
+      "row": 140,
+      "name_zh": "G-48 千兆级榴弹",
+      "name_en": "G-48 Giga Grenade",
+      "unit_cents": 150000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "46333FC9E3D4BD34"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-136",
+      "row": 141,
+      "name_zh": "G/40-K 热熔地雷",
+      "name_en": "G/40-K Melta Mine",
+      "unit_cents": 3000000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "EE4C107B941AB7F4"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-137",
+      "row": 142,
+      "name_zh": "G-8 焚烧弹",
+      "name_en": "G-8 Immolation",
+      "unit_cents": 15000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "5C14F27759DD3BE0"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    },
+    {
+      "id": "EQ-138",
+      "row": 143,
+      "name_zh": "G-60 反坦克寻踪者",
+      "name_en": "G-60 Anti-Tank Seeker",
+      "unit_cents": 1200000,
+      "unit": "枚",
+      "policy": "投出整枚计费；碎片、爆炸与持续效果不另外计弹药。",
+      "source_types": [
+        "8E325C933E55BF62"
+      ],
+      "source": "https://github.com/SkyeShade/HD2Runtime/tree/96ab2d258d867a5df4f22bb7b3321d84d28de21d"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "EQ-126",
+      "name_en": "K-2 Throwing Knife",
+      "reason": "整把刀具无电子引导，保留20 MC。回收后再投不重复采购，遗失/报废才计一次。"
+    }
+  ]
+}

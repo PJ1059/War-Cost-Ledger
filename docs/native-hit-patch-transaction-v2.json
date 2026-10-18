@@ -1,0 +1,391 @@
+{
+  "revision": "owned_native_patch_transaction_manifest_v2",
+  "abi": 2,
+  "entries": [
+    {
+      "name": "patch_transaction_v2",
+      "code_hex": "53565741544155415641574883ec304989cc31c041b801000000f0450fb104240f850c07000041c74424040000000041c744240c0000000041c74424100000000041c74424140000000041c74424180000000041c74424240000000041c74424680000000041c74424740000000041c74424780000000041c744247c0000000041c7442408ffffffff498b742428498b7c243049c78424980000000000000049c78424a00000000000000041837c241c010f825d03000041817c241c000100000f874e03000041837c2420010f824203000041837c2420080f873603000049837c2438ff0f852a03000041837c2470000f841e0300004531ed453b6c241c0f83270000004d6bfd284901f741c747180000000041c7471c0000000041c747240000000041ffc5e9ceffffff4531f6453b7424200f83250000004d6bfe304901ff41837f08050f840b00000041837f08060f85be02000041ffc6e9d0ffffff4531f6453b7424200f83420000004d6bfe304901ff41c747280000000041c7472c000000004d8b174d8b5f1031db418a041a413a041b0f8501040000ffc3413b5f080f82e6ffffff41ffc6e9b3ffffff4531ed453b6c241c0f83330000004d6bfd284901f7498b0f498b442440ffd04189471883f8ff0f84d403000041ff44240c85c00f85d503000041ffc5e9c2ffffff49c78424a000000000000000498b4c2438498b94249800000041b8000800004531c9c744242000000000498d8424a00000004889442428498b842480000000ffd041894424783d1a0000800f84e500000085c00f853e0100004983bc24a0000000000f842f010000498b8c24980000004885c90f8412000000498b842490000000ffd085c00f840c010000498b8c24a000000049898c249800000049c78424a000000000000000498b842488000000ffd085c00f84de00000041ff44247489c3418b44241cffc041394424740f87d8000000413b5c24700f851a00000041837c2424000f85c100000041c744242401000000e909ffffff4531ed453b6c241c0f83a50000004d6bfd284901f7413b5f200f851800000041837f24000f858900000041c7472401000000e9d2feffff41ffc5e9c4ffffff4983bc24a0000000000f8552000000498b8c24980000004885c90f841e000000498b842490000000ffd085c00f842f00000049c784249800000000000000418b44241cffc041394424740f852400000041837c2424010f8518000000e99c00000041ff44247c41c74424040a000000e90e00000041c74424040b000000e900000000498b8c24a00000004885c90f8417000000498b842490000000ffd085c00f850500000041ff44247c49c78424a000000000000000498b8c24980000004885c90f8417000000498b842490000000ffd085c00f850500000041ff44247c49c784249800000000000000e9d302000041c74424040c000000e9c50200004531ed453b6c241c0f836d0000004d6bfd284901f7498b0f498b5708498b442448ffd085c00f847d010000498b5708488b82f8000000498947104531f6453b7424200f832b0000004d6bde304901fb4d8b134c39d00f8210000000418b4b084c01d14839c80f824b01000041ffc6e9caffffff41ffc5e988ffffff4531f6453b7424200f83320000004d6bfe304901ff4d8b174d8b5f1031db418a041a413a041b0f85d2000000ffc3413b5f080f82e6ffffff41ffc6e9c3ffffff4531f6453b7424200f83fc0100004d6bfe304901ff498b0f418b570841b8400000004d8d4f20498b442458ffd085c00f84d900000041c7472801000000418b4720413b470c0f85c30000004d8b174d8b5f1831db418a041b4188041affc3413b5f080f82ecffffff41c7472c0100000041ff442410498b4c2438498b17458b4708498b442460ffd085c00f8491000000498b0f418b5708458b47204d8d4f24498b442458ffd085c00f848600000041c747280000000041ffc6e945ffffff458974240841c744240406000000e93901000041c744240402000000e92b01000041c744240403000000e91d01000041c744240404000000e90f010000458974240841c744240405000000e9fc000000458974240841c744240407000000e926000000458974240841c744240408000000e913000000458974240841c744240409000000e900000000458b7424204585f60f84b500000041ffce4d6bfe304901ff41837f28000f850b00000041837f2c000f84d7ffffff498b0f418b570841b8400000004d8d4f24498b442458ffd085c00f846b00000041837f2c000f84420000004d8b174d8b5f1031db418a041b4188041affc3413b5f080f82ecffffff41ff442468498b4c2438498b17458b4708498b442460ffd085c00f850500000041ff442414498b0f418b5708458b47204d8d4f24498b442458ffd085c00f854cffffff41ff442414e942ffffff458b6c240c4585ed0f842b00000041ffcd4d6bfd284901f7498b0f498b442450ffd04189471c83f8ff0f85d6ffffff41ff442418e9ccffffff41c7042400000000418b442404e905000000b8010000004883c430415f415e415d415c5f5e5bc3",
+      "entry_offset": 0,
+      "executable_length": 1863,
+      "unwind_hex": "010f08000f520bf009e007d005c0037002600130",
+      "relocations": []
+    }
+  ],
+  "signature": "uint32_t (*)(LedgerPatchJobV2 *job)",
+  "argument_register": "RCX",
+  "ffi_cdef": "\ntypedef struct LedgerPatchThreadV2 {\n    void *handle; void *context; uint64_t rip; uint32_t prior; uint32_t resumed;\n    uint32_t thread_id; uint32_t seen;\n} LedgerPatchThreadV2;\ntypedef struct LedgerPatchRowV2 {\n    void *address; uint32_t length; uint32_t expected_protection;\n    void *expected; void *replacement; uint32_t prior_protection;\n    uint32_t scratch_protection; uint32_t protection_changed; uint32_t written;\n} LedgerPatchRowV2;\ntypedef struct LedgerPatchJobV2 {\n    uint32_t lock; uint32_t result; uint32_t failed_patch; uint32_t suspended;\n    uint32_t patched; uint32_t rollback_failures; uint32_t resume_failures;\n    uint32_t thread_count; uint32_t patch_count; uint32_t reserved;\n    void *threads; void *patches; void *process;\n    void *suspend; void *get_context; void *resume; void *protect; void *flush;\n    uint32_t rollback_restored; uint32_t reserved2;\n    uint32_t installer_tid; uint32_t enumerated; uint32_t enum_status; uint32_t enum_failures;\n    void *nt_get_next_thread; void *get_thread_id; void *close_handle;\n    void *enum_cursor; void *enum_next;\n} LedgerPatchJobV2;\n",
+  "layouts": {
+    "job": {
+      "name": "LedgerPatchJobV2",
+      "size": 168,
+      "alignment": 8,
+      "fields": [
+        {
+          "name": "lock",
+          "offset": 0,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "result",
+          "offset": 4,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "failed_patch",
+          "offset": 8,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "suspended",
+          "offset": 12,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "patched",
+          "offset": 16,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "rollback_failures",
+          "offset": 20,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "resume_failures",
+          "offset": 24,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "thread_count",
+          "offset": 28,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "patch_count",
+          "offset": 32,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "reserved",
+          "offset": 36,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "threads",
+          "offset": 40,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "patches",
+          "offset": 48,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "process",
+          "offset": 56,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "suspend",
+          "offset": 64,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "get_context",
+          "offset": 72,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "resume",
+          "offset": 80,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "protect",
+          "offset": 88,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "flush",
+          "offset": 96,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "rollback_restored",
+          "offset": 104,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "reserved2",
+          "offset": 108,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "installer_tid",
+          "offset": 112,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "enumerated",
+          "offset": 116,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "enum_status",
+          "offset": 120,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "enum_failures",
+          "offset": 124,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "nt_get_next_thread",
+          "offset": 128,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "get_thread_id",
+          "offset": 136,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "close_handle",
+          "offset": 144,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "enum_cursor",
+          "offset": 152,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "enum_next",
+          "offset": 160,
+          "bytes": 8,
+          "type": "void*"
+        }
+      ]
+    },
+    "thread": {
+      "name": "LedgerPatchThreadV2",
+      "size": 40,
+      "alignment": 8,
+      "fields": [
+        {
+          "name": "handle",
+          "offset": 0,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "context",
+          "offset": 8,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "rip",
+          "offset": 16,
+          "bytes": 8,
+          "type": "uint64_t"
+        },
+        {
+          "name": "prior",
+          "offset": 24,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "resumed",
+          "offset": 28,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "thread_id",
+          "offset": 32,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "seen",
+          "offset": 36,
+          "bytes": 4,
+          "type": "uint32_t"
+        }
+      ]
+    },
+    "patch": {
+      "name": "LedgerPatchRowV2",
+      "size": 48,
+      "alignment": 8,
+      "fields": [
+        {
+          "name": "address",
+          "offset": 0,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "length",
+          "offset": 8,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "expected_protection",
+          "offset": 12,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "expected",
+          "offset": 16,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "replacement",
+          "offset": 24,
+          "bytes": 8,
+          "type": "void*"
+        },
+        {
+          "name": "prior_protection",
+          "offset": 32,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "scratch_protection",
+          "offset": 36,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "protection_changed",
+          "offset": 40,
+          "bytes": 4,
+          "type": "uint32_t"
+        },
+        {
+          "name": "written",
+          "offset": 44,
+          "bytes": 4,
+          "type": "uint32_t"
+        }
+      ]
+    }
+  },
+  "limits": {
+    "threads_min": 1,
+    "threads_max": 256,
+    "patches_min": 1,
+    "patches_max": 8,
+    "trusted_profile_patch_lengths": [
+      5,
+      6
+    ],
+    "actual_owned_fixture_lengths": [
+      5,
+      6
+    ],
+    "native_rejects_invalid_descriptor_bounds": "counts and instruction lengths only"
+  },
+  "context": {
+    "bytes_min": 1232,
+    "alignment": 16,
+    "flags_offset": 48,
+    "flags_value": 1048577,
+    "rip_offset": 248
+  },
+  "win32_functions": {
+    "suspend": "uint32_t SuspendThread(void *thread)",
+    "get_context": "int GetThreadContext(void *thread, void *aligned_context)",
+    "resume": "uint32_t ResumeThread(void *thread)",
+    "protect": "int VirtualProtect(void *address, size_t length, uint32_t protect, uint32_t *old)",
+    "flush": "int FlushInstructionCache(void *current_process, void *address, size_t length)",
+    "nt_get_next_thread": "int32_t NtGetNextThread(void *current_process, void *previous_thread, uint32_t desired_access, uint32_t attributes, uint32_t flags, void **next_thread)",
+    "get_thread_id": "uint32_t GetThreadId(void *thread)",
+    "close_handle": "int CloseHandle(void *handle)"
+  },
+  "enumeration": {
+    "current_process_pseudo_handle": "-1",
+    "desired_access": 2048,
+    "attributes": 0,
+    "flags": 0,
+    "status_no_more_entries": 2147483674,
+    "required_ids": "exact distinct prepared worker thread IDs plus installer_tid",
+    "required_count": "thread_count+1",
+    "handle_equality_is_identity": false,
+    "post_suspend_check": true,
+    "failures_write_nothing": true,
+    "resumption_order": "reverse prepared order"
+  },
+  "host_initialization": [
+    "Allocate zeroed Job168B/Thread40B/Patch48B; retain every buffer and process-life code/unwind table.",
+    "Open explicit owned worker handles before entry; verify current PID and TID and exclude installer.",
+    "Allocate each CONTROL context at16B alignment, >=1232B; store uint32 0x100001 at+0x30.",
+    "Fill worker handle/context/thread_id; all IDs distinct. Native entry clears seen/prior/resumed.",
+    "Validate complete owned 5/6-byte instruction spans, bytes, ownership, page protections, no overlaps.",
+    "Resolve all eight native function pointers before suspension and fill job. No absolute API addresses in code.",
+    "Set job.process to current-process pseudo HANDLE -1 with exact pointer/intptr cast, and installer_tid to current TID.",
+    "Call entry once with RCX job pointer; no Lua/Python/GC/heap allocation/snapshot API during suspension.",
+    "Native NtGetNextThread uses six arguments and only current process; close all temporary enumeration handles.",
+    "Success requires returned0 AND rollback_failures0 AND resume_failures0 AND enum_failures0.",
+    "Busy return1 does not provide a fresh job result; preserve the in-progress job and do not infer worker state."
+  ],
+  "result_codes": {
+    "ok": 0,
+    "busy": 1,
+    "suspend_failed": 2,
+    "already_suspended": 3,
+    "context_failed": 4,
+    "pc_in_instruction": 5,
+    "bytes_changed": 6,
+    "protect_failed": 7,
+    "flush_failed": 8,
+    "restore_failed": 9,
+    "enum_failed": 10,
+    "thread_set_changed": 11,
+    "invalid_plan": 12
+  },
+  "game_connected": false,
+  "game_access": false,
+  "game_thread_set_complete": false,
+  "new_thread_barrier_proven": false,
+  "unexpected_seh_cleanup_handler": false,
+  "six_byte_span_actual_tested": true,
+  "six_byte_span_fixture": "actual owned FF15 instruction; synthetic CONTROL.Rip offsets0..5 and exclusive end6; real SuspendThread/ResumeThread",
+  "owned_verification_report": "verification.json"
+}

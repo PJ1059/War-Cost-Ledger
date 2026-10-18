@@ -1,0 +1,1508 @@
+{
+  "schema_version": 1,
+  "runtime_version": "0.30.3",
+  "runtime_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+  "rule": "按游戏原生 dealt_kills 来源 type 计为燃烧来源击杀；包含该来源的直击、爆炸和持续燃烧归属击杀。",
+  "policy": {
+    "include_laser_sources": false,
+    "basis": "火焰武器/燃烧弹/燃烧战备来源；仅有点燃状态的普通激光来源另列可选，不默认计入。"
+  },
+  "build": {
+    "exe_sha256": "F5FEE03DCFDB2E553A4752C283590950AC13316B376D8196AA556FF0400D5F06",
+    "game_dll_sha256": "2E2C3B7C2500646DADD5F2B4C6E0504DBB7E7896139F64CDDC0D1813C718F51E",
+    "entities_sha256": "21377252B81FDBC670EBA1E59A8AB64B170323DF208F175E708992E4C1FB515E",
+    "typelib_sha256": "4D04870D0A0D4DC1284998C72CDFA6F8FF6D21ABA0E36B6F758C6F73DD0417A4"
+  },
+  "source_types": [
+    "03F31CAF3A7D8F4E",
+    "04653AB33F3FFB44",
+    "0736BEE2D6328726",
+    "27BB558C893383CC",
+    "39AB99895147A3BF",
+    "3F92BA65EF65CCA9",
+    "4FB0F8C02F55C82B",
+    "5C14F27759DD3BE0",
+    "78A8185F63A70795",
+    "820CC3BAFE962858",
+    "84354339522C932D",
+    "992B6F65A5BAB53D",
+    "A16AB4FF66AE6970",
+    "B2B5E0D185605F9E",
+    "BF32E12923A9A252",
+    "C12A34F375BD5A87",
+    "C5C05FCB5747C799",
+    "D323DE60855898AC",
+    "E5796355A8FD67E0",
+    "EB725C39FC38B87C"
+  ],
+  "sources": [
+    {
+      "type": "03F31CAF3A7D8F4E",
+      "name": "G-142 Pyrotech",
+      "aliases": [],
+      "domains": [
+        "throwable_authoring"
+      ],
+      "runtime_source_name": "G-142 Pyrotech",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "G-142 Pyrotech",
+          "statuses": [
+            "fire"
+          ],
+          "identity": {
+            "status": "RESOLVED",
+            "method": "native_fingerprint",
+            "matchedFacts": [
+              "counts.fromSupply",
+              "counts.maximum",
+              "counts.starting",
+              "detonation.cookable",
+              "detonation.fuse",
+              "detonation.trigger",
+              "explosion.damage.ap",
+              "explosion.damage.demolition",
+              "explosion.damage.durable_damage",
+              "explosion.damage.push_force",
+              "explosion.damage.stagger",
+              "explosion.damage.standard_damage",
+              "explosion.inner_radius",
+              "explosion.outer_radius",
+              "explosion.shockwave_radius"
+            ],
+            "evidence": [
+              "unique player armory equipment (ThrowableComponent + LoadoutPackage + EncyclopediaEntry) agreeing with every published wiki fact (15 facts)",
+              "compared against all 29 armory throwable entities of 46 ThrowableComponent owners",
+              "resource path name recorded as supporting evidence only"
+            ],
+            "nearestOtherCandidate": {
+              "path": "content/fac_helldivers/equipment/throwables/caltrops_grenade/caltrops_grenade",
+              "mismatches": 8,
+              "matches": 7
+            },
+            "aiVariantsWithSameValues": 0
+          }
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_throwable"
+    },
+    {
+      "type": "04653AB33F3FFB44",
+      "name": "G-10 Incendiary",
+      "aliases": [],
+      "domains": [
+        "throwable_authoring"
+      ],
+      "runtime_source_name": "G-10 Incendiary",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "G-10 Incendiary",
+          "statuses": [
+            "fire"
+          ],
+          "identity": {
+            "status": "RESOLVED",
+            "method": "native_fingerprint",
+            "matchedFacts": [
+              "counts.fromSupply",
+              "counts.maximum",
+              "counts.starting",
+              "detonation.cookable",
+              "detonation.fuse",
+              "detonation.trigger",
+              "explosion.damage.ap",
+              "explosion.damage.demolition",
+              "explosion.damage.durable_damage",
+              "explosion.damage.push_force",
+              "explosion.damage.stagger",
+              "explosion.damage.standard_damage",
+              "explosion.inner_radius",
+              "explosion.outer_radius",
+              "explosion.shockwave_radius"
+            ],
+            "evidence": [
+              "unique player armory equipment (ThrowableComponent + LoadoutPackage + EncyclopediaEntry) agreeing with every published wiki fact (15 facts)",
+              "compared against all 29 armory throwable entities of 46 ThrowableComponent owners",
+              "resource path name recorded as supporting evidence only"
+            ],
+            "nearestOtherCandidate": {
+              "path": "content/fac_helldivers/equipment/throwables/incendiary_impact_grenade/incendiary_impact_grenade",
+              "mismatches": 5,
+              "matches": 10
+            },
+            "aiVariantsWithSameValues": 0
+          }
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_throwable"
+    },
+    {
+      "type": "0736BEE2D6328726",
+      "name": "B/FLAM-80 Cremator",
+      "aliases": [],
+      "domains": [
+        "support_weapon_authoring"
+      ],
+      "runtime_source_name": "B/FLAM-80 Cremator",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "B/FLAM-80 Cremator",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/SupportWeaponCapabilities.json",
+          "native_attacks": [
+            {
+              "role": "primary",
+              "kind": "Spray",
+              "damage_info": {
+                "group": 1,
+                "projectileConsumerCount": 0,
+                "recordType": 17,
+                "row": 22,
+                "settingsType": "0xE0A72CF0"
+              },
+              "status_effects": [
+                {
+                  "strength": 3,
+                  "type": 5
+                },
+                {
+                  "strength": 2,
+                  "type": 67
+                },
+                {
+                  "strength": 4,
+                  "type": 6
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "flame_weapon"
+    },
+    {
+      "type": "27BB558C893383CC",
+      "name": "Eagle Napalm Airstrike",
+      "aliases": [],
+      "domains": [
+        "stratagem_authoring"
+      ],
+      "runtime_source_name": "Eagle Napalm Airstrike",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "Eagle Napalm Airstrike",
+          "statuses": [
+            "burning_heavy",
+            "fire"
+          ],
+          "attack_artifact": "schemas/stratagem_authoring_catalog.json",
+          "root": {
+            "id": 2040137691,
+            "package": "0xDE456F55554ABB56",
+            "payloads": [
+              "0x27BB558C893383CC"
+            ],
+            "group": 2,
+            "row": 4
+          },
+          "native_status_nodes": [
+            {
+              "pointer": "/graph/3",
+              "status_type": 5,
+              "status": "fire",
+              "native_damage_type": 390,
+              "native_damage_row": 379,
+              "slot": 1,
+              "strength": 100.0
+            },
+            {
+              "pointer": "/graph/3",
+              "status_type": 32,
+              "status": "burning_heavy",
+              "native_damage_type": 390,
+              "native_damage_row": 379,
+              "slot": 2,
+              "strength": 50.0
+            },
+            {
+              "pointer": "/graph/4",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 390
+            },
+            {
+              "pointer": "/graph/5",
+              "status_type": 32,
+              "status": "burning_heavy",
+              "parent_damage_type": 390
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_stratagem"
+    },
+    {
+      "type": "39AB99895147A3BF",
+      "name": "FLAM-40 Flamethrower",
+      "aliases": [],
+      "domains": [
+        "support_weapon_authoring"
+      ],
+      "runtime_source_name": "FLAM-40 Flamethrower",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "FLAM-40 Flamethrower",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/SupportWeaponCapabilities.json",
+          "native_attacks": [
+            {
+              "role": "primary",
+              "kind": "Spray",
+              "damage_info": {
+                "group": 1,
+                "projectileConsumerCount": 2,
+                "recordType": 14,
+                "row": 20,
+                "settingsType": "0xE0A72CF0"
+              },
+              "status_effects": [
+                {
+                  "strength": 2,
+                  "type": 5
+                },
+                {
+                  "strength": 1,
+                  "type": 67
+                },
+                {
+                  "strength": 3,
+                  "type": 6
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "flame_weapon"
+    },
+    {
+      "type": "3F92BA65EF65CCA9",
+      "name": "P-72 Crisper",
+      "aliases": [],
+      "domains": [
+        "player_weapon_authoring"
+      ],
+      "runtime_source_name": "P-72 Crisper",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "P-72 Crisper",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+          "native_slots": [
+            {
+              "field": "damage.status_1_type",
+              "status": "fire",
+              "backing": {
+                "kind": "settings",
+                "settings": "damage",
+                "offset": 44,
+                "storage": "u32",
+                "width": 4,
+                "group": 1,
+                "row": 24,
+                "recordType": 16,
+                "settingsType": "0xE0A72CF0",
+                "branch": "primary",
+                "consumerCount": 0,
+                "statusSlot": 1,
+                "enum": "status"
+              }
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "flame_weapon"
+    },
+    {
+      "type": "4FB0F8C02F55C82B",
+      "name": "FLAM-66 Torcher",
+      "aliases": [],
+      "domains": [
+        "player_weapon_authoring"
+      ],
+      "runtime_source_name": "FLAM-66 Torcher",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "FLAM-66 Torcher",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+          "native_slots": [
+            {
+              "field": "damage.status_1_type",
+              "status": "fire",
+              "backing": {
+                "kind": "settings",
+                "settings": "damage",
+                "offset": 44,
+                "storage": "u32",
+                "width": 4,
+                "group": 1,
+                "row": 23,
+                "recordType": 15,
+                "settingsType": "0xE0A72CF0",
+                "branch": "primary",
+                "consumerCount": 0,
+                "statusSlot": 1,
+                "enum": "status"
+              }
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "flame_weapon"
+    },
+    {
+      "type": "5C14F27759DD3BE0",
+      "name": "G-8 Immolation",
+      "aliases": [],
+      "domains": [
+        "throwable_authoring"
+      ],
+      "runtime_source_name": "G-8 Immolation",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "G-8 Immolation",
+          "statuses": [
+            "fire"
+          ],
+          "identity": {
+            "status": "RESOLVED",
+            "method": "native_fingerprint",
+            "matchedFacts": [
+              "counts.fromSupply",
+              "counts.maximum",
+              "counts.starting",
+              "detonation.cookable",
+              "detonation.trigger",
+              "explosion.damage.ap",
+              "explosion.damage.demolition",
+              "explosion.damage.durable_damage",
+              "explosion.damage.push_force",
+              "explosion.damage.stagger",
+              "explosion.damage.standard_damage",
+              "explosion.inner_radius",
+              "explosion.outer_radius",
+              "explosion.shockwave_radius"
+            ],
+            "evidence": [
+              "unique player armory equipment (ThrowableComponent + LoadoutPackage + EncyclopediaEntry) agreeing with every published wiki fact (14 facts)",
+              "compared against all 29 armory throwable entities of 46 ThrowableComponent owners",
+              "resource path name recorded as supporting evidence only"
+            ],
+            "nearestOtherCandidate": {
+              "path": "content/fac_helldivers/equipment/throwables/arc_grenade/arc_grenade",
+              "mismatches": 8,
+              "matches": 6
+            },
+            "aiVariantsWithSameValues": 0
+          }
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_throwable"
+    },
+    {
+      "type": "78A8185F63A70795",
+      "name": "B/FLAM-80 Cremator",
+      "aliases": [],
+      "domains": [
+        "support_weapon_authoring"
+      ],
+      "runtime_source_name": "B/FLAM-80 Cremator",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "B/FLAM-80 Cremator",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/SupportWeaponCapabilities.json",
+          "native_attacks": [
+            {
+              "role": "primary",
+              "kind": "Spray",
+              "damage_info": {
+                "group": 1,
+                "projectileConsumerCount": 0,
+                "recordType": 17,
+                "row": 22,
+                "settingsType": "0xE0A72CF0"
+              },
+              "status_effects": [
+                {
+                  "strength": 3,
+                  "type": 5
+                },
+                {
+                  "strength": 2,
+                  "type": 67
+                },
+                {
+                  "strength": 4,
+                  "type": 6
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "flame_weapon"
+    },
+    {
+      "type": "820CC3BAFE962858",
+      "name": "A/FLAM-40 Flame Sentry",
+      "aliases": [],
+      "domains": [
+        "stratagem_authoring"
+      ],
+      "runtime_source_name": "A/FLAM-40 Flame Sentry",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "A/FLAM-40 Flame Sentry",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "schemas/stratagem_authoring_catalog.json",
+          "root": {
+            "id": 474724029,
+            "package": "0x1577E917AD1F287D",
+            "payloads": [
+              "0x820CC3BAFE962858",
+              "0x73F8498BFFDCF415"
+            ],
+            "group": 8,
+            "row": 7
+          },
+          "native_status_nodes": [
+            {
+              "pointer": "/graph/0",
+              "status_type": 5,
+              "status": "fire",
+              "native_damage_type": 17,
+              "native_damage_row": 22,
+              "slot": 1,
+              "strength": 3.0
+            },
+            {
+              "pointer": "/graph/1",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 17
+            },
+            {
+              "pointer": "/deployedEntity/nativeGraph/0",
+              "status_type": 5,
+              "status": "fire",
+              "native_damage_type": 17,
+              "native_damage_row": 22,
+              "slot": 1,
+              "strength": 3.0
+            },
+            {
+              "pointer": "/deployedEntity/nativeGraph/1",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 17
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "flame_sentry"
+    },
+    {
+      "type": "84354339522C932D",
+      "name": "AR-2 Coyote",
+      "aliases": [],
+      "domains": [
+        "player_weapon_authoring"
+      ],
+      "runtime_source_name": "AR-2 Coyote",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "AR-2 Coyote",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+          "native_slots": [
+            {
+              "field": "damage.status_1_type",
+              "status": "fire",
+              "backing": {
+                "kind": "settings",
+                "settings": "damage",
+                "offset": 44,
+                "storage": "u32",
+                "width": 4,
+                "group": 1,
+                "row": 123,
+                "recordType": 118,
+                "settingsType": "0xE0A72CF0",
+                "branch": "primary",
+                "consumerCount": 1,
+                "statusSlot": 1,
+                "enum": "status"
+              }
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_ammunition"
+    },
+    {
+      "type": "992B6F65A5BAB53D",
+      "name": "SMG/FLAM-34 Stoker / underbarrel",
+      "aliases": [],
+      "domains": [
+        "player_subweapon"
+      ],
+      "runtime_source_name": null,
+      "evidence": [
+        {
+          "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+          "link": "The host's default underbarrel item Flamerthrower SMG Flamer names this entity (WeaponCustomization +192 underbarrel_path); the game creates it as a separate weapon when the host is set up.",
+          "spray_component_row": 13,
+          "damage_type_member_offset": 200,
+          "damage_info_type": 16,
+          "damage_row": 24,
+          "status_slots": [
+            {
+              "type": 5,
+              "strength": 2.0
+            },
+            {
+              "type": 67,
+              "strength": 0.5
+            },
+            {
+              "type": 6,
+              "strength": 2.0
+            },
+            {
+              "type": 0,
+              "strength": 0.0
+            }
+          ],
+          "note": "独立下挂资源；未验证游戏是否始终以此 type 记账，不纳入母枪普通子弹。"
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "flame_underbarrel"
+    },
+    {
+      "type": "A16AB4FF66AE6970",
+      "name": "Orbital Napalm Barrage",
+      "aliases": [],
+      "domains": [
+        "stratagem_authoring"
+      ],
+      "runtime_source_name": "Orbital Napalm Barrage",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "Orbital Napalm Barrage",
+          "statuses": [
+            "burning_heavy",
+            "fire"
+          ],
+          "attack_artifact": "schemas/stratagem_authoring_catalog.json",
+          "root": {
+            "id": 2902516083,
+            "package": "0x96CEDF4706334C5F",
+            "payloads": [
+              "0xA16AB4FF66AE6970"
+            ],
+            "group": 5,
+            "row": 5
+          },
+          "native_status_nodes": [
+            {
+              "pointer": "/graph/3",
+              "status_type": 5,
+              "status": "fire",
+              "native_damage_type": 266,
+              "native_damage_row": 262,
+              "slot": 1,
+              "strength": 100.0
+            },
+            {
+              "pointer": "/graph/3",
+              "status_type": 32,
+              "status": "burning_heavy",
+              "native_damage_type": 266,
+              "native_damage_row": 262,
+              "slot": 2,
+              "strength": 50.0
+            },
+            {
+              "pointer": "/graph/4",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 266
+            },
+            {
+              "pointer": "/graph/5",
+              "status_type": 32,
+              "status": "burning_heavy",
+              "parent_damage_type": 266
+            },
+            {
+              "pointer": "/graph/9",
+              "status_type": 5,
+              "status": "fire",
+              "native_damage_type": 266,
+              "native_damage_row": 262,
+              "slot": 1,
+              "strength": 100.0
+            },
+            {
+              "pointer": "/graph/9",
+              "status_type": 32,
+              "status": "burning_heavy",
+              "native_damage_type": 266,
+              "native_damage_row": 262,
+              "slot": 2,
+              "strength": 50.0
+            },
+            {
+              "pointer": "/graph/10",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 266
+            },
+            {
+              "pointer": "/graph/11",
+              "status_type": 32,
+              "status": "burning_heavy",
+              "parent_damage_type": 266
+            },
+            {
+              "pointer": "/graph/15",
+              "status_type": 5,
+              "status": "fire",
+              "native_damage_type": 266,
+              "native_damage_row": 262,
+              "slot": 1,
+              "strength": 100.0
+            },
+            {
+              "pointer": "/graph/15",
+              "status_type": 32,
+              "status": "burning_heavy",
+              "native_damage_type": 266,
+              "native_damage_row": 262,
+              "slot": 2,
+              "strength": 50.0
+            },
+            {
+              "pointer": "/graph/16",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 266
+            },
+            {
+              "pointer": "/graph/17",
+              "status_type": 32,
+              "status": "burning_heavy",
+              "parent_damage_type": 266
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_stratagem"
+    },
+    {
+      "type": "B2B5E0D185605F9E",
+      "name": "EAT-700 Expendable Napalm",
+      "aliases": [],
+      "domains": [
+        "support_weapon_authoring"
+      ],
+      "runtime_source_name": "EAT-700 Expendable Napalm",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "EAT-700 Expendable Napalm",
+          "statuses": [
+            "burning_heavy",
+            "fire"
+          ],
+          "attack_artifact": "sdk/SupportWeaponCapabilities.json",
+          "native_attacks": [
+            {
+              "role": "primary",
+              "kind": "Projectile",
+              "damage_info": {
+                "group": 1,
+                "projectileConsumerCount": 1,
+                "recordType": 274,
+                "row": 224,
+                "settingsType": "0xE0A72CF0"
+              },
+              "status_effects": [
+                {
+                  "strength": 50,
+                  "type": 32
+                }
+              ]
+            },
+            {
+              "role": "primary_impact",
+              "kind": "Explosion",
+              "damage_info": {
+                "group": 1,
+                "projectileConsumerCount": 0,
+                "recordType": 316,
+                "row": 225,
+                "settingsType": "0xE0A72CF0"
+              },
+              "status_effects": [
+                {
+                  "strength": 100,
+                  "type": 5
+                },
+                {
+                  "strength": 50,
+                  "type": 32
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_ammunition"
+    },
+    {
+      "type": "BF32E12923A9A252",
+      "name": "MD-I4 Incendiary Mines",
+      "aliases": [],
+      "domains": [
+        "stratagem_authoring"
+      ],
+      "runtime_source_name": "MD-I4 Incendiary Mines",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "MD-I4 Incendiary Mines",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "schemas/stratagem_authoring_catalog.json",
+          "root": {
+            "id": 2742141597,
+            "package": "0x335A97FA3774906E",
+            "payloads": [
+              "0xBF32E12923A9A252",
+              "0x73F8498BFFDCF415"
+            ],
+            "group": 3,
+            "row": 4
+          },
+          "native_status_nodes": [
+            {
+              "pointer": "/graph/2",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 407
+            },
+            {
+              "pointer": "/deployedEntity/nativeGraph/2",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 407
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_stratagem"
+    },
+    {
+      "type": "C12A34F375BD5A87",
+      "name": "SG-225IE Breaker Incendiary",
+      "aliases": [],
+      "domains": [
+        "player_weapon_authoring"
+      ],
+      "runtime_source_name": "SG-225IE Breaker Incendiary",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "SG-225IE Breaker Incendiary",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+          "native_slots": [
+            {
+              "field": "damage.status_1_type",
+              "status": "fire",
+              "backing": {
+                "kind": "settings",
+                "settings": "damage",
+                "offset": 44,
+                "storage": "u32",
+                "width": 4,
+                "group": 1,
+                "row": 186,
+                "recordType": 182,
+                "settingsType": "0xE0A72CF0",
+                "branch": "primary",
+                "consumerCount": 1,
+                "statusSlot": 1,
+                "enum": "status"
+              }
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_ammunition"
+    },
+    {
+      "type": "C5C05FCB5747C799",
+      "name": "G-123 Thermite",
+      "aliases": [],
+      "domains": [
+        "throwable_authoring"
+      ],
+      "runtime_source_name": "G-123 Thermite",
+      "evidence": [
+        {
+          "artifact": "sdk/ThrowableAuthoringCapabilities.json",
+          "object": "G-123 Thermite",
+          "native_timed_status_template": {
+            "what": "timed status template (thermite burn)",
+            "reason": "ExplosiveComponent StatusEffectTimedSphericalTemplate member semantics are unproven; its status types are published read-only.",
+            "nativeStatusTypes": [
+              "Fire",
+              "Thermite"
+            ]
+          },
+          "identity": {
+            "status": "RESOLVED",
+            "method": "native_fingerprint",
+            "matchedFacts": [
+              "counts.fromSupply",
+              "counts.maximum",
+              "counts.starting",
+              "detonation.cookable",
+              "detonation.trigger",
+              "explosion.damage.ap",
+              "explosion.damage.demolition",
+              "explosion.damage.durable_damage",
+              "explosion.damage.push_force",
+              "explosion.damage.stagger",
+              "explosion.damage.standard_damage",
+              "explosion.inner_radius",
+              "explosion.outer_radius",
+              "explosion.shockwave_radius"
+            ],
+            "evidence": [
+              "unique player armory equipment (ThrowableComponent + LoadoutPackage + EncyclopediaEntry) agreeing with every published wiki fact (14 facts)",
+              "compared against all 29 armory throwable entities of 46 ThrowableComponent owners",
+              "resource path name recorded as supporting evidence only"
+            ],
+            "nearestOtherCandidate": {
+              "path": "content/fac_helldivers/equipment/backpacks/c4_charge_backpack/c4_charge",
+              "mismatches": 9,
+              "matches": 6
+            },
+            "aiVariantsWithSameValues": 1
+          }
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_throwable"
+    },
+    {
+      "type": "D323DE60855898AC",
+      "name": "SG-451 Cookout",
+      "aliases": [],
+      "domains": [
+        "player_weapon_authoring"
+      ],
+      "runtime_source_name": "SG-451 Cookout",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "SG-451 Cookout",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+          "native_slots": [
+            {
+              "field": "damage.status_1_type",
+              "status": "fire",
+              "backing": {
+                "kind": "settings",
+                "settings": "damage",
+                "offset": 44,
+                "storage": "u32",
+                "width": 4,
+                "group": 1,
+                "row": 168,
+                "recordType": 164,
+                "settingsType": "0xE0A72CF0",
+                "branch": "primary",
+                "consumerCount": 1,
+                "statusSlot": 1,
+                "enum": "status"
+              }
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_ammunition"
+    },
+    {
+      "type": "E5796355A8FD67E0",
+      "name": "R-4 Hyena",
+      "aliases": [],
+      "domains": [
+        "player_weapon_authoring"
+      ],
+      "runtime_source_name": "R-4 Hyena",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "R-4 Hyena",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+          "native_slots": [
+            {
+              "field": "damage.status_1_type",
+              "status": "fire",
+              "backing": {
+                "kind": "settings",
+                "settings": "damage",
+                "offset": 44,
+                "storage": "u32",
+                "width": 4,
+                "group": 1,
+                "row": 147,
+                "recordType": 142,
+                "settingsType": "0xE0A72CF0",
+                "branch": "primary",
+                "consumerCount": 1,
+                "statusSlot": 1,
+                "enum": "status"
+              }
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_ammunition"
+    },
+    {
+      "type": "EB725C39FC38B87C",
+      "name": "G-13 Incendiary Impact",
+      "aliases": [],
+      "domains": [
+        "throwable_authoring"
+      ],
+      "runtime_source_name": "G-13 Incendiary Impact",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "G-13 Incendiary Impact",
+          "statuses": [
+            "fire"
+          ],
+          "identity": {
+            "status": "RESOLVED",
+            "method": "native_fingerprint",
+            "matchedFacts": [
+              "counts.fromSupply",
+              "counts.maximum",
+              "counts.starting",
+              "detonation.cookable",
+              "detonation.trigger",
+              "explosion.damage.ap",
+              "explosion.damage.demolition",
+              "explosion.damage.durable_damage",
+              "explosion.damage.push_force",
+              "explosion.damage.stagger",
+              "explosion.damage.standard_damage",
+              "explosion.inner_radius",
+              "explosion.outer_radius",
+              "explosion.shockwave_radius"
+            ],
+            "evidence": [
+              "unique player armory equipment (ThrowableComponent + LoadoutPackage + EncyclopediaEntry) agreeing with every published wiki fact (14 facts)",
+              "compared against all 29 armory throwable entities of 46 ThrowableComponent owners",
+              "resource path name recorded as supporting evidence only"
+            ],
+            "nearestOtherCandidate": {
+              "path": "content/fac_helldivers/equipment/throwables/incendiary_grenade/incendiary_grenade",
+              "mismatches": 4,
+              "matches": 10
+            },
+            "aiVariantsWithSameValues": 0
+          }
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "source_category": "incendiary_throwable"
+    }
+  ],
+  "optional_excluded_by_policy": [
+    {
+      "type": "1980D92B619FF5FE",
+      "name": "LAS-98 Laser Cannon",
+      "aliases": [],
+      "domains": [
+        "support_weapon_authoring"
+      ],
+      "runtime_source_name": "LAS-98 Laser Cannon",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "LAS-98 Laser Cannon",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/SupportWeaponCapabilities.json",
+          "native_attacks": [
+            {
+              "role": "primary",
+              "kind": "Beam",
+              "damage_info": {
+                "group": 1,
+                "projectileConsumerCount": 0,
+                "recordType": 507,
+                "row": 501,
+                "settingsType": "0xE0A72CF0"
+              },
+              "status_effects": [
+                {
+                  "strength": 1.5,
+                  "type": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "exclusion_reason": "原生定义会点燃，但本项目默认仅计火焰武器/燃烧弹/燃烧战备；一般激光来源全部击杀不纳入。",
+      "source_category": "burning_laser_optional"
+    },
+    {
+      "type": "27EE1ED8F6FB6356",
+      "name": "LAS-5 Scythe",
+      "aliases": [],
+      "domains": [
+        "player_weapon_authoring"
+      ],
+      "runtime_source_name": "LAS-5 Scythe",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "LAS-5 Scythe",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+          "native_slots": [
+            {
+              "field": "damage.status_1_type",
+              "status": "fire",
+              "backing": {
+                "kind": "settings",
+                "settings": "damage",
+                "offset": 44,
+                "storage": "u32",
+                "width": 4,
+                "group": 1,
+                "row": 495,
+                "recordType": 501,
+                "settingsType": "0xE0A72CF0",
+                "branch": "primary",
+                "consumerCount": 0,
+                "statusSlot": 1,
+                "enum": "status"
+              }
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "exclusion_reason": "原生定义会点燃，但本项目默认仅计火焰武器/燃烧弹/燃烧战备；一般激光来源全部击杀不纳入。",
+      "source_category": "burning_laser_optional"
+    },
+    {
+      "type": "56070F36CFFFA8A8",
+      "name": "A/LAS-98 Laser Sentry",
+      "aliases": [
+        "LAS-98 Laser Cannon"
+      ],
+      "domains": [
+        "stratagem_authoring",
+        "support_weapon_authoring"
+      ],
+      "runtime_source_name": "LAS-98 Laser Cannon",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "A/LAS-98 Laser Sentry",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "schemas/stratagem_authoring_catalog.json",
+          "root": {
+            "id": 960389145,
+            "package": "0x36313BF684C1FD79",
+            "payloads": [
+              "0x56070F36CFFFA8A8",
+              "0x73F8498BFFDCF415"
+            ],
+            "group": 8,
+            "row": 8
+          },
+          "native_status_nodes": [
+            {
+              "pointer": "/graph/1",
+              "status_type": 5,
+              "status": "fire",
+              "native_damage_type": 507,
+              "native_damage_row": 501,
+              "slot": 1,
+              "strength": 1.5
+            },
+            {
+              "pointer": "/graph/2",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 507
+            },
+            {
+              "pointer": "/deployedEntity/nativeGraph/1",
+              "status_type": 5,
+              "status": "fire",
+              "native_damage_type": 507,
+              "native_damage_row": 501,
+              "slot": 1,
+              "strength": 1.5
+            },
+            {
+              "pointer": "/deployedEntity/nativeGraph/2",
+              "status_type": 5,
+              "status": "fire",
+              "parent_damage_type": 507
+            }
+          ]
+        },
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "LAS-98 Laser Cannon",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/SupportWeaponCapabilities.json",
+          "native_attacks": [
+            {
+              "role": "primary",
+              "kind": "Beam",
+              "damage_info": {
+                "group": 1,
+                "projectileConsumerCount": 0,
+                "recordType": 507,
+                "row": 501,
+                "settingsType": "0xE0A72CF0"
+              },
+              "status_effects": [
+                {
+                  "strength": 1.5,
+                  "type": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "exclusion_reason": "原生定义会点燃，但本项目默认仅计火焰武器/燃烧弹/燃烧战备；一般激光来源全部击杀不纳入。",
+      "source_category": "burning_laser_optional"
+    },
+    {
+      "type": "7B06196E90154C88",
+      "name": "LAS-7 Dagger",
+      "aliases": [],
+      "domains": [
+        "player_weapon_authoring"
+      ],
+      "runtime_source_name": "LAS-7 Dagger",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "LAS-7 Dagger",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/PlayerWeaponAuthoringCapabilities.json",
+          "native_slots": [
+            {
+              "field": "damage.status_1_type",
+              "status": "fire",
+              "backing": {
+                "kind": "settings",
+                "settings": "damage",
+                "offset": 44,
+                "storage": "u32",
+                "width": 4,
+                "group": 1,
+                "row": 494,
+                "recordType": 500,
+                "settingsType": "0xE0A72CF0",
+                "branch": "primary",
+                "consumerCount": 0,
+                "statusSlot": 1,
+                "enum": "status"
+              }
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "exclusion_reason": "原生定义会点燃，但本项目默认仅计火焰武器/燃烧弹/燃烧战备；一般激光来源全部击杀不纳入。",
+      "source_category": "burning_laser_optional"
+    },
+    {
+      "type": "D54B9505C0F72873",
+      "name": "LAS-98 Laser Cannon",
+      "aliases": [],
+      "domains": [
+        "support_weapon_authoring"
+      ],
+      "runtime_source_name": "LAS-98 Laser Cannon",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "LAS-98 Laser Cannon",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "sdk/SupportWeaponCapabilities.json",
+          "native_attacks": [
+            {
+              "role": "primary",
+              "kind": "Beam",
+              "damage_info": {
+                "group": 1,
+                "projectileConsumerCount": 0,
+                "recordType": 507,
+                "row": 501,
+                "settingsType": "0xE0A72CF0"
+              },
+              "status_effects": [
+                {
+                  "strength": 1.5,
+                  "type": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "exclusion_reason": "原生定义会点燃，但本项目默认仅计火焰武器/燃烧弹/燃烧战备；一般激光来源全部击杀不纳入。",
+      "source_category": "burning_laser_optional"
+    },
+    {
+      "type": "EC3575E7A93793BB",
+      "name": "Orbital Laser",
+      "aliases": [],
+      "domains": [
+        "stratagem_authoring"
+      ],
+      "runtime_source_name": "Orbital Laser",
+      "evidence": [
+        {
+          "artifact": "sdk/StatusEffectCatalog.json",
+          "object": "Orbital Laser",
+          "statuses": [
+            "fire"
+          ],
+          "attack_artifact": "schemas/stratagem_authoring_catalog.json",
+          "root": {
+            "id": 970450596,
+            "package": "0x662A9D42F834777E",
+            "payloads": [
+              "0xEC3575E7A93793BB"
+            ],
+            "group": 5,
+            "row": 11
+          },
+          "native_status_nodes": [
+            {
+              "pointer": "/graph/1",
+              "status_type": 5,
+              "status": "fire",
+              "native_damage_type": 513,
+              "native_damage_row": 504,
+              "slot": 1,
+              "strength": 2.0
+            }
+          ]
+        }
+      ],
+      "live_source_attribution": "not_tested",
+      "exclusion_reason": "原生定义会点燃，但本项目默认仅计火焰武器/燃烧弹/燃烧战备；一般激光来源全部击杀不纳入。",
+      "source_category": "burning_laser_optional"
+    }
+  ],
+  "excluded": [
+    {
+      "type": "20AAFC3A504D2E5F",
+      "name": "EAT-700 Expendable Napalm",
+      "reason": "Runtime 将独占投送 payload 命名为装备；此实体只有投送架，不是燃烧武器。"
+    },
+    {
+      "type": "2EA01CB1676ACA29",
+      "name": "Eagle Airstrike",
+      "reason": "普通高爆飞鹰空袭；实际攻击图没有 fire/burning_heavy 状态，不视为凝固汽油弹空袭。"
+    },
+    {
+      "type": "73F8498BFFDCF415",
+      "name": "40-K Meltagun / A/AC-8 Autocannon Sentry / A/ARC-3 Tesla Tower / A/FLAM-40 Flame Sentry / A/G-16 Gatling Sentry / A/GM-17 Gas Mortar Sentry / A/LAS-98 Laser Sentry / A/M-12 Mortar Sentry / A/M-23 EMS Mortar Sentry / A/MG-43 Machine Gun Sentry / A/MLS-4X Rocket Sentry / AC-8 Autocannon / APW-1 Anti-Materiel Rifle / ARC-3 Arc Thrower / AX/AR-23 Guard Dog / AX/ARC-3 K-9 / AX/FLAM-75 Hot Dog / AX/LAS-5 Rover / AX/TX-13 Dog Breath / B-1 Supply Pack / B-100 Portable Hellbomb / B/FLAM-80 Cremator / B/MD C4 Pack / CQC-1 One True Flag / CQC-20 Breaching Hammer / CQC-9 Defoliation Tool / E/AT-12 Anti-Tank Emplacement / E/GL-21 Grenadier Battlement / E/MG-101 HMG Emplacement / EAT-17 Expendable Anti-Tank / EAT-411 Leveller / EAT-700 Expendable Napalm / FAF-14 Spear / FLAM-40 Flamethrower / FX-12 Shield Generator Relay / GL-21 Grenade Launcher / GL-28 Belt-Fed Grenade Launcher / GL-52 De-Escalator / GR-8 Recoilless Rifle / LAS-98 Laser Cannon / LAS-99 Quasar Cannon / LIFT-182 Warp Pack / LIFT-850 Jump Pack / LIFT-860 Hover Pack / M-1000 Maxigun / M-105 Stalwart / MD-17 Anti-Tank Mines / MD-6 Anti-Personnel Minefield / MD-8 Gas Mines / MD-I4 Incendiary Mines / MG-206 Heavy Machine Gun / MG-43 Machine Gun / MGX-42 Bullet Storm / MLS-4X Commando / PLAS-45 Epoch / RL-77 Airburst Rocket Launcher / RS-422 Railgun / Resupply / S-11 Speargun / SH-20 Ballistic Shield Backpack / SH-32 Shield Generator Pack / SH-51 Directional Shield / StA-X3 W.A.S.P. Launcher / TX-41 Sterilizer",
+      "reason": "共享 payload，不能由来源 type 唯一确认燃烧战备。"
+    },
+    {
+      "type": "8A307BD1811A5FE9",
+      "name": "SMG/FLAM-34 Stoker",
+      "reason": "母枪普通子弹不属于火焰；只候选独立下挂喷射武器 type。"
+    },
+    {
+      "type": "CA4F3FC268F449D5",
+      "name": "B/FLAM-80 Cremator",
+      "reason": "Runtime 将独占投送 payload 命名为装备；此实体只有投送架，不是燃烧武器。"
+    },
+    {
+      "type": "E90F771A36FB441E",
+      "name": "FLAM-40 Flamethrower",
+      "reason": "Runtime 将独占投送 payload 命名为装备；此实体只有投送架，不是燃烧武器。"
+    },
+    {
+      "type": "FDE262593307CA2F",
+      "name": "LAS-98 Laser Cannon",
+      "reason": "Runtime 将独占投送 payload 命名为装备；此实体只有投送架，不是燃烧武器。"
+    }
+  ],
+  "uncovered": [
+    {
+      "name": "EXO-51 Lumberer Exosuit / left_gun",
+      "domain": "vehicle_weapon_authoring",
+      "statuses": [
+        "fire"
+      ],
+      "reason": "载具挂载武器存在燃烧定义，但逐来源 type 与该挂载的对应未实测；不把整车或其他挂载击杀算入。"
+    },
+    {
+      "name": "M-104 Incinerator FRV / gun",
+      "domain": "vehicle_weapon_authoring",
+      "statuses": [
+        "fire"
+      ],
+      "reason": "载具挂载武器存在燃烧定义，但逐来源 type 与该挂载的对应未实测；不把整车或其他挂载击杀算入。"
+    },
+    {
+      "name": "unattributed / unknown / shared payload",
+      "reason": "原生无来源部分及未证明的来源不归给火焰；不根据显示名字或当前手持武器补猜。"
+    },
+    {
+      "name": "独立地雷、地面火焰/状态实体及自定义弹药",
+      "reason": "仅当原生 kills 记到已验证 type 才计入；其独立来源 hash 和 MOD 改写后的武器状态未做完整实机枚举。"
+    }
+  ],
+  "limitations": [
+    "这是来源击杀口径，不能称为严格烧死；激光类虽有原生 fire 定义，但按项目政策默认排除。",
+    "sources 是按来源累计的击杀，没有死者 type；仅此表不能可靠判断燃烧来源杀了巨型或强袭虫。",
+    "SDK/原生数据验证通过不代表每个变体已在实机产生该 source type；特别是未命名下挂武器仍需实测。",
+    "不读取游戏进程、不启动游戏、不修改 Runtime/部署；只生成此目录。"
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "domains/event_entities.lua",
+      "sha256": "C2369C01E47C96713374479BCE1FF286B35E6D426125473FDA17054CD904736F"
+    },
+    {
+      "path": "sdk/StatusEffectCatalog.json",
+      "sha256": "D9598E4A4D0C9223BCD943F107509E49569C10A1622DF94F1AA1F7FCB57F6815"
+    },
+    {
+      "path": "sdk/PlayerWeaponAuthoringCapabilities.json",
+      "sha256": "CE4F5B46FCA26D128579557A9E476CE5BAF73CA9D0DE4131D38BCE47900B0A7D"
+    },
+    {
+      "path": "sdk/SupportWeaponCapabilities.json",
+      "sha256": "C2E8BF12EF1E2CFCFA4349D9725B1BECFEFC5B11277DB87A72F5AEBDD401E042"
+    },
+    {
+      "path": "sdk/ThrowableAuthoringCapabilities.json",
+      "sha256": "3BDE977BFA89717220FB3EF3308C80232D9644D72496F8A9591B5E406F9AC04E"
+    },
+    {
+      "path": "schemas/stratagem_authoring_catalog.json",
+      "sha256": "CA928F8F4F12B48AB1206FE12A7EC8F416CDEBF339BD4CEEF78225704FD74E88"
+    },
+    {
+      "path": "schemas/build_profile.json",
+      "sha256": "25205ADDEF75E5813F90EC5A925AD8CF7CD97DA946FC8EF1724FA33392B098E3"
+    }
+  ],
+  "summary": {
+    "included_source_types": 20,
+    "excluded_source_types": 7,
+    "optional_laser_source_types": 6,
+    "unnamed_in_runtime": [
+      "992B6F65A5BAB53D"
+    ],
+    "live_verified": false
+  }
+}

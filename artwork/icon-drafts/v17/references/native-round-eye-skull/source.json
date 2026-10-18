@@ -1,0 +1,16 @@
+{
+  "source": "external/svg_ui_elements.xaml",
+  "resource": "content/ui/shared/resources/svg_ui_elements.xaml",
+  "resource_name_hash": "04a4245928ea3906",
+  "resource_type_hash": "46bc82aae9ae0565",
+  "archive": "007e093ca718ca1a",
+  "template": "DataTemplate_UI_Skull_Icon",
+  "source_line": 8,
+  "source_sha256": "2715fd3fe861f19775429002227461f20641f78f84adf90b95f8ef2fdd1bbe00",
+  "conversion": "Exact XAML Path rendered with Windows WPF Geometry.Parse; white fill; no path edits; transparent 512x512; centered with 12px margin",
+  "png_sha256": "e64d2408a17555e31fe855445e22ad2fa872014da7f9c6a625fc43cf620ce3ad",
+  "verification": "Visually verified rendered native Path matches the reference family: high ridged crown, round eyes, inverted-V nose and short jaw; no claim of runtime kill-counter binding. Existing flat-top skull_icon.texture is a different asset.",
+  "svg_conversion": "XAML F1 is nonzero fill-rule; remove only F1 prefix. All remaining path data unchanged. Original #FFFFFFFF opaque white mapped to SVG white; no stroke. ViewBox uses original geometry bounds.",
+  "svg_sha256": "c70ee4d8e72c8453e7d9afefbe88a7514e14d0a2a1df9efd3f3ed00626190e1a",
+  "reference_image": "external/codex-clipboard-c626d5ba-0252-4800-9f11-4123710136e0.png"
+}

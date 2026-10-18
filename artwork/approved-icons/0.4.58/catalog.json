@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "version": "0.4.58",
+  "status": "approved_originals_exported",
+  "items": [
+    {
+      "id": "M08",
+      "key": "democracy_star",
+      "name": "民主之星",
+      "kind": "medal",
+      "status": "approved",
+      "file": "M08-democracy_star.png",
+      "sha256": "02e61178ae80389d154720b4547c1d91107b06418e88b64f600eac196dcbe096",
+      "width": 1536,
+      "height": 1536,
+      "alpha_bbox": [
+        535,
+        477,
+        1000,
+        1059
+      ],
+      "body_ratio": 0.7989690721649485,
+      "source_sheet_hash": "54fdae1296542575a580329e5dde3d5f0b748ca0f4e47ca76ec292084d339842",
+      "source_sheet": "originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "crop": [
+        40,
+        25,
+        570,
+        642
+      ],
+      "source_visible_bbox": [
+        75,
+        52,
+        540,
+        634
+      ],
+      "LibraryID": "local-generated-source",
+      "method": "deterministic_approved_original_black_matte_export_no_generation",
+      "source_manifest": "export-manifest.json"
+    },
+    {
+      "id": "M09",
+      "key": "super_democracy_star",
+      "name": "超级民主之星",
+      "kind": "medal",
+      "status": "approved",
+      "file": "M09-super_democracy_star.png",
+      "sha256": "18a2e4b3b72ea4f66e0141a57b8d05a3b583e669de26fd0cb0bf0cddaf6cabf6",
+      "width": 1536,
+      "height": 1536,
+      "alpha_bbox": [
+        526,
+        476,
+        1009,
+        1060
+      ],
+      "body_ratio": 0.827054794520548,
+      "source_sheet_hash": "54fdae1296542575a580329e5dde3d5f0b748ca0f4e47ca76ec292084d339842",
+      "source_sheet": "originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "crop": [
+        590,
+        25,
+        1120,
+        642
+      ],
+      "source_visible_bbox": [
+        621,
+        52,
+        1104,
+        636
+      ],
+      "LibraryID": "local-generated-source",
+      "method": "deterministic_approved_original_black_matte_export_no_generation",
+      "source_manifest": "export-manifest.json"
+    },
+    {
+      "id": "M10",
+      "key": "supreme_democracy_star",
+      "name": "超级无上民主之星",
+      "kind": "medal",
+      "status": "approved",
+      "file": "M10-supreme_democracy_star.png",
+      "sha256": "2adc046cb3cb79d6de3d14746df0ce1d4988c3cf4fa9e8a4d8e387a1e944c8f8",
+      "width": 1536,
+      "height": 1536,
+      "alpha_bbox": [
+        466,
+        473,
+        1070,
+        1062
+      ],
+      "body_ratio": 1.0254668930390491,
+      "source_sheet_hash": "54fdae1296542575a580329e5dde3d5f0b748ca0f4e47ca76ec292084d339842",
+      "source_sheet": "originals/exec-c616ef11-d074-4305-b665-97555043a841.png",
+      "crop": [
+        1120,
+        25,
+        1765,
+        642
+      ],
+      "source_visible_bbox": [
+        1134,
+        50,
+        1738,
+        639
+      ],
+      "LibraryID": "local-generated-source",
+      "method": "deterministic_approved_original_black_matte_export_no_generation",
+      "source_manifest": "export-manifest.json"
+    },
+    {
+      "id": "M12",
+      "key": "tyranny_speed_bump",
+      "name": "摧毁暴政减速带",
+      "kind": "medal",
+      "status": "approved",
+      "file": "M12-tyranny_speed_bump.png",
+      "sha256": "9c0ecc9409d0a6c8a00e3c56d6d5f42692bd4eda1a4af231689d19eb3cd85d6d",
+      "width": 1536,
+      "height": 1536,
+      "alpha_bbox": [
+        159,
+        223,
+        1377,
+        1312
+      ],
+      "body_ratio": 1.118457300275482,
+      "source_sheet_hash": "ee653579dd0d82e525231d5dd362e840ecb560d5f26799e48a4a7d36db0bd5da",
+      "source_sheet": "originals/exec-fd33a1ed-2b9a-41d3-b659-d96cf0383a32.png",
+      "crop": [
+        0,
+        0,
+        1330,
+        1182
+      ],
+      "source_visible_bbox": [
+        56,
+        25,
+        1274,
+        1114
+      ],
+      "LibraryID": "local-generated-source",
+      "method": "deterministic_approved_original_black_matte_export_no_generation",
+      "source_manifest": "export-manifest.json"
+    }
+  ]
+}

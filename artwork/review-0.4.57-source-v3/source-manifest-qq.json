@@ -1,0 +1,439 @@
+{
+  "schema": 1,
+  "method": "actual-game-render-download; no AI generation",
+  "review_only": true,
+  "items": [
+    {
+      "key": "giant-dragonroach",
+      "name": "蟑龙",
+      "english_name": "Dragonroach",
+      "page_url": "https://divershub.app/database/enemies/dragonroach",
+      "page_h1": "Dragonroach",
+      "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/1280px-Dragonroach_Enemy_Icon.png",
+      "raw": "artwork/review-0.4.57-source-v3/raw/giant-dragonroach.png",
+      "original_source_filename": "1280px-Dragonroach_Enemy_Icon.png",
+      "source_sha256": "693533ae27d50a9b33777d778a76b8a5c684567c3f099b05632d3a96985d49b4",
+      "source_image_format": "PNG",
+      "source_mode": "RGBA",
+      "source_size": [
+        1280,
+        549
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Game render hosted by fan database DiversHub; filename identifies wiki-style enemy icon. Copyright remains with respective game/assets owners. A per-file reuse license was not shown on the fetched database page; not assumed to be public domain.",
+      "license_verified": false,
+      "file": "giant-dragonroach.png",
+      "crop_box": [
+        16,
+        78,
+        1229,
+        440
+      ],
+      "final_size": [
+        1213,
+        362
+      ],
+      "final_sha256": "1cb4d82c1891bcc73bbe97fcdbe3a4b651b4338f9a69e32ad3f68010ba850b5f",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "key": "giant-vox-engine",
+      "name": "噪轰引擎",
+      "english_name": "Vox Engine",
+      "page_url": "https://divershub.app/database/enemies/vox-engine",
+      "page_h1": "Vox Engine",
+      "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/VoxEngine.webp",
+      "raw": "artwork/review-0.4.57-source-v3/raw/giant-vox-engine.webp",
+      "original_source_filename": "VoxEngine.webp",
+      "source_sha256": "479e2f12881eb5ce65be3dfca7a5eb7de9e974b27a66744046ed749322569efd",
+      "source_image_format": "WEBP",
+      "source_mode": "RGBA",
+      "source_size": [
+        1408,
+        1117
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Game render hosted by fan database DiversHub; filename identifies wiki-style enemy icon. Copyright remains with respective game/assets owners. A per-file reuse license was not shown on the fetched database page; not assumed to be public domain.",
+      "license_verified": false,
+      "file": "giant-vox-engine.png",
+      "crop_box": [
+        0,
+        9,
+        1395,
+        1101
+      ],
+      "final_size": [
+        1395,
+        1092
+      ],
+      "final_sha256": "2910aa8ec8b0241a4b2242d6f0024fef60ee42a6a52615733530ad76dfc6b073",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "key": "giant-leviathan",
+      "name": "利维坦",
+      "english_name": "Leviathan",
+      "page_url": "https://divershub.app/database/enemies/leviathan",
+      "page_h1": "Leviathan",
+      "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/720px-Leviathan_Enemy_Icon.png",
+      "raw": "artwork/review-0.4.57-source-v3/raw/giant-leviathan.png",
+      "original_source_filename": "720px-Leviathan_Enemy_Icon.png",
+      "source_sha256": "6cf6a1721be6962099d96c0fdadab4dfbd338e273aeeb886009e7cbe657c2819",
+      "source_image_format": "PNG",
+      "source_mode": "RGBA",
+      "source_size": [
+        720,
+        720
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Game render hosted by fan database DiversHub; filename identifies wiki-style enemy icon. Copyright remains with respective game/assets owners. A per-file reuse license was not shown on the fetched database page; not assumed to be public domain.",
+      "license_verified": false,
+      "file": "giant-leviathan.png",
+      "crop_box": [
+        16,
+        141,
+        706,
+        598
+      ],
+      "final_size": [
+        690,
+        457
+      ],
+      "final_sha256": "7af10d1d067812eb6769874e8b84d804c9da119eea2174a4597cde8dc4edc050",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "key": "giant-factory-strider",
+      "name": "移动工厂",
+      "english_name": "Factory Strider",
+      "page_url": "https://helldiverstrainingmanual.com/bestiary/automatons/factory-strider",
+      "page_h1": "Automaton Factory Strider",
+      "source_url": "https://helldiverstrainingmanual.com/images/bestiary/factory-strider.png",
+      "raw": "artwork/review-0.4.57-source-v3/raw/giant-factory-strider-clean-trainingmanual.png",
+      "original_source_filename": "factory-strider.png",
+      "source_sha256": "6e4f94a8446370d8cbc926a8c1ec1b7cbb327176c7bae160960fbb95402520b8",
+      "source_image_format": "PNG",
+      "source_mode": "RGBA",
+      "source_size": [
+        600,
+        506
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Actual game model render from Helldivers Training Manual bestiary, visually verified as Factory Strider; per-file reuse license not displayed/verified; game copyright remains with respective owners.",
+      "license_verified": false,
+      "file": "giant-factory-strider.png",
+      "crop_box": [
+        52,
+        28,
+        565,
+        500
+      ],
+      "final_size": [
+        513,
+        472
+      ],
+      "final_sha256": "86ab15bd54108a329d06aa73f6141e44a4f408718c7b06503e0958a0d1a9d235",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ],
+      "alternate_original_sources": [
+        {
+          "page_url": "https://divershub.app/database/enemies/factory-strider",
+          "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/786px-Factory_Strider_Enemy_Icon.webp",
+          "raw": "artwork/review-0.4.57-source-v3/raw/giant-factory-strider.webp",
+          "source_sha256": "092cd0d589486f9497cc6bdad406fe220b3062717271a5a145d86d6369b3582c",
+          "source_size": [
+            786,
+            720
+          ],
+          "crop_box": [
+            0,
+            4,
+            773,
+            720
+          ],
+          "final_sha256": "0c3e5596216b46dee7f22644d044ddf2b9df9951dedf5c9b94645fa966b6f29b",
+          "note": "Correct real model but contains originally rendered spawned Devastators and red deployment glow; clean source selected instead."
+        }
+      ],
+      "visual_notes": "Clean model-only game render, four legs/back cannon, no spawned units or added effects."
+    },
+    {
+      "key": "heavy-charger",
+      "name": "强袭虫",
+      "english_name": "Charger",
+      "page_url": "https://divershub.app/database/enemies/charger",
+      "page_h1": "Charger",
+      "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/Charger.webp",
+      "raw": "artwork/review-0.4.57-source-v3/raw/heavy-charger.webp",
+      "original_source_filename": "Charger.webp",
+      "source_sha256": "e40638d5f2c14767c439a03b4f9223b028c7b30d1396ee05a04c6ba8d9f2d242",
+      "source_image_format": "WEBP",
+      "source_mode": "RGBA",
+      "source_size": [
+        594,
+        448
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Game render hosted by fan database DiversHub; filename identifies wiki-style enemy icon. Copyright remains with respective game/assets owners. A per-file reuse license was not shown on the fetched database page; not assumed to be public domain.",
+      "license_verified": false,
+      "file": "heavy-charger.png",
+      "crop_box": [
+        23,
+        8,
+        579,
+        440
+      ],
+      "final_size": [
+        556,
+        432
+      ],
+      "final_sha256": "33acb89f05b800a3a92ec1c7689ee926fdf50d322da170ec727090c6faa3f24b",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "key": "heavy-charger-behemoth",
+      "name": "巨兽级强袭虫",
+      "english_name": "Charger Behemoth",
+      "page_url": "https://divershub.app/database/enemies/charger-behemoth",
+      "page_h1": "Charger Behemoth",
+      "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/960px-Charger_Behemoth_Enemy_Icon.png",
+      "raw": "artwork/review-0.4.57-source-v3/raw/heavy-charger-behemoth.png",
+      "original_source_filename": "960px-Charger_Behemoth_Enemy_Icon.png",
+      "source_sha256": "670b25abd0b57df05b8ad08a2c91d503a24c49306366cf2c207fdb004aad4b9f",
+      "source_image_format": "PNG",
+      "source_mode": "RGBA",
+      "source_size": [
+        960,
+        720
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Game render hosted by fan database DiversHub; filename identifies wiki-style enemy icon. Copyright remains with respective game/assets owners. A per-file reuse license was not shown on the fetched database page; not assumed to be public domain.",
+      "license_verified": false,
+      "file": "heavy-charger-behemoth.png",
+      "crop_box": [
+        68,
+        30,
+        864,
+        698
+      ],
+      "final_size": [
+        796,
+        668
+      ],
+      "final_sha256": "921550b0f972a61428f76eaa0f4c409dfbeb272b7f8ad2fcd336a28a2eacbb01",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "key": "heavy-spore-charger",
+      "name": "孢子强袭虫",
+      "english_name": "Spore Charger",
+      "page_url": "https://divershub.app/database/enemies/spore-charger",
+      "page_h1": "Spore Charger",
+      "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/1043px-Spore_Charger_Enemy_Icon.png",
+      "raw": "artwork/review-0.4.57-source-v3/raw/heavy-spore-charger.png",
+      "original_source_filename": "1043px-Spore_Charger_Enemy_Icon.png",
+      "source_sha256": "f84825205efc6bc116001a87afb4c5bdf61d6d8494d2a78ef4c1931bc4f8db10",
+      "source_image_format": "PNG",
+      "source_mode": "RGBA",
+      "source_size": [
+        1043,
+        720
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Game render hosted by fan database DiversHub; filename identifies wiki-style enemy icon. Copyright remains with respective game/assets owners. A per-file reuse license was not shown on the fetched database page; not assumed to be public domain.",
+      "license_verified": false,
+      "file": "heavy-spore-charger.png",
+      "crop_box": [
+        117,
+        4,
+        971,
+        689
+      ],
+      "final_size": [
+        854,
+        685
+      ],
+      "final_sha256": "4900f4cd4b0aaf0f632456f1511ac305cfa8d168eb9a0ae3c0a835e321c36bfa",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "key": "heavy-rupture-charger",
+      "name": "爆裂强袭虫",
+      "english_name": "Rupture Charger",
+      "page_url": "https://divershub.app/database/enemies/rupture-charger",
+      "page_h1": "Rupture Charger",
+      "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/Rupture_Charger_Enemy_Icon.webp",
+      "raw": "artwork/review-0.4.57-source-v3/raw/heavy-rupture-charger.webp",
+      "original_source_filename": "Rupture_Charger_Enemy_Icon.webp",
+      "source_sha256": "221402d8a77dbb8fb886ba749d2c01cdbe6e37550211aa8e5e5227b7d5ab2862",
+      "source_image_format": "WEBP",
+      "source_mode": "RGBA",
+      "source_size": [
+        1125,
+        900
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Game render hosted by fan database DiversHub; filename identifies wiki-style enemy icon. Copyright remains with respective game/assets owners. A per-file reuse license was not shown on the fetched database page; not assumed to be public domain.",
+      "license_verified": false,
+      "file": "heavy-rupture-charger.png",
+      "crop_box": [
+        94,
+        56,
+        1040,
+        873
+      ],
+      "final_size": [
+        946,
+        817
+      ],
+      "final_sha256": "42e3b49d7f66a541345b92328bb20bedd0ede742aad71cf041fba6d41b9c8e17",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "key": "heavy-impaler",
+      "name": "穿刺虫",
+      "english_name": "Impaler",
+      "page_url": "https://divershub.app/database/enemies/impaler",
+      "page_h1": "Impaler",
+      "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/Impaler_Enemy_Icon.png",
+      "raw": "artwork/review-0.4.57-source-v3/raw/heavy-impaler.png",
+      "original_source_filename": "Impaler_Enemy_Icon.png",
+      "source_sha256": "73d0e404efa843642989de3d447d34d742d00e921517236c388c867146ad9338",
+      "source_image_format": "PNG",
+      "source_mode": "P",
+      "source_size": [
+        1080,
+        810
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Game render hosted by fan database DiversHub; filename identifies wiki-style enemy icon. Copyright remains with respective game/assets owners. A per-file reuse license was not shown on the fetched database page; not assumed to be public domain.",
+      "license_verified": false,
+      "file": "heavy-impaler.png",
+      "crop_box": [
+        67,
+        40,
+        996,
+        797
+      ],
+      "final_size": [
+        929,
+        757
+      ],
+      "final_sha256": "8cfd4eeef7efe238544f8b9771c361ec0cfdc5d321d38a721198865b03dc3f07",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "key": "heavy-hulk-bruiser",
+      "name": "巨型碾压者",
+      "english_name": "Hulk Bruiser",
+      "page_url": "https://divershub.app/database/enemies/hulk-bruiser",
+      "page_h1": "Hulk Bruiser",
+      "source_url": "https://secejvpgd09sdpuq.public.blob.vercel-storage.com/1080px-Hulk_Bruiser_Enemy_Icon.webp",
+      "raw": "artwork/review-0.4.57-source-v3/raw/heavy-hulk-bruiser.webp",
+      "original_source_filename": "1080px-Hulk_Bruiser_Enemy_Icon.webp",
+      "source_sha256": "c63a16ecdaddad926a1330108d92f5f8a8ef0e2783b953c77d1ae5ba0c3bd813",
+      "source_image_format": "WEBP",
+      "source_mode": "RGBA",
+      "source_size": [
+        1080,
+        1080
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "copyright_note": "Game render hosted by fan database DiversHub; filename identifies wiki-style enemy icon. Copyright remains with respective game/assets owners. A per-file reuse license was not shown on the fetched database page; not assumed to be public domain.",
+      "license_verified": false,
+      "file": "heavy-hulk-bruiser.png",
+      "crop_box": [
+        0,
+        25,
+        994,
+        1045
+      ],
+      "final_size": [
+        994,
+        1020
+      ],
+      "final_sha256": "7913f6601aa42055b38ca6e7424fe6d1ebfe313bcf0360f57e6a9cfac961f06b",
+      "processing": "Native alpha preserved; exact nonzero-alpha bounding-box crop only; PNG encoding. No resizing, recoloring, redrawing, AI, or dewhite used.",
+      "pixel_preservation_verified": true,
+      "final_alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "processing_summary": "10 native-alpha real-game source renders. Only exact alpha-bound cropping and lossless PNG encoding."
+}

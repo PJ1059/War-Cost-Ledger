@@ -1,0 +1,560 @@
+{
+  "schema": 1,
+  "purpose": "Per-identified-unit local-kill ribbons; catalog group order fixes G01..G06 and T01..T18",
+  "legacy": "R02/heavy and R03/giant remain readable for old records; a new known unit earns its specific ribbon instead of the generic one; saved history is never split or backfilled.",
+  "gate": "Existing native local kill-growth / final-creditor observer gate; no teammate kill conversion.",
+  "items": [
+    {
+      "id": "G01",
+      "key": "giant_dragonroach",
+      "name": "巨人杀手",
+      "kind": "ribbon",
+      "unit": "蟑龙",
+      "enemy_key": "Dragonroach",
+      "unit_class": "巨型",
+      "condition": "击杀1个蟑龙。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/giant-dragonroach.png",
+      "faction": "terminids",
+      "hashes": [
+        "960B48A421A3FAAA"
+      ],
+      "bindings": [
+        {
+          "hash": "960B48A421A3FAAA",
+          "kind": "enemy/v1/terminids/dragon",
+          "basis": "reviewed_resource_alias"
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "key": "giant_bile_titan",
+      "name": "巨人杀手",
+      "kind": "ribbon",
+      "unit": "吐酸泰坦",
+      "enemy_key": "Bile Titan",
+      "unit_class": "巨型",
+      "condition": "击杀1个吐酸泰坦。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/giant-bile-titan.png",
+      "faction": "terminids",
+      "hashes": [
+        "9E2E17F2CCCCAFDD"
+      ],
+      "bindings": [
+        {
+          "hash": "9E2E17F2CCCCAFDD",
+          "kind": "enemy/v1/terminids/strider",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "key": "giant_spore_burst_bile_titan",
+      "name": "巨人杀手",
+      "kind": "ribbon",
+      "unit": "孢裂吐酸泰坦",
+      "enemy_key": "Spore Burst Bile Titan",
+      "unit_class": "巨型",
+      "condition": "击杀1个孢裂吐酸泰坦。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/giant-spore-burst-bile-titan.png",
+      "faction": "terminids",
+      "hashes": [
+        "EF04CB84D097A497"
+      ],
+      "bindings": [
+        {
+          "hash": "EF04CB84D097A497",
+          "kind": "enemy/v1/terminids/strider_gloom",
+          "basis": "runtime_wiki_anatomy"
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "key": "giant_vox_engine",
+      "name": "巨人杀手",
+      "kind": "ribbon",
+      "unit": "噪轰引擎",
+      "enemy_key": "Vox Engine",
+      "unit_class": "巨型",
+      "condition": "击杀1个噪轰引擎。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/giant-vox-engine.png",
+      "faction": "automatons",
+      "hashes": [
+        "BC242702FB46B7E7"
+      ],
+      "bindings": [
+        {
+          "hash": "BC242702FB46B7E7",
+          "kind": "enemy/v1/automatons/siege_engine",
+          "basis": "reviewed_resource_alias"
+        }
+      ]
+    },
+    {
+      "id": "G05",
+      "key": "giant_factory_strider",
+      "name": "巨人杀手",
+      "kind": "ribbon",
+      "unit": "移动工厂",
+      "enemy_key": "Factory Strider",
+      "unit_class": "巨型",
+      "condition": "击杀1个移动工厂。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/giant-factory-strider.png",
+      "faction": "automatons",
+      "hashes": [
+        "D37E8D120D2836E3"
+      ],
+      "bindings": [
+        {
+          "hash": "D37E8D120D2836E3",
+          "kind": "enemy/v1/automatons/spawner",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "G06",
+      "key": "giant_leviathan",
+      "name": "巨人杀手",
+      "kind": "ribbon",
+      "unit": "利维坦",
+      "enemy_key": "Leviathan",
+      "unit_class": "巨型",
+      "condition": "击杀1个利维坦。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/giant-leviathan.png",
+      "faction": "illuminate",
+      "hashes": [
+        "F22D027B37BEF107"
+      ],
+      "bindings": [
+        {
+          "hash": "F22D027B37BEF107",
+          "kind": "enemy/v1/illuminate/illuminate_war_machine",
+          "basis": "reviewed_resource_alias"
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "key": "heavy_charger",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "强袭虫",
+      "enemy_key": "Charger",
+      "unit_class": "重型",
+      "condition": "击杀1个强袭虫。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-charger.png",
+      "faction": "terminids",
+      "hashes": [
+        "1A7FCDFF98C664B0"
+      ],
+      "bindings": [
+        {
+          "hash": "1A7FCDFF98C664B0",
+          "kind": "enemy/v1/terminids/charger",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "key": "heavy_charger_behemoth",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "巨兽级强袭虫",
+      "enemy_key": "Charger Behemoth",
+      "unit_class": "重型",
+      "condition": "击杀1个巨兽级强袭虫。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-charger-behemoth.png",
+      "faction": "terminids",
+      "hashes": [
+        "3AFF5FD7D5450B99",
+        "A05BD1EC67B3AC4C"
+      ],
+      "bindings": [
+        {
+          "hash": "3AFF5FD7D5450B99",
+          "kind": "enemy/v1/terminids/charger_bull",
+          "basis": "cloud_cells_and_runtime_health_type"
+        },
+        {
+          "hash": "A05BD1EC67B3AC4C",
+          "kind": "enemy/v1/terminids/charger_tier2",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "key": "heavy_spore_charger",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "孢子强袭虫",
+      "enemy_key": "Spore Charger",
+      "unit_class": "重型",
+      "condition": "击杀1个孢子强袭虫。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-spore-charger.png",
+      "faction": "terminids",
+      "hashes": [
+        "6B202392F4AB605E"
+      ],
+      "bindings": [
+        {
+          "hash": "6B202392F4AB605E",
+          "kind": "enemy/v1/terminids/charger_acid",
+          "basis": "runtime_wiki_anatomy"
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "key": "heavy_rupture_charger",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "爆裂强袭虫",
+      "enemy_key": "Rupture Charger",
+      "unit_class": "重型",
+      "condition": "击杀1个爆裂强袭虫。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-rupture-charger.png",
+      "faction": "terminids",
+      "hashes": [
+        "0AB7B92B131C228C"
+      ],
+      "bindings": [
+        {
+          "hash": "0AB7B92B131C228C",
+          "kind": "enemy/v1/terminids/charger_burrower",
+          "basis": "runtime_wiki_anatomy"
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "key": "heavy_impaler",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "穿刺虫",
+      "enemy_key": "Impaler",
+      "unit_class": "重型",
+      "condition": "击杀1个穿刺虫。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-impaler.png",
+      "faction": "terminids",
+      "hashes": [
+        "AE57FCDB49F74E98"
+      ],
+      "bindings": [
+        {
+          "hash": "AE57FCDB49F74E98",
+          "kind": "entity/v1/unresolved/AE57FCDB49F74E98",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "key": "heavy_hulk_bruiser",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "巨型碾压者",
+      "enemy_key": "Hulk Bruiser",
+      "unit_class": "重型",
+      "condition": "击杀1个巨型碾压者。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-hulk-bruiser.png",
+      "faction": "automatons",
+      "hashes": [
+        "137988CEA16458F7",
+        "32CDEADA234FB8DF"
+      ],
+      "bindings": [
+        {
+          "hash": "137988CEA16458F7",
+          "kind": "enemy/v1/automatons/lieutenant_suppressor",
+          "basis": "cloud_cells_and_runtime_health_type"
+        },
+        {
+          "hash": "32CDEADA234FB8DF",
+          "kind": "entity/v1/unresolved/32CDEADA234FB8DF",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "key": "heavy_hulk_scorcher",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "巨型炙炎者",
+      "enemy_key": "Hulk Scorcher",
+      "unit_class": "重型",
+      "condition": "击杀1个巨型炙炎者。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-hulk-scorcher.png",
+      "faction": "automatons",
+      "hashes": [
+        "3E0537D606438FEA",
+        "E44EC9F9B3FE1D2A"
+      ],
+      "bindings": [
+        {
+          "hash": "3E0537D606438FEA",
+          "kind": "enemy/v1/automatons/lieutenant_assault",
+          "basis": "cloud_cells_and_runtime_health_type"
+        },
+        {
+          "hash": "E44EC9F9B3FE1D2A",
+          "kind": "entity/v1/unresolved/E44EC9F9B3FE1D2A",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "key": "heavy_hulk_obliterator",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "巨型抹煞者",
+      "enemy_key": "Hulk Obliterator",
+      "unit_class": "重型",
+      "condition": "击杀1个巨型抹煞者。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-hulk-obliterator.png",
+      "faction": "automatons",
+      "hashes": [
+        "1E66EE1F6F7FD00E"
+      ],
+      "bindings": [
+        {
+          "hash": "1E66EE1F6F7FD00E",
+          "kind": "enemy/v1/automatons/lieutenant_artillery",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "key": "heavy_hulk_firebomber",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "巨型烈焰轰炸者",
+      "enemy_key": "Hulk Firebomber",
+      "unit_class": "重型",
+      "condition": "击杀1个巨型烈焰轰炸者。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-hulk-firebomber.png",
+      "faction": "automatons",
+      "hashes": [
+        "6DAB2EADF5D8B692"
+      ],
+      "bindings": [
+        {
+          "hash": "6DAB2EADF5D8B692",
+          "kind": "enemy/v1/automatons/lieutenant_ivory_legion",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "key": "heavy_annihilator_tank",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "湮灭坦克",
+      "enemy_key": "Annihilator Tank",
+      "unit_class": "重型",
+      "condition": "击杀1个湮灭坦克。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-annihilator-tank.png",
+      "faction": "automatons",
+      "hashes": [
+        "53D8919D7B8ABD67"
+      ],
+      "bindings": [
+        {
+          "hash": "53D8919D7B8ABD67",
+          "kind": "enemy/v1/automatons/tank_heavycannon",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T11",
+      "key": "heavy_barrager_tank",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "铁幕坦克",
+      "enemy_key": "Barrager Tank",
+      "unit_class": "重型",
+      "condition": "击杀1个铁幕坦克。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-barrager-tank.png",
+      "faction": "automatons",
+      "hashes": [
+        "63DF3D07B7424588"
+      ],
+      "bindings": [
+        {
+          "hash": "63DF3D07B7424588",
+          "kind": "enemy/v1/automatons/tank_rocketlauncher",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T12",
+      "key": "heavy_shredder_tank",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "碎裂坦克",
+      "enemy_key": "Shredder Tank",
+      "unit_class": "重型",
+      "condition": "击杀1个碎裂坦克。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-shredder-tank.png",
+      "faction": "automatons",
+      "hashes": [
+        "C6449FFD9EA3779C"
+      ],
+      "bindings": [
+        {
+          "hash": "C6449FFD9EA3779C",
+          "kind": "enemy/v1/automatons/tank_autocannons",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T13",
+      "key": "heavy_war_strider",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "战争纵步者",
+      "enemy_key": "War Strider",
+      "unit_class": "重型",
+      "condition": "击杀1个战争纵步者。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-war-strider.png",
+      "faction": "automatons",
+      "hashes": [
+        "EF570293245A17C2"
+      ],
+      "bindings": [
+        {
+          "hash": "EF570293245A17C2",
+          "kind": "enemy/v1/automatons/assault_walker",
+          "basis": "cloud_cells_and_runtime_health_type"
+        }
+      ]
+    },
+    {
+      "id": "T14",
+      "key": "heavy_veracitor",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "证真者",
+      "enemy_key": "Veracitor",
+      "unit_class": "重型",
+      "condition": "击杀1个证真者。",
+      "file": "../artwork/review-0.4.57-ribbons-v5/enemies/heavy-veracitor.png",
+      "faction": "illuminate",
+      "hashes": [
+        "20B9C7734DAEAD65"
+      ],
+      "bindings": [
+        {
+          "hash": "20B9C7734DAEAD65",
+          "kind": "enemy/v1/illuminate/exomech_melee",
+          "basis": "runtime_wiki_anatomy"
+        }
+      ]
+    },
+    {
+      "id": "T15",
+      "key": "heavy_gatekeeper",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "御门者",
+      "enemy_key": "Gatekeeper",
+      "unit_class": "重型",
+      "condition": "击杀1个御门者。",
+      "file": "../artwork/review-0.4.57-ribbons-v5/enemies/heavy-gatekeeper.png",
+      "faction": "illuminate",
+      "hashes": [
+        "453FE22C634EB30F"
+      ],
+      "bindings": [
+        {
+          "hash": "453FE22C634EB30F",
+          "kind": "enemy/v1/illuminate/exomech_ranged",
+          "basis": "runtime_wiki_anatomy"
+        }
+      ]
+    },
+    {
+      "id": "T16",
+      "key": "heavy_fleshmob",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "肉瘤体",
+      "enemy_key": "Fleshmob",
+      "unit_class": "重型",
+      "condition": "击杀1个肉瘤体。",
+      "file": "../artwork/review-0.4.57-ribbons-v5/enemies/heavy-fleshmob.png",
+      "faction": "illuminate",
+      "hashes": [
+        "67DC32DCA4F02D33"
+      ],
+      "bindings": [
+        {
+          "hash": "67DC32DCA4F02D33",
+          "kind": "enemy/v1/illuminate/meatglue",
+          "basis": "runtime_wiki_anatomy"
+        }
+      ]
+    },
+    {
+      "id": "T17",
+      "key": "heavy_crusher",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "粉碎者",
+      "enemy_key": "Crusher",
+      "unit_class": "重型",
+      "condition": "击杀1个粉碎者。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-crusher.png",
+      "faction": "illuminate",
+      "hashes": [
+        "905809A4C28D8A45"
+      ],
+      "bindings": [
+        {
+          "hash": "905809A4C28D8A45",
+          "kind": "enemy/v1/illuminate/bodyhorror_helmetguy",
+          "basis": "runtime_wiki_anatomy"
+        }
+      ]
+    },
+    {
+      "id": "T18",
+      "key": "heavy_harvester",
+      "name": "反重",
+      "kind": "ribbon",
+      "unit": "猎杀器",
+      "enemy_key": "Harvester",
+      "unit_class": "重型",
+      "condition": "击杀1个猎杀器。",
+      "file": "../artwork/review-0.4.57-ribbons-v4/heavy-harvester.png",
+      "faction": "illuminate",
+      "hashes": [
+        "965EAE5A51ACDD4A",
+        "D63FCBFF0851B7AF"
+      ],
+      "bindings": [
+        {
+          "hash": "965EAE5A51ACDD4A",
+          "kind": "enemy/v1/illuminate/tripod",
+          "basis": "reviewed_resource_alias"
+        },
+        {
+          "hash": "D63FCBFF0851B7AF",
+          "kind": "enemy/v1/illuminate/tripod_tier_2",
+          "basis": "reviewed_resource_alias"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "method": "HUD flat two-ink mask compilation",
+  "source_art_preserved": true,
+  "runtime_unchanged": true,
+  "items": [
+    {
+      "source": "artwork\\review-0.4.57-ribbons-v5\\medals\\other\\tyranny-speed-bump.png",
+      "source_sha256": "d38cb6f730f93bd916840a7595c7beb153ff585b586fa477ab3453074b60c8fc",
+      "compiled": "artwork\\review-0.4.57-ribbons-v5\\compiled\\tyranny-speed-bump.png",
+      "compiled_sha256": "1eb93ea950dc72297d27f536c4c37f2ecba2e67a1d50abb8990fdd98576227a7",
+      "size": [
+        752,
+        952
+      ],
+      "alpha_threshold": 160,
+      "palette": [
+        [
+          255,
+          249,
+          237
+        ],
+        [
+          199,
+          185,
+          128
+        ]
+      ]
+    },
+    {
+      "source": "artwork\\review-0.4.57-ribbons-v5\\medals\\stars\\medal-democracy-star.png",
+      "source_sha256": "df1193bda2cf9df60db36f4b39605cefd088cdd2d6f227f31c55ac1fe00a9fc2",
+      "compiled": "artwork\\review-0.4.57-ribbons-v5\\compiled\\medal-democracy-star.png",
+      "compiled_sha256": "58aa901f93cef8916c3f03f1583f2aeec20f4849ce77f9571b8a60ccddeda5bd",
+      "size": [
+        663,
+        892
+      ],
+      "alpha_threshold": 160,
+      "palette": [
+        [
+          255,
+          249,
+          237
+        ],
+        [
+          199,
+          185,
+          128
+        ]
+      ]
+    },
+    {
+      "source": "artwork\\review-0.4.57-ribbons-v5\\medals\\stars\\medal-super-democracy-star.png",
+      "source_sha256": "18c5983ae90f93b25c12841fd82c6f239aefa6e61aad3851e2566fbb19bb20f3",
+      "compiled": "artwork\\review-0.4.57-ribbons-v5\\compiled\\medal-super-democracy-star.png",
+      "compiled_sha256": "f1dcb9a38c0dd537f7e94ccde85f2cf46f1a37ba70d6ceb0f4834adcd9837c76",
+      "size": [
+        665,
+        866
+      ],
+      "alpha_threshold": 160,
+      "palette": [
+        [
+          255,
+          249,
+          237
+        ],
+        [
+          199,
+          185,
+          128
+        ]
+      ]
+    },
+    {
+      "source": "artwork\\review-0.4.57-ribbons-v5\\medals\\stars\\medal-supreme-democracy-star.png",
+      "source_sha256": "2f62fc1700dab233208ed66d4f8cf5808188f2e397a4c83b7df807b95eb47442",
+      "compiled": "artwork\\review-0.4.57-ribbons-v5\\compiled\\medal-supreme-democracy-star.png",
+      "compiled_sha256": "cd5e568b7d3da8aa3f75f7c5364440147b2c64571837ca4b06c34722b2d7dc85",
+      "size": [
+        631,
+        873
+      ],
+      "alpha_threshold": 160,
+      "palette": [
+        [
+          255,
+          249,
+          237
+        ],
+        [
+          199,
+          185,
+          128
+        ]
+      ]
+    },
+    {
+      "source": "artwork\\review-0.4.57-ribbons-v5\\medals\\other\\level-not-problem-scissors.png",
+      "source_sha256": "942574b8f2bfb3eebabf2142f423511f15f2a5c64215c6d6650a4beff2ef8cf8",
+      "compiled": "artwork\\review-0.4.57-ribbons-v5\\compiled\\level-not-problem-scissors.png",
+      "compiled_sha256": "4f79593cc807cffeca25a191d5d0849c72a2007101963450688b21895d5f4720",
+      "size": [
+        685,
+        886
+      ],
+      "alpha_threshold": 160,
+      "palette": [
+        [
+          255,
+          249,
+          237
+        ],
+        [
+          199,
+          185,
+          128
+        ]
+      ]
+    },
+    {
+      "source": "artwork\\review-0.4.57-ribbons-v5\\melee\\armored-generated.png",
+      "source_sha256": "43e0fce528e52a30898a7d2510053e4291fb311803c41d2c8a4b751176404d49",
+      "compiled": "artwork\\review-0.4.57-ribbons-v5\\compiled\\ribbon-melee-elbow.png",
+      "compiled_sha256": "a47415c44315b836d872fb8974024b6f71a08eccf771bfd172c22980e8d553cb",
+      "size": [
+        871,
+        674
+      ],
+      "alpha_threshold": 160,
+      "palette": [
+        [
+          255,
+          249,
+          237
+        ]
+      ]
+    }
+  ]
+}
