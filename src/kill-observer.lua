@@ -340,6 +340,8 @@ return function(world_api, natives, catalog, on_death, options)
                         local mapped=resolver and resolver:resolve(row,entry.damage_trace,clock)
                         if mapped then row.source_type,row.source_inferred,row.source_policy=mapped.type,mapped.inferred,mapped.basis end
                         if mapped and mapped.local_source then row.local_source=true end
+                        row.source_kind=row.source_type and type(source_types[row.source_type])=='table'
+                            and source_types[row.source_type].kind or nil
                         entry.damage_trace=trace:observe(entry.damage_trace,row)
                         consumed=consumed+1
                         diag.contact_sources=(diag.contact_sources or 0)+1
@@ -408,6 +410,28 @@ return function(world_api, natives, catalog, on_death, options)
                 readable=stable==true,local_source=creditor(base)==player.peer,creditor_missing=creditor(base)==nil}
             if stable and cause and cause.kind==4 and owner==event.entity_id and entry.enemy then
                 row.source_type,row.mechanism,row.source_policy=raw_type or entry.type,'self_explosion','native_target_self_explosion_owner'
+                -- An instant collision may follow the first live baseline:
+                -- its cached lastOwner already named the falling body, so
+                -- no intermediate HP/owner change called enrich(). Resolve
+                -- only that same target's recent cached owner, never a pod
+                -- elsewhere in the world or a source from a global batch.
+                local prior=previous_trace
+                if prior and prior.baseline==true and prior.complete==true and prior.life and prior.life<2
+                    and prior.entity==event.entity_id and prior.pointer==entry.pointer
+                    and prior.unit==entry.unit and prior.epoch==life_epoch
+                    and type(prior.observed_at)=='number'and clock>=prior.observed_at
+                    and clock-prior.observed_at<=WINDOW+1e-9
+                    and entry.damage_owner and entry.damage_owner~=0 and entry.damage_owner~=event.entity_id
+                    and(row.local_source or row.creditor_missing)then
+                    local pod=owner_type(entry.damage_owner)
+                    if pod and type(source_types[pod])=='table'and source_types[pod].kind=='hellpod'then
+                        entry.damage_trace=trace:observe(prior,{entity=event.entity_id,pointer=entry.pointer,
+                            unit=entry.unit,epoch=life_epoch,health=entry.health,life=entry.life,
+                            now=prior.observed_at,damage_observed=false,readable=true,
+                            source_type=pod,source_kind='hellpod',owner=entry.damage_owner,
+                            local_source=row.local_source,creditor_missing=row.creditor_missing})
+                    end
+                end
             elseif stable and enemy_source(raw_type)and owner~=event.entity_id then
                 row.mechanism,row.source_policy='enemy_damage','native_enemy_damage_owner'
             end
@@ -415,7 +439,7 @@ return function(world_api, natives, catalog, on_death, options)
                 -- No target scan: only an already changing Health entry can
                 -- use the optional, bounded native position reader.
                 row.explosion_damage=cause and cause.kind==4 or false
-                if not pure_contact and (row.explosion_damage or damage_observed and resolver:has_status_context(clock))
+                if not pure_contact and (row.explosion_damage or damage_observed and resolver:has_status_context(clock,life==2))
                     and not row.source_type and resolver:has_context(clock)
                     and type(options.unit_position)=='function'and os.clock()-started<.002 then
                     row.position=position_once()
@@ -430,6 +454,8 @@ return function(world_api, natives, catalog, on_death, options)
                 diag.source_deferred=(diag.source_deferred or 0)+1
                 return event,true
             end
+            row.source_kind=row.source_type and type(source_types[row.source_type])=='table'
+                and source_types[row.source_type].kind or nil
             entry.damage_trace=trace:observe(entry.damage_trace,row)
             event.damage_source=trace:death(entry.damage_trace)
             return event

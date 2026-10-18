@@ -2,7 +2,7 @@
 -- bytes, real attribution/rewards/career/persistence. No synthetic kill event
 -- or replacement production module supplies the missing gas source anchor.
 local addon,runtime,fixture,target_fixture=assert(arg[1]),assert(arg[2]),assert(arg[3]),assert(arg[4])
-local expected_version=arg[5]and arg[5]:match('([^/\\]+)$')or'0.4.65'
+local expected_version=arg[5]and arg[5]:match('([^/\\]+)$')or'0.4.66'
 local function read(path)local f=assert(io.open(path,'rb'));local s=f:read('*a'):gsub('\r\n','\n');f:close();return s end
 assert(read(addon):find("local VERSION = '"..expected_version.."'",1,true),'actual built '..expected_version)
 local native=read(fixture);local boundary=assert(native:find('state=dofile(path).state',1,true))

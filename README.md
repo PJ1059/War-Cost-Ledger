@@ -2,9 +2,9 @@
 
 ![War Cost Ledger — actual combat footage and recorded career panels](artwork/mod-covers-0.4.65-v2/war-cost-ledger-cover-en-1920x1080.png)
 
-**0.4.65** · Combat feedback, career records and an optional fictional war-cost ledger for **HELLDIVERS 2**.
+**0.4.66** · Combat feedback, career records and an optional fictional war-cost ledger for **HELLDIVERS 2**.
 
-[Nexus Mods](https://www.nexusmods.com/helldivers2/mods/17499) · [Download](https://github.com/PJ1059/War-Cost-Ledger/releases/tag/v0.4.65) · [Release notes](docs/releases/v0.4.65.md) · [Build from source](docs/BUILDING.md) · [Credits](THIRD-PARTY.md) · [Data and image sources](docs/DATA-SOURCES.md)
+[Nexus Mods](https://www.nexusmods.com/helldivers2/mods/17499) · [Download](https://github.com/PJ1059/War-Cost-Ledger/releases/tag/v0.4.66) · [Release notes](docs/releases/v0.4.66.md) · [Build from source](docs/BUILDING.md) · [Credits](THIRD-PARTY.md) · [Data and image sources](docs/DATA-SOURCES.md)
 
 ## Features
 
@@ -16,10 +16,12 @@
 
 The source resolver combines observed runtime evidence with weapon/projectile/explosion/beam/arc catalogs. A continuous damage chain can retain the last known weapon through unknown damage when damage observations remain within five seconds. Shared effects, simultaneous kills and unavailable events can still produce unknown or approximate attribution; this is not a guarantee of perfect statistics.
 
+0.4.66 adds target-bound hellpod protection against death self-explosions and bounded ground-fire attribution for nine source families across eleven exact explosion events. Spray-created fire remains a documented gap; see the [release notes](docs/releases/v0.4.66.md).
+
 ## Installation
 
 1. Exit the game. Install the dependencies below separately.
-2. Import `HD2-War-Cost-Ledger-0.4.65.zip` into Arsenal and enable only one version of this mod. Keep **Bingus Shared Loader last** in the load order.
+2. Import `HD2-War-Cost-Ledger-0.4.66.zip` into Arsenal and enable only one version of this mod. Keep **Bingus Shared Loader last** in the load order.
 3. Open **ESC → MODS → War Cost Ledger** to configure the mod. **F8** toggles the combat display. Visit the **Armory → Career** page for the archive.
 
 | Dependency | Version used by this project |
@@ -54,7 +56,7 @@ Prices, the fixed currency snapshot, hashes, damage tables, enemy names and each
 
 ## 中文说明
 
-这是《绝地潜兵 2》的战果与虚拟战争账单 MOD。当前版本 **0.4.65** 提供命中与穿甲反馈、绶带和成就、击杀来源、生涯 KD 曲线、逐局/武器/敌人/死因档案，以及可关闭的战争费用统计。
+这是《绝地潜兵 2》的战果与虚拟战争账单 MOD。当前版本 **0.4.66** 提供命中与穿甲反馈、绶带和成就、击杀来源、生涯 KD 曲线、逐局/武器/敌人/死因档案，以及可关闭的战争费用统计。
 
 简体或繁体中文游戏语言使用中文，其他语言自动切换英语。击杀提示只保留最新一条，无新击杀五秒后消失；关闭提示仍继续记录生涯。战争账单为项目自定的虚拟军需价格，不是真实扣款。
 

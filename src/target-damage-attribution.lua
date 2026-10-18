@@ -1,7 +1,7 @@
 -- Per-target, observation-time damage chains. Unknown damage keeps the latest
 -- named weapon while real HP loss/death observations stay at most 5s apart.
 return function()
-    local api={policy='same_target_continuous_damage_chain',version=2,gap=5}
+    local api={policy='same_target_continuous_damage_chain',version=2,gap=5,pod_window=.75}
     local function hash(v)return type(v)=='string'and #v==16 and not v:find('[^%x]')and v~='0000000000000000'and v:upper()or nil end
     local function clock(v)return type(v)=='number'and v==v and v>=0 and v<math.huge end
     local function identity(a,b)
@@ -12,6 +12,31 @@ return function()
         out.chain_mechanism=previous.chain_mechanism
         out.last_damage_at,out.last_known_at=previous.last_damage_at,previous.last_known_at
         out.chain_had_source,out.chain_expired=previous.chain_had_source,previous.chain_expired
+    end
+    local function self_blast(row)
+        return row.mechanism=='self_explosion'and row.kind==4 and row.owner==row.entity
+            and type(row.life)=='number'and row.life>=2
+    end
+    local function copy_pod(out,previous,row,id,now)
+        -- A verified falling-body owner can arrive just before replicated HP.
+        -- Keep this target-only evidence briefly without creating/renewing a
+        -- weapon damage chain. Re-reading the same owner does not renew it.
+        local eligible=row.local_source==true or row.creditor_missing==true
+        if not eligible then return end
+        if identity(previous,row)and previous.complete==true
+            and(type(previous.life)=='number'and previous.life<2 or previous.death_only_at==now)
+            and clock(previous.pod_observed_at)and now>=previous.pod_observed_at then
+            out.pod_source,out.pod_owner,out.pod_observed_at=
+                previous.pod_source,previous.pod_owner,previous.pod_observed_at
+        end
+        if id and row.source_kind=='hellpod'and not row.mechanism then
+            if out.pod_source~=id or out.pod_owner~=row.owner then
+                out.pod_source,out.pod_owner,out.pod_observed_at=id,row.owner,now
+            end
+        elseif id and not self_blast(row)
+            or row.damage_observed==true and not self_blast(row)and out.pod_owner~=row.owner then
+            out.pod_source,out.pod_owner,out.pod_observed_at=nil,nil,nil
+        end
     end
     function api:baseline(row)
         return {entity=row.entity,pointer=row.pointer,unit=row.unit,epoch=row.epoch,
@@ -25,6 +50,16 @@ return function()
             kind=row.kind,element=row.element,local_source=row.local_source==true,
             damage_token=row.damage_token,damage_info_id=row.damage_info_id,observed_at=now}
         if row.readable~=true or not clock(now)then out.complete=false;return out end
+        copy_pod(out,previous,row,id,now)
+        if self_blast(row)and out.pod_source and clock(out.pod_observed_at)
+            and now-out.pod_observed_at<=self.pod_window+1e-9
+            and not(previous and previous.chain_source==out.pod_source and previous.chain_local==true)then
+            out.type,out.inferred,out.barrier=out.pod_source,true,false
+            out.local_source,out.mechanism=true,nil
+            out.source_policy='same_target_recent_pod_before_self_explosion'
+            if row.first_seen_dead==true then out.death_only_type,out.death_only_at=out.type,now end
+            return out
+        end
         -- A first-seen corpse can expose a real source for this one death,
         -- but never supplies an alive damage timestamp or an inheritable chain.
         if row.first_seen_dead==true then

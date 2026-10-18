@@ -1,8 +1,8 @@
 # 数据与图像来源 / Data and image sources
 
-范围：0.4.65 公开源码与发行说明。记录实际使用的资料及来源边界；不把社区整理数据、游戏渲染图或其他 MOD 改编部分归为本项目独占原创。软件作者与依赖许可另见 [THIRD-PARTY](../THIRD-PARTY.md) 和 [NOTICE](../NOTICE)。
+范围：0.4.66 公开源码与发行说明。记录实际使用的资料及来源边界；不把社区整理数据、游戏渲染图或其他 MOD 改编部分归为本项目独占原创。软件作者与依赖许可另见 [THIRD-PARTY](../THIRD-PARTY.md) 和 [NOTICE](../NOTICE)。
 
-Scope: public source and release documentation for 0.4.65. This register distinguishes project work from community data, game renders and adapted material. Software credits and licensing are in [THIRD-PARTY](../THIRD-PARTY.md) and [NOTICE](../NOTICE).
+Scope: public source and release documentation for 0.4.66. This register distinguishes project work from community data, game renders and adapted material. Software credits and licensing are in [THIRD-PARTY](../THIRD-PARTY.md) and [NOTICE](../NOTICE).
 
 ## 费用 / Prices
 
@@ -112,3 +112,7 @@ The 24 enemy ribbons use existing game renders: crop, remove irrelevant subjects
 这里记录已知缺口，不宣称原作者已许可，也不以来源缺口替代对具体使用方式的判断。若来源作者提供补充署名或许可，应更新此索引。
 
 These are specific gaps in the record, not claims of permission or blanket conclusions about every use. Update the register when source authors provide corrections or terms.
+
+## Ground-fire attribution, 0.4.66
+
+[ground-fire-contexts-0.4.66.json](ground-fire-contexts-0.4.66.json) records pinned Runtime/Filediver input hashes, typed explosion/projectile/component identities, source ownership and individual Helldivers Wiki duration links. The 27/20/15/6-second grenade windows are community ground-pool reports, not verified native lifetimes; other enabled events use an explicit five-second association rule. Native outer explosion radii bound inference and do not prove the exact terrain footprint. Spray-created and code-created areas have no verified creator/position collection path in this release. No live sampling dump is included.

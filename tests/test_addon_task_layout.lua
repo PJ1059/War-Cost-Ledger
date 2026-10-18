@@ -214,7 +214,7 @@ local function boot(options)
     function menu.on_change(id,callback)f.callbacks[id]=callback;return true end
     rawset(_G,'ModOptionsMenu',menu);rawset(_G,'HD2WarCostLedgerV1',nil)
     f.module=dofile(addon_path)
-    assert(f.module.version=='0.4.65' and type(f.module.task_layout_status)=='function' and f.module.native_ui.task)
+    assert(f.module.version=='0.4.66' and type(f.module.task_layout_status)=='function' and f.module.native_ui.task)
     assert(type(f.module.native_hud_snapshot)=='function','native feed must be public to the native HUD host')
     function f:status()return self.module.task_layout_status() end
     function f:apply(id,value)id=prefix..id;assert(self.callbacks[id]);self.values[id]=value;self.callbacks[id](value,id) end
@@ -435,4 +435,4 @@ check('failed/short writes roll back the current owned gap before any native cal
 end)
 
 assert(#failures==0,table.concat(failures,'\n'))
-print('Addon task relocation integration tests: '..count..' passed; actual built 0.4.65, saved real nodes/PINs, native feed and simulated placement; live display/FPS remain unverified.')
+print('Addon task relocation integration tests: '..count..' passed; actual built 0.4.66, saved real nodes/PINs, native feed and simulated placement; live display/FPS remain unverified.')

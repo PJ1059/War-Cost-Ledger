@@ -1,3 +1,9 @@
+# 0.4.66 · Ground-fire and hellpod attribution limits
+
+Hellpod evidence is target-bound and expires after 0.75 seconds without renewal from repeated metadata. Missing pod evidence cannot be reconstructed. Ground-fire inference covers nine source families and eleven exact local explosion events, requiring position, reliable fatal fire type and local ownership/quota. Spray weapons, flame sentries/drones/vehicles and code-created fire remain gaps. The four grenade duration reports are heuristic windows; other events use five seconds. Old records are preserved. Offline replays and successful loading do not measure multiplayer accuracy or frame rate. See [release notes](docs/releases/v0.4.66.md) and the [catalogue](docs/ground-fire-contexts-0.4.66.json).
+
+## Previous versions
+
 # 0.4.64 · 当前局限与未接入功能
 
 孢子强袭虫／孢裂变种的死亡自爆与已知武器按同目标 5 秒真实伤害链衔接；没有存活期武器线索、目标身份断裂或伤害间隔超过窗口时，仍保留自爆或未知。并发未知武器可能沿用前一已知来源，内部证据继续保存，玩家界面去掉推测标签。孢裂变种以真实资源身份的离线用例验证，尚无本机实战记录。

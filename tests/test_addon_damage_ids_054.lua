@@ -74,7 +74,7 @@ function transport.attach(given,options)
 end
 rawset(_G,'HD2OwnedTransport',transport)
 local built=read(path)
-assert(built:find("local VERSION = '0.4.65'",1,true))
+assert(built:find("local VERSION = '0.4.66'",1,true))
 local function replace_module(start,finish,replacement)
     local a=assert(built:find(start,1,true));local z=assert(built:find(finish,a,true))
     built=built:sub(1,a-1)..replacement..built:sub(z)

@@ -1,8 +1,8 @@
 # Build and verify / 构建与验证
 
-This source snapshot builds **HD2 War Cost Ledger 0.4.65**. Run commands from the repository root on 64-bit Windows. Building is offline and does not install the mod or access a running game.
+This source snapshot builds **HD2 War Cost Ledger 0.4.66**. Run commands from the repository root on 64-bit Windows. Building is offline and does not install the mod or access a running game.
 
-本公开源码用于构建 **0.4.65**。在 Windows 64 位系统的仓库根目录运行以下命令；构建不会安装 MOD，也不会访问正在运行的游戏。
+本公开源码用于构建 **0.4.66**。在 Windows 64 位系统的仓库根目录运行以下命令；构建不会安装 MOD，也不会访问正在运行的游戏。
 
 ## Build inputs / 构建输入
 
@@ -16,7 +16,7 @@ $env:HD2_RUNTIME_SDK = "$env:HD2_RUNTIME_SOURCE/sdk"
 python -X utf8 -B tools/build.py
 ```
 
-Output: `dist/HD2-War-Cost-Ledger-0.4.65.zip`. The package contains three `Addon/` archive files and the mod-manager manifest. The main archive contains 125 resources, including 53 award images, four metric images, two trend indicators, the ribbon frame and UI support. Existing PNGs are read without redrawing them. The original runtime dependencies remain separate downloads.
+Output: `dist/HD2-War-Cost-Ledger-0.4.66.zip`. The package contains three `Addon/` archive files and the mod-manager manifest. The main archive contains 125 resources, including 53 award images, four metric images, two trend indicators, the ribbon frame and UI support. Existing PNGs are read without redrawing them. The original runtime dependencies remain separate downloads.
 
 输出为上述 ZIP；使用 MOD 管理器导入。生产构建沿用已审阅 PNG 和价格表，不重新生成图像，也不重新抓取网页、哈希表或用户存档。运行时依赖仍须单独安装。
 
@@ -66,3 +66,7 @@ The legacy diagnostic checks require the original bughole diagnostic input, capt
 `src/` contains production Lua. `tools/build.py` is the build entry, `tools/test.py` is the regression entry, and remaining diagnostic tools are specialist research utilities rather than end-user installers. Public source excludes local deployment/update scripts, accounts, save files, logs, browser caches and review HTML. Build outputs stay in ignored `build/` and `dist/` directories.
 
 Metadata paths use repository-relative names or pinned upstream identities. Changing only those provenance paths requires corresponding whole-file checksum references to be refreshed; it does not justify changing game resource IDs, code pins, prices or artwork bytes. Licensing and source credits are in [THIRD-PARTY](../THIRD-PARTY.md), [NOTICE](../NOTICE) and [DATA-SOURCES](DATA-SOURCES.md).
+
+## Ground-fire catalogue
+
+`python -X utf8 -B tools/ground-fire-contexts.py --check` re-derives the 0.4.66 catalogue from the pinned Runtime and Filediver datalibrary above. It covers every positive explosion/projectile/component FireTemplate row, while enabling only eleven reviewed explosion events. It never reads a running game. The full regression includes the eleven-event built-addon replay.

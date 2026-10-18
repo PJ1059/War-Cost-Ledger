@@ -1,0 +1,2515 @@
+{
+  "schema": 1,
+  "build": "F5FEE03DCFDB",
+  "runtime_commit": "dcd996daca2573443956c07252c55c2d86dd0320",
+  "policy": "reviewed_ground_fire_area_heuristic",
+  "entries": {
+    "stratagem/eagle_napalm_airstrike/payload_impact": {
+      "source_type": "27BB558C893383CC",
+      "radius": 10.0,
+      "status": "fire",
+      "status_duration": 5,
+      "explosion_id": 359,
+      "damage_info_id": 390,
+      "fire_template": 4,
+      "window_policy": "conservative_area_window",
+      "conservative_area_window": 5
+    },
+    "stratagem/mdi4_incendiary_mines/mine": {
+      "source_type": "BF32E12923A9A252",
+      "radius": 4.0,
+      "status": "fire",
+      "status_duration": 5,
+      "explosion_id": 72,
+      "damage_info_id": 407,
+      "fire_template": 3,
+      "window_policy": "conservative_area_window",
+      "conservative_area_window": 5,
+      "required_event_types": [
+        "BF32E12923A9A252",
+        "E49A5AE078AAD407"
+      ],
+      "source_scope": "exact_event_constrained_named_family"
+    },
+    "stratagem/orbital_napalm_barrage/shell_impact": {
+      "source_type": "A16AB4FF66AE6970",
+      "radius": 10.0,
+      "status": "fire",
+      "status_duration": 5,
+      "explosion_id": 63,
+      "damage_info_id": 266,
+      "fire_template": 4,
+      "window_policy": "conservative_area_window",
+      "conservative_area_window": 5
+    },
+    "stratagem/orbital_napalm_barrage/shell_impact_2": {
+      "source_type": "A16AB4FF66AE6970",
+      "radius": 10.0,
+      "status": "fire",
+      "status_duration": 5,
+      "explosion_id": 74,
+      "damage_info_id": 266,
+      "fire_template": 4,
+      "window_policy": "conservative_area_window",
+      "conservative_area_window": 5
+    },
+    "support_weapon/eat700_expendable_napalm/impact": {
+      "source_type": "B2B5E0D185605F9E",
+      "radius": 8.0,
+      "status": "fire",
+      "status_duration": 5,
+      "explosion_id": 316,
+      "damage_info_id": 316,
+      "fire_template": 4,
+      "window_policy": "conservative_area_window",
+      "conservative_area_window": 5
+    },
+    "support_weapon/eat700_expendable_napalm/impact/shrapnel_impact": {
+      "source_type": "B2B5E0D185605F9E",
+      "radius": 5.0,
+      "status": "fire",
+      "status_duration": 5,
+      "explosion_id": 26,
+      "damage_info_id": 276,
+      "fire_template": 4,
+      "window_policy": "conservative_area_window",
+      "conservative_area_window": 5
+    },
+    "throwable/g10_incendiary/detonation": {
+      "source_type": "04653AB33F3FFB44",
+      "radius": 7.0,
+      "status": "fire",
+      "status_duration": 20,
+      "explosion_id": 224,
+      "damage_info_id": 338,
+      "fire_template": 4,
+      "window_policy": "documented_area_duration_heuristic"
+    },
+    "throwable/g13_incendiary_impact/detonation": {
+      "source_type": "EB725C39FC38B87C",
+      "radius": 7.0,
+      "status": "fire",
+      "status_duration": 15,
+      "explosion_id": 69,
+      "damage_info_id": 340,
+      "fire_template": 3,
+      "window_policy": "documented_area_duration_heuristic"
+    },
+    "throwable/g142_pyrotech/detonation": {
+      "source_type": "03F31CAF3A7D8F4E",
+      "radius": 5.0,
+      "status": "fire",
+      "status_duration": 6,
+      "explosion_id": 409,
+      "damage_info_id": 26,
+      "fire_template": 2,
+      "window_policy": "documented_area_duration_heuristic"
+    },
+    "throwable/g40k_melta_mine/detonation": {
+      "source_type": "EE4C107B941AB7F4",
+      "radius": 6.0,
+      "status": "fire",
+      "status_duration": 5,
+      "explosion_id": 368,
+      "damage_info_id": 410,
+      "fire_template": 1,
+      "window_policy": "conservative_area_window",
+      "conservative_area_window": 5
+    },
+    "throwable/g8_immolation/detonation": {
+      "source_type": "5C14F27759DD3BE0",
+      "radius": 10.0,
+      "status": "fire",
+      "status_duration": 27,
+      "explosion_id": 32,
+      "damage_info_id": 339,
+      "fire_template": 4,
+      "window_policy": "documented_area_duration_heuristic"
+    }
+  },
+  "catalogue": [
+    {
+      "node": "explosion:14",
+      "kind": "explosion",
+      "native_id": 14,
+      "record_index": 212,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 390,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 1.600000023841858,
+        "outer": 8.0,
+        "shockwave": 10.0
+      },
+      "association_radius": 8.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:20",
+      "kind": "explosion",
+      "native_id": 20,
+      "record_index": 289,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 390,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 1.600000023841858,
+        "outer": 13.0,
+        "shockwave": 20.0
+      },
+      "association_radius": 13.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:26",
+      "kind": "explosion",
+      "native_id": 26,
+      "record_index": 221,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 276,
+      "event_names": [
+        "support_weapon/eat700_expendable_napalm/impact/shrapnel_impact"
+      ],
+      "sources": [
+        {
+          "source_type": "B2B5E0D185605F9E",
+          "sdk_names": [
+            {
+              "name": "EAT-700 Expendable Napalm",
+              "kind": "support_weapon",
+              "artifact": "sdk/SupportWeaponCapabilities.json"
+            }
+          ],
+          "name": "EAT-700 Expendable Napalm",
+          "kind": "weapon",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/support_weapons/expendable_napalm_launcher/expendable_napalm_launcher"
+        }
+      ],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "support_weapon/eat700_expendable_napalm/impact/shrapnel_impact",
+          "family": "support_weapon",
+          "evidence": "chain",
+          "owners": [
+            {
+              "category": "explosion",
+              "name": "support_weapon/eat700_expendable_napalm/impact",
+              "role": "shrapnel_impact",
+              "reference": "chain"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 1.600000023841858,
+        "outer": 5.0,
+        "shockwave": 5.0
+      },
+      "association_radius": 5.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": null,
+        "verified_native_lifetime": false,
+        "basis": "Actual ground-pool lifetime is not closed by reviewed data."
+      },
+      "association_window": {
+        "seconds": 5,
+        "policy": "conservative_area_window",
+        "basis": "Project attribution rule: use only the first5 seconds after this exact observed local detonation. This is not a claim that the ground fire lasts5 seconds."
+      },
+      "pending_duration_reports": [
+        {
+          "url": "https://helldivers.wiki.gg/wiki/EAT-700_Expendable_Napalm",
+          "basis": "Individual bomblet impact has its own observed position; no exact pool lifetime is proven. Do not use the carrier impact as every bomblet position."
+        }
+      ]
+    },
+    {
+      "node": "explosion:32",
+      "kind": "explosion",
+      "native_id": 32,
+      "record_index": 82,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 339,
+      "event_names": [
+        "throwable/g8_immolation/detonation"
+      ],
+      "sources": [
+        {
+          "source_type": "5C14F27759DD3BE0",
+          "sdk_names": [],
+          "name": "G-8 Immolation",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/molotov_grenade/molotov_grenade"
+        }
+      ],
+      "direct_resource_owners": [
+        {
+          "source_type": "5C14F27759DD3BE0",
+          "sdk_names": [],
+          "name": "G-8 Immolation",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/molotov_grenade/molotov_grenade"
+        }
+      ],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "throwable/g8_immolation/detonation",
+          "family": "throwable",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "throwable",
+              "name": "G-8 Immolation",
+              "role": "detonation",
+              "reference": "component"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 4.0,
+        "outer": 10.0,
+        "shockwave": 10.0
+      },
+      "association_radius": 10.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": 27,
+        "url": "https://helldivers.wiki.gg/wiki/G-8_Immolation",
+        "basis": "Community field report describes a 27-second ground pool; not a native lifetime field or a local live measurement.",
+        "verified_native_lifetime": false,
+        "live_tested": false
+      },
+      "association_window": {
+        "seconds": 27,
+        "policy": "documented_area_duration_heuristic"
+      }
+    },
+    {
+      "node": "explosion:33",
+      "kind": "explosion",
+      "native_id": 33,
+      "record_index": 24,
+      "fire_template": 2,
+      "fire_template_name": "Medium",
+      "template_field_offset": 96,
+      "damage_info_id": 338,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 1.0,
+        "outer": 3.0,
+        "shockwave": 5.0
+      },
+      "association_radius": 3.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:48",
+      "kind": "explosion",
+      "native_id": 48,
+      "record_index": 362,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 474,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 1.0,
+        "outer": 7.5,
+        "shockwave": 15.0
+      },
+      "association_radius": 7.5,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:63",
+      "kind": "explosion",
+      "native_id": 63,
+      "record_index": 152,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 266,
+      "event_names": [
+        "stratagem/orbital_napalm_barrage/shell_impact"
+      ],
+      "sources": [
+        {
+          "source_type": "A16AB4FF66AE6970",
+          "sdk_names": [
+            {
+              "name": "Orbital Napalm Barrage",
+              "kind": "stratagem_payload",
+              "artifact": "schemas/stratagem_authoring_catalog.json"
+            }
+          ],
+          "name": "Orbital Napalm Barrage",
+          "kind": "stratagem",
+          "name_basis": "reviewed_integration_catalog"
+        }
+      ],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "stratagem/orbital_napalm_barrage/shell_impact",
+          "family": "stratagem",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "stratagem payload",
+              "name": "Orbital Napalm Barrage",
+              "role": "shell_impact",
+              "reference": "projectile"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 3.299999952316284,
+        "outer": 10.0,
+        "shockwave": 11.0
+      },
+      "association_radius": 10.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": null,
+        "verified_native_lifetime": false,
+        "basis": "Actual ground-pool lifetime is not closed by reviewed data."
+      },
+      "association_window": {
+        "seconds": 5,
+        "policy": "conservative_area_window",
+        "basis": "Project attribution rule: use only the first5 seconds after this exact observed local detonation. This is not a claim that the ground fire lasts5 seconds."
+      },
+      "pending_duration_reports": [
+        {
+          "url": "https://helldivers.wiki.gg/wiki/Orbital_Napalm_Barrage",
+          "basis": "The referenced page documents residual ground fire but no exact ground-pool lifetime. Barrage firing duration is not pool lifetime."
+        }
+      ]
+    },
+    {
+      "node": "explosion:69",
+      "kind": "explosion",
+      "native_id": 69,
+      "record_index": 84,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 96,
+      "damage_info_id": 340,
+      "event_names": [
+        "throwable/g13_incendiary_impact/detonation"
+      ],
+      "sources": [
+        {
+          "source_type": "EB725C39FC38B87C",
+          "sdk_names": [],
+          "name": "G-13 Incendiary Impact",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/incendiary_impact_grenade/incendiary_impact_grenade"
+        }
+      ],
+      "direct_resource_owners": [
+        {
+          "source_type": "EB725C39FC38B87C",
+          "sdk_names": [],
+          "name": "G-13 Incendiary Impact",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/incendiary_impact_grenade/incendiary_impact_grenade"
+        }
+      ],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "throwable/g13_incendiary_impact/detonation",
+          "family": "throwable",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "throwable",
+              "name": "G-13 Incendiary Impact",
+              "role": "detonation",
+              "reference": "component"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 1.0,
+        "outer": 7.0,
+        "shockwave": 9.0
+      },
+      "association_radius": 7.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": 15,
+        "url": "https://helldivers.wiki.gg/wiki/G-13_Incendiary_Impact",
+        "basis": "Community field report describes 15-second lingering ground fire after detonation; not the 3-second victim status.",
+        "verified_native_lifetime": false,
+        "live_tested": false
+      },
+      "association_window": {
+        "seconds": 15,
+        "policy": "documented_area_duration_heuristic"
+      }
+    },
+    {
+      "node": "explosion:72",
+      "kind": "explosion",
+      "native_id": 72,
+      "record_index": 259,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 96,
+      "damage_info_id": 407,
+      "event_names": [
+        "stratagem/mdi4_incendiary_mines/mine"
+      ],
+      "sources": [
+        {
+          "source_type": "BF32E12923A9A252",
+          "sdk_names": [
+            {
+              "name": "MD-I4 Incendiary Mines",
+              "kind": "stratagem_payload",
+              "artifact": "schemas/stratagem_authoring_catalog.json"
+            },
+            {
+              "name": "MD-I4 Incendiary Mines",
+              "kind": "stratagem_deployed_entity",
+              "artifact": "schemas/stratagem_authoring_catalog.json"
+            }
+          ],
+          "name": "MD-I4 Incendiary Mines",
+          "kind": "stratagem",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/hellpod/mine_launcher/mine_launcher_incendiary"
+        }
+      ],
+      "direct_resource_owners": [
+        {
+          "source_type": "BF32E12923A9A252",
+          "sdk_names": [
+            {
+              "name": "MD-I4 Incendiary Mines",
+              "kind": "stratagem_payload",
+              "artifact": "schemas/stratagem_authoring_catalog.json"
+            },
+            {
+              "name": "MD-I4 Incendiary Mines",
+              "kind": "stratagem_deployed_entity",
+              "artifact": "schemas/stratagem_authoring_catalog.json"
+            }
+          ],
+          "name": "MD-I4 Incendiary Mines",
+          "kind": "stratagem",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/hellpod/mine_launcher/mine_launcher_incendiary"
+        },
+        {
+          "source_type": "E49A5AE078AAD407",
+          "sdk_names": [],
+          "resource_path": "content/fac_helldivers/equipment/throwables/incendiary_mine/incendiary_mine"
+        }
+      ],
+      "native_origin_status": {
+        "shared": true,
+        "unresolved": true
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "source_scope": "exact_event_constrained_named_family",
+      "source_constraint": {
+        "canonical_source": "BF32E12923A9A252",
+        "required_event_types": [
+          "BF32E12923A9A252",
+          "E49A5AE078AAD407"
+        ],
+        "basis": "Explosion72 has a named minefield and its incendiary-mine entity as shared native consumers. An exact event may use the minefield label only when its native source_type or owner_type identifies one of these consumers; event name alone is insufficient."
+      },
+      "event_identity": [
+        {
+          "name": "stratagem/mdi4_incendiary_mines/mine",
+          "family": "stratagem",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "stratagem payload",
+              "name": "MD-I4 Incendiary Mines",
+              "role": "mine",
+              "reference": "component"
+            },
+            {
+              "category": "entity",
+              "name": "incendiary_mine",
+              "role": "detonation",
+              "reference": "component"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 1.2000000476837158,
+        "outer": 4.0,
+        "shockwave": 7.0
+      },
+      "association_radius": 4.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": null,
+        "verified_native_lifetime": false,
+        "basis": "Actual ground-pool lifetime is not closed by reviewed data."
+      },
+      "association_window": {
+        "seconds": 5,
+        "policy": "conservative_area_window",
+        "basis": "Project attribution rule: use only the first5 seconds after this exact observed local detonation. This is not a claim that the ground fire lasts5 seconds."
+      },
+      "pending_duration_reports": [
+        {
+          "url": "https://helldivers.wiki.gg/wiki/MD-I4_Incendiary_Mines",
+          "basis": "The referenced page documents post-detonation ground fire but no exact pool lifetime. Deployed mine lifetime is different."
+        }
+      ]
+    },
+    {
+      "node": "explosion:74",
+      "kind": "explosion",
+      "native_id": 74,
+      "record_index": 153,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 266,
+      "event_names": [
+        "stratagem/orbital_napalm_barrage/shell_impact_2"
+      ],
+      "sources": [
+        {
+          "source_type": "A16AB4FF66AE6970",
+          "sdk_names": [
+            {
+              "name": "Orbital Napalm Barrage",
+              "kind": "stratagem_payload",
+              "artifact": "schemas/stratagem_authoring_catalog.json"
+            }
+          ],
+          "name": "Orbital Napalm Barrage",
+          "kind": "stratagem",
+          "name_basis": "reviewed_integration_catalog"
+        }
+      ],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "stratagem/orbital_napalm_barrage/shell_impact_2",
+          "family": "stratagem",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "stratagem payload",
+              "name": "Orbital Napalm Barrage",
+              "role": "shell_impact",
+              "reference": "projectile"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 3.299999952316284,
+        "outer": 10.0,
+        "shockwave": 11.0
+      },
+      "association_radius": 10.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": null,
+        "verified_native_lifetime": false,
+        "basis": "Actual ground-pool lifetime is not closed by reviewed data."
+      },
+      "association_window": {
+        "seconds": 5,
+        "policy": "conservative_area_window",
+        "basis": "Project attribution rule: use only the first5 seconds after this exact observed local detonation. This is not a claim that the ground fire lasts5 seconds."
+      },
+      "pending_duration_reports": [
+        {
+          "url": "https://helldivers.wiki.gg/wiki/Orbital_Napalm_Barrage",
+          "basis": "Second native shell branch; no exact per-impact ground-pool lifetime is proven."
+        }
+      ]
+    },
+    {
+      "node": "explosion:108",
+      "kind": "explosion",
+      "native_id": 108,
+      "record_index": 135,
+      "fire_template": 2,
+      "fire_template_name": "Medium",
+      "template_field_offset": 96,
+      "damage_info_id": 368,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 2.5,
+        "outer": 5.0,
+        "shockwave": 6.5
+      },
+      "association_radius": 5.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:120",
+      "kind": "explosion",
+      "native_id": 120,
+      "record_index": 361,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 390,
+      "event_names": [
+        "entity/explosive_gas_chimney/ability"
+      ],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "event_identity": [
+        {
+          "name": "entity/explosive_gas_chimney/ability",
+          "family": "entity",
+          "evidence": "code",
+          "owners": [
+            {
+              "category": "entity",
+              "name": "explosive_gas_chimney",
+              "role": "ability",
+              "reference": "code"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 1.399999976158142,
+        "outer": 7.0,
+        "shockwave": 10.0
+      },
+      "association_radius": 7.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:140",
+      "kind": "explosion",
+      "native_id": 140,
+      "record_index": 339,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 444,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 6.0,
+        "outer": 12.0,
+        "shockwave": 18.0
+      },
+      "association_radius": 12.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:152",
+      "kind": "explosion",
+      "native_id": 152,
+      "record_index": 115,
+      "fire_template": 2,
+      "fire_template_name": "Medium",
+      "template_field_offset": 96,
+      "damage_info_id": 338,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 1.0,
+        "outer": 7.0,
+        "shockwave": 9.0
+      },
+      "association_radius": 7.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:161",
+      "kind": "explosion",
+      "native_id": 161,
+      "record_index": 342,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 96,
+      "damage_info_id": 327,
+      "event_names": [
+        "entity/habs_barrel_fuel/detonation"
+      ],
+      "sources": [],
+      "direct_resource_owners": [
+        {
+          "source_type": "74F33BD19068A439",
+          "sdk_names": []
+        },
+        {
+          "source_type": "ADD299F56916AE1F",
+          "sdk_names": [],
+          "name": "Explosive Barrel",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only",
+          "resource_path": "content/env_super_earth/habs/props/habs_barrel_fuel"
+        }
+      ],
+      "native_origin_status": {
+        "shared": true,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "event_identity": [
+        {
+          "name": "entity/habs_barrel_fuel/detonation",
+          "family": "entity",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": null,
+              "name": null,
+              "role": "detonation",
+              "reference": "component"
+            },
+            {
+              "category": "entity",
+              "name": "habs_barrel_fuel",
+              "role": "detonation",
+              "reference": "component"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 0.4000000059604645,
+        "outer": 4.0,
+        "shockwave": 8.0
+      },
+      "association_radius": 4.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:190",
+      "kind": "explosion",
+      "native_id": 190,
+      "record_index": 271,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 96,
+      "damage_info_id": 327,
+      "event_names": [
+        "support_weapon/las98_laser_cannon/ability"
+      ],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "event_identity": [
+        {
+          "name": "support_weapon/las98_laser_cannon/ability",
+          "family": "support_weapon",
+          "evidence": "code",
+          "owners": [
+            {
+              "category": "stratagem payload",
+              "name": "A/FLAM-40 Flame Sentry",
+              "role": "ability",
+              "reference": "code"
+            },
+            {
+              "category": "support weapon",
+              "name": "LAS-98 Laser Cannon",
+              "role": "ability",
+              "reference": "code"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 0.4000000059604645,
+        "outer": 4.0,
+        "shockwave": 8.0
+      },
+      "association_radius": 4.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:214",
+      "kind": "explosion",
+      "native_id": 214,
+      "record_index": 364,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 193,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 2.0,
+        "outer": 4.0,
+        "shockwave": 6.0
+      },
+      "association_radius": 4.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:223",
+      "kind": "explosion",
+      "native_id": 223,
+      "record_index": 365,
+      "fire_template": 5,
+      "fire_template_name": null,
+      "template_field_offset": 96,
+      "damage_info_id": 193,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "UNREVIEWED_FIRE_TEMPLATE_VALUE",
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 4.0,
+        "outer": 6.0,
+        "shockwave": 8.0
+      },
+      "association_radius": 6.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:224",
+      "kind": "explosion",
+      "native_id": 224,
+      "record_index": 81,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 338,
+      "event_names": [
+        "throwable/g10_incendiary/detonation"
+      ],
+      "sources": [
+        {
+          "source_type": "04653AB33F3FFB44",
+          "sdk_names": [],
+          "name": "G-10 Incendiary",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/incendiary_grenade/incendiary_grenade"
+        }
+      ],
+      "direct_resource_owners": [
+        {
+          "source_type": "04653AB33F3FFB44",
+          "sdk_names": [],
+          "name": "G-10 Incendiary",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/incendiary_grenade/incendiary_grenade"
+        }
+      ],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "throwable/g10_incendiary/detonation",
+          "family": "throwable",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "throwable",
+              "name": "G-10 Incendiary",
+              "role": "detonation",
+              "reference": "component"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 1.0,
+        "outer": 7.0,
+        "shockwave": 9.0
+      },
+      "association_radius": 7.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": 20,
+        "url": "https://helldivers.wiki.gg/wiki/G-10_Incendiary",
+        "basis": "Community field report describes 20-second lingering ground fire after detonation; not the 3-second victim status.",
+        "verified_native_lifetime": false,
+        "live_tested": false
+      },
+      "association_window": {
+        "seconds": 20,
+        "policy": "documented_area_duration_heuristic"
+      }
+    },
+    {
+      "node": "explosion:252",
+      "kind": "explosion",
+      "native_id": 252,
+      "record_index": 23,
+      "fire_template": 2,
+      "fire_template_name": "Medium",
+      "template_field_offset": 96,
+      "damage_info_id": 341,
+      "event_names": [
+        "enemy/lieutenant_ivory_legion/impact"
+      ],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": true,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "event_identity": [
+        {
+          "name": "enemy/lieutenant_ivory_legion/impact",
+          "family": "enemy",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "weapon of enemy automatons",
+              "name": "lieutenant_ivory_legion",
+              "role": "impact",
+              "reference": "projectile"
+            },
+            {
+              "category": "weapon of enemy automatons",
+              "name": "lieutenant_ivory_legion",
+              "role": "expiry",
+              "reference": "projectile"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 1.0,
+        "outer": 4.0,
+        "shockwave": 5.0
+      },
+      "association_radius": 4.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:316",
+      "kind": "explosion",
+      "native_id": 316,
+      "record_index": 220,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 316,
+      "event_names": [
+        "support_weapon/eat700_expendable_napalm/impact"
+      ],
+      "sources": [
+        {
+          "source_type": "B2B5E0D185605F9E",
+          "sdk_names": [
+            {
+              "name": "EAT-700 Expendable Napalm",
+              "kind": "support_weapon",
+              "artifact": "sdk/SupportWeaponCapabilities.json"
+            }
+          ],
+          "name": "EAT-700 Expendable Napalm",
+          "kind": "weapon",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/support_weapons/expendable_napalm_launcher/expendable_napalm_launcher"
+        }
+      ],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "support_weapon/eat700_expendable_napalm/impact",
+          "family": "support_weapon",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "support weapon",
+              "name": "EAT-700 Expendable Napalm",
+              "role": "impact",
+              "reference": "projectile"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 1.600000023841858,
+        "outer": 8.0,
+        "shockwave": 10.0
+      },
+      "association_radius": 8.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": null,
+        "verified_native_lifetime": false,
+        "basis": "Actual ground-pool lifetime is not closed by reviewed data."
+      },
+      "association_window": {
+        "seconds": 5,
+        "policy": "conservative_area_window",
+        "basis": "Project attribution rule: use only the first5 seconds after this exact observed local detonation. This is not a claim that the ground fire lasts5 seconds."
+      },
+      "pending_duration_reports": [
+        {
+          "url": "https://helldivers.wiki.gg/wiki/EAT-700_Expendable_Napalm",
+          "basis": "The referenced page documents fire pools but no exact pool lifetime. The victim Fire/BurningHeavy durations and bomblet flight lifetime are different values."
+        }
+      ]
+    },
+    {
+      "node": "explosion:317",
+      "kind": "explosion",
+      "native_id": 317,
+      "record_index": 363,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 96,
+      "damage_info_id": 193,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 1.5,
+        "outer": 3.0,
+        "shockwave": 5.0
+      },
+      "association_radius": 3.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:318",
+      "kind": "explosion",
+      "native_id": 318,
+      "record_index": 83,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 96,
+      "damage_info_id": 338,
+      "event_names": [
+        "entity/conscript_grenade_incendiary/detonation"
+      ],
+      "sources": [],
+      "direct_resource_owners": [
+        {
+          "source_type": "A701E55EA68D4CF9",
+          "sdk_names": [],
+          "name": "Cyborg's Incendiary Grenade (Model)",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only",
+          "resource_path": "content/fac_cyborgs/equipment/weapons/conscript_grenade_he/conscript_grenade_incendiary"
+        }
+      ],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "event_identity": [
+        {
+          "name": "entity/conscript_grenade_incendiary/detonation",
+          "family": "entity",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "entity",
+              "name": "conscript_grenade_incendiary",
+              "role": "detonation",
+              "reference": "component"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 1.0,
+        "outer": 7.0,
+        "shockwave": 9.0
+      },
+      "association_radius": 7.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:338",
+      "kind": "explosion",
+      "native_id": 338,
+      "record_index": 340,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 390,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 1.399999976158142,
+        "outer": 7.0,
+        "shockwave": 10.0
+      },
+      "association_radius": 7.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:359",
+      "kind": "explosion",
+      "native_id": 359,
+      "record_index": 213,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "template_field_offset": 96,
+      "damage_info_id": 390,
+      "event_names": [
+        "stratagem/eagle_napalm_airstrike/payload_impact"
+      ],
+      "sources": [
+        {
+          "source_type": "27BB558C893383CC",
+          "sdk_names": [
+            {
+              "name": "Eagle Napalm Airstrike",
+              "kind": "stratagem_payload",
+              "artifact": "schemas/stratagem_authoring_catalog.json"
+            }
+          ],
+          "name": "Eagle Napalm Airstrike",
+          "kind": "stratagem",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/vehicles/eagle/eagle_napalm"
+        }
+      ],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "stratagem/eagle_napalm_airstrike/payload_impact",
+          "family": "stratagem",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "stratagem payload",
+              "name": "Eagle Napalm Airstrike",
+              "role": "payload_impact",
+              "reference": "projectile"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 2.0,
+        "outer": 10.0,
+        "shockwave": 15.0
+      },
+      "association_radius": 10.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": null,
+        "verified_native_lifetime": false,
+        "basis": "Actual ground-pool lifetime is not closed by reviewed data."
+      },
+      "association_window": {
+        "seconds": 5,
+        "policy": "conservative_area_window",
+        "basis": "Project attribution rule: use only the first5 seconds after this exact observed local detonation. This is not a claim that the ground fire lasts5 seconds."
+      },
+      "pending_duration_reports": [
+        {
+          "url": "https://helldivers.wiki.gg/wiki/Eagle_Napalm_Airstrike",
+          "basis": "Community page reports a 12-to-20-second location-dependent range with citation needed; no precise current native area lifetime is proven."
+        }
+      ]
+    },
+    {
+      "node": "explosion:368",
+      "kind": "explosion",
+      "native_id": 368,
+      "record_index": 261,
+      "fire_template": 1,
+      "fire_template_name": "Small",
+      "template_field_offset": 96,
+      "damage_info_id": 410,
+      "event_names": [
+        "throwable/g40k_melta_mine/detonation"
+      ],
+      "sources": [
+        {
+          "source_type": "EE4C107B941AB7F4",
+          "sdk_names": [],
+          "name": "G/40-K Melta Mine",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/mine_shark/mine_shark"
+        }
+      ],
+      "direct_resource_owners": [
+        {
+          "source_type": "EE4C107B941AB7F4",
+          "sdk_names": [],
+          "name": "G/40-K Melta Mine",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/mine_shark/mine_shark"
+        }
+      ],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "throwable/g40k_melta_mine/detonation",
+          "family": "throwable",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "throwable",
+              "name": "G/40-K Melta Mine",
+              "role": "detonation",
+              "reference": "component"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 2.5,
+        "outer": 6.0,
+        "shockwave": 15.0
+      },
+      "association_radius": 6.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": null,
+        "verified_native_lifetime": false,
+        "basis": "Actual ground-pool lifetime is not closed by reviewed data."
+      },
+      "association_window": {
+        "seconds": 5,
+        "policy": "conservative_area_window",
+        "basis": "Project attribution rule: use only the first5 seconds after this exact observed local detonation. This is not a claim that the ground fire lasts5 seconds."
+      },
+      "pending_duration_reports": [
+        {
+          "url": "https://helldivers.wiki.gg/wiki/G/40-K_Melta_Mine",
+          "basis": "Native FireTemplate1 is present; no reviewed exact ground-pool lifetime is available."
+        }
+      ]
+    },
+    {
+      "node": "explosion:389",
+      "kind": "explosion",
+      "native_id": 389,
+      "record_index": 214,
+      "fire_template": 5,
+      "fire_template_name": null,
+      "template_field_offset": 96,
+      "damage_info_id": 390,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "UNREVIEWED_FIRE_TEMPLATE_VALUE",
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "native_radii": {
+        "inner": 2.0,
+        "outer": 10.0,
+        "shockwave": 15.0
+      },
+      "association_radius": 10.0,
+      "persistent_status_volume": 0
+    },
+    {
+      "node": "explosion:409",
+      "kind": "explosion",
+      "native_id": 409,
+      "record_index": 86,
+      "fire_template": 2,
+      "fire_template_name": "Medium",
+      "template_field_offset": 96,
+      "damage_info_id": 26,
+      "event_names": [
+        "throwable/g142_pyrotech/detonation"
+      ],
+      "sources": [
+        {
+          "source_type": "03F31CAF3A7D8F4E",
+          "sdk_names": [],
+          "name": "G-142 Pyrotech",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/zipper_grenade/zipper_grenade"
+        }
+      ],
+      "direct_resource_owners": [
+        {
+          "source_type": "03F31CAF3A7D8F4E",
+          "sdk_names": [],
+          "name": "G-142 Pyrotech",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/zipper_grenade/zipper_grenade"
+        }
+      ],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": false
+      },
+      "automatic_context": true,
+      "blocked_reasons": [],
+      "event_identity": [
+        {
+          "name": "throwable/g142_pyrotech/detonation",
+          "family": "throwable",
+          "evidence": "data",
+          "owners": [
+            {
+              "category": "throwable",
+              "name": "G-142 Pyrotech",
+              "role": "detonation",
+              "reference": "component"
+            }
+          ]
+        }
+      ],
+      "native_radii": {
+        "inner": 2.5,
+        "outer": 5.0,
+        "shockwave": 7.0
+      },
+      "association_radius": 5.0,
+      "persistent_status_volume": 0,
+      "area_duration": {
+        "seconds": 6,
+        "url": "https://helldivers.wiki.gg/wiki/G-142_Pyrotech",
+        "basis": "Community field report distinguishes a 4-second pre-detonation spray from 6 seconds of ground fire after detonation. Only the latter begins at this event.",
+        "verified_native_lifetime": false,
+        "live_tested": false
+      },
+      "association_window": {
+        "seconds": 6,
+        "policy": "documented_area_duration_heuristic"
+      }
+    },
+    {
+      "node": "projectile:60",
+      "kind": "projectile",
+      "native_id": 60,
+      "record_index": 338,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 236,
+      "damage_info_id": 14,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [
+        {
+          "source_type": "6BF1164EA3829A23",
+          "sdk_names": []
+        },
+        {
+          "source_type": "E0E257B37526DBE3",
+          "sdk_names": [],
+          "name": "E/MG-101 HMG Emplacement (Flamethrower)",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only"
+        }
+      ],
+      "native_origin_status": {
+        "shared": true,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "impact_explosion_id": 0,
+      "expiry_explosion_id": 0,
+      "position_gap": "No ground-impact location is reported for this configured projectile by the explosion event unless it produces a separate observed explosion."
+    },
+    {
+      "node": "projectile:69",
+      "kind": "projectile",
+      "native_id": 69,
+      "record_index": 339,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 236,
+      "damage_info_id": 14,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "impact_explosion_id": 0,
+      "expiry_explosion_id": 0,
+      "position_gap": "No ground-impact location is reported for this configured projectile by the explosion event unless it produces a separate observed explosion."
+    },
+    {
+      "node": "projectile:235",
+      "kind": "projectile",
+      "native_id": 235,
+      "record_index": 28,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 236,
+      "damage_info_id": 7,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [
+        {
+          "source_type": "76E9644BCD3F341B",
+          "sdk_names": [],
+          "name": "Dragonroach Vomit",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only"
+        }
+      ],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "impact_explosion_id": 0,
+      "expiry_explosion_id": 0,
+      "position_gap": "No ground-impact location is reported for this configured projectile by the explosion event unless it produces a separate observed explosion."
+    },
+    {
+      "node": "projectile:250",
+      "kind": "projectile",
+      "native_id": 250,
+      "record_index": 78,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "template_field_offset": 236,
+      "damage_info_id": 6,
+      "event_names": [],
+      "sources": [],
+      "direct_resource_owners": [],
+      "native_origin_status": {
+        "shared": false,
+        "unresolved": true
+      },
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_EXPLOSION_EVENT_NAME",
+        "NO_UNIQUE_NAMED_TYPED_PARENT",
+        "SHARED_OR_UNRESOLVED_NATIVE_ORIGINS",
+        "NO_REVIEWED_DURATION_OR_EXPLICIT_ASSOCIATION_RULE"
+      ],
+      "impact_explosion_id": 0,
+      "expiry_explosion_id": 0,
+      "position_gap": "No ground-impact location is reported for this configured projectile by the explosion event unless it produces a separate observed explosion."
+    }
+  ],
+  "configured_component_templates": [
+    {
+      "component": "FireSourceComponentData",
+      "record_index": 0,
+      "member": "16",
+      "field_offset": 16,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "owners": [
+        {
+          "source_type": "A7CD9C1B0504DA2B",
+          "sdk_names": [],
+          "name": "Permanent Fire Zone",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only",
+          "resource_path": "content/entities/basic_fire_source"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "FireSourceComponentData",
+      "record_index": 1,
+      "member": "16",
+      "field_offset": 16,
+      "fire_template": 4,
+      "fire_template_name": "Massive",
+      "owners": [
+        {
+          "source_type": "C25C86066A36CFC8",
+          "sdk_names": [],
+          "name": "Fire Tornado (Entity)",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 0,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "9E2E17F2CCCCAFDD",
+          "sdk_names": [],
+          "name": "Bile Titan",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only",
+          "resource_path": "content/fac_bugs/cha_strider/cha_strider"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 1,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "6F91BC8002875E76",
+          "sdk_names": [],
+          "name": "Bile Spewer Vomit",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 2,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "271567F38F9CEDFD",
+          "sdk_names": []
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 4,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "1D8D9AA0502F866E",
+          "sdk_names": [],
+          "name": "Predator Hunter Vomit",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 5,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "F4C0B6C9218FB571",
+          "sdk_names": [],
+          "name": "Pyro Trooper Flamer (Model)",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only",
+          "resource_path": "content/fac_cyborgs/equipment/weapons/conscript_flamer/conscript_flamer"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 6,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "F2B4A99D1B0E40C8",
+          "sdk_names": [],
+          "name": "Hulk Scorcher Flamer (Model)",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 7,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "0736BEE2D6328726",
+          "sdk_names": [
+            {
+              "name": "B/FLAM-80 Cremator",
+              "kind": "support_weapon",
+              "artifact": "sdk/SupportWeaponCapabilities.json"
+            },
+            {
+              "name": "EXO-51 Lumberer Exosuit / left_gun",
+              "kind": "mounted_weapon",
+              "artifact": "sdk/VehicleWeaponCapabilities.json"
+            }
+          ],
+          "name": "B/FLAM-80 Cremator",
+          "kind": "weapon",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/vehicles/combat_walker_flamethrower/combat_walker_flamethrower"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 8,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "EF04CB84D097A497",
+          "sdk_names": [],
+          "name": "Spore Burst Bile Titan",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only",
+          "resource_path": "content/fac_bugs/cha_strider/cha_strider_gloom"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 9,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "529DFE4C4C881324",
+          "sdk_names": [],
+          "name": "Nursing Spewer Vomit",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 10,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 2,
+      "fire_template_name": "Medium",
+      "owners": [
+        {
+          "source_type": "03F31CAF3A7D8F4E",
+          "sdk_names": [],
+          "name": "G-142 Pyrotech",
+          "kind": "throwable",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/throwables/zipper_grenade/zipper_grenade"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 11,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "820CC3BAFE962858",
+          "sdk_names": [
+            {
+              "name": "A/FLAM-40 Flame Sentry",
+              "kind": "stratagem_payload",
+              "artifact": "schemas/stratagem_authoring_catalog.json"
+            },
+            {
+              "name": "A/FLAM-40 Flame Sentry",
+              "kind": "stratagem_deployed_entity",
+              "artifact": "schemas/stratagem_authoring_catalog.json"
+            }
+          ],
+          "name": "A/FLAM-40 Flame Sentry",
+          "kind": "stratagem",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/hellpod/flamethrower_turret/flamethrower_turret"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 12,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "E0E257B37526DBE3",
+          "sdk_names": [],
+          "name": "E/MG-101 HMG Emplacement (Flamethrower)",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 13,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "992B6F65A5BAB53D",
+          "sdk_names": [
+            {
+              "name": "SMG/FLAM-34 Stoker / underbarrel",
+              "kind": "player_weapon",
+              "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json"
+            }
+          ],
+          "name": "Flamerthrower SMG Flamer",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 14,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "6BF1164EA3829A23",
+          "sdk_names": []
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 15,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "65CD4325BA23F3C6",
+          "sdk_names": [
+            {
+              "name": "AX/FLAM-75 Hot Dog / gun",
+              "kind": "mounted_weapon",
+              "artifact": "sdk/VehicleWeaponCapabilities.json"
+            }
+          ],
+          "name": "AX/FLAM-75 Hot Dog Gun (Model)",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only",
+          "resource_path": "content/fac_helldivers/equipment/backpacks/drone_weapons/drone_flamethrower/drone_flamethrower_mount"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 17,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "4FB0F8C02F55C82B",
+          "sdk_names": [
+            {
+              "name": "FLAM-66 Torcher",
+              "kind": "player_weapon",
+              "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json"
+            }
+          ],
+          "name": "FLAM-66 Torcher",
+          "kind": "weapon",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/primary_weapons/flamethrower_ripley/flamethrower_ripley"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 18,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "3F92BA65EF65CCA9",
+          "sdk_names": [
+            {
+              "name": "P-72 Crisper",
+              "kind": "player_weapon",
+              "artifact": "sdk/PlayerWeaponAuthoringCapabilities.json"
+            }
+          ],
+          "name": "P-72 Crisper",
+          "kind": "weapon",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/sidearm_weapons/flamer_pistol/flamer_pistol"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 20,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "39AB99895147A3BF",
+          "sdk_names": [
+            {
+              "name": "FLAM-40 Flamethrower",
+              "kind": "support_weapon",
+              "artifact": "sdk/SupportWeaponCapabilities.json"
+            }
+          ],
+          "name": "FLAM-40 Flamethrower",
+          "kind": "weapon",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/support_weapons/flamethrower/flamethrower"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 21,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "78A8185F63A70795",
+          "sdk_names": [
+            {
+              "name": "B/FLAM-80 Cremator",
+              "kind": "support_weapon",
+              "artifact": "sdk/SupportWeaponCapabilities.json"
+            }
+          ],
+          "name": "B/FLAM-80 Cremator",
+          "kind": "weapon",
+          "name_basis": "reviewed_integration_catalog",
+          "resource_path": "content/fac_helldivers/equipment/support_weapons/heavy_flamethrower/heavy_flamethrower"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    },
+    {
+      "component": "SprayWeaponComponentData",
+      "record_index": 22,
+      "member": "220",
+      "field_offset": 220,
+      "fire_template": 3,
+      "fire_template_name": "Large",
+      "owners": [
+        {
+          "source_type": "444880F62CA7EAE8",
+          "sdk_names": [
+            {
+              "name": "M-104 Incinerator FRV / gun",
+              "kind": "mounted_weapon",
+              "artifact": "sdk/VehicleWeaponCapabilities.json"
+            }
+          ],
+          "name": "M-104 Incinerator FRV Flamer",
+          "kind": "unknown",
+          "name_basis": "exact_cloud_hash_label_only",
+          "resource_path": "content/fac_helldivers/vehicles/frv_heavy/armaments/frv_flamethrower/frv_flamethrower"
+        }
+      ],
+      "automatic_context": false,
+      "blocked_reasons": [
+        "NO_EXACT_GROUND_CREATION_EVENT_OR_POSITION",
+        "AREA_LIFETIME_NOT_REVIEWED"
+      ],
+      "activation_note": "A configured template may be unused on a branch. Spray/acid/enemy defaults do not prove that a fire pool was created; no area is placed at the shooter or target merely from this field."
+    }
+  ],
+  "fire_status_without_ground_template_chain": [
+    {
+      "source_type": "1980D92B619FF5FE",
+      "name": "LAS-98 Laser Cannon",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "27EE1ED8F6FB6356",
+      "name": "LAS-5 Scythe",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "56070F36CFFFA8A8",
+      "name": "A/LAS-98 Laser Sentry",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "7B06196E90154C88",
+      "name": "LAS-7 Dagger",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "84354339522C932D",
+      "name": "AR-2 Coyote",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "C12A34F375BD5A87",
+      "name": "SG-225IE Breaker Incendiary",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "C5C05FCB5747C799",
+      "name": "G-123 Thermite",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "D323DE60855898AC",
+      "name": "SG-451 Cookout",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "D54B9505C0F72873",
+      "name": "LAS-98 Laser Cannon",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "E5796355A8FD67E0",
+      "name": "R-4 Hyena",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    },
+    {
+      "source_type": "EC3575E7A93793BB",
+      "name": "Orbital Laser",
+      "automatic_context": false,
+      "reason": "NATIVE_FIRE_STATUS_WITHOUT_REVIEWED_GROUND_TEMPLATE_CHAIN",
+      "note": "Igniting a victim is not proof of a ground pool. A code-created ground effect may still exist; its creation event/identity is not closed by this data inventory."
+    }
+  ],
+  "template_names": {
+    "1": "Small",
+    "2": "Medium",
+    "3": "Large",
+    "4": "Massive"
+  },
+  "evidence": {
+    "native": "Pinned native ExplosionInfo +96, ProjectileInfo +236, and component members typed FireTemplate; exact explosion names and parent-source graph are re-derived from the pinned SDK and data library.",
+    "area_duration_basis": "Per-event cited community field reports are bounded heuristics, not verified native area-instance lifetimes; equal FireTemplate values do not prove equal durations.",
+    "conservative_area_window": {
+      "seconds": 5,
+      "basis": "For uniquely named native player explosion parents with no reviewed pool lifetime, a5-second association rule limits inference. It does not replace or assert the actual fuel lifetime."
+    },
+    "area_radius_basis": "Each native explosion outer radius bounds association; it is not a measured ground-fire footprint. Shockwave radius is not substituted.",
+    "victim_status": "Native victim fire status3s is distinct from ground-area duration. Health extension kind/element is reliable only at owned life2, never for live HP loss.",
+    "requirements": "Exact observed local detonation, actual owned target death life2 with native kind2 element1, target position, local creditor or existing native local-kill quota. Direct known sources always win.",
+    "shared_family_exception": "MD-I4 retains shared/unresolved native origin flags. Its exact event additionally requires a native source_type or owner_type in required_event_types; these types are not installed as global weapon aliases.",
+    "unverified_templates": "The pinned Filediver enum names values1..4. Value5 is named Count there, yet2 explosion rows store it; these are inventoried but not automatically attributed.",
+    "reviewed_on": "2026-10-19",
+    "duration_sources": {
+      "throwable/g10_incendiary/detonation": {
+        "seconds": 20,
+        "url": "https://helldivers.wiki.gg/wiki/G-10_Incendiary",
+        "basis": "Community field report describes 20-second lingering ground fire after detonation; not the 3-second victim status."
+      },
+      "throwable/g13_incendiary_impact/detonation": {
+        "seconds": 15,
+        "url": "https://helldivers.wiki.gg/wiki/G-13_Incendiary_Impact",
+        "basis": "Community field report describes 15-second lingering ground fire after detonation; not the 3-second victim status."
+      },
+      "throwable/g142_pyrotech/detonation": {
+        "seconds": 6,
+        "url": "https://helldivers.wiki.gg/wiki/G-142_Pyrotech",
+        "basis": "Community field report distinguishes a 4-second pre-detonation spray from 6 seconds of ground fire after detonation. Only the latter begins at this event."
+      },
+      "throwable/g8_immolation/detonation": {
+        "seconds": 27,
+        "url": "https://helldivers.wiki.gg/wiki/G-8_Immolation",
+        "basis": "Community field report describes a 27-second ground pool; not a native lifetime field or a local live measurement."
+      }
+    },
+    "upstream": [
+      "https://github.com/SkyeShade/HD2Runtime/tree/dcd996daca2573443956c07252c55c2d86dd0320",
+      "https://github.com/xypwn/filediver/blob/master/datalibrary/enum/firetemplate.go"
+    ]
+  },
+  "inputs": {
+    "datalibrary": {
+      "generated_entities.dl_bin": "21377252B81FDBC670EBA1E59A8AB64B170323DF208F175E708992E4C1FB515E",
+      "dl_library.dl_typelib": "4D04870D0A0D4DC1284998C72CDFA6F8FF6D21ABA0E36B6F758C6F73DD0417A4",
+      "generated_projectile_settings.dl_bin": "50AF7CCCF03697A0EF96B7F9DDEB19279ADC3B887BD95E0F972996844B7221EA",
+      "generated_explosion_settings.dl_bin": "1F7C53253250E89CD17A1381BD5A2FEB48AEB336E4A3C97E74311C6FB67D7AF6",
+      "generated_damage_settings.dl_bin": "55E2BC4AC209D45363670A5952C3FE5DE045854AA062634A5A2444CB11510C35",
+      "generated_beam_settings.dl_bin": "FDE93701608D12CB1AA4985F11EB9F2BAB8BB6DC4E8F556B7F7B18B171C7017B",
+      "generated_arc_settings.dl_bin": "08E1461A8D8EE1C46FBCE72FFAA629B489AE512B8B8253AE187D9DBF78A0F159"
+    },
+    "runtime": {
+      "sdk/ExplosionCatalogue.json": "39D28352C9501E0ED0B7AB28A5835B6B4243FE07AC2DB2D37786EC68BAFE9E25",
+      "sdk/PlayerWeaponAuthoringCapabilities.json": "CE4F5B46FCA26D128579557A9E476CE5BAF73CA9D0DE4131D38BCE47900B0A7D",
+      "sdk/SupportWeaponCapabilities.json": "C2E8BF12EF1E2CFCFA4349D9725B1BECFEFC5B11277DB87A72F5AEBDD401E042",
+      "sdk/VehicleWeaponCapabilities.json": "1B95A4A924B280912049F79F543C1D0EDDE269B7D5110D4D2DDC56A4983C6A41",
+      "schemas/stratagem_authoring_catalog.json": "CA928F8F4F12B48AB1206FE12A7EC8F416CDEBF339BD4CEEF78225704FD74E88"
+    },
+    "integration_catalogs_sha256": "002B0E66F9E61F4B2A758AB181F64700A1DFA8D3B7E4884BE8AF392AEBA9269B",
+    "fire_sources_sha256": "400DC4C3BE0A8530D013481155BE0D06743968A1FD9CEF43FF00BB333EFAB675",
+    "filediver_fire_enum_sha256": "EB061703E8C9E583130424641E85D6EF3C6EBA835B9853C13D2C3ACD326BD804"
+  },
+  "summary": {
+    "explosion_template_rows": 28,
+    "projectile_template_rows": 4,
+    "named_explosion_template_rows": 16,
+    "named_player_source_hashes": 9,
+    "configured_component_records": 22,
+    "configured_component_owners": 22,
+    "automatic_context_events": 11,
+    "automatic_context_sources": 9,
+    "documented_duration_events": 4,
+    "conservative_window_events": 7,
+    "constrained_family_events": 1,
+    "pending_catalogue_rows": 21,
+    "template_values": {
+      "1": 1,
+      "2": 5,
+      "3": 10,
+      "4": 14,
+      "5": 2
+    }
+  },
+  "limitations": [
+    "Configured references prove capability, not activation or a particular player kill.",
+    "No live process is read and no game API is called by this generator.",
+    "An unavailable/remote explosion event cannot create a local area context.",
+    "Native defaults may be changed by other MODs; cited durations may vary.",
+    "Spray weapons, drones, flame sentries, vehicle flamers, unowned projectiles and code-created ground effects remain inventoried gaps until a real creation/impact event and bounded lifetime are established.",
+    "Enemy/environment templates and unsupported template5 are never promoted into player weapon areas."
+  ]
+}

@@ -76,9 +76,11 @@ return function(reverse,resource_nodes)
     end
     function api:reset()explosions,last_now={},nil;self.diagnostics.explosions=0 end
     function api:has_context(now)return clock(now)and #explosions>0 end
-    function api:has_status_context(now)
+    function api:has_status_context(now,include_fire)
         if not clock(now)then return false end
-        for _,event in ipairs(explosions)do if event.status=='poison'then return true end end
+        for _,event in ipairs(explosions)do
+            if event.status=='poison'or include_fire~=false and event.status=='fire'then return true end
+        end
         return false
     end
     function api:explosion(event,now)
@@ -91,6 +93,11 @@ return function(reverse,resource_nodes)
         local status,duration=nil,WINDOW
         if event.status=='poison'and finite(event.status_duration)and event.status_duration>0
             and event.status_duration<=10 then status,duration='poison',event.status_duration end
+        -- Reviewed ground-fire sources outlive their initial explosion.
+        -- Each source has its own bounded association window; this is not
+        -- a native fire-instance ID or a live Health-element observation.
+        if event.status=='fire'and finite(event.status_duration)and event.status_duration>0
+            and event.status_duration<=30 then status,duration='fire',event.status_duration end
         if #explosions>=MAX_EXPLOSIONS then table.remove(explosions,1)end
         explosions[#explosions+1]={source_type=source,position=pos,radius=radius,
             owner=event.owner,time=now,status=status,duration=duration}
@@ -130,13 +137,15 @@ return function(reverse,resource_nodes)
         if pos then
             for i=#explosions,1,-1 do
                 local event=explosions[i]
-                local status=event.status=='poison'
-                local poison_compatible=status and (input.kind==nil or input.kind==10 or input.kind==2 and input.element==5)
+                local status=event.status=='poison'or event.status=='fire'
+                local poison_compatible=event.status=='poison'and (input.kind==nil or input.kind==10 or input.kind==2 and input.element==5)
+                    and (not typed or contains(payload,event.source_type))
+                local fire_compatible=event.status=='fire'and input.life==2 and input.kind==2 and input.element==1
                     and (not typed or contains(payload,event.source_type))
                 local blast_compatible=now-event.time<=WINDOW and
                     (payload and contains(payload,event.source_type)
                     or not payload and not typed and input.explosion_damage==true)
-                local compatible=poison_compatible or blast_compatible
+                local compatible=poison_compatible or fire_compatible or blast_compatible
                 local credited=input.local_source==true or status and input.creditor_missing==true
                 local owner=input.context_owner or input.owner
                 -- A status instigator can be the expired throwable rather
@@ -148,6 +157,7 @@ return function(reverse,resource_nodes)
                 if credited and compatible and owner_matches and dx*dx+dy*dy+dz*dz<=event.radius*event.radius then
                     self.diagnostics.mapped=self.diagnostics.mapped+1
                     return {type=event.source_type,basis=poison_compatible and 'same_target_local_poison_status_area'
+                        or fire_compatible and 'same_target_local_fire_status_area'
                         or payload and 'typed_damage_info_local_blast_parent'
                         or 'same_target_recent_local_blast',inferred=true,local_source=true}
                 end

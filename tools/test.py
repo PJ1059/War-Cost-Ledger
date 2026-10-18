@@ -296,6 +296,9 @@ def main(package_only=False):
     run_lua(ROOT / 'tests/test_combat_pairs_062.lua', ROOT / 'src/combat-records.lua')
     run_lua(ROOT / 'tests/test_target_damage_attribution.lua', ROOT / 'src/target-damage-attribution.lua')
     run_lua(ROOT / 'tests/test_damage_source_resolver.lua', ROOT / 'src/damage-source-resolver.lua')
+    run_lua(ROOT / 'tests/test_g8_ground_fire_066.lua', ROOT / 'src/damage-source-resolver.lua')
+    run_lua(ROOT / 'tests/test_hellpod_spore_066.lua', ROOT / 'src/kill-observer.lua', runtime,
+            ROOT / 'tests/test_integration.lua', ROOT / 'src/target-damage-attribution.lua', ROOT / 'src/damage-source-resolver.lua')
     run_lua(ROOT / 'tests/test_damage_source_full_ids_060.lua', ROOT / 'src/damage-source-resolver.lua', ROOT / 'src/target-damage-attribution.lua')
     run_lua(ROOT / 'tests/test_target_damage_observer.lua', ROOT / 'src/kill-observer.lua', runtime, ROOT / 'tests/test_integration.lua', ROOT / 'src/target-damage-attribution.lua', ROOT / 'src/damage-source-resolver.lua')
     run_lua(ROOT / 'tests/test_addon_repeat_achievements.lua', ROOT / 'dist/addon.lua', runtime,
@@ -321,6 +324,12 @@ def main(package_only=False):
             ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
     run_lua(ROOT / 'tests/test_addon_spore_source_064.lua', ROOT / 'dist/addon.lua', runtime,
             ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
+    run_lua(ROOT / 'tests/test_addon_hellpod_spore_066.lua', ROOT / 'dist/addon.lua', runtime,
+            ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
+    run_lua(ROOT / 'tests/test_addon_g8_ground_fire_066.lua', ROOT / 'dist/addon.lua', runtime,
+            ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
+    subprocess.run([sys.executable, '-X', 'utf8', '-B',
+                    str(ROOT / 'tests/test_ground_fire_contexts_066.py')], cwd=ROOT, check=True)
     vehicle_spec = importlib.util.spec_from_file_location('test_vehicle_body_kill_sources', ROOT / 'tests/test_vehicle_body_kill_sources.py')
     vehicle_tests = importlib.util.module_from_spec(vehicle_spec)
     vehicle_spec.loader.exec_module(vehicle_tests)

@@ -18,7 +18,7 @@ RESOURCE = 'mods/hd2_costs/war_cost_ledger'
 GUID = 'fd5e720e-6e58-4e4e-a563-e8274b12214c'
 NS = {'s': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 NATIVE_ID = 458198946  # HD2Runtime 0.30.3: MG-43 StratagemDefinition.root.id
-VERSION = '0.4.65'
+VERSION = '0.4.66'
 CALL_TARGETS = {'ST-021': (NATIVE_ID, 'mg43', 'MG-43 Machine Gun'),
                 'ST-022': (14345846, 'm105', 'M-105 Stalwart')}
 M105_SOURCE_TYPES = ['A6A735ACCB4A327F', 'B43235DBD493750C', 'B9606C5AAB32C3C2', 'D53EE03481AE73FD']
@@ -221,7 +221,8 @@ def build():
                     '__DAMAGE_SOURCE_CATALOG__': lua_table({key: json.loads((ROOT / 'docs/damage-source-catalog.json').read_text(encoding='utf8'))[key]
                                                          for key in ('reverse', 'source_radius', 'resource_nodes', 'explosion_names')}),
                     '__DAMAGE_SOURCE_RESOLVER_MODULE__': (ROOT / 'src/damage-source-resolver.lua').read_text(encoding='utf8'),
-                    '__STATUS_DAMAGE_CONTEXTS__': lua_table(json.loads((ROOT / 'docs/gas-status-contexts-0.4.57.json').read_text(encoding='utf8'))['entries']),
+                    '__STATUS_DAMAGE_CONTEXTS__': lua_table({**json.loads((ROOT / 'docs/gas-status-contexts-0.4.57.json').read_text(encoding='utf8'))['entries'],
+                        **json.loads((ROOT / 'docs/ground-fire-contexts-0.4.66.json').read_text(encoding='utf8'))['entries']}),
                     '__COMBAT_SOURCE_TOTALS_MODULE__': (ROOT / 'src/combat-source-totals.lua').read_text(encoding='utf8'),
                     '__CAREER_WEAPON_CATALOG__': lua_table(career_catalog['weapon_catalog']),
                     '__COMBAT_RECORDS_MODULE__': (ROOT / 'src/combat-records.lua').read_text(encoding='utf8'),
@@ -319,7 +320,7 @@ def build():
     resources[(archive_sdk.LUA_TYPE, resource_hash(native_resource))] = (archive_sdk.lua_resource(native_source), b'')
     archive, gpu = archive_sdk.make_resource_archive(resources)
     assert archive_sdk.read_archive(archive, gpu) == resources
-    description = '0.4.65: English UI for all non-Chinese game languages; Simplified and Traditional Chinese keep Chinese text. Includes settings, live notices, Career, bilingual search and word-aware labels. Requires Bingus Shared Loader v19, Mod Options Menu, HD2Runtime 0.30.3 and HD2 HUD+ 0.2.1 or 0.2.4. 中文与历史存档保持兼容。'
+    description = '0.4.66: Target-bound hellpod attribution before enemy self-explosions; bounded ground-fire attribution for nine source families across eleven explosion events. Spray-created fire remains a documented gap. Import in Arsenal and keep Bingus Shared Loader v19 last. Requires Mod Options Menu, HD2Runtime 0.30.3 and HD2 HUD+ 0.2.1 or 0.2.4. English UI for non-Chinese languages; Simplified/Traditional Chinese and existing records remain supported.'
     manifest = {'Version': 1, 'Guid': GUID, 'Name': 'HD2 War Cost Ledger - ' + VERSION,
                 'Description': description, 'Options': [{'Name': '盟友计费与个人战斗统计',
                 'Description': description, 'Include': ['Addon']}]}
@@ -364,6 +365,8 @@ def build():
         'docs/melee-source-0.4.55.md': (ROOT / 'docs/melee-source-0.4.55.md').read_bytes(),
         'docs/continuous-damage-chain-0.4.56.md': (ROOT / 'docs/continuous-damage-chain-0.4.56.md').read_bytes(),
         'docs/gas-status-contexts-0.4.57.json': (ROOT / 'docs/gas-status-contexts-0.4.57.json').read_bytes(),
+        'docs/ground-fire-contexts-0.4.66.json': (ROOT / 'docs/ground-fire-contexts-0.4.66.json').read_bytes(),
+        'docs/releases/v0.4.66.md': (ROOT / 'docs/releases/v0.4.66.md').read_bytes(),
         'docs/combat-polish-0.4.57.md': (ROOT / 'docs/combat-polish-0.4.57.md').read_bytes(),
         'docs/storage-status-0.4.57.md': (ROOT / 'docs/storage-status-0.4.57.md').read_bytes(),
         'docs/career-query-performance-0.4.57.json': (ROOT / 'docs/career-query-performance-0.4.57.json').read_bytes(),

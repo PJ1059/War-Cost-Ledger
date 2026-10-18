@@ -3,7 +3,7 @@
 -- https://github.com/SkyeShade/HD2Runtime
 -- Reads game state; objective spacing uses the game's native layout on the update thread.
 local MOD_ID = 'mods/hd2_costs/war_cost_ledger'
-local VERSION = '0.4.65'
+local VERSION = '0.4.66'
 local PRICES = __CONFIRMED_PRICES__
 local FIRE_SOURCES = __FIRE_SOURCES__
 local ENEMY_TYPES = __ENEMY_TYPES__
@@ -20,7 +20,7 @@ if rawget(_G, 'HD2WarCostLedgerV1') then return rawget(_G, 'HD2WarCostLedgerV1')
 local ok, hd2 = pcall(require, 'mods/skyeshade/hd2runtime')
 assert(ok, 'War Cost Ledger requires HD2Runtime 0.30.3; import and enable its official runtime ZIP.')
 local metadata = require('hd2runtime/domains/metadata')
-assert(metadata.version == '0.30.3', 'War Cost Ledger 0.4.65 was checked against HD2Runtime 0.30.3.')
+assert(metadata.version == '0.30.3', 'War Cost Ledger 0.4.66 was checked against HD2Runtime 0.30.3.')
 local world_api = require('hd2runtime/runtime/event_world')
 local beacons = require('hd2runtime/runtime/beacon_redirect')
 local loadout = require('hd2runtime/runtime/stratagem_loadout')
@@ -1046,6 +1046,18 @@ __BUGHOLE_OBSERVER_MODULE__
         if not state.mission or type(event)~='table' then return end
         if event.local_player==true and combat_detail.kill_observer then
             local status=combat_detail.status_contexts[event.name]
+            if status and status.required_event_types then
+                -- Shared mine payloads need the observed native resource,
+                -- not a name-only fallback, to select their named family.
+                local allowed=false
+                for _,id in ipairs(status.required_event_types)do
+                    if type(event.source_type)=='string'and event.source_type:upper()==id
+                        or type(event.owner_type)=='string'and event.owner_type:upper()==id then
+                        allowed=true;break
+                    end
+                end
+                if not allowed then status=nil end
+            end
             local source=combat_detail.damage_sources[event.source_type] and event.source_type
                 or combat_detail.damage_sources[event.owner_type] and event.owner_type
                 or status and status.source_type
