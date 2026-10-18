@@ -4,7 +4,7 @@
 
 **0.4.65** · Combat feedback, career records and an optional fictional war-cost ledger for **HELLDIVERS 2**.
 
-[Download](https://github.com/PJ1059/War-Cost-Ledger/releases/tag/v0.4.65) · [Release notes](docs/releases/v0.4.65.md) · [Build from source](docs/BUILDING.md) · [Credits](THIRD-PARTY.md) · [Data and image sources](docs/DATA-SOURCES.md)
+[Nexus Mods](https://www.nexusmods.com/helldivers2/mods/17499) · [Download](https://github.com/PJ1059/War-Cost-Ledger/releases/tag/v0.4.65) · [Release notes](docs/releases/v0.4.65.md) · [Build from source](docs/BUILDING.md) · [Credits](THIRD-PARTY.md) · [Data and image sources](docs/DATA-SOURCES.md)
 
 ## Features
 
