@@ -1,7 +1,7 @@
-# 0.4.66 · Hellpod and ground-fire attribution
+# 0.4.69 · Current release
 
-The current release preserves target-bound pod evidence before a dying enemy overwrites its source with a self explosion, and adds bounded local ground-fire attribution for nine source families across eleven explosion events. The native-data catalogue inventories 28 explosion rows, four projectile rows and 22 component rows with positive FireTemplate values.
+This cumulative update adds single-match records and award/history links, defaults the display currency to SC at the author's 1 SC = 1 USD rule, restores the Impaler body alias and fixes three bounded G-8 attribution gaps. It replaces the exact Runtime 0.30.3 startup gate with API 1 capability checks and supports HUD+ 0.2.9 combat drawing through this project's Runtime renderer. Legacy native combat/Career integration is retained.
 
-Offline LuaJIT regression, eleven-event callback replay, catalog and package/privacy checks accompany this release. Successful game loading is confirmed locally; exhaustive live multiplayer attribution and frame rate are not verified. Spray-created fire still requires a verified weapon-and-impact-position capture path. No sample dumps or personal records are included.
+0.4.69 removes every F9 binding and the independent archive introduced in 0.4.68. Open Armory → Career normally. This is not a new native Career interface for modern HUD+ hosts that removed the mounting API. Statistics, original monetary values and stored records are preserved.
 
-See [release notes](docs/releases/v0.4.66.md), [build instructions](docs/BUILDING.md) and [source credits](docs/DATA-SOURCES.md).
+Offline regression covers gameplay rules, English/Chinese display, actual built-addon routing and missing-capability failures. Public source/package validation and privacy checks accompany publication. These checks do not establish exhaustive live multiplayer source accuracy, pixels or frame rate. No personal account, raw captures or complete third-party mod packages are included. See [release notes](docs/releases/v0.4.69.md), [compatibility](docs/dependency-compatibility-0.4.68.md) and [limitations](LIMITATIONS.md).

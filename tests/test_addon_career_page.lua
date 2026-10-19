@@ -40,10 +40,11 @@ package.preload['hd2runtime/runtime/event_world']=function()return {
     game_state=function()return {state=mission and 4 or 3,mission=mission,host=true}end,
     players=function()return {player}end,
     stat_breakdown=function()return stats end,
+    entity_state=function()return nil end,
     health_header=function()return nil end}end
 package.preload['hd2runtime/runtime/beacon_redirect']=function()return {
-    prove=function()return false end,clock=function()return 0 end}end
-package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{}end
+    prove=function()return false end,clock=function()return 0 end,beacons=function()return{}end}end
+package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{prove=function()return false end,id_of=function()return nil end}end
 os.clock=function()return 0 end
 -- Unrelated hit installation is already stopped; this fixture has no writable
 -- process API and never supplies native game addresses for invocation.

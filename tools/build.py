@@ -18,7 +18,7 @@ RESOURCE = 'mods/hd2_costs/war_cost_ledger'
 GUID = 'fd5e720e-6e58-4e4e-a563-e8274b12214c'
 NS = {'s': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 NATIVE_ID = 458198946  # HD2Runtime 0.30.3: MG-43 StratagemDefinition.root.id
-VERSION = '0.4.66'
+VERSION = '0.4.69'
 CALL_TARGETS = {'ST-021': (NATIVE_ID, 'mg43', 'MG-43 Machine Gun'),
                 'ST-022': (14345846, 'm105', 'M-105 Stalwart')}
 M105_SOURCE_TYPES = ['A6A735ACCB4A327F', 'B43235DBD493750C', 'B9606C5AAB32C3C2', 'D53EE03481AE73FD']
@@ -213,7 +213,8 @@ def build():
     assert native_hit_transaction['abi'] == 3
     assert source_types and len(source_types) == len(set(source_types))
     assert all(re.fullmatch('[0-9A-F]{16}', value) for value in source_types)
-    replacements = {'__LOCALIZATION_MODULE__': (ROOT / 'src/localization.lua').read_text(encoding='utf8'),
+    replacements = {'__RUNTIME_COMPAT_MODULE__': (ROOT / 'src/runtime-compat.lua').read_text(encoding='utf8'),
+                    '__LOCALIZATION_MODULE__': (ROOT / 'src/localization.lua').read_text(encoding='utf8'),
                     '__LOCALIZATION_CATALOG__': lua_table(json.loads((ROOT / 'docs/localization-en.json').read_text(encoding='utf8'))),
                     '__CONFIRMED_PRICES__': lua_table(price), '__FIRE_SOURCES__': lua_table(source_types),
                     '__KILL_SOURCE_TRAITS__': lua_table(json.loads((ROOT / 'docs/kill-source-traits.json').read_text(encoding='utf8'))['source_types']),
@@ -320,7 +321,7 @@ def build():
     resources[(archive_sdk.LUA_TYPE, resource_hash(native_resource))] = (archive_sdk.lua_resource(native_source), b'')
     archive, gpu = archive_sdk.make_resource_archive(resources)
     assert archive_sdk.read_archive(archive, gpu) == resources
-    description = '0.4.66: Target-bound hellpod attribution before enemy self-explosions; bounded ground-fire attribution for nine source families across eleven explosion events. Spray-created fire remains a documented gap. Import in Arsenal and keep Bingus Shared Loader v19 last. Requires Mod Options Menu, HD2Runtime 0.30.3 and HD2 HUD+ 0.2.1 or 0.2.4. English UI for non-Chinese languages; Simplified/Traditional Chinese and existing records remain supported.'
+    description = '0.4.69: Remove the F9 shortcut and independent archive window. Keep the normal Armory Career entry, Runtime API 1 compatibility checks, existing native HUD integration and Runtime combat fallback. F8 still toggles the combat display. Existing history, settings and accounts are preserved.'
     manifest = {'Version': 1, 'Guid': GUID, 'Name': 'HD2 War Cost Ledger - ' + VERSION,
                 'Description': description, 'Options': [{'Name': '盟友计费与个人战斗统计',
                 'Description': description, 'Include': ['Addon']}]}
@@ -348,10 +349,14 @@ def build():
         'NOTICE': (ROOT / 'NOTICE').read_bytes(),
         'docs/DATA-SOURCES.md': (ROOT / 'docs/DATA-SOURCES.md').read_bytes(),
         'docs/releases/v0.4.65.md': (ROOT / 'docs/releases/v0.4.65.md').read_bytes(),
+        'docs/releases/v0.4.68.md': (ROOT / 'docs/releases/v0.4.68.md').read_bytes(),
+        'docs/releases/v0.4.69.md': (ROOT / 'docs/releases/v0.4.69.md').read_bytes(),
+        'docs/dependency-compatibility-0.4.68.md': (ROOT / 'docs/dependency-compatibility-0.4.68.md').read_bytes(),
         'docs/releases/v0.4.65-credits.txt': (ROOT / 'docs/releases/v0.4.65-credits.txt').read_bytes(),
         'artwork/mod-covers-0.4.65-v2/war-cost-ledger-cover-en-1920x1080.png': (ROOT / 'artwork/mod-covers-0.4.65-v2/war-cost-ledger-cover-en-1920x1080.png').read_bytes(),
         'pricing/HD2-军需价格表-v0.2.xlsx': WORKBOOK.read_bytes(),
         'Source/addon.lua': source,
+        'Source/runtime-compat.lua': (ROOT / 'src/runtime-compat.lua').read_bytes(),
         'Source/confirmed-prices.json': json.dumps(price, ensure_ascii=False, indent=2).encode('utf8'),
         'Source/fire-sources.json': (ROOT / 'docs/fire-sources.json').read_bytes(),
         'Source/native-stats.lua': (ROOT / 'src/native-stats.lua').read_bytes(),
@@ -367,6 +372,11 @@ def build():
         'docs/gas-status-contexts-0.4.57.json': (ROOT / 'docs/gas-status-contexts-0.4.57.json').read_bytes(),
         'docs/ground-fire-contexts-0.4.66.json': (ROOT / 'docs/ground-fire-contexts-0.4.66.json').read_bytes(),
         'docs/releases/v0.4.66.md': (ROOT / 'docs/releases/v0.4.66.md').read_bytes(),
+        'docs/releases/v0.4.67.md': (ROOT / 'docs/releases/v0.4.67.md').read_bytes(),
+        'docs/career-records-0.4.67.md': (ROOT / 'docs/career-records-0.4.67.md').read_bytes(),
+        'docs/sc-currency-0.4.67.md': (ROOT / 'docs/sc-currency-0.4.67.md').read_bytes(),
+        'docs/unit-ribbon-coverage-0.4.67.md': (ROOT / 'docs/unit-ribbon-coverage-0.4.67.md').read_bytes(),
+        'docs/g8-ground-fire-0.4.67.md': (ROOT / 'docs/g8-ground-fire-0.4.67.md').read_bytes(),
         'docs/combat-polish-0.4.57.md': (ROOT / 'docs/combat-polish-0.4.57.md').read_bytes(),
         'docs/storage-status-0.4.57.md': (ROOT / 'docs/storage-status-0.4.57.md').read_bytes(),
         'docs/career-query-performance-0.4.57.json': (ROOT / 'docs/career-query-performance-0.4.57.json').read_bytes(),

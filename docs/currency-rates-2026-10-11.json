@@ -8,9 +8,16 @@
   "base": "USD",
   "mc_usd_rate": 1,
   "mc_usd_rule_origin": "user_confirmed_mod_rule",
-  "rate_direction": "units of selected currency per 1 USD; because 1 MC = 1 USD, also units per 1 MC",
+  "sc_usd_rate": 1,
+  "sc_usd_rule_origin": "mod_virtual_military_cost_presentation_rule_not_real_money_store_conversion",
+  "presentation_default": "SC",
+  "presentation_aliases": {
+    "MC": "SC"
+  },
+  "rate_direction": "units of selected display currency per 1 legacy MC / USD; SC is a mod-defined virtual presentation scale",
   "rates": {
     "MC": 1.0,
+    "SC": 1.0,
     "USD": 1.0,
     "CNY": 6.692129216491166,
     "EUR": 0.8923790826343031,
@@ -19,6 +26,7 @@
   },
   "rates_decimal": {
     "MC": "1",
+    "SC": "1",
     "USD": "1",
     "CNY": "6.692129216491165447081920399785829020168",
     "EUR": "0.8923790826343030519364626093164376227021",
@@ -120,6 +128,7 @@
     }
   ],
   "notes_zh": [
+    "0.4.67起默认显示SC（超级货币），1 SC＝1 USD为用户确认的本MOD虚拟军费折算规则，与现实购买超级货币的价格无关。旧MC显示选项自动映射到SC；原始MC分账目、价格、历史金额和真实币种汇率均保留，汇总后仅在显示时换算。",
     "1 MC = 1 USD 是用户确认的 MOD 记账规则；MC 与美元的关系不来自央行汇率。",
     "2026-10-11 日本时区为星期日。欧洲央行周末不公布参考汇率，本次使用查验时最近公布日 2026-10-09 的官方参考汇率。",
     "官方原表以欧元为基准。美元换算率由同一公布日的各币欧元报价除以 1.1206 得出；保留原始十进制报价与除法关系，金额展示时才舍入。",

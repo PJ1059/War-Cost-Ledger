@@ -22,7 +22,7 @@ class BillingPriceFixes(unittest.TestCase):
         loader=importlib.util.spec_from_file_location('ledger_catalog_regeneration_052',ROOT/'tools/integration-catalogs.py')
         generator=importlib.util.module_from_spec(loader);loader.loader.exec_module(generator)
         rebuilt=generator.catalogs()
-        self.assertEqual(len(rebuilt['entities']),134)
+        self.assertEqual(len(rebuilt['entities']),135)
         self.assertEqual(rebuilt['entities'],self.catalog['entities'])
         self.assertEqual(rebuilt['stat_sources'],self.catalog['stat_sources'])
         for identity in ('16474112801385B6','1FA1F596769225C2','439F9E65C18567DA'):

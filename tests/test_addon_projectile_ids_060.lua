@@ -3,6 +3,7 @@
 -- Reuse only the existing fixture's installer/transport boundary scaffold.
 local addon,runtime,fixture,target_fixture,copy_fixture,damage_fixture=
     assert(arg[1]),assert(arg[2]),assert(arg[3]),assert(arg[4]),assert(arg[5]),assert(arg[6])
+local expected_version=assert(arg[7], 'expected built version required'):match('([^/\\]+)$')
 local function read(path)local f=assert(io.open(path,'rb'));local s=f:read('*a'):gsub('\r\n','\n');f:close();return s end
 local native=read(fixture);local boundary=assert(native:find('state=dofile(path).state',1,true))
 local target=read(target_fixture)
@@ -17,6 +18,7 @@ local damage=read(damage_fixture)
 first=assert(damage:find('local before=[=[',1,true))+#'local before=[=['
 last=assert(damage:find('\n]=]',first,true))
 local before=damage:sub(first,last-1)
+before=before:gsub('__TEST_EXPECTED_VERSION__', string.format('%q', expected_version))
 local scenario=[=[
 local RL='26E40437EA275296'
 local detail=assert(upvalue(module.career_combat_query,'combat_detail'))

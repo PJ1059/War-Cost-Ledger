@@ -80,9 +80,10 @@ package.preload['hd2runtime/runtime/event_world']=function()return {
     open=function()return available and world end,
     game_state=function()return {state=mission and 4 or 3,mission=mission,host=true}end,
     players=function()return {}end,stat_breakdown=function()return stat end,
+    entity_state=function()return nil end,
     health_header=function()return nil end}end
-package.preload['hd2runtime/runtime/beacon_redirect']=function()return {prove=function()return false end,clock=function()return 0 end}end
-package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{}end
+package.preload['hd2runtime/runtime/beacon_redirect']=function()return {prove=function()return false end,clock=function()return 0 end,beacons=function()return{}end}end
+package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{prove=function()return false end,id_of=function()return nil end}end
 local opens,original_open=0,JSON.open
 JSON.open=function(owner)
     assert(owner=='mods/hd2_costs/war_cost_ledger/engine_bindings','unexpected store owner')

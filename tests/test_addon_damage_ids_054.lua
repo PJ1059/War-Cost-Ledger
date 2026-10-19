@@ -3,6 +3,7 @@
 -- Installation and FIFO transport are the only native bridge boundaries.
 local addon,runtime,fixture,target_fixture,copy_fixture=
     assert(arg[1]),assert(arg[2]),assert(arg[3]),assert(arg[4]),assert(arg[5])
+local expected_version=assert(arg[6], 'expected built version required'):match('([^/\\]+)$')
 local function read(path)local f=assert(io.open(path,'rb'));local s=f:read('*a'):gsub('\r\n','\n');f:close();return s end
 local native=read(fixture);local boundary=assert(native:find('state=dofile(path).state',1,true))
 local target=read(target_fixture)
@@ -14,6 +15,7 @@ local record_first=assert(old_copy:find('local function record(sequence,result)'
 local record_last=assert(old_copy:find('local kinds=',record_first,true))
 local record_helper=old_copy:sub(record_first,record_last-1)
 local before=[=[
+local expected_version=__TEST_EXPECTED_VERSION__
 local function read(path)local f=assert(io.open(path,'rb'));local s=f:read('*a'):gsub('\r\n','\n');f:close();return s end
 os.clock=function()return 0 end -- deterministic owned-memory replay; no performance claim
 local function upvalue(fn,name)
@@ -74,7 +76,7 @@ function transport.attach(given,options)
 end
 rawset(_G,'HD2OwnedTransport',transport)
 local built=read(path)
-assert(built:find("local VERSION = '0.4.66'",1,true))
+assert(built:find("local VERSION = '"..expected_version.."'",1,true), 'actual built '..expected_version)
 local function replace_module(start,finish,replacement)
     local a=assert(built:find(start,1,true));local z=assert(built:find(finish,a,true))
     built=built:sub(1,a-1)..replacement..built:sub(z)
@@ -114,6 +116,7 @@ local function blast(source)
     end
 end
 ]=]
+before=before:gsub('__TEST_EXPECTED_VERSION__', string.format('%q', expected_version))
 local after=[=[
 local function contact(a,damage_id,source,attribution_only,result)
     c.record_sequence=c.record_sequence+1

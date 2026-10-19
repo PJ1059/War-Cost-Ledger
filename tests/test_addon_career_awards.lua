@@ -64,8 +64,11 @@ assert(totals().ribbons.melee==5 and totals().ribbons.air==0,'independent previe
 ships()
 assert(state.ribbons.demolition==10 and totals().ribbons.demolition==12)
 assert(totals().medals.foreign_parking==1,'real same-mission threshold records one medal')
+local earned_at=module.mission_history_snapshot().entries[1].medal_last_at.foreign_parking
+assert(type(earned_at)=='number'and earned_at>0,'actual built award observation saves the acquisition time')
 tick(4)
 assert(totals().medals.foreign_parking==1 and totals().ribbons.demolition==12)
+assert(module.mission_history_snapshot().entries[1].medal_last_at.foreign_parking==earned_at,'idle polling never renews acquisition time')
 active=false;tick()
 assert(saved.career_awards_v1.totals.ribbons.demolition==12 and saved.last_mission.ribbons.demolition==10,
     'end_mission persists the award checkpoint with the matching mission state')
@@ -75,6 +78,7 @@ module=dofile(path);state=module.state
 assert(module.career_award_snapshot().totals.ribbons.demolition==12)
 tick(2)
 assert(module.career_award_snapshot().totals.medals.foreign_parking==1,'reload must not re-import the last mission')
+assert(module.mission_history_snapshot().entries[1].medal_last_at.foreign_parking==earned_at,'award timestamps survive the real store reload')
 stats={totals={[SHOTS]=0,[KILLS]=0,[DEATHS]=0,[0xC7680A1B]=0},sources={}}
 actors={};active=true;tick()
 ships()

@@ -103,7 +103,7 @@ return function(state, is_visible, currency)
             'battle HUD width must use the native parent local UI units')
         width = math.floor(width)
         local shown = is_visible() == true
-        local code = currency and currency:code(context.currency or state.display_currency) or 'MC'
+        local code = currency and currency:code(context.currency or state.display_currency) or 'SC'
         local changed = cached == nil or previous.shown ~= shown or previous.map ~= context.map_open
             or previous.width ~= width or previous.sequence ~= state.sequence
             or previous.kills ~= state.kills or previous.deaths ~= state.deaths
@@ -122,8 +122,9 @@ return function(state, is_visible, currency)
         previous.currency = code
         previous.shots = state.shots
         previous.billing_enabled = state.billing_enabled
+        local fallback = (state.total_cents or 0) / 100
         local bill = currency and currency:format(state.total_cents, code)
-            or string.format('%.2f', (state.total_cents or 0) / 100)
+            or (fallback > 0 and fallback < 0.01 and '<0.01' or string.format('%.2f', fallback))
         local current_kd=kd(state.kills,state.deaths,true)
         local history_kd=kd(state.history_kills,state.history_deaths)
         local arrow=''
@@ -133,7 +134,7 @@ return function(state, is_visible, currency)
             local history=state.history_kills/math.max(1,state.history_deaths)
             if current>history then arrow='↑' elseif current<history then arrow='↓' end
         end
-        local symbols={MC='MC',USD='$',CNY='¥',EUR='€',GBP='£',SEK='kr'}
+        local symbols={SC=' SC',USD='$',CNY='¥',EUR='€',GBP='£',SEK='kr'}
         local view = {version = 1, artwork = 'placeholders', native_binding = false,
             mode = context.map_open and 'map' or 'combat', shown = shown, width = width,
             medals = {}, ribbons = {}, height = 0, task_offset_y = 0,

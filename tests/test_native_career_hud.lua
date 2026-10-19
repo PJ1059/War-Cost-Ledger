@@ -430,6 +430,13 @@ feed=feed_of({legacy_crush=derived});draw()
 assert(node('award_R12_count').text=='x157'and node('award_R12_texture').shown)
 assert(node('award_R12_count_back').shown,'new crush count gets the same border-clearing backplate')
 feed=historical({history=old_body,expanded_sequence=31,legacy_crush=derived});draw()
+if not node('award_R12_texture').shown then
+    local maximum=feed.model.max_scroll
+    for at=0,math.ceil(maximum/16)do
+        feed=historical({history=old_body,expanded_sequence=31,legacy_crush=derived,scroll=math.min(maximum,at*16)});draw()
+        if node('award_R12_texture').shown then break end
+    end
+end
 assert(node('award_R12_count').text=='x154'and node('award_R12_texture').shown)
 assert(old_body.entries[1].ribbons.crush==nil and records.totals.ribbons.crush==3,
     'native legacy display never rewrites either history or the stored cumulative count')
@@ -437,9 +444,16 @@ records=old_records
 feed=historical();view=draw()
 assert(#feed.model.items==0 and control('toggle_match',20) and control('toggle_match',19),'collapsed history lists both matches')
 feed=historical({expanded_sequence=20});view=draw()
-assert(node('award_R01_count').text=='x5' and node('award_R01_texture').shown)
 assert(contains_text('60.00') and contains_text('+5.0000'))
 assert(not control('delete_history') and not contains_text('删除'),'history has no deletion control')
+if not node('award_R01_texture').shown then
+    local maximum=feed.model.max_scroll
+    for at=0,math.ceil(maximum/16)do
+        feed=historical({expanded_sequence=20,scroll=math.min(maximum,at*16)});view=draw()
+        if node('award_R01_texture').shown then break end
+    end
+end
+assert(node('award_R01_count').text=='x5' and node('award_R01_texture').shown,'awards remain reachable below the record header')
 feed=historical({expanded_sequence=19});view=draw()
 assert(contains_text('记录中断') and contains_text('4/0'))
 assert(contains_text('基准未记录'),'missing after value never invents a delta')
@@ -536,13 +550,13 @@ local patriotic_bill={version=1,total_cents=2500,entries={{key='maintenance:las'
 feed=feed_of({view='collection',billing_enabled=true,history={entries={{sequence=2,status='ended',patriotic_bill=patriotic_bill}}}});view=draw()
 local bill_entry
 for _,c in ipairs(feed.model.nav_controls)do if c.id=='collection_bill'then bill_entry=c end end
-assert(bill_entry and bill_entry.action=='tab_bill'and contains_text('爱国账单：25.00 MC'),
+assert(bill_entry and bill_entry.action=='tab_bill'and contains_text('爱国账单：25.00 SC'),
     'the collection footer reuses retained native text controls for the actual bill entry')
 feed=feed_of({view='bill',billing_enabled=true,history={entries={{sequence=2,status='ended',kills=1,deaths=0,ribbons={},medals={},patriotic_bill=patriotic_bill}}}});view=draw()
-assert(control('tab_bill')and contains_text('累计爱国账单')and contains_text('25.00 MC')and contains_text('激光维护折旧费'),
+assert(control('tab_bill')and contains_text('累计爱国账单')and contains_text('25.00 SC')and contains_text('激光维护折旧费'),
     'real retained native widgets render the sixth tab, actual bill and maintenance name')
 feed=feed_of({view='bill',billing_enabled=false});view=draw()
-assert(not control('tab_bill')and not contains_text('25.00 MC'),'disabling hides retained bill slots')
+assert(not control('tab_bill')and not contains_text('25.00 SC'),'disabling hides retained bill slots')
 -- Exercise every fixed slot, then shrink to one of each. This catches leftover
 -- text/active paint when filtering replaces control IDs at the same indices.
 feed=feed_of();feed.model.items={};feed.model.sections={};feed.model.tooltip=nil

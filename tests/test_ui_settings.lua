@@ -106,10 +106,10 @@ assert(f.settings.config.enabled == false and f.settings.config.move_tasks == fa
 assert(#f.actions == 0 and f.menu.get(PREFIX .. 'preview') == 1 and f.menu.get(PREFIX .. 'capture') == 1)
 assert(#f.sets == 5, 'startup resets three actions and migrates two stock insets')
 for _, set in ipairs(f.sets) do assert((set.value == 1 and (set.id == PREFIX .. 'preview' or set.id == PREFIX .. 'capture' or set.id==PREFIX..'code_copy_test')) or (set.value==0 and (set.id==PREFIX..'right_margin' or set.id==PREFIX..'top_margin'))) end
-assert(f.settings.config.currency == 'MC' and f.settings.values.currency == 1)
+assert(f.settings.config.currency == 'SC' and f.settings.values.currency == 1)
 assert(f.registrations[3].spec.label == '账单显示币种')
-assert(f.registrations[3].spec.description == '选择战争账单的显示币种。' and Text.check(f.registrations[3].spec.description))
-assert(f.registrations[3].spec.choices[1] == 'MC（军需单位）' and #f.registrations[3].spec.choices == 6)
+assert(f.registrations[3].spec.description == '选择战争账单的显示币种。SC按1 SC＝1 USD折算，仅为本MOD的虚拟军费显示规则。' and Text.check(f.registrations[3].spec.description))
+assert(f.registrations[3].spec.choices[1] == 'SC（超级货币）' and #f.registrations[3].spec.choices == 6)
 assert(f.settings.values.code_copy_test==1 and f.menu.get(PREFIX..'code_copy_test')==1)
 print('PASS: '..#EXPECTED..' Chinese options use real MOM v1.2 API/model in one category; false preferences preserved; saved actions reset without firing')
 local migrated=fresh({ui_settings={right_margin=18,top_margin=18}}, {[PREFIX..'right_margin']='18',[PREFIX..'top_margin']='18'})
@@ -173,7 +173,7 @@ assert(apply(f, 'career_ship_sync', true) == 1 and f.settings.config.career_ship
 print('PASS: real pending/apply callbacks persist settings including false; programmatic MOM set has no callbacks')
 
 -- Currency waits for Apply, maps to display codes, and keeps unrelated stored options.
-local currencies = {'MC', 'USD', 'CNY', 'EUR', 'GBP', 'SEK'}
+local currencies = {'SC', 'USD', 'CNY', 'EUR', 'GBP', 'SEK'}
 f.data.ui_settings.other_option_added_later = 'keep'
 for index = 2, #currencies do
     local before = f.settings.config.currency
@@ -190,11 +190,21 @@ assert(restored.settings.config.currency == 'SEK')
 publish(restored)
 assert(restored.settings.config.currency == 'SEK' and restored.menu.get(PREFIX .. 'currency') == 6)
 local invalid_saved = fresh({ui_settings = {currency = 7}})
-assert(invalid_saved.settings.config.currency == 'MC')
+assert(invalid_saved.settings.config.currency == 'SC')
 publish(invalid_saved)
-assert(invalid_saved.registrations[3].spec.description == '选择战争账单的显示币种。')
+assert(invalid_saved.registrations[3].spec.description == '选择战争账单的显示币种。SC按1 SC＝1 USD折算，仅为本MOD的虚拟军费显示规则。')
 _G.ModOptionsMenu = f.menu
-assert(apply(f, 'currency', 1) == 1 and f.settings.config.currency == 'MC')
+assert(apply(f, 'currency', 1) == 1 and f.settings.config.currency == 'SC')
+for _,legacy in ipairs({1,'MC','SC'}) do
+    local old=fresh({ui_settings={currency=legacy}})
+    assert(old.settings.config.currency=='SC' and old.settings.values.currency==1)
+    publish(old);assert(old.settings.config.currency=='SC' and old.menu.get(PREFIX..'currency')==1)
+end
+for index=2,6 do
+    local explicit=fresh({ui_settings={currency=index}}, {[PREFIX..'currency']=tostring(index)})
+    publish(explicit);assert(explicit.settings.config.currency==currencies[index], 'explicit real currency was reset to SC')
+end
+_G.ModOptionsMenu=f.menu
 print('PASS: six currency codes change only after real MOM Apply, restore from both stores, and retain legacy settings; concise function description verified')
 
 -- F8 mirrors one public set, saves only hud_enabled, and withdraws an unapplied menu edit.

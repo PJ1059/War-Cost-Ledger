@@ -8,7 +8,7 @@ local base=arg[1]:gsub('game%-hud.lua$','')
 local make_layout=dofile(base..'hud-layout.lua')
 local make_charges=dofile(base..'charge-notifications.lua')
 local make_currency=dofile(base..'currency.lua')
-local currency=make_currency({rates={MC=1,USD=1,CNY=7,EUR=.9,GBP=.8,SEK=10},mc_usd_rate=1})
+local currency=make_currency({rates={MC=1,SC=1,USD=1,CNY=7,EUR=.9,GBP=.8,SEK=10},mc_usd_rate=1})
 local state={sequence=1,shots=1145,kills=240,deaths=0,history_kills=7596,history_deaths=100,
     total_cents=13056438,ribbons={},mission_medals={}}
 local battle=make_battle(state,function()return true end,currency)
@@ -53,7 +53,7 @@ local function frame(w,h,now)
     hud:draw(d,now,true);return d
 end
 local baseline=frame(1920,1080,0)
-assert(baseline.texts['240/0[75.96'] and baseline.texts[']'] and baseline.texts['130564.38MC'])
+assert(baseline.texts['240/0[75.96'] and baseline.texts[']'] and baseline.texts['130564.38 SC'])
 local function has_image(frame,id)
     for _,name in ipairs(frame.images)do if name==id then return true end end
     return false
@@ -74,7 +74,7 @@ hud:observe(.1)
 model=hud:native_model(.1,true)
 local plan=model.layout
 assert(#plan.side.hits==1 and #plan.side.ribbons==1 and #plan.side.medals==1 and #plan.charges==1)
-assert(plan.charges[1].text=='治疗针 -2500.00MC')
+assert(plan.charges[1].text=='治疗针 -2500.00 SC')
 local right=frame(1920,1080,.1)
 assert(math.abs(right.texts.x7.y-(540+18*1.5))<.001,
     'missing native pickup keeps fallback notifications at the right midpoint')
@@ -82,7 +82,7 @@ hud:configure({hit_position='center',charge_position='center'})
 local central=frame(1920,1080,.1)
 assert(math.abs(central.texts.x7.x-(960+31*1.5/2))<.001
     and math.abs(central.texts.x7.y-(610+18*1.5))<.001,'central hit is below the reticle')
-local fee=central.texts['治疗针 -2500.00MC']
+local fee=central.texts['治疗针 -2500.00 SC']
 assert(fee.x==960 and math.abs(fee.y-(610+(29+6)*1.5))<.001 and fee.align=='center',
     'central fee is centered below the central hit')
 assert(central.texts.x1.x==1920,'earned ribbons remain right when hit and fee move centrally')
@@ -98,7 +98,7 @@ model=hud:native_model(.2,true)
 assert(#model.layout.side.ribbons==1 and model.layout.side.ribbons[1].count==2 and model.height==before)
 charges:emit('stim','治疗针',250000,1.8);hud:observe(1.8)
 model=hud:native_model(2.3,true)
-assert(#model.awards.items==3 and model.charges.items[1].amount_text=='-5000.00MC','fee prolongs common batch')
+assert(#model.awards.items==3 and model.charges.items[1].amount_text=='-5000.00 SC','fee prolongs common batch')
 hud:configure({currency='USD',ribbon_mode='always'})
 model=hud:native_model(2.4,true)
 assert(model.charges.items[1].text=='治疗针 -5000.00$')
@@ -163,4 +163,17 @@ state.kill_source_notices={revision=2,items={{expires_at=40,lines={'未结束的
 assert(#hud:native_model(31,true).kill_source_notices.items==1)
 state.mission=false
 assert(not hud:native_model(31,true).kill_source_notices.items,'returning to ship hides stale source snapshots')
+-- Small positive ammo costs remain visible after conversion; switching the old
+-- display code selects SC and never rewrites any charge or total in the account.
+hud:configure({currency='MC'})
+charges:emit('single-round','单发弹药',1,40);hud:observe(40)
+model=hud:native_model(40,true)
+assert(hud.config.currency=='SC' and model.stats.currency=='SC')
+assert(model.charges.items[1].amount_text=='-0.01 SC' and model.charges.items[1].text=='单发弹药 -0.01 SC')
+assert(state.total_cents==real_bill and charges:snapshot(40,true).items[1].amount_cents==1)
+hud:configure({currency='GBP'})
+model=hud:native_model(40,true)
+assert(model.charges.items[1].amount_text=='-<0.01£' and model.charges.items[1].text=='单发弹药 -<0.01£')
+local tiny=frame(1920,1080,40)
+assert(tiny.texts['单发弹药 -<0.01£'],'flat renderer must retain the less-than sign and negative charge prefix')
 print('PASS: approved native/fallback layout, exact metrics/KD/currencies, common three rows and 2s charge batch, shared task height, five viewport sizes, isolated preview and idle retained draw.')

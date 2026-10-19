@@ -8,7 +8,7 @@ local PREFIX='hd2_costs.war_cost_ledger.'
 local lang='en'
 local translations={['战果与战争账单']='Combat Results & War Costs',
     ['显示战果界面']='Show Combat HUD',['账单显示币种']='Bill Currency',
-    ['MC（军需单位）']='MC (Military Credits)',['美元（USD）']='US Dollar (USD)',
+    ['SC（超级货币）']='SC (Super Credits)',['美元（USD）']='US Dollar (USD)',
     ['人民币（CNY）']='Chinese Yuan (CNY)',['欧元（EUR）']='Euro (EUR)',
     ['英镑（GBP）']='British Pound (GBP)',['瑞典克朗（SEK）']='Swedish Krona (SEK)',
     ['同步状态一']='Sync status one',['同步状态二']='Sync status two'}
@@ -45,13 +45,13 @@ for _,version in ipairs({2,3})do
     local career=f.state.options[PREFIX..'career_page_sync']
     assert(enabled.label=='Show Combat HUD' and type(enabled.sources.label)=='function')
     assert(type(f.state.mods[1].source)=='function' and f.state.mods[1].title=='COMBAT RESULTS & WAR COSTS')
-    assert(currency.choices[1]=='MC (MILITARY CREDITS)' and currency.choices[2]=='US DOLLAR (USD)')
+    assert(currency.choices[1]=='SC (SUPER CREDITS)' and currency.choices[2]=='US DOLLAR (USD)')
     assert(type(currency.sources.choices[1])=='function' and type(currency.sources.choices[6])=='function')
     assert(career.description=='Sync status one')
     assert(f.settings.config.enabled==false and f.settings.config.currency=='CNY' and f.settings.config.scale==1.15)
     local writes,registers,changes=f.counts()
     lang='zh';f.status('同步状态二');f.mom.translation.refresh()
-    assert(enabled.label=='显示战果界面' and currency.choices[1]=='MC（军需单位）')
+    assert(enabled.label=='显示战果界面' and currency.choices[1]=='SC（超级货币）')
     assert(currency.choices[2]=='美元（USD）' and currency.choices[6]=='瑞典克朗（SEK）',
         'each choice must keep its own source, not the final loop value')
     assert(career.description=='同步状态二' and f.state.mods[1].title=='战果与战争账单')

@@ -1,8 +1,8 @@
 # 数据与图像来源 / Data and image sources
 
-范围：0.4.66 公开源码与发行说明。记录实际使用的资料及来源边界；不把社区整理数据、游戏渲染图或其他 MOD 改编部分归为本项目独占原创。软件作者与依赖许可另见 [THIRD-PARTY](../THIRD-PARTY.md) 和 [NOTICE](../NOTICE)。
+范围：0.4.69 公开源码与发行说明。记录实际使用的资料及来源边界；不把社区整理数据、游戏渲染图或其他 MOD 改编部分归为本项目独占原创。软件作者与依赖许可另见 [THIRD-PARTY](../THIRD-PARTY.md) 和 [NOTICE](../NOTICE)。
 
-Scope: public source and release documentation for 0.4.66. This register distinguishes project work from community data, game renders and adapted material. Software credits and licensing are in [THIRD-PARTY](../THIRD-PARTY.md) and [NOTICE](../NOTICE).
+Scope: public source and release documentation for 0.4.69. This register distinguishes project work from community data, game renders and adapted material. Software credits and licensing are in [THIRD-PARTY](../THIRD-PARTY.md) and [NOTICE](../NOTICE).
 
 ## 费用 / Prices
 
@@ -17,15 +17,15 @@ The direct price source is the project's workbook. Its rules and parameter sheet
 | [Helldivers Wiki weapons](https://helldivers.wiki.gg/zh/wiki/%E6%AD%A6%E5%99%A8?variant=zh-sg), [stratagems](https://helldivers.wiki.gg/zh/wiki/%E6%88%98%E7%95%A5%E9%85%8D%E5%A4%87?variant=zh-hans), [Maintenance Report](https://helldivers.wiki.gg/zh/wiki/Maintenance_Report) | 名称、技术类别与背景；逐装备链接保留在工作簿 N 列，英文名在 P 列。 / Names, technology classes and background; per-item URLs are retained in workbook column N and English names in P. |
 | [Ship Master voice lines](https://helldivers.wiki.gg/wiki/Ship_Master#Voice_Lines), [Liberty-Class Cruiser](https://helldivers.fandom.com/wiki/Liberty-Class_Cruiser) | 军需与舰船背景参考，来源保留在规则页。 / Requisition and ship-lore references retained on the rules sheet. |
 
-`1 MC = 1 USD` 是本 MOD 的记账标尺，不是游戏货币的现实兑换承诺；不换算超级货币或申购点。汇率切换只影响显示，历史账目继续使用 MC。
+默认费用显示为 **SC（超级货币）**，按作者指定的虚构规则 **1 SC = 1 USD** 换算；这不是官方游戏世界汇率，也不按现实购买超级货币的价格换算。申购点不参与换算。历史内部 MC 整数分字段与原始金额保留，货币切换只影响显示。
 
-`1 MC = 1 USD` is an accounting convention, not a real exchange offer for an in-game currency. Super Credits and Requisition Slips are not converted. Currency selection changes display; stored accounting remains in MC.
+The default display is **SC (Super Credits)** at the author's fictional rule of **1 SC = 1 USD**. This is neither an official in-game exchange rate nor a conversion based on real-money Super Credit purchases. Requisition Slips are not converted. Legacy integer MC-cent fields and original amounts remain unchanged; currency selection affects display only.
 
 ## 汇率 / Exchange rates
 
-来源记录：[currency-rates-2026-10-11.json](currency-rates-2026-10-11.json)。使用 2026-10-09 的固定欧元参考汇率，2026-10-11 复核；以 EUR 报价换算为 USD/MC 基准。游戏运行时不查询网络，也不把该历史快照称为当前市场价格。
+来源记录：[currency-rates-2026-10-11.json](currency-rates-2026-10-11.json)。使用 2026-10-09 的固定欧元参考汇率，2026-10-11 复核；以 EUR 报价换算为 USD 基准；MC 仅保留为历史内部记账字段，SC 显示规则见上。游戏运行时不查询网络，也不把该历史快照称为当前市场价格。
 
-The [rate snapshot](currency-rates-2026-10-11.json) stores euro reference rates dated 2026-10-09, checked on 2026-10-11, converted to a USD/MC base. The mod makes no live exchange-rate requests; this historical snapshot is not advertised as current market pricing.
+The [rate snapshot](currency-rates-2026-10-11.json) stores euro reference rates dated 2026-10-09, checked on 2026-10-11, converted to a USD base; MC remains a legacy internal accounting field, while the SC display rule is defined above. The mod makes no live exchange-rate requests; this historical snapshot is not advertised as current market pricing.
 
 - [European Central Bank — euro foreign exchange reference rates](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.fr.html)
 - [Bank of Lithuania — ECB daily reference rates](https://www.lb.lt/en/daily-euro-foreign-exchange-reference-rates-published-by-the-european-central-bank)
@@ -116,3 +116,7 @@ These are specific gaps in the record, not claims of permission or blanket concl
 ## Ground-fire attribution, 0.4.66
 
 [ground-fire-contexts-0.4.66.json](ground-fire-contexts-0.4.66.json) records pinned Runtime/Filediver input hashes, typed explosion/projectile/component identities, source ownership and individual Helldivers Wiki duration links. The 27/20/15/6-second grenade windows are community ground-pool reports, not verified native lifetimes; other enabled events use an explicit five-second association rule. Native outer explosion radii bound inference and do not prove the exact terrain footprint. Spray-created and code-created areas have no verified creator/position collection path in this release. No live sampling dump is included.
+
+## 0.4.67–0.4.69 additions
+
+The [Impaler audit](unit-ribbon-coverage-0.4.67.md) verifies the exact full-body resource against Runtime's SDK while excluding tentacles. Existing approved artwork is reused. [G-8 diagnosis](g8-ground-fire-0.4.67.md) documents bounded source inference without publishing personal mission data. [SC display](sc-currency-0.4.67.md) records the author's explicit 1 SC = 1 USD rule; it is not a game-world or purchase exchange rate. [Dependency compatibility](dependency-compatibility-0.4.68.md) lists official Runtime commits and the separate legacy/modern HUD+ contracts.

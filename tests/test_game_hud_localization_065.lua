@@ -5,7 +5,7 @@ local make_battle=dofile(base..'battle-hud.lua')
 local make_awards=dofile(base..'award-notifications.lua')
 local make_charges=dofile(base..'charge-notifications.lua')
 local make_layout=dofile(base..'hud-layout.lua')
-local currency=dofile(base..'currency.lua')({rates={MC=1,USD=1,CNY=7,EUR=.9,GBP=.8,SEK=10},mc_usd_rate=1})
+local currency=dofile(base..'currency.lua')({rates={MC=1,SC=1,USD=1,CNY=7,EUR=.9,GBP=.8,SEK=10},mc_usd_rate=1})
 local state={sequence=1,mission=true,shots=10,kills=2,deaths=0,history_kills=100,history_deaths=1,
     total_cents=250000,ribbons={},mission_medals={}}
 local battle=make_battle(state,function()return true end,currency)
@@ -30,14 +30,14 @@ end
 local hud=make_hud({},state,battle,awards,{images={},frame={}},{currency=currency,charges=charges,
     layout=layout_factory,localize=t,locale_revision=function()return revision end})
 local en=hud:native_model(.1,true)
-assert(en.charges.items[1].name=='Stim' and en.charges.items[1].text=='Stim -2500.00MC')
+assert(en.charges.items[1].name=='Stim' and en.charges.items[1].text=='Stim -2500.00 SC')
 assert(en.kill_source_notices.items[1].lines[1]=='Alpha Commander [R-36 Eruptor]')
 assert(hud:native_model(.1,true)==en,'same language and source data should reuse retained presentation')
 local clears=layout_clears
 lang,revision='zh',2
 local zh=hud:native_model(.1,true)
 assert(zh~=en and zh.layout~=en.layout and layout_clears==clears+1)
-assert(zh.charges.items[1].name=='治疗针' and zh.charges.items[1].text=='治疗针 -2500.00MC')
+assert(zh.charges.items[1].name=='治疗针' and zh.charges.items[1].text=='治疗针 -2500.00 SC')
 assert(zh.kill_source_notices.items[1].lines[1]==raw_notice)
 assert(zh.kill_source_notices.items[1].expires_at==5,'switching language must not restart notice lifetime')
 assert(state.kill_source_notices.items[1].lines[1]==raw_notice and charges:snapshot(.1,true).items[1].name=='治疗针',

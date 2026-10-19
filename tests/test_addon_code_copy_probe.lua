@@ -40,9 +40,10 @@ package.preload['mods/skyeshade/hd2runtime']=function()return{mod=function()retu
     ui={overlay=function()return{draw=function()end,show=function()end,hide=function()end}end}}end
 package.preload['hd2runtime/runtime/event_world']=function()return{
     open=function()return c.available and c.world end,
-    game_state=function()return{state=c.state,mission=c.state==4,host=true}end,players=function()return{}end}end
-package.preload['hd2runtime/runtime/beacon_redirect']=function()return{prove=function()return false end,clock=function()return 0 end}end
-package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{}end
+    game_state=function()return{state=c.state,mission=c.state==4,host=true}end,players=function()return{}end,
+    entity_state=function()return nil end,stat_breakdown=function()return{totals={},sources={}}end}end
+package.preload['hd2runtime/runtime/beacon_redirect']=function()return{prove=function()return false end,clock=function()return 0 end,beacons=function()return{}end}end
+package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{prove=function()return false end,id_of=function()return nil end}end
 JSON.open=function(owner)
     if owner:sub(-19)=='/plugin_frame_probe'then return{get=function()return{source_sha=old_sha,phase='stopped'}end}end
     assert(owner=='mods/hd2_costs/war_cost_ledger/code_copy_probe')

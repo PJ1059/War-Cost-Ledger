@@ -1,7 +1,11 @@
 -- Actual built entry/bridge/layout integration. Saved real nodes and code pins
 -- are rebased into isolated memory. The native layout call is an explicit
 -- simulation, never an address called in a game or evidence of real FPS.
+-- Explicit legacy host: this fixture verifies native reservation and no duplicate
+-- Runtime combat draw. Runtime-only backend coverage is independent.
+rawset(_G,'HD2WarCostLedgerNativeHUDV1',{ready=true})
 local addon_path, runtime_path, fixture_path = assert(arg[1]), assert(arg[2]), assert(arg[3])
+local expected_version=assert(arg[4], 'expected built version required'):match('([^/\\]+)$')
 package.preload['hd2runtime/schemas/current'] = function() return dofile(runtime_path .. '/schemas/current.lua') end
 package.preload['hd2runtime/core/bytes'] = function() return dofile(runtime_path .. '/core/bytes.lua') end
 package.preload['hd2runtime/runtime/mod_store'] = function() return dofile(runtime_path .. '/runtime/mod_store.lua') end
@@ -196,16 +200,17 @@ local function boot(options)
             end}}
     end
     package.preload['hd2runtime/domains/metadata']=function()return {version='0.30.3'} end
-    package.preload['hd2runtime/domains/event_natives']=function()return {stats={keys={projectiles_fired=1,dealt_kills=2,received_deaths=3}}} end
+    package.preload['hd2runtime/domains/event_natives']=function()return {stats={keys={projectiles_fired=1,dealt_kills=2,received_deaths=3,projectiles_hit=4}}} end
     package.preload['hd2runtime/runtime/event_world']=function()
         return {open=function()return f.available and world or nil end,game_state=function()return {mission=f.mission} end,
+            entity_state=function()return nil,'fixture has no avatar Health record' end,
             players=function()return {{['local']=true,entity=42}} end,stat_breakdown=function()
                 f.stat_reads=f.stat_reads+1
                 return {totals={[1]=f.shots,[2]=f.kills,[3]=f.deaths,[0xC7680A1B]=0},sources={}}
             end}
     end
-    package.preload['hd2runtime/runtime/beacon_redirect']=function()return {prove=function()return false end,clock=function()return 0 end} end
-    package.preload['hd2runtime/runtime/stratagem_loadout']=function()return {} end
+    package.preload['hd2runtime/runtime/beacon_redirect']=function()return {prove=function()return false end,clock=function()return 0 end,beacons=function()return {} end} end
+    package.preload['hd2runtime/runtime/stratagem_loadout']=function()return {prove=function()return false end,id_of=function()return nil end} end
     for _,name in ipairs(modules) do package.loaded[name]=nil end
     local menu={api=1,version=3}
     function menu.register_option(id,spec)f.options[id],f.values[id]=spec,spec.default;return true end
@@ -214,7 +219,7 @@ local function boot(options)
     function menu.on_change(id,callback)f.callbacks[id]=callback;return true end
     rawset(_G,'ModOptionsMenu',menu);rawset(_G,'HD2WarCostLedgerV1',nil)
     f.module=dofile(addon_path)
-    assert(f.module.version=='0.4.66' and type(f.module.task_layout_status)=='function' and f.module.native_ui.task)
+    assert(f.module.version==expected_version and type(f.module.task_layout_status)=='function' and f.module.native_ui.task)
     assert(type(f.module.native_hud_snapshot)=='function','native feed must be public to the native HUD host')
     function f:status()return self.module.task_layout_status() end
     function f:apply(id,value)id=prefix..id;assert(self.callbacks[id]);self.values[id]=value;self.callbacks[id](value,id) end
@@ -435,4 +440,4 @@ check('failed/short writes roll back the current owned gap before any native cal
 end)
 
 assert(#failures==0,table.concat(failures,'\n'))
-print('Addon task relocation integration tests: '..count..' passed; actual built 0.4.66, saved real nodes/PINs, native feed and simulated placement; live display/FPS remain unverified.')
+print('Addon task relocation integration tests: '..count..' passed; actual built '..expected_version..', saved real nodes/PINs, native feed and simulated placement; live display/FPS remain unverified.')

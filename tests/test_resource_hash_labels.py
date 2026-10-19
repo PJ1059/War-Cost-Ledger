@@ -93,7 +93,7 @@ class HashLabels(unittest.TestCase):
     def test_checked_in_catalog_missing_kind_audit_contract(self):
         value=json.loads((ROOT/'docs/integration-catalogs.json').read_text(encoding='utf8'))
         rows=value['entities']
-        self.assertEqual(len(rows),134)
+        self.assertEqual(len(rows),135)
         self.assertEqual(len(value['stat_sources']),1185)
         self.assertEqual(sum(row.get('basis')=='exact_cloud_hash_and_runtime_enemy_type' for row in rows.values()),36)
         reviewed={hash_id:row for hash_id,row in rows.items()
@@ -105,7 +105,8 @@ class HashLabels(unittest.TestCase):
         self.assertEqual(sum(row.get('identity_basis')=='exact_cloud_hash_runtime_kill_and_cloud_enemy_group'
                              for row in reviewed.values()),2)
         legacy=[row for row in rows.values() if row.get('basis') not in
-                ('exact_cloud_hash_and_runtime_enemy_type','reviewed_exact_hash_runtime_unresolved_enemy')]
+                ('exact_cloud_hash_and_runtime_enemy_type','reviewed_exact_hash_runtime_unresolved_enemy',
+                 'reviewed_full_enemy_body_resource')]
         self.assertEqual(len(legacy),84)
         roster=json.loads((ROOT/'docs/enemy-catalog/units.json').read_text(encoding='utf8'))['units']
         roles={row['name_en']:row for row in roster}

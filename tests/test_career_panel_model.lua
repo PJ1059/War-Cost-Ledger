@@ -90,7 +90,7 @@ local history={revision=1,limit=500,entries={
 local h={page_visible=true,personal=true,width=420,height=747,view='history',history=history,
     format_time=function()return '2026-10-13 20:00'end}
 view=api:layout(records,h);bounded(view)
-assert(view.history_count==3 and view.expanded_sequence==18 and view.list_top==322)
+assert(view.history_count==3 and view.expanded_sequence==18 and view.list_top==366)
 assert(history.entries[1].sequence==16 and history.entries[2].sequence==18,'source never sorted/mutated')
 assert(find(view.nav_controls,'history_row1').sequence==18)
 assert(find(view.nav_controls,'history_row1').text:sub(1,2)=='- ','expanded card has an ASCII collapse indicator')

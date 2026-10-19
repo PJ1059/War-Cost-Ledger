@@ -242,13 +242,19 @@
       "file": "../artwork/review-0.4.57-ribbons-v4/heavy-impaler.png",
       "faction": "terminids",
       "hashes": [
-        "AE57FCDB49F74E98"
+        "AE57FCDB49F74E98",
+        "DCF8E74212FBEE3B"
       ],
       "bindings": [
         {
           "hash": "AE57FCDB49F74E98",
           "kind": "entity/v1/unresolved/AE57FCDB49F74E98",
           "basis": "cloud_cells_and_runtime_health_type"
+        },
+        {
+          "hash": "DCF8E74212FBEE3B",
+          "kind": "enemy/v1/terminids/impaler",
+          "basis": "reviewed_full_enemy_body_resource"
         }
       ]
     },

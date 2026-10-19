@@ -137,18 +137,19 @@ local function boot(options)
     end
     package.preload['hd2runtime/domains/metadata'] = function() return {version = '0.30.3'} end
     package.preload['hd2runtime/domains/event_natives'] = function() return {stats = {keys = {
-        projectiles_fired = 1, dealt_kills = 2, received_deaths = 3}}} end
+        projectiles_fired = 1, dealt_kills = 2, received_deaths = 3, projectiles_hit = 4}}} end
     package.preload['hd2runtime/runtime/event_world'] = function()
         return {open = function() return f.available and world or nil end,
             game_state = function() return {mission = f.mission} end,
+            entity_state = function() return nil, 'fixture has no avatar Health record' end,
             players = function() return {{['local'] = true, entity = 42}} end,
             stat_breakdown = function()
                 f.stat_reads = f.stat_reads + 1
                 return {totals = {[1] = f.shots, [2] = f.kills, [3] = f.deaths, [0xC7680A1B] = 0}, sources = {}}
             end}
     end
-    package.preload['hd2runtime/runtime/beacon_redirect'] = function() return {prove = function() return false end, clock = function() return 0 end} end
-    package.preload['hd2runtime/runtime/stratagem_loadout'] = function() return {} end
+    package.preload['hd2runtime/runtime/beacon_redirect'] = function() return {prove = function() return false end, clock = function() return 0 end, beacons = function() return {} end} end
+    package.preload['hd2runtime/runtime/stratagem_loadout'] = function() return {prove = function() return false end, id_of = function() return nil end} end
     for _, name in ipairs(runtime_modules) do package.loaded[name] = nil end
     local menu = {api = 1, version = 3}
     function menu.register_option(id, spec) f.options[id], f.values[id] = spec, spec.default; return true end

@@ -1,3 +1,11 @@
+# 0.4.69 · Compatibility and attribution limits
+
+Runtime uses required API 1 capability checks; this is not a guarantee for every future version or game build. HUD+ 0.2.9 combat uses Runtime rendering, while legacy 0.2.1 / 0.2.4 native paths remain. The F9 binding and separate archive are removed. Career retains its existing native attachment; no replacement Career interface is provided for hosts without that API.
+
+SC is the author's display unit at 1 SC = 1 USD, not an official exchange rate. Historical data is not rescaled or backfilled. G-8 fixes retain the existing local-event, position, fatal-fire, radius/time and local-credit requirements; unknown sources and spray-created ground-fire gaps remain. Offline tests do not measure live multiplayer accuracy or frame rate.
+
+## Previous release limits
+
 # 0.4.66 · Ground-fire and hellpod attribution limits
 
 Hellpod evidence is target-bound and expires after 0.75 seconds without renewal from repeated metadata. Missing pod evidence cannot be reconstructed. Ground-fire inference covers nine source families and eleven exact local explosion events, requiring position, reliable fatal fire type and local ownership/quota. Spray weapons, flame sentries/drones/vehicles and code-created fire remain gaps. The four grenade duration reports are heuristic windows; other events use five seconds. Old records are preserved. Offline replays and successful loading do not measure multiplayer accuracy or frame rate. See [release notes](docs/releases/v0.4.66.md) and the [catalogue](docs/ground-fire-contexts-0.4.66.json).

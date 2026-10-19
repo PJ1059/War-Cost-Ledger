@@ -6,6 +6,7 @@ return function(options)
     local scroll,award_page=0,1
     local expanded_bill=false
     local previous_left,sampled_at,recent_sequence
+    local last_award_click,jump_sequence
     local pending,wheel,menu_wheel={},0,0
     local capture_requested=false
     local mouse_capture={keyboard=false,mouse=true}
@@ -71,6 +72,11 @@ return function(options)
         for _,c in ipairs(model.nav_controls or {})do
             if c.enabled and p.x>=c.x and p.x<c.x+c.width and p.y>=c.y and p.y<c.y+c.height then return c end
         end
+        for _,item in ipairs(model.items or {})do
+            if p.x>=item.x and p.x<item.x+item.width and p.y>=item.y and p.y<item.y+item.height then
+                return {id='award_'..item.id,action='award_jump',text=item.id,sequence=item.sequence,enabled=true}
+            end
+        end
     end
     function api:clear(reason)
         -- Reader timeouts hide the view without erasing browsing state.
@@ -80,6 +86,7 @@ return function(options)
         combat.dropdown=nil
         cached,geometry,identity=nil,nil,nil
         previous_left,sampled_at=nil,nil
+        last_award_click,jump_sequence=nil,nil
         pending,wheel,menu_wheel={},0,0
         self.status=reason or 'hidden'
     end
@@ -116,7 +123,7 @@ return function(options)
         end
         capture((search and search.active==true)or combat.dropdown~=nil or(p.x>=0 and p.x<geometry.width and p.y>=0 and p.y<geometry.height))
         if previous_left==false and left and c and #pending<8 then
-            pending[#pending+1]={id=c.id,sequence=c.sequence,text=c.text,filter=c.filter,value=c.value,action=c.action,
+            pending[#pending+1]={id=c.id,sequence=c.sequence,text=c.text,filter=c.filter,value=c.value,action=c.action,time=now,
                 parent=geometry.parent,gui_context=geometry.gui_context,
                 mouse={x=mouse.x,y=mouse.y,w=mouse.w,h=mouse.h}}
         end
@@ -189,6 +196,7 @@ return function(options)
                 width=g.width,height=g.height,pointer=pointer,view=view,period=period,
                 expanded_sequence=expanded,expanded_bill_sequence=expanded_bill,summary_expanded=summary_expanded,scroll=scroll,
                 award_page=award_page,format_time=options.format_time,
+                jump_sequence=jump_sequence,
                 billing_enabled=billing,format_money=options.format_money,
                 history=history,summary=summary,combat=combat_data,combat_state=combat,combat_query=options.combat,legacy_crush=legacy_crush})
         end
@@ -203,6 +211,7 @@ return function(options)
             return model
         end
         local model=take(layout())
+        jump_sequence=nil
         if model.dropdown and combat.dropdown and menu_wheel~=0 then
             combat.dropdown.scroll=math.max(0,math.min(model.dropdown.max_scroll,model.dropdown.scroll-menu_wheel))
             model=take(layout())
@@ -217,6 +226,7 @@ return function(options)
                 and c.id==event.id and c.sequence==event.sequence and c.text==event.text
                 and c.filter==event.filter and c.value==event.value and c.action==event.action then
                 local action=c.action or c.id
+                if action~='award_jump'then last_award_click=nil end
                 if action=='tab_collection' or action=='tab_history' or action=='tab_deaths' or action=='tab_weapons' or action=='tab_enemies' or(action=='tab_bill'and billing)then
                     blur();local next_view=action:sub(5)
                     if view~=next_view then
@@ -231,6 +241,22 @@ return function(options)
                 elseif action=='toggle_match' then
                     if expanded==c.sequence then expanded=false else expanded=c.sequence end
                     summary_expanded=false;expanded_bill=false
+                elseif action=='history_jump' or action=='award_jump' then
+                    local sequence=c.sequence
+                    if action=='award_jump'then
+                        sequence=nil
+                        local previous=last_award_click
+                        last_award_click={id=c.id,time=event.time}
+                        if previous and previous.id==c.id and event.time>=previous.time and event.time-previous.time<=.4 then
+                            sequence=c.sequence
+                            last_award_click=nil
+                        end
+                    end
+                    if finite(sequence)then
+                        blur();view,period,expanded,summary_expanded='history','all',sequence,false
+                        expanded_bill=false;scroll=0;award_page=1;jump_sequence=sequence
+                        summary=options.summary and options.summary()or nil
+                    end
                 elseif action=='toggle_match_bill' then
                     if expanded==c.sequence then expanded_bill=expanded_bill~=c.sequence and c.sequence or false end
                 elseif action=='toggle_summary' then
@@ -286,6 +312,7 @@ return function(options)
                     combat.focus_id=nil;combat.back={};reset_pages()
                 end
                 model=take(layout())
+                jump_sequence=nil
             end
         end
         pending={}

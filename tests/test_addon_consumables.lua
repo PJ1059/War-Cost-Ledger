@@ -38,8 +38,8 @@ package.preload['hd2runtime/runtime/event_world']=function()
         stat_breakdown=function() return stats end,
         health_header=function() return nil end}, {__index=f.world_api})
 end
-package.preload['hd2runtime/runtime/beacon_redirect']=function() return {prove=function() return false end,clock=function() return 100000 end} end
-package.preload['hd2runtime/runtime/stratagem_loadout']=function() return {prove=function() return false end} end
+package.preload['hd2runtime/runtime/beacon_redirect']=function() return {prove=function() return false end,clock=function() return 100000 end,beacons=function()return {}end} end
+package.preload['hd2runtime/runtime/stratagem_loadout']=function() return {prove=function() return false end,id_of=function()return nil end} end
 local function ammo(rounds,spares,empty,working)
     m:put(m.records+f.D.turretWeapon.magazine.stride,f.u32(working or rounds)..f.u32(0)..f.u32(1)..f.u32(0))
     m:put(m.entries+f.D.ammo.entryStride,f.u32(spares)..f.u32(rounds)..string.char(empty or 0,0,0,0))

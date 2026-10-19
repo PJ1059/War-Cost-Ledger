@@ -55,7 +55,7 @@ return function(game_hud, state, battle, awards)
             pickup_occupied=pickup and pickup.occupied,available_height=remaining,
             shots=tostring(model.state.shots or '--'),
             kills=tostring(stats.kills),fire=tostring(model.state.fire_kills or '--'),bill=tostring(stats.bill),
-            currency=stats.currency or 'MC',
+            currency=stats.currency or 'SC',
             kd=stats.kd,
             history_kd=stats.history_kd,
             kd_text=stats.kd_text,bill_text=stats.bill_text,

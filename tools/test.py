@@ -76,6 +76,8 @@ def main(package_only=False):
     run_lua(ROOT / 'tests/test_mission_history.lua', ROOT / 'src/mission-history.lua')
     run_lua(ROOT / 'tests/test_career_history_summary.lua', ROOT / 'src/career-history-summary.lua')
     run_lua(ROOT / 'tests/test_career_panel_model.lua', ROOT / 'src/career-panel-model.lua', ROOT / 'src/battle-hud.lua')
+    run_lua(ROOT / 'tests/test_career_records_067.lua', ROOT / 'src/career-panel-model.lua', ROOT / 'src/career-panel-feed.lua', ROOT / 'src/battle-hud.lua', ROOT / 'src/mission-history.lua')
+    run_lua(ROOT / 'tests/test_career_award_click_067.lua', ROOT / 'src/career-panel-feed.lua', ROOT / 'src/career-panel-model.lua', ROOT / 'src/battle-hud.lua')
     run_lua(ROOT / 'tests/test_career_page_sync.lua', ROOT / 'src/career-page-sync.lua', ROOT / 'src/career-kd.lua')
     for filename, expected in (
         ('ui-root-window-0.4.4.bin', 'c1ebdf76c73b00410bb0fd83cc2586b934bd54a7bae4ace189091981a81758e5'),
@@ -88,7 +90,8 @@ def main(package_only=False):
         manifest = json.loads(z.read('manifest.json'))
         fx = json.loads(z.read('docs/currency-rates-2026-10-11.json'))
         assert fx == json.loads((ROOT / 'docs/currency-rates-2026-10-11.json').read_text(encoding='utf8'))
-        assert set(fx['rates']) == {'MC', 'USD', 'CNY', 'EUR', 'GBP', 'SEK'}
+        assert set(fx['rates']) == {'MC', 'SC', 'USD', 'CNY', 'EUR', 'GBP', 'SEK'}
+        assert fx['rates']['SC'] == 1
         assert fx['mc_usd_rate'] == fx['rates']['MC'] == fx['rates']['USD'] == 1
         for code in ('CNY', 'EUR', 'GBP', 'SEK'):
             expected = float(fx['original_eur_rates'][code]) / float(fx['original_eur_rates']['USD'])
@@ -131,11 +134,13 @@ def main(package_only=False):
         assert version == 2 and size == len(source)
         assert source.startswith(('-- HD2-Addon: ' + RESOURCE + '\n').encode())
         assert source == z.read('Source/addon.lua') == (ROOT / 'dist/addon.lua').read_bytes()
-        for module in ('mission-history', 'career-history-summary', 'career-panel-model', 'career-panel-feed', 'native-career-hud',
+        for module in ('runtime-compat', 'mission-history', 'career-history-summary', 'career-panel-model', 'career-panel-feed', 'native-career-hud',
                        'grenade-reader', 'grenade-billing', 'kill-source-attribution',
                        'combat-source-totals', 'target-damage-attribution', 'damage-source-resolver', 'combat-records', 'native-death-reader', 'death-observer', 'combat-achievements', 'vehicle-kill-ribbons', 'kill-source-notices',
                        'career-combat-panel-model', 'career-search-input'):
             assert z.read('Source/' + module + '.lua') == (ROOT / 'src' / (module + '.lua')).read_bytes()
+        assert not {'Source/career-overlay.lua', 'Source/career-overlay-renderer.lua'} & set(z.namelist()), \
+            'retired F9 independent-window modules must not ship'
         native_resource = 'mods/hd2_costs/war_cost_native_hud'
         native_lua, native_gpu = resources[(sdk.LUA_TYPE, resource_hash(native_resource))]
         native_size, native_version = struct.unpack_from('<II', native_lua)
@@ -222,7 +227,7 @@ def main(package_only=False):
         for p in shell_prices.values():
             assert p['shell_cents'] == cents(sheets[4][p['shell_price_id']]['D'])
             assert p['policy'] == '逐发计费' and re.fullmatch('[0-9A-F]{16}', p['payload'])
-        assert len(integration['entities']) == 134
+        assert len(integration['entities']) == 135
         assert sum(row.get('basis')=='exact_cloud_hash_and_runtime_enemy_type'
                    for row in integration['entities'].values())==36
         for value in ('32541FC4EC7C9CDC','9A8A3AAE287B230C','B2A6FA1E4284C7E6'):
@@ -233,7 +238,8 @@ def main(package_only=False):
         assert len(mapped_names) == 76
         reviewed_entities = [p for p in integration['entities'].values()
                              if p.get('basis') not in ('exact_cloud_hash_and_runtime_enemy_type',
-                                                     'reviewed_exact_hash_runtime_unresolved_enemy')]
+                                                     'reviewed_exact_hash_runtime_unresolved_enemy',
+                                                     'reviewed_full_enemy_body_resource')]
         assert len(reviewed_entities) == 84
         assert len({p['key'] for p in reviewed_entities} & roles.keys()) == 62
         for p in integration['entities'].values():
@@ -272,7 +278,7 @@ def main(package_only=False):
                      'kill-observer-performance.json'):
             assert z.read('docs/' + name) == (ROOT / 'docs' / name).read_bytes()
     print('PASS: manager manifest, discoverable resource identity, archive/envelope, ZIP integrity, exact workbook price.')
-    print('PASS: exact workbook components, 94 calls / 81 ammo prices, six actual-shell prices, 134 target hashes / 76 named roster roles; original 62 classifications preserved.')
+    print('PASS: exact workbook components, 94 calls / 81 ammo prices, six actual-shell prices, 135 target hashes / 76 named roster roles; original 62 classifications preserved.')
     print('PASS: original MD byte-for-byte preserved, 41 original items retained, user amendments yield 43 rules, 22 implemented / 21 pending; native-body100 once-per-match M12 contract and bundled docs match.')
     if package_only:
         return
@@ -291,12 +297,17 @@ def main(package_only=False):
     run_lua(ROOT / 'tests/test_achievements.lua', ROOT / 'dist/addon.lua')
     runtime = Path(os.environ.get('HD2_RUNTIME_SOURCE',
         r'external/HD2Runtime'))
+    run_lua(ROOT / 'tests/test_runtime_compat_068.lua', ROOT / 'src/runtime-compat.lua', ROOT / 'src/native-ui-bridge.lua', runtime)
+    newer_runtime = Path(os.environ.get('HD2_RUNTIME_NEW_SOURCE',
+        'external/HD2Runtime-v0.40.1'))
     run_lua(ROOT / 'tests/test_combat_achievements.lua', ROOT / 'src/combat-achievements.lua')
     run_lua(ROOT / 'tests/test_combat_source_totals.lua', ROOT / 'src/combat-source-totals.lua')
     run_lua(ROOT / 'tests/test_combat_pairs_062.lua', ROOT / 'src/combat-records.lua')
     run_lua(ROOT / 'tests/test_target_damage_attribution.lua', ROOT / 'src/target-damage-attribution.lua')
     run_lua(ROOT / 'tests/test_damage_source_resolver.lua', ROOT / 'src/damage-source-resolver.lua')
     run_lua(ROOT / 'tests/test_g8_ground_fire_066.lua', ROOT / 'src/damage-source-resolver.lua')
+    run_lua(ROOT / 'tests/test_g8_first_dead_067.lua', ROOT / 'src/damage-source-resolver.lua')
+    run_lua(ROOT / 'tests/test_observer_g8_first_dead_067.lua', ROOT / 'src/kill-observer.lua', runtime, ROOT / 'tests/test_integration.lua', ROOT / 'src/target-damage-attribution.lua', ROOT / 'src/damage-source-resolver.lua')
     run_lua(ROOT / 'tests/test_hellpod_spore_066.lua', ROOT / 'src/kill-observer.lua', runtime,
             ROOT / 'tests/test_integration.lua', ROOT / 'src/target-damage-attribution.lua', ROOT / 'src/damage-source-resolver.lua')
     run_lua(ROOT / 'tests/test_damage_source_full_ids_060.lua', ROOT / 'src/damage-source-resolver.lua', ROOT / 'src/target-damage-attribution.lua')
@@ -328,6 +339,8 @@ def main(package_only=False):
             ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
     run_lua(ROOT / 'tests/test_addon_g8_ground_fire_066.lua', ROOT / 'dist/addon.lua', runtime,
             ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
+    run_lua(ROOT / 'tests/test_addon_g8_first_dead_067.lua', ROOT / 'dist/addon.lua', runtime, ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
+    run_lua(ROOT / 'tests/test_addon_g8_death_wait_067.lua', ROOT / 'dist/addon.lua', runtime, ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
     subprocess.run([sys.executable, '-X', 'utf8', '-B',
                     str(ROOT / 'tests/test_ground_fire_contexts_066.py')], cwd=ROOT, check=True)
     vehicle_spec = importlib.util.spec_from_file_location('test_vehicle_body_kill_sources', ROOT / 'tests/test_vehicle_body_kill_sources.py')
@@ -386,14 +399,14 @@ def main(package_only=False):
     run_lua(ROOT / 'tests/test_addon_target_sources.lua', ROOT / 'dist/addon.lua', runtime, ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
     run_lua(ROOT / 'tests/test_addon_full_ids_060.lua', ROOT / 'dist/addon.lua', runtime, ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
     run_lua(ROOT / 'tests/test_addon_continuous_damage_056.lua', ROOT / 'dist/addon.lua', runtime,
-            ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
+            ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua', VERSION)
     run_lua(ROOT / 'tests/test_addon_gas_status_057.lua', ROOT / 'dist/addon.lua', runtime,
-            ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
+            ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua', VERSION)
     run_lua(ROOT / 'tests/test_addon_damage_ids_054.lua', ROOT / 'dist/addon.lua', runtime,
-            ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua', ROOT / 'tests/test_addon_native_hit_copy.lua')
+            ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua', ROOT / 'tests/test_addon_native_hit_copy.lua', VERSION)
     run_lua(ROOT / 'tests/test_addon_projectile_ids_060.lua', ROOT / 'dist/addon.lua', runtime,
             ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua',
-            ROOT / 'tests/test_addon_native_hit_copy.lua', ROOT / 'tests/test_addon_damage_ids_054.lua')
+            ROOT / 'tests/test_addon_native_hit_copy.lua', ROOT / 'tests/test_addon_damage_ids_054.lua', VERSION)
     run_lua(ROOT / 'tests/test_addon_melee_source_055.lua', ROOT / 'dist/addon.lua', runtime,
             ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
     run_lua(ROOT / 'tests/test_addon_damage_attribution.lua', ROOT / 'dist/addon.lua', runtime, ROOT / 'tests/test_integration.lua', ROOT / 'tests/test_target_damage_observer.lua')
@@ -441,10 +454,15 @@ def main(package_only=False):
     run_lua(ROOT / 'tests/test_native_stats.lua', ROOT / 'src/native-stats.lua', runtime)
     menu_api = Path(os.environ.get('HD2_MENU_API_SOURCE',
         r'external/VanillaPlusMegapack/components/ModOptionsMenu/src/api.lua'))
+    run_lua(ROOT / 'tests/test_addon_runtime_compat_068.lua', ROOT / 'dist/addon.lua', runtime, ROOT / 'tests/test_integration.lua', menu_api)
+    for overlay_runtime in dict.fromkeys([runtime, newer_runtime] if newer_runtime.is_dir() else [runtime]):
+        run_lua(ROOT / 'tests/test_addon_no_f9_069.lua', ROOT / 'dist/addon.lua', overlay_runtime,
+                ROOT / 'tests/test_integration.lua', ROOT / 'dist/game-icons.lua', ROOT)
     run_lua(ROOT / 'tests/test_ui_settings.lua', ROOT / 'src/ui-settings.lua', menu_api)
     run_lua(ROOT/'tests/test_ui_settings_localization_065.lua', ROOT/'src/ui-settings.lua', menu_api.parent.parent)
     run_lua(ROOT/'tests/test_game_hud_localization_065.lua', ROOT/'src/game-hud.lua')
     run_lua(ROOT/'tests/test_localization_065.lua', ROOT/'src/localization.lua', ROOT/'dist/localization-en.lua')
+    run_lua(ROOT/'tests/test_career_records_localization_067.lua', ROOT/'src/career-panel-model.lua', ROOT/'src/battle-hud.lua', ROOT/'src/localization.lua', ROOT/'dist/localization-en.lua')
     run_lua(ROOT/'tests/test_addon_localization_065.lua', ROOT/'dist/addon.lua', runtime, ROOT/'tests/test_integration.lua', menu_api.parent.parent)
     run_lua(ROOT/'tests/test_career_localization_065.lua', ROOT/'src/career-panel-model.lua', ROOT/'src/career-combat-panel-model.lua')
     run_lua(ROOT/'tests/test_native_career_word_wrap_065.lua', ROOT/'src/native-career-hud.lua')
@@ -455,6 +473,11 @@ def main(package_only=False):
             ROOT / 'tests/fixtures/task-native-layout-0.4.7.json')
     hud_plus = Path(os.environ.get('HD2_HUD_PLUS_021_SOURCE', 'external/HD2-HUD-Plus-0.2.1/56E46A6DC1DF0A13.lua'))
     hud_plus_024 = Path(os.environ.get('HD2_HUD_PLUS_024_SOURCE', 'external/HD2-HUD-Plus-0.2.4/56E46A6DC1DF0A13.lua'))
+    hud_plus_029 = Path(os.environ.get('HD2_HUD_PLUS_LIFECYCLE_SOURCE',
+        'external/HD2-HUD-Plus-0.2.9/56E46A6DC1DF0A13.lua'))
+    if hud_plus_029.is_file():
+        run_lua(ROOT / 'tests/test_hud_host_adapter_068.lua', ROOT / 'dist/native-hud-addon.lua', hud_plus_029,
+                ROOT / 'dist/native-game-art.lua')
     for host in (hud_plus, hud_plus_024):
         run_lua(ROOT / 'tests/test_native_hud_addon.lua', ROOT / 'src/native-hud-addon.lua', host,
                 ROOT / 'dist/native-game-art.lua')
@@ -484,7 +507,7 @@ def main(package_only=False):
     run_lua(ROOT / 'tests/test_addon_task_layout_code.lua', ROOT / 'dist/addon.lua', runtime,
             ROOT / 'tests/fixtures/task-layout-caller-pins-0.4.7.json')
     run_lua(ROOT / 'tests/test_addon_task_layout.lua', ROOT / 'dist/addon.lua', runtime,
-            ROOT / 'tests/fixtures/addon-task-layout-0.4.8.json')
+            ROOT / 'tests/fixtures/addon-task-layout-0.4.8.json', VERSION)
     run_lua(ROOT / 'tests/test_native_hit_reader.lua', ROOT / 'src/native-hit-reader.lua', runtime)
     run_lua(ROOT / 'tests/test_native_status_reader.lua', ROOT / 'src/native-status-reader.lua', runtime)
     with tempfile.TemporaryDirectory(prefix='hd2-stat-probe-test-') as name:
@@ -498,7 +521,7 @@ def main(package_only=False):
         'stats_scope': 'local_player', 'test_example_mc': 38487.5,
         'fire_source_types': len(json.loads((ROOT / 'docs/fire-sources.json').read_text(encoding='utf8'))['source_types']),
         'gameplay_observation_hz': 10, 'store_checkpoint_seconds': 5,
-        'currencies': {'codes': list(fx['rates']), 'mc_usd_rate': 1, 'as_of': fx['as_of'],
+        'currencies': {'presentation_default': 'SC', 'sc_per_usd': 1, 'legacy_alias': {'MC': 'SC'}, 'codes': list(fx['rates']), 'mc_usd_rate': 1, 'as_of': fx['as_of'],
                        'requested_date': fx['requested_date'], 'offline_snapshot': True,
                        'accounting_unit': 'integer_MC_cents', 'live_pixels_verified': False},
         'probe_default_enabled': False, 'actual_fps_verified': False,
@@ -517,7 +540,7 @@ def main(package_only=False):
                          'enemy_health_observer_enabled': True, 'runtime_per_frame_health_events_enabled': False,
                          'enemy_observation_hz': 10, 'enemy_polls_per_600_frames_at_60fps': 100,
                          'max_new_descriptors_per_poll': 64, 'max_live_records': 4096,
-                         'observer_budget_checkpoint_ms': 2, 'mapped_enemy_asset_hashes': 134,
+                         'observer_budget_checkpoint_ms': 2, 'mapped_enemy_asset_hashes': 135,
                          'mapped_roster_names': 76, 'original_classified_roster_names': 62,
                          'original_unmapped_roster_names': 21,
                          'live_new_readers_verified': False},
@@ -539,7 +562,7 @@ def main(package_only=False):
                 'cached_combat_feed': True, 'source_widget_and_compiled_resource_tests': 'passed',
                 'map_poll_reads': 4, 'map_poll_bytes': 11, 'map_poll_hz': 10,
                 'side_notifications': True, 'same_type_merge': True, 'shared_idle_seconds': 2,
-                'late_join_no_replay': True, 'toggle_key': 'F8', 'collection_toggle_key': 'F9',
+                'late_join_no_replay': True, 'toggle_key': 'F8', 'collection_toggle_key': None,
                 'native_map_open_interface_verified': True, 'native_objective_node_verified': True,
                 'hover_details_implemented': False, 'synthetic_drawing_tests': 'passed',
                 'native_feedback_readers_verified': False, 'live_pixels_verified': False,

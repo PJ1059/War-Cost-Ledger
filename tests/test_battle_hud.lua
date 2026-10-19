@@ -11,7 +11,7 @@ for _,icon in ipairs(hud.icons)do if icon.id=='R12'then crush_icon=icon end end
 assert(crush_icon and crush_icon.key=='crush'and crush_icon.name=='碾压'and crush_icon.kind=='ribbon')
 local closed = hud:snapshot({map_open = false})
 assert(closed.stats.kills == '238' and closed.stats.kd == '119.00' and closed.stats.history_kd == '44.83')
-assert(closed.stats.bill == '72431285.00' and #closed.medals == 0 and #closed.ribbons == 0)
+assert(closed.stats.bill == '72431285.00' and closed.stats.currency=='SC' and closed.stats.bill_text=='72431285.00 SC' and #closed.medals == 0 and #closed.ribbons == 0)
 assert(closed.height == 52 and closed.task_offset_y == 60)
 assert(hud:snapshot({map_open = false}) == closed, 'unchanged data must reuse the retained view')
 assert(#closed.medals == 0, 'a historical unlock must not become a current-mission medal')

@@ -1,7 +1,9 @@
 -- Exercise the actual built addon with only read-only Runtime boundaries replaced.
+-- Explicit legacy host: fallback rendering is covered by test_addon_no_f9_069.lua.
+rawset(_G,'HD2WarCostLedgerNativeHUDV1',{ready=true})
 local addon_path = assert(arg[1], 'built addon path required')
 local data, mission, available, state_readable = {}, false, true, true
-local frame, draw, binding, collection_binding, overlay, module
+local frame, draw, binding, overlay, module
 local stat_reads, sets, shows, hides = 0, 0, 0, 0
 local world = {game = 1, view = {slot = function() return {} end}}
 local store = {}
@@ -13,11 +15,8 @@ function mod:store() return store end
 function mod:log() end
 function mod:on_frame(fn) frame = fn end
 function mod:bind(id, opts)
-    if id == 'war_cost_ledger.toggle_hud' then
-        assert(opts.key == 'F8'); binding = opts
-    else
-        assert(id == 'war_cost_ledger.toggle_collection' and opts.key == 'F9'); collection_binding = opts
-    end
+    assert(id == 'war_cost_ledger.toggle_hud' and opts.key == 'F8', 'F8 is the only registered HUD shortcut')
+    binding = opts
     return {state = 'active'}
 end
 package.preload['mods/skyeshade/hd2runtime'] = function()
@@ -31,12 +30,13 @@ package.preload['mods/skyeshade/hd2runtime'] = function()
 end
 package.preload['hd2runtime/domains/metadata'] = function() return {version = '0.30.3'} end
 package.preload['hd2runtime/domains/event_natives'] = function()
-    return {stats = {keys = {projectiles_fired = 1, dealt_kills = 2, received_deaths = 3}}}
+    return {stats = {keys = {projectiles_fired = 1, dealt_kills = 2, received_deaths = 3, projectiles_hit = 4}}}
 end
 package.preload['hd2runtime/runtime/event_world'] = function()
     return {
         open = function() return available and world or nil end,
         game_state = function() return state_readable and {mission = mission} or nil end,
+        entity_state = function() return nil, 'fixture has no avatar Health record' end,
         players = function() return {{['local'] = true, entity = 42}} end,
         stat_breakdown = function()
             stat_reads = stat_reads + 1
@@ -45,9 +45,9 @@ package.preload['hd2runtime/runtime/event_world'] = function()
     }
 end
 package.preload['hd2runtime/runtime/beacon_redirect'] = function()
-    return {prove = function() return false end, clock = function() return 0 end}
+    return {prove = function() return false end, clock = function() return 0 end, beacons = function() return {} end}
 end
-package.preload['hd2runtime/runtime/stratagem_loadout'] = function() return {} end
+package.preload['hd2runtime/runtime/stratagem_loadout'] = function() return {prove = function() return false end, id_of = function() return nil end} end
 local function load()
     rawset(_G, 'HD2WarCostLedgerV1', nil)
     module = dofile(addon_path)
@@ -79,10 +79,7 @@ assert(blocked_icon and blocked_icon.key=='hit_blocked', 'blocked hits remain a 
 assert(module.game_hud and module.game_hud.image_count == 59 and not module.game_hud.collection_open)
 assert(module.game_hud.artwork == 'v18_icon_masks' and not module.game_hud.image_api_available,
     'missing optional image API must not create a flat combat fallback')
-local before_collection = stat_reads
-collection_binding.on_press(); assert(module.game_hud.collection_open)
-collection_binding.on_press(); assert(not module.game_hud.collection_open)
-assert(stat_reads == before_collection, 'F9 changes presentation only')
+assert(not module.game_hud.collection_open, 'collection has no shortcut toggle')
 local before_preview_reads, before_preview_sets = stat_reads, sets
 local preview = module.battle_hud:snapshot({map_open = false})
 assert(preview.shown and preview.artwork == 'placeholders' and preview.native_binding == false)
@@ -134,4 +131,4 @@ state_readable = true; mission = false; frame(0.1)
 assert(not overlay.visible and #render(1920, 1080) == 0, 'returning to ship must hide HUD')
 binding.on_press(); binding.on_press()
 assert(not overlay.visible and data.hud_enabled == true, 'turning ON on the ship must still draw nothing')
-print('PASS: native-only combat rendering at five resolutions, F8 preference, recording while hidden and stale-state hiding.')
+print('PASS: ready legacy native host has no Runtime combat duplicate at five resolutions; F8 preference, hidden recording and stale-state hiding.')

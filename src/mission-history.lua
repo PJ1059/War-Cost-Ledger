@@ -95,7 +95,7 @@ return function(options)
             if ok then return timestamp(result) end
         end
     end
-    local function update(entry,state)
+    local function update(entry,state,observed_at)
         local changed=false
         local bill=bill_snapshot(state)
         if bill and (not entry.patriotic_bill or bill.total_cents>=entry.patriotic_bill.total_cents)
@@ -123,6 +123,10 @@ return function(options)
                 value=value==true and 1 or value
                 if count(value) and value>(entry.medals[key] or 0) then
                     entry.medals[key]=value;changed=true
+                    if timestamp(observed_at)then
+                        entry.medal_last_at=entry.medal_last_at or {}
+                        entry.medal_last_at[key]=observed_at
+                    end
                 end
             end
         end
@@ -142,6 +146,12 @@ return function(options)
             assert(type(entry[group])=='table','invalid mission history awards')
             for key,value in pairs(entry[group])do
                 assert(type(key)=='string' and count(value) and value>0,'invalid mission history award count')
+            end
+        end
+        if entry.medal_last_at~=nil then
+            assert(type(entry.medal_last_at)=='table','invalid mission award timestamps')
+            for key,at in pairs(entry.medal_last_at)do
+                assert(type(key)=='string'and entry.medals[key] and timestamp(at),'invalid mission award timestamp')
             end
         end
         for _,key in ipairs({'history_before','history_after'})do
@@ -230,6 +240,7 @@ return function(options)
         if entry and entry.status=='interrupted' then return false,'interrupted' end
         if entry and entry.status=='ended' and state.status~='ended' then return false,'ended' end
         local changed=false
+        local observed_at=entry and entry.status=='active' and clock(time) or nil
         if not entry then
             if #data.entries>=MAX_ENTRIES then return false,'limit' end
             for _,previous in ipairs(data.entries)do
@@ -243,7 +254,7 @@ return function(options)
             by_sequence[seq]=entry;highest=seq;data.max_sequence=seq;data.deleted={}
             table.insert(data.entries,1,entry);changed=true
         end
-        changed=update(entry,state) or changed
+        changed=update(entry,state,observed_at) or changed
         if state.status=='ended' and entry.status~='ended' then
             entry.status='ended';entry.ended_at=clock(time);changed=true
             -- The first end observation owns this endpoint. Later ship/page

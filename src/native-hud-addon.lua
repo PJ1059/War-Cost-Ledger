@@ -369,5 +369,23 @@ return function(options)
         result.native_career_status=career.status
         status.career=career.status
     end
+    -- HUD+ 0.2.9 discovers addons through lifecycle/widgets contracts rather
+    -- than the legacy Reader/screens declaration above. Its public widgets do
+    -- not expose our combat parent or Career root. Select Runtime's real
+    -- overlay renderer; this handshake never claims to draw native widgets.
+    result.id='war-cost-ledger.runtime-overlay'
+    result.requires={lifecycle=1,widgets=1}
+    result.options={}
+    result.resources={}
+    -- An addon with no HUD+ menu rows still needs a valid strings descriptor.
+    -- Reuse the host's own existing template, rather than an absent resource.
+    result.menu={template=1207430374,resource='94a17a3a1257fc23'}
+    function result.create()
+        status.backend='runtime_overlay'
+        status.modern_host=true
+        status.ready=false
+        status.status='runtime_overlay_selected'
+        return {close=function()status.modern_host=false end}
+    end
     return result
 end

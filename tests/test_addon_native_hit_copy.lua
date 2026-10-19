@@ -174,13 +174,14 @@ local stats={totals={[S]=0,[K]=0,[H]=0},sources={}}
 package.preload['hd2runtime/runtime/event_world']=function()return{
     open=function()return c.world end,
     game_state=function()return{state=c.game_state,mission=c.game_state==4,host=true}end,
+    entity_state=function()return nil end,
     players=function()return{{['local']=true,entity=42,peer=PEER}}end,
     stat_breakdown=function(_,_,requested)
         local wanted=false;for _,key in ipairs(requested)do if key==H then wanted=true end end
         assert(wanted);c.stats_reads=c.stats_reads+1;return stats
     end}end
-package.preload['hd2runtime/runtime/beacon_redirect']=function()return{prove=function()return false end,clock=function()return 0 end}end
-package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{}end
+package.preload['hd2runtime/runtime/beacon_redirect']=function()return{prove=function()return false end,clock=function()return 0 end,beacons=function()return{}end}end
+package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{prove=function()return false end,id_of=function()return nil end}end
 JSON.open=function(owner)
     return{get=function(_,k,default)
         if owner:sub(-19)=='/plugin_frame_probe'then return{source_sha=old_sha,phase='stopped'}end

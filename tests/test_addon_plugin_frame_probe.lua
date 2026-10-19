@@ -45,9 +45,10 @@ package.preload['mods/skyeshade/hd2runtime']=function()return{mod=function()retu
     ui={overlay=function()return{draw=function()end,show=function()end,hide=function()end}end}}end
 package.preload['hd2runtime/runtime/event_world']=function()return{
     open=function()return c.available and c.world end,
-    game_state=function()return{state=2,mission=false,host=true}end,players=function()return{}end}end
-package.preload['hd2runtime/runtime/beacon_redirect']=function()return{prove=function()return false end,clock=function()return 0 end}end
-package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{}end
+    game_state=function()return{state=2,mission=false,host=true}end,players=function()return{}end,
+    entity_state=function()return nil end,stat_breakdown=function()return{totals={},sources={}}end}end
+package.preload['hd2runtime/runtime/beacon_redirect']=function()return{prove=function()return false end,clock=function()return 0 end,beacons=function()return{}end}end
+package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{prove=function()return false end,id_of=function()return nil end}end
 JSON.open=function(owner)
     assert(owner=='mods/hd2_costs/war_cost_ledger/plugin_frame_probe','unexpected independent diagnostic owner')
     c.opens=c.opens+1

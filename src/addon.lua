@@ -3,7 +3,7 @@
 -- https://github.com/SkyeShade/HD2Runtime
 -- Reads game state; objective spacing uses the game's native layout on the update thread.
 local MOD_ID = 'mods/hd2_costs/war_cost_ledger'
-local VERSION = '0.4.66'
+local VERSION = '0.4.69'
 local PRICES = __CONFIRMED_PRICES__
 local FIRE_SOURCES = __FIRE_SOURCES__
 local ENEMY_TYPES = __ENEMY_TYPES__
@@ -17,21 +17,20 @@ __CURRENCY_MODULE__
 end)()(__CURRENCY_RATES__)
 if rawget(_G, 'HD2WarCostLedgerV1') then return rawget(_G, 'HD2WarCostLedgerV1') end
 
-local ok, hd2 = pcall(require, 'mods/skyeshade/hd2runtime')
-assert(ok, 'War Cost Ledger requires HD2Runtime 0.30.3; import and enable its official runtime ZIP.')
-local metadata = require('hd2runtime/domains/metadata')
-assert(metadata.version == '0.30.3', 'War Cost Ledger 0.4.66 was checked against HD2Runtime 0.30.3.')
-local world_api = require('hd2runtime/runtime/event_world')
-local beacons = require('hd2runtime/runtime/beacon_redirect')
-local loadout = require('hd2runtime/runtime/stratagem_loadout')
-local stat_keys = require('hd2runtime/domains/event_natives').stats.keys
+local runtime_compat=(function()
+__RUNTIME_COMPAT_MODULE__
+end)()
+local hd2,metadata,world_api,beacons,loadout,stat_keys=runtime_compat.load(require)
+assert(hd2,metadata)
 local SHOTS, KILLS = stat_keys.projectiles_fired, stat_keys.dealt_kills
 local HITS = stat_keys.projectiles_hit
 local STIMS = 0xC8256789 -- Runtime's native stims_used counter.
 local MELEE, DEATHS = 0xC7680A1B, stat_keys.received_deaths
 local mod = hd2.mod(MOD_ID)
+assert(runtime_compat.check_mod(mod))
 local store = mod:store()
 local overlay = hd2.ui.overlay({owner = MOD_ID, id = 'costs', visible = false})
+assert(runtime_compat.check_objects(mod,store,overlay))
 local hud = {enabled = store:get('hud_enabled', true) ~= false, mission = false, visible = false}
 local ui_settings, game_hud, ui_capture, capture_request, native_hud_feed
 local career_award_records,career_panel_feed
@@ -137,6 +136,11 @@ local function sync_hud(in_mission)
         if visible then overlay:show() else overlay:hide() end
     end
 end
+function combat_detail.hud_backend()
+    local host=rawget(_G,'HD2WarCostLedgerNativeHUDV1')
+    return type(host)=='table' and host.backend~='runtime_overlay' and host.ready==true
+        and 'native' or 'runtime_overlay'
+end
 mod:bind('war_cost_ledger.toggle_hud', {key = 'F8', on_press = function()
     if ui_settings then hud.enabled = ui_settings:toggle_enabled()
     else hud.enabled = not hud.enabled; store:set('hud_enabled', hud.enabled) end
@@ -174,7 +178,7 @@ local state = {
     version = VERSION, price_version = PRICES.version, workbook_sha256 = PRICES.workbook_sha256,
     mission = false, sequence = store:get('mission_sequence', 0), total_cents = 0,
     billing_enabled = true,
-    display_currency = 'MC', currency_rate_date = currency.as_of,
+    display_currency = 'SC', currency_rate_date = currency.as_of,
     entries = {}, status = 'waiting', coverage = 'solo_calls_local_stats',
     call_counts = {mg43 = 0, m105 = 0}, shots = nil, kills = nil, stats_ready = false,
     hits = nil, hit_policy = 'local_projectile_stat_known_projectile_weapons', hit_stats_ready = false,
@@ -282,6 +286,7 @@ local stim_entry
 local barrage_first, barrage_instances, barrage_calls, barrage_prices = true, {}, {}, {}
 local life_epoch = 0
 local last_melee, last_deaths, health_avatar, last_health, last_max_health
+combat_detail.life_tracking={dead=false,health_dead=false,health_pending=0,counter_pending=false}
 local observe_elapsed, probe_elapsed, persist_elapsed, enemy_elapsed, dirty = 0.1, 0, 0, 0, false
 local notification_baseline_sequence
 local POLL_INTERVAL, SAVE_INTERVAL = 0.1, 5
@@ -402,7 +407,10 @@ function combat_detail.notice_stats(snapshot,player_entity,kills,first)
 end
 local REQUESTED_STATS = {SHOTS, KILLS, MELEE, DEATHS, HITS, STIMS}
 
-local function money(cents) return string.format('%.2f', cents / 100) end
+local function money(cents)
+    local code=currency:code(state.display_currency)
+    return currency:format(cents,code)..' '..code
+end
 local function persist()
     if career_award_records then career_award_records:observe(state) end
     if mission_history then mission_history:observe(state) end
@@ -891,6 +899,25 @@ local function new_life()
     state.life_restored_health = 0
     break_health_sample()
 end
+function combat_detail.observe_health_death()
+    if not combat_detail.life_tracking.health_dead then
+        combat_detail.life_tracking.health_dead=true
+        if combat_detail.life_tracking.counter_pending then combat_detail.life_tracking.counter_pending=false
+        else combat_detail.life_tracking.health_pending=combat_detail.life_tracking.health_pending+1 end
+    end
+    if not combat_detail.life_tracking.dead then combat_detail.life_tracking.dead=true;new_life()end
+end
+function combat_detail.observe_counter_death(delta)
+    -- Health and the native counter report the same death in either order.
+    -- Keep unmatched Health observations across respawns so a late counter
+    -- cannot clear a new avatar's attribution chain a second time.
+    local matched=math.min(delta,combat_detail.life_tracking.health_pending)
+    combat_detail.life_tracking.health_pending=combat_detail.life_tracking.health_pending-matched
+    if delta>matched then
+        combat_detail.life_tracking.counter_pending=true
+        if not combat_detail.life_tracking.dead then combat_detail.life_tracking.dead=true;new_life()end
+    end
+end
 function combat_detail.sync_source_weapon(id)
     if type(id)~='string' then return end
     local entry=state.weapon_stats[id]
@@ -1043,7 +1070,13 @@ __BUGHOLE_OBSERVER_MODULE__
         self.peer,self.world,self.destruction,self.active=nil,nil,nil,false
     end
     function api:explosion(event)
-        if not state.mission or type(event)~='table' then return end
+        if type(event)~='table' then return end
+        local observer=combat_detail.kill_observer
+        if not state.mission then
+            if observer then observer:status_event(event,false,'mission_inactive')end
+            return
+        end
+        local forwarded,reason=false,'not_local'
         if event.local_player==true and combat_detail.kill_observer then
             local status=combat_detail.status_contexts[event.name]
             if status and status.required_event_types then
@@ -1064,13 +1097,17 @@ __BUGHOLE_OBSERVER_MODULE__
             local matched=status and source==status.source_type
             local radius=matched and status.radius or source and combat_detail.damage_catalog.source_radius[source]
             if source and radius then
-                combat_detail.kill_observer:explosion({local_player=true,source_type=source,
+                forwarded=combat_detail.kill_observer:explosion({local_player=true,source_type=source,
                     owner=event.owner_id,position=event.position,radius=radius,
                     status=matched and status.status or nil,status_duration=matched and status.status_duration or nil,
                     explosion_id=matched and status.explosion_id
                         or combat_detail.damage_catalog.explosion_names[event.name]})
+                reason=forwarded==true and nil or 'rejected'
+            else
+                reason=not source and 'missing_source' or 'missing_radius'
             end
         end
+        if observer then observer:status_event(event,forwarded==true,reason)end
         if not self.active then return end
         local known=catalogue.by_name[event.name]
         local owned
@@ -1191,17 +1228,21 @@ local function poll_health(world, players)
     local player
     for _, item in ipairs(players) do if item['local'] == true then player = item; break end end
     if not player then break_health_sample(); return end
-    if player.lifecycle == 2 then new_life(); return end
+    if player.lifecycle == 2 then combat_detail.observe_health_death(); return end
     local avatar = player.avatar
     if not avatar then break_health_sample(); return end
-    if avatar ~= health_avatar then
-        health_avatar = avatar
-        new_life()
-    end
     local current = world_api.entity_state(world, avatar)
     if current and current.descriptor and current.descriptor.entity == avatar
         and current.descriptor.owned == true and valid_count(current.life) and current.life >= 2 then
-        new_life(); return
+        health_avatar=avatar
+        combat_detail.observe_health_death(); return
+    end
+    local alive=current and current.descriptor and current.descriptor.entity==avatar
+        and current.descriptor.owned==true and valid_count(current.life)and current.life<2
+    if avatar~=health_avatar or alive and combat_detail.life_tracking.health_dead then
+        health_avatar=avatar
+        combat_detail.life_tracking.dead,combat_detail.life_tracking.health_dead,combat_detail.life_tracking.counter_pending=false,false,false
+        new_life()
     end
     if not (current and current.descriptor and current.descriptor.entity == avatar
         and current.descriptor.owned == true and valid_count(current.life) and current.life < 2
@@ -1278,6 +1319,7 @@ local function start_mission()
     barrage_first, barrage_instances, barrage_calls = true, {}, {}
     kill_observer:reset()
     last_melee, last_deaths, health_avatar = nil, nil, nil
+    combat_detail.life_tracking={dead=false,health_dead=false,health_pending=0,counter_pending=false}
     break_health_sample()
     seen, group_seen = {}, false
     last_stats, ammo_entry = nil, nil
@@ -1297,9 +1339,9 @@ local function end_mission()
         persist()
         flush(true)
         store:save()
-        mod:log('任务结束：作战支出 ' .. money(state.total_cents) .. ' MC；本人发射量 '
+        mod:log('任务结束：作战支出 ' .. money(state.total_cents) .. '；本人发射量 '
             .. tostring(state.shots) .. '；击杀 ' .. tostring(state.kills)
-            .. '；盟友弹药 ' .. state.m105_billed_shots .. ' 发 / ' .. money(state.ammo_cents) .. ' MC。')
+            .. '；盟友弹药 ' .. state.m105_billed_shots .. ' 发 / ' .. money(state.ammo_cents) .. '。')
     end
     seen = {}
     magazine_billing:reset()
@@ -1323,8 +1365,8 @@ local function charge_call(price, beacon, game_clock)
     entry.policy = price.policy
     if price.policy == '逐发计费' then entry.unbilled_component = 'actual_orbital_projectiles' end
     persist()
-    mod:log('作战支出：' .. entry.name .. ' +' .. money(entry.amount_cents) .. ' MC；累计 '
-        .. money(state.total_cents) .. ' MC；信标 ' .. tostring(beacon.entity))
+    mod:log('作战支出：' .. entry.name .. ' +' .. money(entry.amount_cents) .. '；累计 '
+        .. money(state.total_cents) .. '；信标 ' .. tostring(beacon.entity))
 end
 
 local function charge_ammo(price, quantity, game_clock, inventory)
@@ -1383,8 +1425,8 @@ local function poll_stims(world, player, current)
     state.total_cents = state.total_cents + result.cents
     charge_notifications:emit('stim:' .. PRICES.stim.id, stim_entry.name, result.cents, hud_time)
     persist()
-    mod:log('医疗支出：治疗针 ' .. result.units .. ' 支 +' .. money(result.cents) .. ' MC；累计 '
-        .. money(state.total_cents) .. ' MC。')
+    mod:log('医疗支出：治疗针 ' .. result.units .. ' 支 +' .. money(result.cents) .. '；累计 '
+        .. money(state.total_cents) .. '。')
 end
 
 local function poll_consumables(world, players)
@@ -1518,7 +1560,7 @@ local function poll_optional_stats(totals)
         if delta > 0 then
             combat_history.deaths = combat_history.deaths + delta
             sync_career_history()
-            new_life()
+            combat_detail.observe_counter_death(delta)
             -- This counter batch cannot order kills before/after the death.
             combat_detail.achievements:gap()
         end
@@ -1714,6 +1756,7 @@ mod:on_frame(function(dt)
         current_world, type_ids, stat_block = world.game, {}, nil
         stim_billing:reset()
         health_avatar = nil
+        combat_detail.life_tracking={dead=false,health_dead=false,health_pending=0,counter_pending=false}
         new_life()
     end
     local game = world_api.game_state(world)
@@ -2028,16 +2071,15 @@ state.billing_enabled = ui_settings.config.billing_enabled~=false
 native_hud_feed=(function()
 __NATIVE_HUD_FEED_MODULE__
 end)()(game_hud,state,battle_hud,awards)
-mod:bind('war_cost_ledger.toggle_collection', {key = 'F9', on_press = function()
-    local open = game_hud:toggle_collection()
-    mod:log('累计绶带备用视图：' .. (open and '展开' or '收起') .. '；真实地图状态可读时优先自动联动。')
-end})
 overlay:draw(function(d)
-    -- The flat overlay remains an isolated ship/menu preview only. Combat uses
-    -- the same native widget host as the objective list, never both renderers.
-    if not hud.mission and game_hud:preview_active(hud_time) then game_hud:draw(d,hud_time,hud.visible) end
+    if (hud.mission and combat_detail.hud_backend()=='runtime_overlay')
+        or (not hud.mission and game_hud:preview_active(hud_time)) then
+        game_hud:draw(d,hud_time,hud.visible)
+    end
 end)
 local exported = {version = VERSION, state = state, battle_hud = battle_hud,
+    runtime_compatibility={version=metadata.version,api_version=metadata.api_version or hd2.api_version,
+        contract='required_api1_capabilities'},
     localization=combat_detail.localization,
     demolition_status=function()return combat_detail.demolition:status()end,
     kill_source_snapshot=function()return {latest=kill_source_attribution.latest,
@@ -2052,6 +2094,7 @@ local exported = {version = VERSION, state = state, battle_hud = battle_hud,
     career_checkpoint_snapshot=function()return career_summary:snapshot()end,
     career_panel_snapshot=function() return career_panel_feed:snapshot() end,
     career_panel_status=function() return {status=career_panel_feed.status,reader=career_panel_feed.reader_diagnostics} end,
+    hud_backend=combat_detail.hud_backend,
     charge_notifications = charge_notifications,
     game_hud = game_hud, award_notifications = awards, ui_settings = ui_settings, native_ui = native_ui,
     native_hud_snapshot=function() return native_hud_feed:snapshot() end,
@@ -2074,6 +2117,8 @@ local exported = {version = VERSION, state = state, battle_hud = battle_hud,
     capture_status = function() return capture_request and 'queued' or (ui_capture and ui_capture.status or 'disabled') end}
 rawset(_G, 'HD2WarCostLedgerV1', exported)
 mod:log('War Cost Ledger ' .. VERSION .. ' loaded; M-105 盟友呼叫 '
-    .. money(calls_by_id[14345846].total_cents) .. ' MC；弹药 '
-    .. money(PRICES.m105_ammo.unit_cents) .. ' MC/发；侧边战果停更2秒后收纳；ESC→MODS设置/预览/任务让位；F8显示开关并恢复任务间距。')
+    .. money(calls_by_id[14345846].total_cents) .. '；弹药 '
+    .. money(PRICES.m105_ammo.unit_cents) .. '/发；侧边战果停更2秒后收纳；ESC→MODS设置/预览/任务让位；F8显示开关；正常打开军械库生涯查看档案。')
+mod:log('Runtime compatibility: HD2Runtime '..tostring(metadata.version or hd2.version or 'unknown')
+    ..'; API '..tostring(metadata.api_version or hd2.api_version or 'capabilities checked')..'.')
 return exported

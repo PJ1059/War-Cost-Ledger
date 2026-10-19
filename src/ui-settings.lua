@@ -1,14 +1,15 @@
 -- Public Mod Options Menu API only. No game memory reads or menu widget writes.
 local PREFIX = 'hd2_costs.war_cost_ledger.'
-local CURRENCIES = {'MC', 'USD', 'CNY', 'EUR', 'GBP', 'SEK'}
+-- Keep the former MC choice at index 1 so saved USD/CNY/etc. choices retain their meaning.
+local CURRENCIES = {'SC', 'USD', 'CNY', 'EUR', 'GBP', 'SEK'}
 local controls = {
     {id = 'enabled', type = 'toggle', label = '显示战果界面', default = true,
-        description = 'F8也可切换。关闭界面后仍记录真实战果与账单。'},
+        description = 'F8也可切换。正常打开军械库的生涯页即可查看档案。关闭界面后仍记录真实战果与账单。'},
     {id = 'billing_enabled', type = 'toggle', label = '开启战争账单', default = true,
         description = '记录后续作战消费，并在战斗及生涯显示爱国账单。关闭时停止新增费用，保留已有账目。'},
     {id = 'currency', type = 'choice', label = '账单显示币种', default = 1,
-        choices = {'MC（军需单位）', '美元（USD）', '人民币（CNY）', '欧元（EUR）', '英镑（GBP）', '瑞典克朗（SEK）'},
-        description = '选择战争账单的显示币种。'},
+        choices = {'SC（超级货币）', '美元（USD）', '人民币（CNY）', '欧元（EUR）', '英镑（GBP）', '瑞典克朗（SEK）'},
+        description = '选择战争账单的显示币种。SC按1 SC＝1 USD折算，仅为本MOD的虚拟军费显示规则。'},
     {id = 'scale_percent', type = 'slider', label = '界面大小（百分比）', min = 60, max = 140, step = 5, default = 100},
     {id = 'opacity_percent', type = 'slider', label = '界面不透明度', min = 30, max = 100, step = 1, default = 82},
     {id = 'right_margin', type = 'slider', label = '整体右侧微调', min = 0, max = 180, step = 6, default = 0,
@@ -16,7 +17,7 @@ local controls = {
     {id = 'top_margin', type = 'slider', label = '整体顶部微调', min = 0, max = 180, step = 6, default = 0},
     {id = 'ribbon_mode', type = 'choice', label = '累计绶带显示', default = 1,
         choices = {'打开地图时显示', '始终显示'},
-        description = '累计绶带可始终显示；打开地图还会在成就下显示四类命中累计，零命中不显示。F9可临时展开。'},
+        description = '累计绶带可始终显示；打开地图还会在成就下显示四类命中累计，零命中不显示。'},
     {id = 'hit_position', type = 'choice', label = '命中提示位置', default = 1,
         choices = {'屏幕右侧', '准心下方', '不显示'},
         description = '仅调整即时命中提示；仍记录真实命中，打开地图可查看累计。绶带与成就保留在右侧。'},
@@ -72,7 +73,9 @@ return function(mod, store, callbacks)
     local menu, elapsed, check_elapsed, warned = nil, 0, 0.5, false
     local before_menu_changes = {}
     for _, c in ipairs(controls) do
-        local value = valid(c, saved[c.id])
+        local stored = saved[c.id]
+        if c.id == 'currency' and (stored == 'MC' or stored == 'SC') then stored = 1 end
+        local value = valid(c, stored)
         if c.id == 'enabled' then value = store:get('hud_enabled', true) ~= false end
         if action(c.id) then value = 1 end
         api.values[c.id] = value == nil and c.default or value
@@ -145,7 +148,7 @@ return function(mod, store, callbacks)
             or type(candidate.on_change) ~= 'function' then
             if elapsed >= 5 and not warned then
                 warned = true; self.status = 'menu_unavailable'
-                mod:log('游戏内设置入口尚不可用：需要启用Mod Options Menu；F8/F9仍可使用。')
+                mod:log('游戏内设置入口尚不可用：需要启用Mod Options Menu；F8仍可使用。')
             end
             return
         end

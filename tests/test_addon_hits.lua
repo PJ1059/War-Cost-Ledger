@@ -16,13 +16,14 @@ package.preload['mods/skyeshade/hd2runtime']=function() return {mod=function() r
 package.preload['hd2runtime/runtime/event_world']=function() return {
     open=function() return {game=1,view={slot=function() return {} end}} end,
     game_state=function() return {mission=mission} end,
+    entity_state=function() return nil, 'fixture has no avatar Health record' end,
     players=function() return {{['local']=true,entity=42}} end,
     stat_breakdown=function(_,_,wanted)
         local found=false;for _,key in ipairs(wanted) do if key==H then found=true end end
         assert(found,'actual stat read must request HITS');reads=reads+1;return native
     end} end
-package.preload['hd2runtime/runtime/beacon_redirect']=function() return {prove=function() return false end,clock=function() return 0 end} end
-package.preload['hd2runtime/runtime/stratagem_loadout']=function() return {} end
+package.preload['hd2runtime/runtime/beacon_redirect']=function() return {prove=function() return false end,clock=function() return 0 end,beacons=function() return {} end} end
+package.preload['hd2runtime/runtime/stratagem_loadout']=function() return {prove=function() return false end,id_of=function() return nil end} end
 local addon=dofile(path);local state=addon.state
 local bullet,incendiary,stoker,spray='A6A735ACCB4A327F','C12A34F375BD5A87','8A307BD1811A5FE9','4FB0F8C02F55C82B'
 local function set(total,values)

@@ -36,6 +36,16 @@ ALIASES = {
     'bodyhorror_bladed': 'Wretch', 'bodyhorror_helmetguy': 'Crusher',
 }
 FACTIONS = {'终结族': 'terminids', '机器人': 'automatons', '光能者': 'illuminate'}
+# Runtime's generated kill flag follows its positive-score field, not whether
+# the resource is a complete enemy. This one exact resource is the SDK-backed
+# 4000-HP Impaler body, separately identified from its independent tentacles.
+# Keep the exception narrow: do not promote other kill=false enemies or limbs.
+FULL_ENEMY_BODY_OVERRIDES = {
+    'DCF8E74212FBEE3B': {
+        'key': 'Impaler', 'semantic_id': 'enemy/v1/terminids/impaler',
+        'path': 'content/fac_bugs/cha_impaler/cha_impaler', 'health': 4000,
+    },
+}
 
 
 def read_json(name):
@@ -51,6 +61,7 @@ def catalogs():
     assert len(health) == 501 and len(sources) == 218
     roster = json.loads((ROOT / 'docs/enemy-catalog/units.json').read_text(encoding='utf8'))['units']
     roles = {unit['name_en']: unit for unit in roster}
+    sdk_bodies = {row['semanticId']: row for row in read_json('sdk/EnemyAuthoringCapabilities.json')['classes']}
     cloud = json.loads((ROOT / 'docs/enemy-hash-evidence.json').read_text(encoding='utf8'))
     cloud_rows = {row[1]: row for row in cloud['rows'] if row[3]}
     entities, unresolved = {}, []
@@ -77,16 +88,31 @@ def catalogs():
             continue
         if unit and faction != FACTIONS[unit['faction']]:
             raise ValueError('Enemy faction mismatch: ' + h)
-        if unit and value.get('kind') == 'enemy' and not value.get('kill'):
+        body_override = FULL_ENEMY_BODY_OVERRIDES.get(h)
+        if body_override:
+            body = sdk_bodies.get(body_override['semantic_id'], {})
+            assert (semantic == body_override['semantic_id'] and name == body_override['key']
+                    and value.get('kind') == 'enemy' and value.get('kill') is False
+                    and body.get('identity', {}).get('basis') == 'hash-verified resource path'
+                    and body.get('identity', {}).get('path') == body_override['path']
+                    and body.get('main', {}).get('health') == body_override['health']
+                    and len(body.get('zones', [])) == 23
+                    and any(zone.get('name') == 'head' and zone.get('fatal') for zone in body['zones'])), \
+                'Reviewed complete enemy body identity changed: ' + h
+            basis = 'reviewed_full_enemy_body_resource'
+        if unit and value.get('kind') == 'enemy' and not value.get('kill') and not body_override:
             continue  # body parts do not become another enemy
         if not unit and asset:
             name = '机器人构造者' if cls.startswith('spawner_factory') else '停泊运输舰'
         entities[h] = {'key': name, 'name_zh': unit['name_zh'] if unit else name,
                        'name_en': name, 'class': unit['display_class'] if unit else '资产',
                        'faction': faction, 'air': bool(unit and '飞行' in unit['tags']),
-                       'kill': bool(value['kill']), 'asset': asset,
+                       'kill': bool(value['kill'] or body_override), 'asset': asset,
                        'illuminate_ship': name == 'Warp Ship', 'basis': basis,
                        'semantic_id': semantic, 'cloud_row': cloud_row[0] if cloud_row else None}
+        if body_override:
+            entities[h].update(runtime_kill_flag=value['kill'], resource_path=body_override['path'],
+                identity_basis='exact_sdk_body_resource_with_health_zones')
 
     workbook = workbook_rows((2, 3, 4))
     native_calls = read_json(INPUTS[1])['stratagems']

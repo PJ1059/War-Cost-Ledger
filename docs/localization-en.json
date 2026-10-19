@@ -1,11 +1,10 @@
 {
   "exact": {
     "显示战果界面": "Show combat HUD",
-    "F8也可切换。关闭界面后仍记录真实战果与账单。": "Also toggled with F8. Awards and costs are still recorded while hidden.",
+    "F8也可切换。正常打开军械库的生涯页即可查看档案。关闭界面后仍记录真实战果与账单。": "F8 toggles the display. Open Armory > Career normally to view your archive. Awards and costs keep recording while hidden.",
     "开启战争账单": "Enable war costs",
     "记录后续作战消费，并在战斗及生涯显示爱国账单。关闭时停止新增费用，保留已有账目。": "Record combat spending and show the Patriotic Bill in battle and Career. Turning this off stops new charges and keeps existing records.",
     "账单显示币种": "Bill currency",
-    "MC（军需单位）": "MC (Materiel Credits)",
     "美元（USD）": "US Dollar (USD)",
     "人民币（CNY）": "Chinese Yuan (CNY)",
     "欧元（EUR）": "Euro (EUR)",
@@ -20,7 +19,7 @@
     "累计绶带显示": "Ribbon totals",
     "打开地图时显示": "While map is open",
     "始终显示": "Always visible",
-    "累计绶带可始终显示；打开地图还会在成就下显示四类命中累计，零命中不显示。F9可临时展开。": "Ribbon totals can stay visible. Opening the map also shows four hit totals below medals; zero totals are hidden. F9 temporarily expands the view.",
+    "累计绶带可始终显示；打开地图还会在成就下显示四类命中累计，零命中不显示。": "Ribbon totals can stay visible. Opening the map also shows four hit totals below medals; zero totals are hidden.",
     "命中提示位置": "Hit feedback position",
     "屏幕右侧": "Right side",
     "准心下方": "Below crosshair",
@@ -1528,7 +1527,7 @@
     "击杀1个粉碎者。": "Kill 1 Crusher.",
     "击杀1个猎杀器。": "Kill 1 Harvester.",
     "关闭面板": "Close",
-    "游戏内设置入口尚不可用：需要启用Mod Options Menu；F8/F9仍可使用。": "In-game settings unavailable: enable Mod Options Menu. F8/F9 still work.",
+    "游戏内设置入口尚不可用：需要启用Mod Options Menu；F8仍可使用。": "In-game settings unavailable: enable Mod Options Menu. F8 still works.",
     "游戏内设置已注册：ESC → MODS → 战果与战争账单；修改后按应用。": "Settings available: ESC > MODS > Combat Awards & War Costs. Apply after making changes.",
     "设置注册失败 ": "Setting registration failed: ",
     "收起": "Collapse",
@@ -1543,7 +1542,14 @@
     "本次上舰生涯同步完成。": "Career synced for this ship visit.",
     "本次上舰未完成同步；下次上舰再试，可手动打开生涯页同步。": "Career sync did not finish this visit. It will retry on the next ship arrival; opening Career can also sync it.",
     "暂未读到完整生涯数据，保留上次结果。": "Full Career data is not available yet. Keeping the previous result.",
-    "上舰后自动同步本人生涯数据。": "Automatically sync your Career data on arrival aboard the ship."
+    "上舰后自动同步本人生涯数据。": "Automatically sync your Career data on arrival aboard the ship.",
+    "SC（超级货币）": "SC (Super Credits)",
+    "单局最高击杀": "Most kills / match",
+    "单局最高KD": "Best K/D / match",
+    "单局最高死亡": "Most deaths / match",
+    "双击跳转至该对局": "Double-click to open this match",
+    "对应对局未记录": "Matching history was not recorded",
+    "选择战争账单的显示币种。SC按1 SC＝1 USD折算，仅为本MOD的虚拟军费显示规则。": "Choose the war bill display currency. SC uses 1 SC = 1 USD as this mod’s virtual military cost display rule."
   },
   "fragments": {
     "显示战果界面": "Show combat HUD",
@@ -3047,7 +3053,7 @@
     "F8也可切换。关闭界面后仍记录真实战果与账单。": "Also toggled with F8. Awards and costs are still recorded while hidden.",
     "记录后续作战消费，并在战斗及生涯显示爱国账单。关闭时停止新增费用，保留已有账目。": "Record combat spending and show the Patriotic Bill in battle and Career. Turning this off stops new charges and keeps existing records.",
     "默认跟随游戏HUD边缘偏移；命中、绶带、成就与战果数字共用右边缘。": "Follows the game HUD margin by default. Hit feedback, ribbons, medals and counters share the same right edge.",
-    "累计绶带可始终显示；打开地图还会在成就下显示四类命中累计，零命中不显示。F9可临时展开。": "Ribbon totals can stay visible. Opening the map also shows four hit totals below medals; zero totals are hidden. F9 temporarily expands the view.",
+    "累计绶带可始终显示；打开地图还会在成就下显示四类命中累计，零命中不显示。": "Ribbon totals can stay visible. Opening the map also shows four hit totals below medals; zero totals are hidden.",
     "仅调整即时命中提示；仍记录真实命中，打开地图可查看累计。绶带与成就保留在右侧。": "Only moves live hit feedback. Hits are still recorded and totals appear on the map. Ribbons and medals stay on the right.",
     "独立选择每次消费的提示位置；关闭提示仍正常累计战争账单。": "Choose where charge notifications appear. Hiding them does not stop cost tracking.",
     "显示最近一次的击杀目标和来源，5秒后消失。关闭只隐藏提示，武器击杀、绶带和生涯仍正常记录；重新开启后显示新的击杀。": "Show the latest target and kill source for 5 seconds. Hiding this keeps weapon kills, ribbons and Career recording. Re-enabling shows new kills.",
@@ -3106,7 +3112,7 @@
     "击杀1个粉碎者。": "Kill 1 Crusher.",
     "击杀1个猎杀器。": "Kill 1 Harvester.",
     "关闭面板": "Close",
-    "游戏内设置入口尚不可用：需要启用Mod Options Menu；F8/F9仍可使用。": "In-game settings unavailable: enable Mod Options Menu. F8/F9 still work.",
+    "游戏内设置入口尚不可用：需要启用Mod Options Menu；F8仍可使用。": "In-game settings unavailable: enable Mod Options Menu. F8 still works.",
     "游戏内设置已注册：ESC → MODS → 战果与战争账单；修改后按应用。": "Settings available: ESC > MODS > Combat Awards & War Costs. Apply after making changes.",
     "设置注册失败 ": "Setting registration failed: ",
     "未采集": "Not captured",
@@ -3122,9 +3128,17 @@
     "本次上舰生涯同步完成。": "Career synced for this ship visit.",
     "本次上舰未完成同步；下次上舰再试，可手动打开生涯页同步。": "Career sync did not finish this visit. It will retry on the next ship arrival; opening Career can also sync it.",
     "暂未读到完整生涯数据，保留上次结果。": "Full Career data is not available yet. Keeping the previous result.",
-    "上舰后自动同步本人生涯数据。": "Automatically sync your Career data on arrival aboard the ship."
+    "上舰后自动同步本人生涯数据。": "Automatically sync your Career data on arrival aboard the ship.",
+    "上次获得：": "Last earned: ",
+    "上次获得对局：": "Last earned in: ",
+    "单局最多：": "Match record: ",
+    "对应对局：": "Match: "
   },
   "patterns": [
+    {
+      "source": "^单局最多：(%d+) 次  #(%d+)$",
+      "target": "Match record: %1 times  #%2"
+    },
     {
       "source": "^查看(.-)战果  ·  战果 (%d+)  成就 (%d+)$",
       "target": "View awards: %1  ·  Ribbons %2  Medals %3"
@@ -3182,10 +3196,10 @@
   "language": "en",
   "policy": "Display only; do not translate player names, identifiers, saved keys or source records.",
   "inputs": {
-    "docs/integration-catalogs.json": "002b0e66f9e61f4b2a758ab181f64700a1dfa8d3b7e4884be8af392aeba9269b",
+    "docs/integration-catalogs.json": "bd5048458e0025e18532316f96e16845854b00c8a803bc4a51ded5f5dbe60434",
     "docs/hellpod-kill-sources.json": "428d2b61e21cc05fe69e8441c36f2b3ed95b61b95ea6da8166d38d78ba1d0d85",
     "docs/vehicle-body-kill-sources.json": "0058be81cc6ca1ae335bd1ee342dce30eb8569de8c2720bbcbb3716cf1951fd7",
-    "docs/damage-source-catalog.json": "983f6ba56629a4550815ff6819b0f45bd8b6e9c23da4d23f6dc8424253a00765",
+    "docs/damage-source-catalog.json": "f2dd2c54ecebfea67425df5e8c274f12c1a4cdff692b09f0519de1abf1afb57c",
     "docs/enemy-catalog/units.json": "2ac54ca0c799cb31f785adc5b351cf344a79a1bc055a383b9003b3c724be4a40",
     "pricing/HD2-军需价格表-v0.2.xlsx": "bb09a99d05de0819b7e4e5df50c069ebd42dd5abc0146b5b2d8c8a6225e5d47f"
   },
@@ -3234,8 +3248,8 @@
   "counts": {
     "bilingual_names": 1202,
     "unit_conditions": 24,
-    "exact": 1544,
-    "fragments": 1577,
-    "patterns": 13
+    "exact": 1550,
+    "fragments": 1581,
+    "patterns": 14
   }
 }

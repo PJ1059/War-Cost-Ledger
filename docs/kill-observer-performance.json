@@ -1,49 +1,49 @@
 {
   "cases": [
     {
-      "max_ms": 0.0520000003,
+      "max_ms": 0.0924999995,
       "health_records": 128,
       "limit_ms": 2,
       "hash_capacity": 256,
       "max_read_bytes": 59496,
-      "avg_ms": 0.0160213,
+      "avg_ms": 0.01551545,
       "poll_hz": 10,
       "incomplete_polls": 0,
       "max_read_calls": 6,
       "iterations": 2000,
-      "p99_ms": 0.0289999998
+      "p99_ms": 0.0263000002
     },
     {
-      "max_ms": 0.5633,
+      "max_ms": 0.494800001,
       "health_records": 1024,
       "limit_ms": 2,
       "hash_capacity": 2048,
       "max_read_bytes": 475240,
-      "avg_ms": 0.1232182,
+      "avg_ms": 0.1217985,
       "poll_hz": 10,
-      "incomplete_polls": 3,
+      "incomplete_polls": 0,
       "max_read_calls": 6,
       "iterations": 2000,
-      "p99_ms": 0.178200001
+      "p99_ms": 0.160600001
     },
     {
-      "max_ms": 1.0037,
+      "max_ms": 1.2918,
       "health_records": 4096,
       "limit_ms": 2,
       "hash_capacity": 8192,
       "max_read_bytes": 1900648,
-      "avg_ms": 0.4855567,
+      "avg_ms": 0.49238865,
       "poll_hz": 10,
-      "incomplete_polls": 4,
+      "incomplete_polls": 11,
       "max_read_calls": 7,
       "iterations": 2000,
-      "p99_ms": 0.7378
+      "p99_ms": 0.7857
     }
   ],
   "failed_reads": 0,
-  "measured_utc": "2026-10-18T18:53:44.216122+00:00",
+  "measured_utc": "2026-10-19T14:53:13.555577+00:00",
   "lua_dll": "G:\\SteamLibrary\\steamapps\\common\\Helldivers 2\\bin\\lua51.dll",
-  "observer_sha256": "b2733002ae7999040d8655e76a9e61214d2bdfd5c975628a5a3ef6b22d74080c",
+  "observer_sha256": "ca5ae1216c7883216507b3e02e67c746b8afdd9b598dfa3b4dfe8d15ca75d33f",
   "method": "game LuaJIT + ReadProcessMemory of owned synthetic living-actor buffers",
   "game_running": false,
   "actual_fps_verified": false,

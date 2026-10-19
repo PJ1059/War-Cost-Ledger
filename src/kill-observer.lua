@@ -20,6 +20,7 @@ return function(world_api, natives, catalog, on_death, options)
     local cause_world,cause_ready
     local trace=options.damage_attribution
     local resolver=options.damage_resolver
+    if resolver and resolver.diagnostics then self.diagnostics.ground_fire=resolver.diagnostics.ground_fire end
     local source_types=options.source_types or {}
     local function enemy_source(kind)
         local role=kind and catalog[kind]
@@ -128,6 +129,20 @@ return function(world_api, natives, catalog, on_death, options)
     function self:explosion(event)
         return resolver and resolver:explosion(event,clock)or false
     end
+    function self:status_event(event,forwarded,reason)
+        local diag=self.diagnostics.ground_fire
+        if not diag or type(event)~='table'or event.name~='throwable/g8_immolation/detonation'then return end
+        diag.events_seen=diag.events_seen+1
+        if event.local_player==true then diag.events_local=diag.events_local+1
+        elseif event.local_player==false then diag.events_foreign=diag.events_foreign+1
+        else diag.events_uncredited=diag.events_uncredited+1 end
+        if forwarded==true then diag.events_forwarded=diag.events_forwarded+1
+        elseif reason=='mission_inactive'then diag.event_mission_inactive=diag.event_mission_inactive+1
+        elseif reason=='missing_source'then diag.event_missing_source=diag.event_missing_source+1
+        elseif reason=='missing_radius'then diag.event_missing_radius=diag.event_missing_radius+1
+        elseif reason=='not_local'then diag.event_not_local=diag.event_not_local+1
+        else diag.event_rejected=diag.event_rejected+1 end
+    end
     function self:poll(world, players, dt, life_epoch)
         clock = clock + dt
         elapsed = elapsed + dt
@@ -154,7 +169,10 @@ return function(world_api, natives, catalog, on_death, options)
         if not player or not player.peer then self:gap(); finish('local_peer_unavailable'); return end
         if last_peer ~= player.peer then self:gap(); last_peer = player.peer end
         if last_epoch ~= life_epoch then
-            clear_credit();contact_pending={};if resolver then resolver:reset()end;last_epoch = life_epoch
+            diag.life_changes=(diag.life_changes or 0)+1
+            clear_credit();contact_pending={}
+            if resolver then resolver:life_changed(clock)end
+            last_epoch = life_epoch
         end
         local header = world_api.health_header(world, blocks[1])
         if not header or not header.buckets or not header.records or not header.descriptors then
@@ -439,7 +457,8 @@ return function(world_api, natives, catalog, on_death, options)
                 -- No target scan: only an already changing Health entry can
                 -- use the optional, bounded native position reader.
                 row.explosion_damage=cause and cause.kind==4 or false
-                if not pure_contact and (row.explosion_damage or damage_observed and resolver:has_status_context(clock,life==2))
+                local fire_death=first_seen_dead and life==2 and cause and cause.kind==2 and cause.element==1
+                if not pure_contact and (row.explosion_damage or(damage_observed or fire_death)and resolver:has_status_context(clock,life==2))
                     and not row.source_type and resolver:has_context(clock)
                     and type(options.unit_position)=='function'and os.clock()-started<.002 then
                     row.position=position_once()

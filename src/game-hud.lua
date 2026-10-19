@@ -4,7 +4,7 @@ local function clamp(v,lo,hi) return math.max(lo,math.min(hi,v)) end
 local function finite(v) return type(v)=='number' and v==v and v>-math.huge and v<math.huge end
 local EMPTY={}
 local DEFAULT={scale=1,opacity=.82,right_margin=0,top_margin=0,side_margin=0,
-    side_vertical=.5,ribbon_mode='map',move_tasks=true,task_gap=12,currency='MC',width=600,
+    side_vertical=.5,ribbon_mode='map',move_tasks=true,task_gap=12,currency='SC',width=600,
     hit_position='right',charge_position='right',kill_source_enabled=true}
 local function alpha(v) return string.format('%02X',math.floor(clamp(v,0,1)*255+.5)) end
 
@@ -180,7 +180,7 @@ return function(hd2,state,battle,awards,art,factories)
                 else ribbons[#ribbons+1]=item end
                 if icon.kind=='medal' then all_medals[#all_medals+1]=item else all_ribbons[#all_ribbons+1]=item end
             end
-            local stats={kills='648',shots='56222',kd='216.00',history_kd='44.83',bill='72431285.00',currency='MC'}
+            local stats={kills='648',shots='56222',kd='216.00',history_kd='44.83',bill='72431285.00',currency='SC',bill_text='72431285.00 SC'}
             local stats_view={stats=stats}
             test_battle={snapshot=function() return stats_view end}
             local view={items=items,medals=medals,ribbons=ribbons}
@@ -303,10 +303,11 @@ return function(hd2,state,battle,awards,art,factories)
             and shown_charges:snapshot(now,visible==true,shown_awards.deadline) or false
         if charge_view~=last_charge_source or cfg.currency~=last_charge_currency then
             formatted_charges={items={},deadline=charge_view and charge_view.deadline,revision=charge_view and charge_view.revision}
-            local symbols={MC='MC',USD='$',CNY='¥',EUR='€',GBP='£',SEK='kr'}
+            local symbols={SC=' SC',USD='$',CNY='¥',EUR='€',GBP='£',SEK='kr'}
             for _,item in ipairs(charge_view and charge_view.items or {}) do
+                local fallback=item.amount_cents/100
                 local amount=factories.currency and factories.currency:format(item.amount_cents,cfg.currency)
-                    or string.format('%.2f',item.amount_cents/100)
+                    or (fallback>0 and fallback<0.01 and '<0.01' or string.format('%.2f',fallback))
                 local amount_text='-'..amount..(symbols[cfg.currency] or cfg.currency)
                 local name=localize(item.name)
                 formatted_charges.items[#formatted_charges.items+1]={id=item.key,name=name,

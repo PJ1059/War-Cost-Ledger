@@ -42,9 +42,10 @@ end
 return function(icons,conditions,create_combat,localize)
     assert(type(icons)=='table','career panel needs award definitions')
     local t=type(localize)=='function' and localize or function(value)return value end
-    local api={version=5}
+    local api={version=6}
     local combat=type(create_combat)=='function' and create_combat(t) or nil
     local history_source,history_revision,ordered
+    local award_source,award_revision,award_index
     local function history_entries(history)
         history=type(history)=='table' and history or {}
         local source=history.entries or {}
@@ -60,6 +61,23 @@ return function(icons,conditions,create_combat,localize)
     end
     local function count(value)
         return number(value) and value>=0 and value%1==0 and string.format('%.0f',value) or '--'
+    end
+    local function award_records(history)
+        local entries=history_entries(history)
+        if award_index and award_source==history_source and award_revision==history_revision then return award_index end
+        local out={medals={},ribbons={}}
+        for _,entry in ipairs(entries)do
+            for _,group in ipairs({'medals','ribbons'})do
+                for key,n in pairs(type(entry[group])=='table'and entry[group]or{})do
+                    local old=out[group][key]
+                    if number(n)and n>0 and n%1==0 and(not old or group=='ribbons'and n>old.count)then
+                        out[group][key]={entry=entry,count=n}
+                    end
+                end
+            end
+        end
+        award_source,award_revision,award_index=history_source,history_revision,out
+        return out
     end
     local function ratio(value)
         if type(value)~='table' or count(value.kills)=='--' or count(value.deaths)=='--' then return nil end
@@ -284,7 +302,8 @@ return function(icons,conditions,create_combat,localize)
                     return text..(type(code)=='string'and code~=''and(' '..code)or'')
                 end
             end
-            return string.format('%.2f MC',cents/100)
+            local amount=cents/100
+            return (amount>0 and amount<.01 and '<0.01' or string.format('%.2f',amount))..' SC'
         end
         local function acquired(source,kind)
             local entries={}
@@ -304,9 +323,35 @@ return function(icons,conditions,create_combat,localize)
                 x=x,y=y,width=w,height=h,colour=icon.colour,visible=true,derived_crush=derived}
         end
         local function finish()
+            local history_awards=award_records(context.history)
+            local crush=history_awards.ribbons.crush
+            for _,entry in ipairs(history_entries(context.history))do
+                local n=legacy.by_sequence and legacy.by_sequence[entry.sequence]
+                if entry.ribbons and entry.ribbons.crush==nil and number(n)and n>0
+                    and(not crush or n>crush.count or n==crush.count and entry.sequence>crush.entry.sequence)then
+                    crush={entry=entry,count=n}
+                end
+            end
             for _,award in ipairs(result.items)do
+                local group=award.kind=='medal' and 'medals' or 'ribbons'
+                local record=award.key=='crush'and crush or history_awards[group][award.key]
+                local best,amount=record and record.entry,record and record.count
+                award.sequence=best and best.sequence
                 if inside(award.x,award.y,award.width,award.height)then
+                    local details={}
+                    if best then
+                        if award.kind=='medal'then
+                            local at=best.medal_last_at and best.medal_last_at[award.key]
+                            details[1]=t((at and '上次获得：' or '上次获得对局：')..date(at or best.ended_at or best.started_at)..'  #'..count(best.sequence))
+                        else
+                            details[1]=t('单局最多：'..count(amount)..' 次  #'..count(best.sequence))
+                            details[2]=t('对应对局：'..date(best.ended_at or best.started_at))
+                        end
+                        details[#details+1]=t('双击跳转至该对局')
+                    else details[1]=t('对应对局未记录')end
+                    for index,line in ipairs(details)do details[index]=fit_text(line,math.max(0,width-40)*14/12)end
                     result.tooltip={id=award.id,key=award.key,name=award.name,count=award.count,condition=award.condition,
+                        details=details,sequence=best and best.sequence,
                         anchor={x=award.x,y=award.y,width=award.width,height=award.height}}
                 end
             end
@@ -479,10 +524,40 @@ return function(icons,conditions,create_combat,localize)
                             result.sparkline.interpolation='monotone_cubic'
                         end
                     end
-                    header('list_count',label..' · '..count(#entries)..' 场',pad,299,inner/2,nil,nil,{height=17,font_size=11,colour=MUTED})
-                    header('list_hint','点击展开详情',pad+inner/2,299,inner/2,nil,nil,{height=17,font_size=11,colour=MUTED,align=1})
-                    top=322
+                    top=294
                 end
+                -- Records are derived only from saved matches in this period.
+                -- Newest sequence wins ties; zero-death matches rank above finite KD.
+                local best={}
+                for _,entry in ipairs(entries)do
+                    if entry.status=='ended' or entry.status=='interrupted'then
+                        for _,key in ipairs({'kills','deaths'})do
+                            if count(entry[key])~='--' and (not best[key] or entry[key]>best[key][key])then best[key]=entry end
+                        end
+                        if ratio(entry) and (entry.kills>0 or entry.deaths>0)then
+                            local old=best.kd
+                            local higher=not old or (entry.deaths==0 and old.deaths~=0)
+                                or (entry.deaths==0 and old and old.deaths==0 and entry.kills>old.kills)
+                                or (entry.deaths>0 and old and old.deaths>0 and ratio(entry)>ratio(old))
+                            if higher then best.kd=entry end
+                        end
+                    end
+                end
+                result.match_records=best
+                local ry=top
+                for index,record in ipairs({{'kills','单局最高击杀'},{'kd','单局最高KD'},{'deaths','单局最高死亡'}})do
+                    local entry=best[record[1]]
+                    local value=entry and(record[1]=='kd' and current_kd(entry)or count(entry[record[1]]))or'--'
+                    local x=pad+(index-1)*(inner+6)/3
+                    control('record_'..record[1],record[2],x,ry,(inner-12)/3,compact and 34 or 42,'history_jump',
+                        {sequence=entry and entry.sequence,enabled=entry~=nil,font_size=10,inset=3,text_offset_y=4})
+                    header('record_value_'..record[1],value,x,ry+(compact and 16 or 20),(inner-12)/3,nil,nil,{height=compact and 16 or 19,font_size=compact and 13 or 15,align=.5})
+                end
+                if not compact then
+                    header('list_count',label..' · '..count(#entries)..' 场',pad,ry+49,inner/2,nil,nil,{height=17,font_size=11,colour=MUTED})
+                    header('list_hint','点击展开详情',pad+inner/2,ry+49,inner/2,nil,nil,{height=17,font_size=11,colour=MUTED,align=1})
+                end
+                top=ry+(compact and 40 or 72)
                 local available=math.max(0,bottom-top)
                 local row_height=math.max(66,math.ceil(available/6))
                 local detail_height=math.max(26,math.ceil(available/6))
@@ -600,6 +675,14 @@ return function(icons,conditions,create_combat,localize)
         result.total_items,result.content_height=total_items,y
         result.max_scroll=math.max(0,y-available)
         result.scroll=math.max(0,math.min(result.max_scroll,number(context.scroll) and context.scroll or 0))
+        if context.jump_sequence then
+            for _,entry in ipairs(blocks)do
+                if entry.kind=='match' and entry.data.sequence==context.jump_sequence then
+                    -- Keep the destination header visible even for the oldest match.
+                    result.scroll=math.min(result.max_scroll,entry.y);break
+                end
+            end
+        end
         local row_slot=0
         for _,entry in ipairs(blocks)do
             local at=top+entry.y-result.scroll

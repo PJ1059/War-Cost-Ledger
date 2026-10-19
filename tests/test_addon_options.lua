@@ -1,5 +1,8 @@
 -- Exercise the actual built addon. Only Runtime/game and the public menu API
 -- are boundaries: the native map bridge, settings, preview and renderer are real.
+-- Explicit legacy host: combat rendering must not duplicate it. The independent
+-- Runtime combat fallback and normal Career are exercised in test_addon_no_f9_069.lua.
+rawset(_G,'HD2WarCostLedgerNativeHUDV1',{ready=true})
 local addon_path, runtime_path = assert(arg[1]), assert(arg[2])
 package.preload['hd2runtime/schemas/current'] = function() return dofile(runtime_path .. '/schemas/current.lua') end
 package.preload['hd2runtime/runtime/log'] = function() return {emit = function() end} end
@@ -83,11 +86,12 @@ package.preload['mods/skyeshade/hd2runtime'] = function()
 end
 package.preload['hd2runtime/domains/metadata'] = function() return {version = '0.30.3'} end
 package.preload['hd2runtime/domains/event_natives'] = function()
-    return {stats = {keys = {projectiles_fired = 1, dealt_kills = 2, received_deaths = 3}}}
+    return {stats = {keys = {projectiles_fired = 1, dealt_kills = 2, received_deaths = 3, projectiles_hit = 4}}}
 end
 package.preload['hd2runtime/runtime/event_world'] = function()
     return {open = function() return available and world or nil end,
         game_state = function() return readable and {mission = mission} or nil end,
+        entity_state = function() return nil, 'fixture has no avatar Health record' end,
         players = function() return {{['local'] = true, entity = 42}} end,
         stat_breakdown = function()
             stat_reads = stat_reads + 1
@@ -95,9 +99,9 @@ package.preload['hd2runtime/runtime/event_world'] = function()
         end}
 end
 package.preload['hd2runtime/runtime/beacon_redirect'] = function()
-    return {prove = function() return false end, clock = function() return 0 end}
+    return {prove = function() return false end, clock = function() return 0 end, beacons = function() return {} end}
 end
-package.preload['hd2runtime/runtime/stratagem_loadout'] = function() return {} end
+package.preload['hd2runtime/runtime/stratagem_loadout'] = function() return {prove = function() return false end, id_of = function() return nil end} end
 local menu = {api = 1, version = 3, ready = function() return false end}
 function menu.register_option(id, spec)
     assert(options[id] == nil, 'each option must register once')
@@ -216,7 +220,7 @@ check('currency Apply reaches live and isolated preview HUD without rewriting th
     local total, entries, last = module.state.total_cents, canonical(module.state.entries), canonical(data.last_mission)
     local reads = pointer_reads + byte_reads + stat_reads + queries
     module.state.total_cents = 10000 -- fixture balance: 100 MC
-    local cases = {{1,'MC','100.00','MC'},{2,'USD','100.00','$'},{3,'CNY','669.21','¥'},
+    local cases = {{1,'SC','100.00',' SC'},{2,'USD','100.00','$'},{3,'CNY','669.21','¥'},
         {4,'EUR','89.24','€'},{5,'GBP','75.64','£'},{6,'SEK','996.56','kr'}}
     for _, c in ipairs(cases) do
         apply('currency', c[1])
@@ -251,8 +255,8 @@ check('numeric native HUD map state immediately gates collected ribbons', functi
     assert(module.native_ui.state.map_open and #module.game_hud:native_model(0,true).awards.ribbons>0)
     map_open = false; frame(.1)
     assert(not module.native_ui.state.map_open and #module.game_hud:native_model(0,true).awards.ribbons==0)
-    bindings['war_cost_ledger.toggle_collection'].on_press()
-    assert(module.game_hud.collection_open and #module.game_hud:native_model(0,true).awards.ribbons==0, 'verified closed map takes precedence over F9')
+    assert(bindings['war_cost_ledger.toggle_collection']==nil, 'retired F9 collection shortcut must not be registered')
+    assert(not module.game_hud.collection_open and #module.game_hud:native_model(0,true).awards.ribbons==0)
     apply('ribbon_mode', 2); assert(#module.game_hud:native_model(0,true).awards.ribbons>0)
     apply('ribbon_mode', 1); assert(#module.game_hud:native_model(0,true).awards.ribbons==0)
     assert(#render().items==0, 'map changes must not re-enable flat combat rendering')

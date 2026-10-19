@@ -1,4 +1,7 @@
 -- Runs the actual built entry with simulated read-only HD2Runtime interfaces.
+-- This fixture owns a ready legacy native host. Runtime-only drawing has its
+-- actual-built coverage in test_addon_overlay_068.lua.
+rawset(_G,'HD2WarCostLedgerNativeHUDV1',{ready=true})
 local addon_path = assert(arg[1], 'built addon path required')
 local function copy(value)
     if type(value) ~= 'table' then return value end
@@ -40,6 +43,7 @@ package.preload['hd2runtime/runtime/event_world'] = function()
     return {
         open = function() world_reads = world_reads + 1; if available then return current end; return nil, 'unavailable test' end,
         game_state = function() return {mission = mission, host = host} end,
+        entity_state = function() return nil, 'fixture has no avatar Health record' end,
         players = function()
             player_reads = player_reads + 1
             local out = {}; for i = 1, player_count do
@@ -75,7 +79,8 @@ package.preload['hd2runtime/runtime/stratagem_loadout'] = function()
     }
 end
 package.preload['hd2runtime/domains/event_natives'] = function()
-    return {stats = {keys = {projectiles_fired = SHOTS, dealt_kills = KILLS, received_deaths = 2641135157}}}
+    return {stats = {keys = {projectiles_fired = SHOTS, dealt_kills = KILLS,
+        received_deaths = 2641135157, projectiles_hit = 0x897A5551}}}
 end
 local module = dofile(addon_path)
 local state = module.state

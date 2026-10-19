@@ -51,6 +51,7 @@ local world={game=fixture.image.base,exe=fixture.image.base,runtime={mode='live'
 package.preload['hd2runtime/runtime/event_world']=function()return {
     open=function()return world end,
     game_state=function()return {state=mission and 4 or 3,mission=mission,host=true}end,
+    entity_state=function()return nil end,
     players=function()return {player}end,
     stat_breakdown=function(_,entity,wanted)
         assert(entity==player.entity);stat_reads=stat_reads+1
@@ -58,8 +59,8 @@ package.preload['hd2runtime/runtime/event_world']=function()return {
         assert(requested[S] and requested[K] and requested[H])
         return stats_available and stats or nil
     end}end
-package.preload['hd2runtime/runtime/beacon_redirect']=function()return {prove=function()return false end,clock=function()return 0 end}end
-package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{}end
+package.preload['hd2runtime/runtime/beacon_redirect']=function()return {prove=function()return false end,clock=function()return 0 end,beacons=function()return{}end}end
+package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{prove=function()return false end,id_of=function()return nil end}end
 local addon=dofile(addon_path)
 assert(addon.version==fixture.addon_version and type(frame)=='function')
 local state=addon.state
@@ -156,7 +157,8 @@ check('F8 hides presentation while actual native counting continues',function()
 end)
 check('two seconds idle folds side batches into collected ribbon totals',function()
     model();tick(2.1)
-    bindings['war_cost_ledger.toggle_collection'].on_press()
+    assert(bindings['war_cost_ledger.toggle_collection']==nil, 'retired F9 shortcut must not be registered')
+    addon.game_hud:configure({ribbon_mode='always'})
     local hud=model();assert(#hud.awards.items==0 and hud.collected)
     for id,count in pairs({H01=99,H02=2,H03=4,H04=1,H05=1})do
         assert(item_of(hud.awards.ribbons,id).count==count)

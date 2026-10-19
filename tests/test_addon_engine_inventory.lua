@@ -34,9 +34,10 @@ local world={game=0x10000000,view={slot=function()return{}end},runtime={mode='li
 package.preload['hd2runtime/runtime/event_world']=function()return {
     open=function()return available and world end,
     game_state=function()return {mission=mission,state=state,host=true}end,
-    players=function()return {}end}end
-package.preload['hd2runtime/runtime/beacon_redirect']=function()return {prove=function()return false end}end
-package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{}end
+    players=function()return {}end,entity_state=function()return nil end,
+    stat_breakdown=function()return {totals={},sources={}}end}end
+package.preload['hd2runtime/runtime/beacon_redirect']=function()return {prove=function()return false end,clock=function()return 0 end,beacons=function()return {} end}end
+package.preload['hd2runtime/runtime/stratagem_loadout']=function()return{prove=function()return false end,id_of=function()return nil end}end
 os.clock=function()return 0 end
 local function load()
     rawset(_G,'HD2WarCostLedgerV1',nil)

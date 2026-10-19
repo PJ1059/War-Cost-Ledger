@@ -15,7 +15,7 @@ local cases={
     {id='T02',key='heavy_charger_behemoth',unit='Charger Behemoth',hashes={'3AFF5FD7D5450B99','A05BD1EC67B3AC4C'}},
     {id='T03',key='heavy_spore_charger',unit='Spore Charger',hashes={'6B202392F4AB605E'}},
     {id='T04',key='heavy_rupture_charger',unit='Rupture Charger',hashes={'0AB7B92B131C228C'}},
-    {id='T05',key='heavy_impaler',unit='Impaler',hashes={'AE57FCDB49F74E98'}},
+    {id='T05',key='heavy_impaler',unit='Impaler',hashes={'AE57FCDB49F74E98','DCF8E74212FBEE3B'}},
     {id='T06',key='heavy_hulk_bruiser',unit='Hulk Bruiser',hashes={'137988CEA16458F7','32CDEADA234FB8DF'}},
     {id='T07',key='heavy_hulk_scorcher',unit='Hulk Scorcher',hashes={'3E0537D606438FEA','E44EC9F9B3FE1D2A'}},
     {id='T08',key='heavy_hulk_obliterator',unit='Hulk Obliterator',hashes={'1E66EE1F6F7FD00E'}},
@@ -70,6 +70,25 @@ for _,case in ipairs(cases)do
         assert(state.ribbons[case.key]==expected[case.key],'retained corpses cannot repeat a ribbon')
     end
 end
+-- The full 4000-HP Impaler has no positive native score flag. Its exact SDK body
+-- identity is eligible, but independent tentacles are never another enemy.
+local impaler_before=state.ribbons.heavy_impaler
+local tentacle=actor('672F7DA17F3BA34A');tick(4)
+tentacle.life,tentacle.credit=2,0x11;tick(10)
+assert(state.ribbons.heavy_impaler==impaler_before and state.classified_kills==total,
+    'killing an independent Impaler tentacle must not earn T05')
+local foreign_impaler=actor('DCF8E74212FBEE3B');tick(4);kill(foreign_impaler,0x22);tick(4)
+assert(state.ribbons.heavy_impaler==impaler_before and state.classified_kills==total,
+    'another player killing the exact Impaler body cannot earn T05')
+local uncredited_impaler=actor('DCF8E74212FBEE3B');tick(4)
+uncredited_impaler.life,uncredited_impaler.credit=2,0;tick(10)
+assert(state.ribbons.heavy_impaler==impaler_before and state.classified_kills==total,
+    'a missing-creditor Impaler without a matching native local kill cannot earn T05')
+local quota_impaler=actor('DCF8E74212FBEE3B');tick(4)
+quota_impaler.life,quota_impaler.credit=2,0;stats.totals[KILLS]=stats.totals[KILLS]+1;tick(4)
+expected.heavy_impaler=expected.heavy_impaler+1;total=total+1
+assert(state.ribbons.heavy_impaler==expected.heavy_impaler and state.classified_kills==total,
+    'the full Impaler body retains the existing missing-creditor local native-kill gate')
 -- Other players' final credit cannot be converted into a local unit ribbon.
 peers=2
 local foreign=actor('1A7FCDFF98C664B0');foreign.credit=0x11;tick(4)
@@ -133,7 +152,7 @@ add(TANK,100);tick()
 assert(state.sequence==10 and state.mission_medals.tyranny_speed_bump==1 and totals().medals.tyranny_speed_bump==2,
     'next mission can earn one more M12')
 assert(totals().ribbons.heavy==7 and totals().ribbons.giant==3,'legacy generic totals remain unchanged after new missions')
-print('PASS built 24 unit ribbons/28 exact hash aliases: local gates, first popup/glyph, no generic double count, career/match/period/reload; M12 baseline/99/100/101/life/new mission, cannon-MG/foreign exclusion and persistence.')
+print('PASS built 24 unit ribbons/29 exact hash aliases: local gates, first popup/glyph, no generic double count, full Impaler body/tentacle/foreign/no-quota distinction, career/match/period/reload; M12 baseline/99/100/101/life/new mission, cannon-MG/foreign exclusion and persistence.')
 ]]
 arg={addon,runtime_root}
 assert(loadstring(source:sub(1,start-1)..scenario,'@unit-ribbons-058-integration'))()

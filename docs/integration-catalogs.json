@@ -1004,6 +1004,23 @@
       "semantic_id": "enemy/v1/terminids/scavenger_gloom",
       "cloud_row": null
     },
+    "DCF8E74212FBEE3B": {
+      "key": "Impaler",
+      "name_zh": "穿刺虫",
+      "name_en": "Impaler",
+      "class": "重型",
+      "faction": "terminids",
+      "air": false,
+      "kill": true,
+      "asset": false,
+      "illuminate_ship": false,
+      "basis": "reviewed_full_enemy_body_resource",
+      "semantic_id": "enemy/v1/terminids/impaler",
+      "cloud_row": null,
+      "runtime_kill_flag": false,
+      "resource_path": "content/fac_bugs/cha_impaler/cha_impaler",
+      "identity_basis": "exact_sdk_body_resource_with_health_zones"
+    },
     "DFBACBD977A948DC": {
       "key": "Scavenger",
       "name_zh": "食腐虫",

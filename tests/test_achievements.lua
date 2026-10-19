@@ -1,4 +1,6 @@
 -- Run the built addon, replacing only Runtime's read-only boundaries.
+-- Explicit legacy host: Runtime fallback drawing has separate actual-built coverage.
+rawset(_G,'HD2WarCostLedgerNativeHUDV1',{ready=true})
 local addon_path = assert(arg[1])
 local function copy(value)
     if type(value) ~= 'table' then return value end
@@ -64,9 +66,9 @@ package.preload['hd2runtime/runtime/event_world'] = function()
     }
 end
 package.preload['hd2runtime/runtime/beacon_redirect'] = function()
-    return {prove = function() return false end, clock = function() return 0 end}
+    return {prove = function() return false end, clock = function() return 0 end, beacons = function() return {} end}
 end
-package.preload['hd2runtime/runtime/stratagem_loadout'] = function() return {} end
+package.preload['hd2runtime/runtime/stratagem_loadout'] = function() return {prove = function() return false end, id_of = function() return nil end} end
 local function load()
     rawset(_G, 'HD2WarCostLedgerV1', nil)
     state = dofile(addon_path).state

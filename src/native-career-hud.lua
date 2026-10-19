@@ -195,7 +195,15 @@ return function(options)
         end
         local height=feed.size[2]
         if plan.tooltip then
-            local x,y,w,h=8,height-112,plan.width-16,104
+            local has_details=type(plan.tooltip.details)=='table'and #plan.tooltip.details>0
+            local h=has_details and 164 or 104
+            local x,y,w=8,math.max(0,height-h-8),plan.width-16
+            local anchor=plan.tooltip.anchor
+            if anchor and anchor.y<y+h and anchor.y+anchor.height>y then
+                local above=anchor.y-h-8
+                if above>=0 then y=above
+                elseif anchor.y+anchor.height+h+8<=height then y=anchor.y+anchor.height+8 end
+            end
             rectangle('tooltip_shape_1',x,y,w,h,{.035,.035,.035,.98})
             rectangle('tooltip_shape_2',x,y,w,1,{.7,.7,.7,.8})
             rectangle('tooltip_shape_3',x,y+h-1,w,1,{.7,.7,.7,.8})
@@ -205,6 +213,12 @@ return function(options)
             view.tooltip_title_position={x+12,-(y+10)}
             for index,line in ipairs(wrap(plan.tooltip.condition,math.max(8,(w-24)/13),3))do
                 view['tooltip'..index]=line;view['tooltip'..index..'_position']={x+12,-(y+36+(index-1)*18)}
+            end
+            for index,line in ipairs(plan.tooltip.details or {})do
+                if index<=3 then
+                    view['tooltip_history'..index]=line
+                    view['tooltip_history'..index..'_position']={x+12,-(y+98+(index-1)*18)}
+                end
             end
         end
         -- Select menus share the existing tooltip depth bands, above the
@@ -303,6 +317,7 @@ return function(options)
     for index=1,5 do rectangle_row('tooltip_shape_'..index,tooltip_back_layer)end
     text_row('tooltip_title',15,nil,nil,tooltip_text_layer)
     for index=1,3 do text_row('tooltip'..index,13,nil,nil,tooltip_text_layer)end
+    for index=1,3 do text_row('tooltip_history'..index,12,nil,nil,tooltip_text_layer)end
     options.refresh_aliases(sources,'ledger.career.refresh',refresh)
     return {numbers={ledger_career_layer=24,ledger_career_art_layer=25,ledger_career_count_back_layer=26,ledger_career_text_layer=27,
         ledger_career_tooltip_back_layer=28,ledger_career_tooltip_text_layer=29,

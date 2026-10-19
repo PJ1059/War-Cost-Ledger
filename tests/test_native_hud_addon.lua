@@ -28,7 +28,7 @@ local make_layout=assert(dofile(arg[4] or module_path:gsub('native%-hud%-addon%.
 local layout=make_layout()
 local animation_time=0
 local feed={shown=true,hud=68993637784,position={0,-96},scale={1,1},opacity=.82,
-    kills=11,shots=120,bill='346.60MC',kd='11.00',history_kd='34.50',map_open=true,
+    kills=11,shots=120,bill='346.60 SC',kd='11.00',history_kd='34.50',map_open=true,
     block_height=109,size={600,109},now=0,sequence=1}
 local function refresh_layout()
     if not feed or (feed.immutable and feed.layout) then return feed end
@@ -64,7 +64,7 @@ check('installed HUD+ merge and real Reader produce cached ledger text',function
     local values=step(reader,1)
     assert(values['ledger.native.kills']=='11')
     assert(values['ledger.native.shots']=='120')
-    assert(values['ledger.native.bill']=='346.60MC')
+    assert(values['ledger.native.bill']=='346.60 SC')
     assert(values['ledger.native.kd']=='11.00[34.50]')
     assert(values['ledger.native.parent']==feed.hud+0x2944A0)
     assert(part.native_hud_status.ready and part.native_hud_status.status=='feed_ready')
@@ -331,7 +331,7 @@ check('real Widgets renders icon statistics and right-aligned values with native
     assert(v['ledger.native.parent']==parent and nodes[addresses.ledger_block].shown)
 end)
 check('bill and charge notices show each selected currency without a text label',function()
-    for _, symbol in ipairs({'MC','$','¥','€','£','kr'}) do
+    for _, symbol in ipairs({' SC','$','¥','€','£','kr'}) do
         feed.bill='2500.00'..symbol
         feed.charges={{id='stims',name='治疗针',text='治疗针 -2500.00'..symbol}}
         put_all()
@@ -339,8 +339,16 @@ check('bill and charge notices show each selected currency without a text label'
         assert(nodes[addresses.ledger_charge_1].text=='治疗针 -2500.00'..symbol)
         assert(native_read:value(addresses.ledger_charge_1_frame+n.widget_local_position,'f32')==600)
     end
-    feed.bill='2500.00MC';feed.charges={};put_all()
+    feed.bill='2500.00 SC';feed.charges={};put_all()
     assert(not nodes[addresses.ledger_charge_1_frame].shown)
+end)
+check('fractional GBP charges retain the less-than marker in native widgets',function()
+    feed.bill='<0.01£'
+    feed.charges={{id='ammo',name='单发弹药',text='单发弹药 -<0.01£'}}
+    put_all()
+    assert(nodes[addresses.ledger_bill].text=='<0.01£')
+    assert(nodes[addresses.ledger_charge_1].text=='单发弹药 -<0.01£')
+    feed.charges={};put_all()
 end)
 if art then
     check('compiled resource_require wrapper returns a complete native addon table',function()
@@ -542,7 +550,7 @@ if art then
         local fixed={'ledger_metric_U01_texture','ledger_kills_frame','ledger_kd_frame',
             'ledger_collected_R02_texture','ledger_collected_R02_count_frame'}
         feed.ribbons={{id='R02',kind='ribbon',count=4,total=4}}
-        feed.charges={{id='stims',name='治疗针',text='治疗针 -2500.00MC'}}
+        feed.charges={{id='stims',name='治疗针',text='治疗针 -2500.00 SC'}}
         feed.popup_shift=0;put_all()
         local positions={}
         for _,ids in ipairs({moving,fixed})do for _,id in ipairs(ids)do positions[id]=y(id)end end
@@ -558,7 +566,7 @@ if art then
         feed.side=side;feed.ribbons={};feed.medals={};feed.charges={};put_all()
     end)
     check('150 percent popup art and text preserve one right edge and leave top metrics unchanged',function()
-        feed.charges={{id='stims',name='治疗针',text='治疗针 -2500.00MC'}}
+        feed.charges={{id='stims',name='治疗针',text='治疗针 -2500.00 SC'}}
         local before=put_all()['ledger.native.feed']
         local count_scale=nodes[addresses.ledger_side_R01_count_frame].widget_scale_set[1]
         local owned=next_at
@@ -579,7 +587,7 @@ if art then
     end)
     check('all nine hit and charge choices reach real Widgets while ribbons remain right',function()
         local owned=next_at
-        feed.charges={{id='stims',name='治疗针',text='治疗针 -2500.00MC'}}
+        feed.charges={{id='stims',name='治疗针',text='治疗针 -2500.00 SC'}}
         feed.center_position={220,-420};feed.popup_scale=1.5
         feed.popup_shift_x=-24;feed.popup_shift=360
         for _,hit in ipairs({'right','center','hidden'})do
@@ -615,7 +623,7 @@ if art then
         local owned=next_at
         feed.center_position={220,-300};feed.popup_scale=1.5
         feed.hit_position,feed.charge_position='center','center'
-        feed.charges={{id='ammo',name='测试扣费',text='测试扣费 -1.00MC'}}
+        feed.charges={{id='ammo',name='测试扣费',text='测试扣费 -<0.01£'}}
         feed.kill_source_notices={revision=1,items={{expires_at=16.3,lines={'追猎虫 [GL-21 榴弹发射器]'}},
             {expires_at=16.3,lines={'不应叠加的旧提示'}}}}
         feed.now=11.3;animation_time=1011.3

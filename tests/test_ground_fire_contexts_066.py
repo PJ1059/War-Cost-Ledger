@@ -18,7 +18,7 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-from build import lua_table
+from build import VERSION, lua_table
 from test import run_lua
 
 CONFIG = ROOT / 'docs/ground-fire-contexts-0.4.66.json'
@@ -166,7 +166,7 @@ class GroundFireCatalogue066(unittest.TestCase):
             config_lua = Path(folder) / 'contexts.lua'
             cases = [dict(name=name, **entry) for name, entry in sorted(self.document['entries'].items())]
             config_lua.write_text('return ' + lua_table(cases) + '\n', encoding='utf8')
-            with ZipFile(ROOT / 'dist/HD2-War-Cost-Ledger-0.4.66.zip') as package:
+            with ZipFile(ROOT / f'dist/HD2-War-Cost-Ledger-{VERSION}.zip') as package:
                 self.assertEqual(package.read('docs/ground-fire-contexts-0.4.66.json'), CONFIG.read_bytes())
                 resolver_source = package.read('Source/damage-source-resolver.lua')
                 self.assertEqual(resolver_source, (ROOT / 'src/damage-source-resolver.lua').read_bytes())

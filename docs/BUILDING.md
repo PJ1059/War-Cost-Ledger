@@ -1,8 +1,8 @@
 # Build and verify / 构建与验证
 
-This source snapshot builds **HD2 War Cost Ledger 0.4.66**. Run commands from the repository root on 64-bit Windows. Building is offline and does not install the mod or access a running game.
+This source snapshot builds **HD2 War Cost Ledger 0.4.69**. Run commands from the repository root on 64-bit Windows. Building is offline and does not install the mod or access a running game.
 
-本公开源码用于构建 **0.4.66**。在 Windows 64 位系统的仓库根目录运行以下命令；构建不会安装 MOD，也不会访问正在运行的游戏。
+本公开源码用于构建 **0.4.69**。在 Windows 64 位系统的仓库根目录运行以下命令；构建不会安装 MOD，也不会访问正在运行的游戏。
 
 ## Build inputs / 构建输入
 
@@ -16,7 +16,7 @@ $env:HD2_RUNTIME_SDK = "$env:HD2_RUNTIME_SOURCE/sdk"
 python -X utf8 -B tools/build.py
 ```
 
-Output: `dist/HD2-War-Cost-Ledger-0.4.66.zip`. The package contains three `Addon/` archive files and the mod-manager manifest. The main archive contains 125 resources, including 53 award images, four metric images, two trend indicators, the ribbon frame and UI support. Existing PNGs are read without redrawing them. The original runtime dependencies remain separate downloads.
+Output: `dist/HD2-War-Cost-Ledger-0.4.69.zip`. The package contains three `Addon/` archive files and the mod-manager manifest. The main archive contains 125 resources, including 53 award images, four metric images, two trend indicators, the ribbon frame and UI support. Existing PNGs are read without redrawing them. The original runtime dependencies remain separate downloads.
 
 输出为上述 ZIP；使用 MOD 管理器导入。生产构建沿用已审阅 PNG 和价格表，不重新生成图像，也不重新抓取网页、哈希表或用户存档。运行时依赖仍须单独安装。
 
@@ -40,6 +40,8 @@ The full suite also needs Capstone (`python -m pip install capstone`) and extern
 | Environment variable | Required external input |
 | --- | --- |
 | `HD2_RUNTIME_SOURCE` | Pinned Runtime 0.30.3 source above |
+| `HD2_RUNTIME_NEW_SOURCE` | Official Runtime 0.40.1 checkout (`219d70864032150f4e4359281add5ead23cb86dc`) for the newer API/actual-built checks |
+| `HD2_HUD_PLUS_LIFECYCLE_SOURCE` | HUD+ 0.2.9 extracted `56E46A6DC1DF0A13.lua` for its lifecycle contract checks |
 | `HD2_RUNTIME_SDK` | Its `sdk/` directory |
 | `HD2_LUA51_DLL` | Installed game `bin/lua51.dll` |
 | `HD2_MENU_API_SOURCE` | Mod Options Menu version 3 `components/ModOptionsMenu/src/api.lua`; keep its sibling source modules |
@@ -70,3 +72,9 @@ Metadata paths use repository-relative names or pinned upstream identities. Chan
 ## Ground-fire catalogue
 
 `python -X utf8 -B tools/ground-fire-contexts.py --check` re-derives the 0.4.66 catalogue from the pinned Runtime and Filediver datalibrary above. It covers every positive explosion/projectile/component FireTemplate row, while enabling only eleven reviewed explosion events. It never reads a running game. The full regression includes the eleven-event built-addon replay.
+
+## Current dependency and Career behavior
+
+The pinned 0.30.3 SDK is a build input; installed Runtime uses API 1 capability checks rather than an exact release lock. Four official release interfaces were checked. Legacy HUD+ 0.2.1 / 0.2.4 retains native combat/Career integration; 0.2.9 uses the Runtime combat renderer. 0.4.69 removes all F9 bindings and the independent Career window. Open Armory → Career normally; no replacement native Career interface is added for modern hosts that removed that API. See [dependency details](dependency-compatibility-0.4.68.md).
+
+Set both newer-dependency environment variables above to include their external reference checks; absent optional inputs are not evidence that those paths passed. No complete HUD+ or Runtime package is redistributed.
